@@ -1,0 +1,1891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A35B7D0F-3A25-45D3-ABA7-51AA694D590C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Good_Teacher</RootNamespace>
+    <AssemblyName>Good Teacher</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Admin\Desktop\Publish\GT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Test Maker</ProductName>
+    <PublisherName>Miroslav Murin</PublisherName>
+    <SuiteName>Good Teacher</SuiteName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BookIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FF5FDE44AFB7430B91B0DAC042527F7DE8ABB69A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Test Maker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseX64|AnyCPU'">
+    <OutputPath>bin\ReleaseX64\</OutputPath>
+    <DefineConstants>TRACE;RELEASEX64</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HelixToolkit, Version=2.2.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.2.2.0\lib\netstandard1.1\HelixToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.2.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.2.0\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="Jint, Version=0.0.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jint.2.11.58\lib\net451\Jint.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-wpf, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-wpf.1.50.4845-RC2a\lib\net30\PdfSharp-wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-wpf, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-wpf.1.50.4845-RC2a\lib\net30\PdfSharp.Charting-wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfMath, Version=0.5.0.41790, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfMath.0.5.0\lib\net40\WpfMath.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdNet.1.3.3\lib\net45\ZstdNet.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Class\Actions\Action_ClosePresentation.cs" />
+    <Compile Include="Class\Actions\Action_GoToPage.cs" />
+    <Compile Include="Class\Actions\Action_LoadPresentation.cs" />
+    <Compile Include="Class\Actions\Action_OpenApp.cs" />
+    <Compile Include="Class\Actions\Action_OpenWeb.cs" />
+    <Compile Include="Class\Actions\Action_ShowMessageBox.cs" />
+    <Compile Include="Class\Actions\Action_Sound.cs" />
+    <Compile Include="Class\Actions\IActions.cs" />
+    <Compile Include="Class\Animations\Animation_Opacity.cs" />
+    <Compile Include="Class\Animations\Animation_Position.cs" />
+    <Compile Include="Class\Animations\Animation_Size.cs" />
+    <Compile Include="Class\Animations\IAnimation.cs" />
+    <Compile Include="Class\Controls\GalleryImage.cs" />
+    <Compile Include="Class\Enumerators\BarcodeType.cs" />
+    <Compile Include="Class\Enumerators\ActionType.cs" />
+    <Compile Include="Class\Enumerators\ChartType.cs" />
+    <Compile Include="Class\Enumerators\DateTypeShow.cs" />
+    <Compile Include="Class\Enumerators\LanguageSettings.cs" />
+    <Compile Include="Class\Enumerators\ModelLightType.cs" />
+    <Compile Include="Class\Enumerators\SoundAction.cs" />
+    <Compile Include="Class\History\EventList.cs" />
+    <Compile Include="Class\History\HistoryCommand.cs" />
+    <Compile Include="Class\History\His_AddControl.cs" />
+    <Compile Include="Class\History\His_PositionChanged.cs" />
+    <Compile Include="Class\History\His_RemovedControl.cs" />
+    <Compile Include="Class\Save\AppSettings.cs" />
+    <Compile Include="Class\Save\CanvasWriter.cs" />
+    <Compile Include="Class\Save\DesignSave.cs" />
+    <Compile Include="Class\Save\FontPackage.cs" />
+    <Compile Include="Class\Save\LocalPath.cs" />
+    <Compile Include="Class\Save\Output\CheckBoxInput.cs" />
+    <Compile Include="Class\Save\Output\InputType.cs" />
+    <Compile Include="Class\Save\Output\OutputPage.cs" />
+    <Compile Include="Class\Save\Output\PresentationOutput.cs" />
+    <Compile Include="Class\Save\Output\RadioButtonInput.cs" />
+    <Compile Include="Class\Save\Output\Temporary\AnswerButton_TempSave.cs" />
+    <Compile Include="Class\Save\Output\Temporary\CheckControl_TempSave.cs" />
+    <Compile Include="Class\Save\Output\Temporary\ComboBox_TempSave.cs" />
+    <Compile Include="Class\Save\Output\Temporary\InkCanvas_TempSave.cs" />
+    <Compile Include="Class\Save\Output\Temporary\TemporaryDataSave.cs" />
+    <Compile Include="Class\Save\Output\Temporary\Temporary_Save.cs" />
+    <Compile Include="Class\Save\Output\Temporary\TextBox_TempSave.cs" />
+    <Compile Include="Class\Save\Output\TextboxInput.cs" />
+    <Compile Include="Class\Save\RepeatingData.cs" />
+    <Compile Include="Class\Serialization\AxisSerializer.cs" />
+    <Compile Include="Class\Serialization\Camera_Serializer.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\ContentCreator.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Answers.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Date.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Default.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Image.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_PageNumber.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Splitter.cs" />
+    <Compile Include="Class\Serialization\Content_Ser\Content_Text.cs" />
+    <Compile Include="Class\Serialization\Font_Serializer.cs" />
+    <Compile Include="Class\Serialization\ModelPath.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\AnswerButton_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\Barcode_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\Button_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\CartesianChart_Serialization.cs" />
+    <Compile Include="Class\Serialization\Content_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\ComboBox_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\ContentViewer_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\Formula_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\Gallery_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\InkCanvas_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\MediaPlayerController_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\Model_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\ScalableImage_Serialization.cs" />
+    <Compile Include="Class\Workers\ClassWorker.cs" />
+    <Compile Include="Class\Save\Compression.cs" />
+    <Compile Include="Class\Serialization\ImageRepresentation.cs" />
+    <Compile Include="Class\Workers\ControlWorker.cs" />
+    <Compile Include="Class\Workers\FileWorker.cs" />
+    <Compile Include="Class\Workers\FontWorker.cs" />
+    <Compile Include="Class\Workers\ImageWorker.cs" />
+    <Compile Include="Class\Save\ResourceData.cs" />
+    <Compile Include="Class\Save\ResourcesArchive.cs" />
+    <Compile Include="Class\Workers\LocalizationWorker.cs" />
+    <Compile Include="Class\Workers\MathWorker.cs" />
+    <Compile Include="Class\Workers\RichTextBoxWorker.cs" />
+    <Compile Include="Class\Save\SaveEditor.cs" />
+    <Compile Include="Class\Serialization\Brush_Serializer.cs" />
+    <Compile Include="Class\Save\CanvasSaveLoad.cs" />
+    <Compile Include="Class\Serialization\ChartData.cs" />
+    <Compile Include="Class\Serialization\ChartRowData.cs" />
+    <Compile Include="Class\Serialization\ControlDefaultData.cs" />
+    <Compile Include="Class\Serialization\ControlSerializer.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\PieChart_Serialization.cs" />
+    <Compile Include="Class\Serialization\PositionSize.cs" />
+    <Compile Include="Class\Serialization\Effect_Serializer.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\WebPage_Serialization.cs" />
+    <Compile Include="Class\PageClass\Page_DefaultAbstract.cs" />
+    <Compile Include="Class\Workers\ScriptingWorker.cs" />
+    <Compile Include="Class\Workers\SizeFormatWorker.cs" />
+    <Compile Include="Class\Workers\TempFilesWorker.cs" />
+    <Compile Include="Class\Workers\WebWorker.cs" />
+    <Compile Include="Controls\AnswerButton.xaml.cs">
+      <DependentUpon>AnswerButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Barcode.xaml.cs">
+      <DependentUpon>Barcode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CButton.xaml.cs">
+      <DependentUpon>CButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FlatButtonContent.xaml.cs">
+      <DependentUpon>FlatButtonContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MediaPlayerController_Control.xaml.cs">
+      <DependentUpon>MediaPlayerController_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageMiniature.xaml.cs">
+      <DependentUpon>PageMiniature.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScalableImage.xaml.cs">
+      <DependentUpon>ScalableImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\Arrow.cs" />
+    <Compile Include="Controls\Shapes\CheckMark.cs" />
+    <Compile Include="Controls\Shapes\Chevron.cs" />
+    <Compile Include="Controls\Shapes\Cloud.cs" />
+    <Compile Include="Controls\ComboBox_Control.xaml.cs">
+      <DependentUpon>ComboBox_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContentViewer.xaml.cs">
+      <DependentUpon>ContentViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Linkers\ControlsLinker.cs" />
+    <Compile Include="Controls\Shapes\Cross.cs" />
+    <Compile Include="Controls\Shapes\Diamond.cs" />
+    <Compile Include="Controls\DrawingImage_Control.xaml.cs">
+      <DependentUpon>DrawingImage_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FlatButton.xaml.cs">
+      <DependentUpon>FlatButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Gallery.xaml.cs">
+      <DependentUpon>Gallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\Drop.cs" />
+    <Compile Include="Controls\Shapes\Heart.cs" />
+    <Compile Include="Controls\Shapes\Hexagon.cs" />
+    <Compile Include="Controls\Image_Control.xaml.cs">
+      <DependentUpon>Image_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InkCanvas_Control.xaml.cs">
+      <DependentUpon>InkCanvas_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MediaPlayer_Control.xaml.cs">
+      <DependentUpon>MediaPlayer_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OpacityButton.xaml.cs">
+      <DependentUpon>OpacityButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PanoramaViewer.xaml.cs">
+      <DependentUpon>PanoramaViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RepeatingInfoControl.xaml.cs">
+      <DependentUpon>RepeatingInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RotationButton.xaml.cs">
+      <DependentUpon>RotationButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectButton.xaml.cs">
+      <DependentUpon>SelectButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\Ribbon.cs" />
+    <Compile Include="Controls\Shapes\RightAngledTriangle.cs" />
+    <Compile Include="Controls\Shapes\RightAngledTriangleSE.cs" />
+    <Compile Include="Controls\Shapes\SmileFace.cs" />
+    <Compile Include="Controls\Shapes\Speech.cs" />
+    <Compile Include="Controls\Special\AlignmentSelector.xaml.cs">
+      <DependentUpon>AlignmentSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\BrushSelector.xaml.cs">
+      <DependentUpon>BrushSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\CodeEditor\CodeEditor.xaml.cs">
+      <DependentUpon>CodeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\CodeEditor\ScriptCompletionData.cs" />
+    <Compile Include="Controls\Special\EditorSpecial\ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\EffectSelector.xaml.cs">
+      <DependentUpon>EffectSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\FontEditorPanel.xaml.cs">
+      <DependentUpon>FontEditorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumberTextBox.xaml.cs">
+      <DependentUpon>NumberTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Special\PositionSelector.xaml.cs">
+      <DependentUpon>PositionSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\Star.cs" />
+    <Compile Include="Controls\Special\SliderFinalChange.cs" />
+    <Compile Include="Controls\TestType_ControlN.xaml.cs">
+      <DependentUpon>TestType_ControlN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\Triangle.cs" />
+    <Compile Include="Controls\WebPage_Control.xaml.cs">
+      <DependentUpon>WebPage_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Good_Teacher\Windows\Globalization.cs" />
+    <Compile Include="MainWindow_AddControl.cs" />
+    <Compile Include="MainWindow_Control.cs" />
+    <Compile Include="MainWindow_ControlEffects.cs" />
+    <Compile Include="MainWindow_ControlEvents.cs" />
+    <Compile Include="MainWindow_Functions.cs" />
+    <Compile Include="MainWindow_MouseControl.cs" />
+    <Compile Include="MainWindow_SaveLoad.cs" />
+    <Compile Include="MainWindow_SaveLoadControlWork.cs" />
+    <Compile Include="MainWindow_TestTypeControl.cs" />
+    <Compile Include="MW_AddControl\MainWindow_AddControl_Level5.cs" />
+    <Compile Include="MW_AddControl\MainWindow_AddControl_Level4.cs" />
+    <Compile Include="MW_AddControl\MainWindow_AddControl_Level3.cs" />
+    <Compile Include="MW_AddControl\MainWindow_AddControl_Level2.cs" />
+    <Compile Include="MW_AddControl\MainWindow_AddControl_Level1.cs" />
+    <Compile Include="Pages\AnimationSettings\Anim_Opacity.xaml.cs">
+      <DependentUpon>Anim_Opacity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AnimationSettings\Anim_Position.xaml.cs">
+      <DependentUpon>Anim_Position.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AnimationSettings\Anim_Size.xaml.cs">
+      <DependentUpon>Anim_Size.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_Answers.xaml.cs">
+      <DependentUpon>ContentEditor_Answers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_Date.xaml.cs">
+      <DependentUpon>ContentEditor_Date.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_Image.xaml.cs">
+      <DependentUpon>ContentEditor_Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_PageNumber.xaml.cs">
+      <DependentUpon>ContentEditor_PageNumber.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_Splitter.xaml.cs">
+      <DependentUpon>ContentEditor_Splitter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Content\ContentEditor_Text.xaml.cs">
+      <DependentUpon>ContentEditor_Text.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_1Start.xaml.cs">
+      <DependentUpon>ManualP_1Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_2CanvasSettings.xaml.cs">
+      <DependentUpon>ManualP_2CanvasSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_3Image.xaml.cs">
+      <DependentUpon>ManualP_3Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_4EditControl.xaml.cs">
+      <DependentUpon>ManualP_4EditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_5SaveAndExport.xaml.cs">
+      <DependentUpon>ManualP_5SaveAndExport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Manual\ManualP_Main.xaml.cs">
+      <DependentUpon>ManualP_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pages\Page_Form.xaml.cs">
+      <DependentUpon>Page_Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pages\Page_Interface.cs" />
+    <Compile Include="Pages\Special\Page_MultiSelect.xaml.cs">
+      <DependentUpon>Page_MultiSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Special\Page_TextEdit.xaml.cs">
+      <DependentUpon>Page_TextEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_AnswerButton.xaml.cs">
+      <DependentUpon>Value_AnswerButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Barcode.xaml.cs">
+      <DependentUpon>Value_Barcode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Button.xaml.cs">
+      <DependentUpon>Value_Button.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_CartesianChart.xaml.cs">
+      <DependentUpon>Value_CartesianChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Checkbox.xaml.cs">
+      <DependentUpon>Value_Checkbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_ComboBox.xaml.cs">
+      <DependentUpon>Value_ComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_ContentViewer.xaml.cs">
+      <DependentUpon>Value_ContentViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Formula.xaml.cs">
+      <DependentUpon>Value_Formula.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Gallery.xaml.cs">
+      <DependentUpon>Value_Gallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Image.xaml.cs">
+      <DependentUpon>Value_Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_InkCanvas.xaml.cs">
+      <DependentUpon>Value_InkCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Line.xaml.cs">
+      <DependentUpon>Value_Line.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Media.xaml.cs">
+      <DependentUpon>Value_Media.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_MediaPlayer.xaml.cs">
+      <DependentUpon>Value_MediaPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Model.xaml.cs">
+      <DependentUpon>Value_Model.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_PieChart.xaml.cs">
+      <DependentUpon>Value_PieChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_RadioButton.xaml.cs">
+      <DependentUpon>Value_RadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_ScalableImage.xaml.cs">
+      <DependentUpon>Value_ScalableImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Shapes.xaml.cs">
+      <DependentUpon>Value_Shapes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_Text.xaml.cs">
+      <DependentUpon>Value_Text.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Value_TextBox.xaml.cs">
+      <DependentUpon>Value_TextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Save\DataStore.cs" />
+    <Compile Include="Pages\Value_WebBrowser.xaml.cs">
+      <DependentUpon>Value_WebBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\PageClass\Page.cs" />
+    <Compile Include="Class\Enumerators\TestTypeID.cs" />
+    <Compile Include="Pages\Value_Label.xaml.cs">
+      <DependentUpon>Value_Label.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\FormatStrings.sk.Designer.cs">
+      <DependentUpon>FormatStrings.sk.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings\FormatStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormatStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\HardStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HardStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Linkers\StringsLinker.cs" />
+    <Compile Include="Strings\ManualStrings.sk.Designer.cs">
+      <DependentUpon>ManualStrings.sk.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings\ManualStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManualStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\ResStrings.sk.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResStrings.sk.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Strings\ResStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_AddFromClipboard.xaml.cs">
+      <DependentUpon>DWindow_AddFromClipboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_AddFromWeb.xaml.cs">
+      <DependentUpon>DWindow_AddFromWeb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_AddImage.xaml.cs">
+      <DependentUpon>DWindow_AddImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_Animations.xaml.cs">
+      <DependentUpon>DWindow_Animations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_Brush.xaml.cs">
+      <DependentUpon>DWindow_Brush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_ComboBox.xaml.cs">
+      <DependentUpon>DWindow_ComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_ExistingModel.xaml.cs">
+      <DependentUpon>DWindow_ExistingModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_GalleryImages.xaml.cs">
+      <DependentUpon>DWindow_GalleryImages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_Image.xaml.cs">
+      <DependentUpon>DWindow_Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_MediaSelector.xaml.cs">
+      <DependentUpon>DWindow_MediaSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_ModelSelector.xaml.cs">
+      <DependentUpon>DWindow_ModelSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_MoveTo.xaml.cs">
+      <DependentUpon>DWindow_MoveTo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dialogs\DWindow_NewModel.xaml.cs">
+      <DependentUpon>DWindow_NewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DWindow_Content.xaml.cs">
+      <DependentUpon>DWindow_Content.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Popup\PWindow_ColorPicker.xaml.cs">
+      <DependentUpon>PWindow_ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_AppSettings.xaml.cs">
+      <DependentUpon>Window_AppSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_CheckForUpdates.xaml.cs">
+      <DependentUpon>Window_CheckForUpdates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_CodeEditor.xaml.cs">
+      <DependentUpon>Window_CodeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_ControlsID.xaml.cs">
+      <DependentUpon>Window_ControlsID.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_Editor.xaml.cs">
+      <DependentUpon>Window_Editor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_FileInformations.xaml.cs">
+      <DependentUpon>Window_FileInformations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_FontManager.xaml.cs">
+      <DependentUpon>Window_FontManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_FormulaWriter.xaml.cs">
+      <DependentUpon>Window_FormulaWriter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_ImageCompress.xaml.cs">
+      <DependentUpon>Window_ImageCompress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_Manual.xaml.cs">
+      <DependentUpon>Window_Manual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_PDFExport.xaml.cs">
+      <DependentUpon>Window_PDFExport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_PlayMedia.xaml.cs">
+      <DependentUpon>Window_PlayMedia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_Presentation.xaml.cs">
+      <DependentUpon>Window_Presentation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_PrintPreview.xaml.cs">
+      <DependentUpon>Window_PrintPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_RealView.xaml.cs">
+      <DependentUpon>Window_RealView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_Repeating.xaml.cs">
+      <DependentUpon>Window_Repeating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_ShowAllPages.xaml.cs">
+      <DependentUpon>Window_ShowAllPages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_ShowImage.xaml.cs">
+      <DependentUpon>Window_ShowImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_ShowModel.xaml.cs">
+      <DependentUpon>Window_ShowModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_TextEditor.xaml.cs">
+      <DependentUpon>Window_TextEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_AboutApp.xaml.cs">
+      <DependentUpon>Window_AboutApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_AllControls.xaml.cs">
+      <DependentUpon>Window_AllControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_Archive.xaml.cs">
+      <DependentUpon>Window_Archive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_ChartData.xaml.cs">
+      <DependentUpon>Window_ChartData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_ColorPicker.xaml.cs">
+      <DependentUpon>Window_ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_SetOnClickActions.xaml.cs">
+      <DependentUpon>Window_SetOnClickActions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_Settings.xaml.cs">
+      <DependentUpon>Window_Settings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\AnswerButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Barcode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ComboBox_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ContentViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DrawingImage_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FlatButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FlatButtonContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Gallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Image_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InkCanvas_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MediaPlayerController_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MediaPlayer_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\OpacityButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageMiniature.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PanoramaViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RepeatingInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RotationButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ScalableImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\AlignmentSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\BrushSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\CodeEditor\CodeEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\EditorSpecial\ImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\EffectSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\FontEditorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NumberTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Special\PositionSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TestType_ControlN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\WebPage_Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\AnimationSettings\Anim_Opacity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AnimationSettings\Anim_Position.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AnimationSettings\Anim_Size.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_Answers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_Date.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_PageNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_Splitter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Content\ContentEditor_Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_1Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_2CanvasSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_3Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_4EditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_5SaveAndExport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Manual\ManualP_Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Pages\Page_Form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Special\Page_MultiSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Special\Page_TextEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_AnswerButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Barcode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Value_CartesianChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Checkbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_ContentViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Formula.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Gallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_InkCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Line.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Media.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_MediaPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Model.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_PieChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_RadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_ScalableImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Shapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_WebBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Value_Label.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_AddFromClipboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_AddFromWeb.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_AddImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_Animations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_Brush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_ExistingModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_GalleryImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_MediaSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_ModelSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_MoveTo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Dialogs\DWindow_NewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DWindow_Content.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Popup\PWindow_ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_AppSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_CheckForUpdates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_CodeEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_ControlsID.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_Editor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_FileInformations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_FontManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_FormulaWriter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_ImageCompress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_Manual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_PDFExport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_PlayMedia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_Presentation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_PrintPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_RealView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_Repeating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_ShowAllPages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_ShowImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_ShowModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_TextEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_AboutApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_AllControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_Archive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_ChartData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_SetOnClickActions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\FormatStrings.sk.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormatStrings.sk.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\FormatStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormatStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\HardStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HardStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\ManualStrings.sk.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManualStrings.sk.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\ManualStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManualStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\ResStrings.sk.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResStrings.sk.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\ResStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NormalWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\cancelsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\classicTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\AddPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\editbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\fontDown.png" />
+    <Resource Include="Resources\EditValues\fontUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\alignment_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\alignment_bottom.png" />
+    <Resource Include="Resources\EditValues\alignment_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\LayerDown.png" />
+    <Resource Include="Resources\EditValues\LayerUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\colorpicker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\build.png" />
+    <Resource Include="Resources\Menu\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\ThemeBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\New.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Icons\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\movedown.png" />
+    <Resource Include="Resources\Icons\moveup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\duplicate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\bold.png" />
+    <Resource Include="Resources\EditValues\Italic.png" />
+    <Resource Include="Resources\EditValues\underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\subscript.png" />
+    <Resource Include="Resources\EditValues\superscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\strikethrough.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\LoadRTF.png" />
+    <Resource Include="Resources\Specific\SaveRTF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\Redo.png" />
+    <Resource Include="Resources\Specific\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\ForColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\BackColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\align_center.png" />
+    <Resource Include="Resources\EditValues\align_left.png" />
+    <Resource Include="Resources\EditValues\align_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\align_justify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\FindHardisk.png" />
+    <Resource Include="Resources\EditValues\FindWeb.png" />
+    <Resource Include="Resources\EditValues\Hyperlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\AddImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\ImgBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Ellipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Shapes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\WebBrowser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\PieChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EditValues\Data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Presentation\Back.png" />
+    <Resource Include="Resources\Presentation\ClosePresentation.png" />
+    <Resource Include="Resources\Presentation\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\ZoomCancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\ColumnGraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\LineChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\RowChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\StackedChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\StackedRowChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\StackedAreaGraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Charts\StepLineChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Models.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\ModelsColors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\ModelBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\print_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\ImageBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\TitleBar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\CanvasDrawOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\Move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BookIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\OnePage.png" />
+    <Resource Include="Resources\Icons\Pages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\FileImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\FileImage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\ToClipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\SettingsBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\QRCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\Special.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\Barcodes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\BarcodeProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Controls\Controller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Controls\Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\FromClipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Resources\AppSpecial\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\OnClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\BackgroundMat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\MathFormula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FFunction.png" />
+    <Resource Include="Resources\Math\FSqrt.png" />
+    <Resource Include="Resources\Math\FSqrtTo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FFraction.png" />
+    <Resource Include="Resources\Math\FPi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FInfinity.png" />
+    <Resource Include="Resources\Math\FLeft.png" />
+    <Resource Include="Resources\Math\FRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FDelta.png" />
+    <Resource Include="Resources\Math\FIntegral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FSpace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\FLim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Down.png" />
+    <Resource Include="Resources\Icons\Buttons\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\Media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\Video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\BigMedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\DeleteFill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\SaveBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Draw\Draw.png" />
+    <Resource Include="Resources\Draw\Eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Draw\ImageEditor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Draw\EraseAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Controls\Question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\PDFDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Content.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\ImageAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\LabelAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Palette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Design\ContentViewer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Design\Gallery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Design\GalleryControl\Left.png" />
+    <Resource Include="Resources\Controls\Design\GalleryControl\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".gtch">
+      <Visible>False</Visible>
+      <Description>Good Teacher presentation</Description>
+      <Progid>GTCH</Progid>
+      <DefaultIcon>BookIcon.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Animations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\AppSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\MoveAnim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\OpacityAnimation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\BeginTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\Duration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Math\CDot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\Repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\PlayCurrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\testRepairoGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\RadioButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\ComboBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\LeftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\CheckUpdate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\Scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\Reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\PageNumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\RepeatingControls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Design\Drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\RepeatingC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\RemoveLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\AddPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Hexagon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\SmileFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Speech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Ribbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\CheckMark.png" />
+    <Resource Include="Resources\Controls\Cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\GaWAnswers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Next.png" />
+    <Resource Include="Resources\Icons\Buttons\Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\ShowOnePage.png" />
+    <Resource Include="Resources\Icons\ShowPages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\Real.png" />
+    <Resource Include="Resources\Icons\Special\Stretch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\RealPage.png" />
+    <Resource Include="Resources\Icons\ScalePage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Hidden.png" />
+    <Resource Include="Resources\Icons\Buttons\MoveTo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Presentation\ShowListPages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\InsertPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\ScaleImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\CancelMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\BasicShape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\SpecialShapes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\RealView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\NextWhite.png" />
+    <Resource Include="Resources\Icons\Buttons\PreviousWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Shapes\RATriangle.png" />
+    <Resource Include="Resources\Controls\Shapes\RATriangleSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Shapes\Chevron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Shapes\Drop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\EditWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\Pause.png" />
+    <Resource Include="Resources\Icons\Media\PlayFromStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Media\MediaPlayer.png" />
+    <Resource Include="Resources\Icons\Media\Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_AddPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_Pages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_BottomControls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_SettingsWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_ImageSelection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_ControlEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Manual\Manual_Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\FontPackage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\SelectModelBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Background\BackgroundGeometric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Menu\Panel\NextPanel.png" />
+    <Resource Include="Resources\Menu\Panel\NextPanelClick.png" />
+    <Resource Include="Resources\Menu\Panel\NextPanelHover.png" />
+    <Resource Include="Resources\Menu\Panel\PreviousPanel.png" />
+    <Resource Include="Resources\Menu\Panel\PreviousPanelClick.png" />
+    <Resource Include="Resources\Menu\Panel\PreviousPanelHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Compress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\FontFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GTFileIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\ZstdNet.1.3.3\build\ZstdNet.targets" Condition="Exists('..\packages\ZstdNet.1.3.3\build\ZstdNet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ZstdNet.1.3.3\build\ZstdNet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ZstdNet.1.3.3\build\ZstdNet.targets'))" />
+  </Target>
+</Project>

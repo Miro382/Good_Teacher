@@ -1,0 +1,1696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>O aplikácii</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Pridať</value>
+  </data>
+  <data name="AddHyperlink" xml:space="preserve">
+    <value>Pridať odkaz</value>
+  </data>
+  <data name="AddImage" xml:space="preserve">
+    <value>Pridať obrázok</value>
+  </data>
+  <data name="AddPage" xml:space="preserve">
+    <value>Pridať novú stranu</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Všetky súbory (*.*)</value>
+  </data>
+  <data name="Alpha" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>Uhol</value>
+  </data>
+  <data name="Answers" xml:space="preserve">
+    <value>Odpovede</value>
+    <comment>Test Type</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Good Teacher</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archív</value>
+  </data>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Farba pozadia</value>
+  </data>
+  <data name="BackgroundSettings" xml:space="preserve">
+    <value>Nastavenia pozadia</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Modrá</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Rozmazať</value>
+  </data>
+  <data name="BlurBox" xml:space="preserve">
+    <value>Štvorcové</value>
+    <comment>Blur Type</comment>
+  </data>
+  <data name="BlurRadius" xml:space="preserve">
+    <value>Polomer rozmazania</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Tučné</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>Farba okraju</value>
+  </data>
+  <data name="BorderSettings" xml:space="preserve">
+    <value>Nastavenia okraju:</value>
+  </data>
+  <data name="BorderSize" xml:space="preserve">
+    <value>Rozmery okraju</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Štvorec</value>
+  </data>
+  <data name="BoxSett" xml:space="preserve">
+    <value>Nastavenia štvorca</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Postaviť</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Zmazať</value>
+  </data>
+  <data name="ClearCanvas" xml:space="preserve">
+    <value>Naozaj chcete odstrániť všetky ovládacie prvky zo strany?</value>
+  </data>
+  <data name="CloseApp" xml:space="preserve">
+    <value>Naozaj chcete zavrieť aplikáciu? Ak obsah nie je uložený môžete stratiť svoje data.</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farba</value>
+  </data>
+  <data name="ColorFormat" xml:space="preserve">
+    <value>Formát farby:
+hexadecimal 
+(#AARRGGBB)</value>
+  </data>
+  <data name="ColorPicker" xml:space="preserve">
+    <value>Výber farieb</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Vytvoril:</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Vymazať</value>
+  </data>
+  <data name="Depth" xml:space="preserve">
+    <value>Hĺbka</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Smer</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Dole</value>
+  </data>
+  <data name="DuplicatePage" xml:space="preserve">
+    <value>Duplikovať stranu</value>
+  </data>
+  <data name="EditBox" xml:space="preserve">
+    <value>Textové pole</value>
+  </data>
+  <data name="EditBoxSettings" xml:space="preserve">
+    <value>Nastavenia textového poľa</value>
+  </data>
+  <data name="Effects" xml:space="preserve">
+    <value>Efekt</value>
+  </data>
+  <data name="Ellipse" xml:space="preserve">
+    <value>Elipsa</value>
+  </data>
+  <data name="EllipseSett" xml:space="preserve">
+    <value>Nastavenia elipsy</value>
+  </data>
+  <data name="EndColor" xml:space="preserve">
+    <value>Koncová farba</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="ErrorLoad" xml:space="preserve">
+    <value>Chyba pri načítaní dát.</value>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>Chyba pri ukladaní dát.</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Exportovať</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Súbor</value>
+  </data>
+  <data name="FillOptions" xml:space="preserve">
+    <value>Možnosti vyplnenia:</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>Farba fontu</value>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Veľkosť fontu</value>
+  </data>
+  <data name="FormControls" xml:space="preserve">
+    <value>Formulárové ovládacie prvky</value>
+  </data>
+  <data name="Gaussian" xml:space="preserve">
+    <value>Gaussové</value>
+    <comment>Blur type</comment>
+  </data>
+  <data name="GoodTeacherTestFormat" xml:space="preserve">
+    <value>Good Teacher súbor (*.gtch)</value>
+    <comment>Good Teacher file (*.gtch)</comment>
+  </data>
+  <data name="GradientColor" xml:space="preserve">
+    <value>Prechodová Farba</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Zelená</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Výška</value>
+  </data>
+  <data name="Hexadecimal" xml:space="preserve">
+    <value>Hexadecimálne</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Skrytý</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Obrázok</value>
+  </data>
+  <data name="ImageSett" xml:space="preserve">
+    <value>Nastavenia obrázka</value>
+  </data>
+  <data name="ImageSource" xml:space="preserve">
+    <value>Zdroj obrázka</value>
+  </data>
+  <data name="ImageStretch" xml:space="preserve">
+    <value>Roztiahnutie obrázka</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Kurzíva</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Štítok</value>
+  </data>
+  <data name="LabelSett" xml:space="preserve">
+    <value>Nastavenia štítka</value>
+  </data>
+  <data name="Linear" xml:space="preserve">
+    <value>Lineárne</value>
+  </data>
+  <data name="ListControls" xml:space="preserve">
+    <value>Zoznam prvkov</value>
+  </data>
+  <data name="LoadRTF" xml:space="preserve">
+    <value>Načítať dokument RTF</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Nový</value>
+  </data>
+  <data name="NewColor" xml:space="preserve">
+    <value>Nová farba</value>
+  </data>
+  <data name="NewProject" xml:space="preserve">
+    <value>Naozaj chcete odstrániť všetok aktuálny obsah?</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OldColor" xml:space="preserve">
+    <value>Stará farba</value>
+  </data>
+  <data name="Opacity" xml:space="preserve">
+    <value>Nepriehľadnosť</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Otvoriť</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Strana</value>
+  </data>
+  <data name="PathOrURL" xml:space="preserve">
+    <value>Cesta alebo URL</value>
+  </data>
+  <data name="PosX" xml:space="preserve">
+    <value>Pozícia X</value>
+  </data>
+  <data name="PosY" xml:space="preserve">
+    <value>Pozícia Y</value>
+  </data>
+  <data name="PosZ" xml:space="preserve">
+    <value>Pozícia Z</value>
+  </data>
+  <data name="Radial" xml:space="preserve">
+    <value>Radiálne</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Červený</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Krok vpred (CTRL + Y)</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>Referencie</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>Rotácia</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Uložiť</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Uložiť ako</value>
+  </data>
+  <data name="SavedTo" xml:space="preserve">
+    <value>Uložené do</value>
+  </data>
+  <data name="SaveRTF" xml:space="preserve">
+    <value>Uložiť do RTF dokumentu</value>
+  </data>
+  <data name="Setforallpages" xml:space="preserve">
+    <value>Nastaviť pozadie na všetky strany</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Nastavenia</value>
+  </data>
+  <data name="Shadow" xml:space="preserve">
+    <value>Tieň</value>
+  </data>
+  <data name="Shapes" xml:space="preserve">
+    <value>Tvary</value>
+  </data>
+  <data name="StartColor" xml:space="preserve">
+    <value>Počiatočná farba</value>
+  </data>
+  <data name="Stretch_fill" xml:space="preserve">
+    <value>Vyplniť</value>
+  </data>
+  <data name="Stretch_none" xml:space="preserve">
+    <value>Žiadne</value>
+  </data>
+  <data name="Stretch_uniform" xml:space="preserve">
+    <value>Zachovať pomer</value>
+  </data>
+  <data name="Stretch_uniformToFill" xml:space="preserve">
+    <value>Zachovať pomer a vyplniť</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Úspech</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="TextEditor" xml:space="preserve">
+    <value>Textový editor</value>
+  </data>
+  <data name="TextSettings" xml:space="preserve">
+    <value>Nastavenia textu</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Krok späť (CTRL + Z)</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Hore</value>
+  </data>
+  <data name="UsedLibraries" xml:space="preserve">
+    <value>Použité knižnice:</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Verzia:</value>
+  </data>
+  <data name="VerticalScrollBar" xml:space="preserve">
+    <value>Vertikálna posuvná lišta</value>
+  </data>
+  <data name="Visible" xml:space="preserve">
+    <value>Viditeľné</value>
+  </data>
+  <data name="WebAddress" xml:space="preserve">
+    <value>Webová adresa</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Šírka</value>
+  </data>
+  <data name="WrongFormat" xml:space="preserve">
+    <value>Zlý format</value>
+  </data>
+  <data name="WrongUrl" xml:space="preserve">
+    <value>Zlá URL</value>
+  </data>
+  <data name="DeleteDialog" xml:space="preserve">
+    <value>Naozaj chcete vymazať tento obrázok?</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>Webová stránka</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Veľkosť</value>
+  </data>
+  <data name="WebPageSett" xml:space="preserve">
+    <value>Nastavenia web stránky</value>
+  </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Tlačidlá</value>
+  </data>
+  <data name="Charts" xml:space="preserve">
+    <value>Grafy</value>
+  </data>
+  <data name="PieChart" xml:space="preserve">
+    <value>Koláčový graf</value>
+  </data>
+  <data name="PieChartSett" xml:space="preserve">
+    <value>Nastavenia koláčového grafu</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Údaje</value>
+  </data>
+  <data name="AddColumn" xml:space="preserve">
+    <value>Pridať stĺpec</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Zrušiť</value>
+  </data>
+  <data name="RemoveColumn" xml:space="preserve">
+    <value>Odstrániť stĺpec</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Aktualizovať</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Prispôsobenie</value>
+  </data>
+  <data name="DataLabel" xml:space="preserve">
+    <value>Údajový štítok</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Názov</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Dole</value>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>Graf</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Farby</value>
+  </data>
+  <data name="InteractiveChart" xml:space="preserve">
+    <value>Interaktívny graf</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Vľavo</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Legenda</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Žiadne</value>
+  </data>
+  <data name="PushOut" xml:space="preserve">
+    <value>Vystrčiť</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Vpravo</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Spustiť</value>
+  </data>
+  <data name="RunProgramTooltip" xml:space="preserve">
+    <value>Spustí prezentáciu (F5)</value>
+  </data>
+  <data name="TestMakerPresentation" xml:space="preserve">
+    <value>Good Teacher Presentation</value>
+  </data>
+  <data name="Tooltip" xml:space="preserve">
+    <value>Nápoveda</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Hore</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>Vlastné farby</value>
+  </data>
+  <data name="DefaultColors" xml:space="preserve">
+    <value>Predvolené farby</value>
+  </data>
+  <data name="RemoveSelected" xml:space="preserve">
+    <value>Vymazať označené</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Čiara</value>
+  </data>
+  <data name="LineSett" xml:space="preserve">
+    <value>Nastavenia čiary</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Uzamknuté</value>
+  </data>
+  <data name="RemoveLockedPage" xml:space="preserve">
+    <value>Strana je uzamknutá. Naozaj chcete odstrániť stranu?</value>
+  </data>
+  <data name="RemoveLockedPageTitle" xml:space="preserve">
+    <value>Odstrániť uzamknutú stranu</value>
+  </data>
+  <data name="RadiusX" xml:space="preserve">
+    <value>Polomer X</value>
+  </data>
+  <data name="RadiusY" xml:space="preserve">
+    <value>Polomer Y</value>
+  </data>
+  <data name="RoundedCorners" xml:space="preserve">
+    <value>Zaoblené rohy</value>
+  </data>
+  <data name="ColumnChart" xml:space="preserve">
+    <value>Stĺpcový graf</value>
+  </data>
+  <data name="InnerRadius" xml:space="preserve">
+    <value>Vnútorný polomer</value>
+  </data>
+  <data name="StrokeColor" xml:space="preserve">
+    <value>Farba ťahu</value>
+  </data>
+  <data name="AxisX" xml:space="preserve">
+    <value>Os X</value>
+  </data>
+  <data name="AxisY" xml:space="preserve">
+    <value>Os Y</value>
+  </data>
+  <data name="StrokeThickness" xml:space="preserve">
+    <value>Hrúbka ťahu</value>
+  </data>
+  <data name="CartesianChart" xml:space="preserve">
+    <value>Karteziánsky graf</value>
+  </data>
+  <data name="LineChart" xml:space="preserve">
+    <value>Čiarový graf</value>
+  </data>
+  <data name="RowChart" xml:space="preserve">
+    <value>Riadkový graf</value>
+  </data>
+  <data name="StackedColumnChart" xml:space="preserve">
+    <value>Stohovaný stĺpcový graf</value>
+  </data>
+  <data name="StackedRowChart" xml:space="preserve">
+    <value>Stohovaný riadkový graf</value>
+  </data>
+  <data name="AxisXTitle" xml:space="preserve">
+    <value>Názov osi X</value>
+  </data>
+  <data name="AxisYTitle" xml:space="preserve">
+    <value>Názov osi Y</value>
+  </data>
+  <data name="CustomFill" xml:space="preserve">
+    <value>Vlastná výplň</value>
+  </data>
+  <data name="ModelObject" xml:space="preserve">
+    <value>3D model</value>
+  </data>
+  <data name="StackedAreaChart" xml:space="preserve">
+    <value>Graf stohovaných oblastí</value>
+  </data>
+  <data name="StepLineChart" xml:space="preserve">
+    <value>Krokový graf</value>
+  </data>
+  <data name="ImportModel" xml:space="preserve">
+    <value>Importovať nový model</value>
+  </data>
+  <data name="ModelSelection" xml:space="preserve">
+    <value>Výber modelu</value>
+  </data>
+  <data name="ModelSettings" xml:space="preserve">
+    <value>Nastavenia 3D modela</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Vybrať</value>
+  </data>
+  <data name="Texture" xml:space="preserve">
+    <value>Textúra</value>
+  </data>
+  <data name="DefaultMaterialColor" xml:space="preserve">
+    <value>Predvolená farba materiálu</value>
+  </data>
+  <data name="ErrorLoadModel" xml:space="preserve">
+    <value>Chyba pri načítaní modelu.</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Prosím, najprv uložte projekt.</value>
+  </data>
+  <data name="NotSavedTitle" xml:space="preserve">
+    <value>Projekt je neuložený</value>
+  </data>
+  <data name="SelectFolderModel" xml:space="preserve">
+    <value>Výberte model vo vlastnej zložke. Zložka musí obsahovať iba potrebné súbory. Zložka s modelom a materiálmi sa skopíruje do zložky zdrojov.</value>
+  </data>
+  <data name="DeleteDialogModel" xml:space="preserve">
+    <value>Naozaj chcete vymazať model?</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Načítať</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zatvoriť</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Predvolené</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Svetlo</value>
+  </data>
+  <data name="Maximize" xml:space="preserve">
+    <value>Maximalizovať</value>
+  </data>
+  <data name="Minimize" xml:space="preserve">
+    <value>Minimalizovať</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Vytlačiť</value>
+  </data>
+  <data name="PrintingTitle" xml:space="preserve">
+    <value>Tlač stránok</value>
+  </data>
+  <data name="RestoreDown" xml:space="preserve">
+    <value>Obnoviť</value>
+  </data>
+  <data name="SpotHeadLight" xml:space="preserve">
+    <value>Bodové svetlo</value>
+  </data>
+  <data name="SunLight" xml:space="preserve">
+    <value>Slnečné svetlo</value>
+  </data>
+  <data name="FixedModel" xml:space="preserve">
+    <value>Pevný model</value>
+  </data>
+  <data name="AddNewImage" xml:space="preserve">
+    <value>Pridať nový obrázok</value>
+  </data>
+  <data name="DisableAnimations" xml:space="preserve">
+    <value>Zakázať animáciu</value>
+  </data>
+  <data name="FromDisk" xml:space="preserve">
+    <value>Z disku</value>
+  </data>
+  <data name="ImageFromArchive" xml:space="preserve">
+    <value>Obrázok z archívu</value>
+  </data>
+  <data name="RemoveRow" xml:space="preserve">
+    <value>Odstrániť riadok</value>
+  </data>
+  <data name="TestControls" xml:space="preserve">
+    <value>Testovacie ovládacie prvky</value>
+  </data>
+  <data name="ImageSelection" xml:space="preserve">
+    <value>Výber orázkov</value>
+  </data>
+  <data name="ScalingQuality" xml:space="preserve">
+    <value>Kvalita škálovania</value>
+  </data>
+  <data name="HighQuality" xml:space="preserve">
+    <value>Vysoká kvalita</value>
+  </data>
+  <data name="NearestNeighbor" xml:space="preserve">
+    <value>Najbližší sused (Nízka)</value>
+  </data>
+  <data name="NormalQuality" xml:space="preserve">
+    <value>Normalna kvalita</value>
+  </data>
+  <data name="CurrentPage" xml:space="preserve">
+    <value>Aktuálna strana</value>
+  </data>
+  <data name="DefaultPage" xml:space="preserve">
+    <value>Predvolená strana</value>
+  </data>
+  <data name="DefaultZoom" xml:space="preserve">
+    <value>Predvolené zväčšenie (100%)</value>
+  </data>
+  <data name="LockCanvas" xml:space="preserve">
+    <value>Uzamknúť plátno</value>
+  </data>
+  <data name="OnlyCanvas" xml:space="preserve">
+    <value>Iba plátno</value>
+  </data>
+  <data name="CanvasSize" xml:space="preserve">
+    <value>Veľkosť plátna</value>
+  </data>
+  <data name="CanvasX" xml:space="preserve">
+    <value>Plátno X</value>
+  </data>
+  <data name="CanvasY" xml:space="preserve">
+    <value>Plátno Y</value>
+  </data>
+  <data name="ChangeCanvasSize" xml:space="preserve">
+    <value>Zmena veľkosti plátna</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Všetky strany</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Skopírovať do schránky</value>
+  </data>
+  <data name="ExportToAllImages" xml:space="preserve">
+    <value>Vyberte priečinok, do ktorého chcete uložiť všetky obrázky z prezentácie.</value>
+  </data>
+  <data name="Customize" xml:space="preserve">
+    <value>Prispôsobiť</value>
+  </data>
+  <data name="Barcodes" xml:space="preserve">
+    <value>Čiarové kódy</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>QR kód</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Špeciálne</value>
+  </data>
+  <data name="BarcodeSett" xml:space="preserve">
+    <value>Nastavenia čiarového kódu</value>
+  </data>
+  <data name="Encode" xml:space="preserve">
+    <value>Zakódovať</value>
+  </data>
+  <data name="DataLabelSize" xml:space="preserve">
+    <value>Veľkosť písma štítku údajov</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Povolené</value>
+  </data>
+  <data name="Button" xml:space="preserve">
+    <value>Tlačidlo</value>
+  </data>
+  <data name="Controls" xml:space="preserve">
+    <value>Ovládacie prvky</value>
+  </data>
+  <data name="FromClipboard" xml:space="preserve">
+    <value>Zo schránky</value>
+  </data>
+  <data name="ClipboardNoImage" xml:space="preserve">
+    <value>Schránka neobsahuje obrázok.</value>
+  </data>
+  <data name="FromWeb" xml:space="preserve">
+    <value>Z webu</value>
+  </data>
+  <data name="ButtonSett" xml:space="preserve">
+    <value>Nastavenia tlačidla</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Kliknutie</value>
+  </data>
+  <data name="Hover" xml:space="preserve">
+    <value>Myš nad</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normálne</value>
+  </data>
+  <data name="ChangeOnClick" xml:space="preserve">
+    <value>Zmena po kliknutí</value>
+  </data>
+  <data name="ChangeOnHover" xml:space="preserve">
+    <value>Zmena po myši nad</value>
+  </data>
+  <data name="HorizontalAlignment" xml:space="preserve">
+    <value>Horizontálne zarovnanie</value>
+  </data>
+  <data name="VerticalAlignment" xml:space="preserve">
+    <value>Zvislé zarovnanie</value>
+  </data>
+  <data name="CurrentAction" xml:space="preserve">
+    <value>Aktuálna akcia:</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Prejsť na stranu</value>
+  </data>
+  <data name="MathFormula" xml:space="preserve">
+    <value>Matematický vzorec</value>
+  </data>
+  <data name="OnclickAction" xml:space="preserve">
+    <value>Akcia po kliknutí</value>
+  </data>
+  <data name="OpenApplication" xml:space="preserve">
+    <value>Otvoriť aplikáciu</value>
+  </data>
+  <data name="OpenLink" xml:space="preserve">
+    <value>Otvoriť odkaz</value>
+  </data>
+  <data name="ShowMessageBox" xml:space="preserve">
+    <value>Zobraziť okno so správou</value>
+  </data>
+  <data name="WrongInputData" xml:space="preserve">
+    <value>Nesprávne vstupné údaje.</value>
+  </data>
+  <data name="FormulaSett" xml:space="preserve">
+    <value>Nastavenia vzorca</value>
+  </data>
+  <data name="SetFormula" xml:space="preserve">
+    <value>Nastaviť vzorec</value>
+  </data>
+  <data name="WriteFormula" xml:space="preserve">
+    <value>Napísať vzorec</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Prezentácia</value>
+  </data>
+  <data name="BlockPresentationInput" xml:space="preserve">
+    <value>Blokovať predvolený vstup</value>
+  </data>
+  <data name="BlockPresentationInputHelp" xml:space="preserve">
+    <value>Blokovať predvolený vstup (šípky klávesnice, spodný panel). Presun na ďaľšiu stranu je možný iba pomocou vlastných akcií tlačidlami...</value>
+  </data>
+  <data name="Brush" xml:space="preserve">
+    <value>Výplň</value>
+  </data>
+  <data name="ButtonBrushCheckedTooltip" xml:space="preserve">
+    <value>Ak je začiarknuté, zmení sa výplň a nepriehľadnosť. V opačnom prípade sa zmení iba nepriehľadnosť.</value>
+  </data>
+  <data name="ClosePresentation" xml:space="preserve">
+    <value>Zatvoriť prezentáciu</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Ďalšia strana</value>
+  </data>
+  <data name="OnButtonClosePresentation" xml:space="preserve">
+    <value>Kliknutím zatvorí prezentáciu. (Kliknutím na tlačidlo OK nastavíte akciu zavrieť).</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>Predchádzajúca strana</value>
+  </data>
+  <data name="SpecificPage" xml:space="preserve">
+    <value>Prejsť na konkrétnu stranu</value>
+  </data>
+  <data name="ActualPath" xml:space="preserve">
+    <value>Skutočná cesta k súboru:</value>
+  </data>
+  <data name="UseLocalPath" xml:space="preserve">
+    <value>Použite lokálnu cestu</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Médiá</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="MediaSett" xml:space="preserve">
+    <value>Nastavenia médií</value>
+  </data>
+  <data name="OutsideColor" xml:space="preserve">
+    <value>Farba mimo plátna</value>
+  </data>
+  <data name="AddNewMedia" xml:space="preserve">
+    <value>Pridať nové médiá</value>
+  </data>
+  <data name="ToolbarPanel" xml:space="preserve">
+    <value>Panel s nástrojmi</value>
+  </data>
+  <data name="RemoveImage" xml:space="preserve">
+    <value>Naozaj chcete odstrániť obrázok?</value>
+  </data>
+  <data name="Barcode" xml:space="preserve">
+    <value>Čiarový kód</value>
+  </data>
+  <data name="DrawingCanvas" xml:space="preserve">
+    <value>Kresliace plátno</value>
+  </data>
+  <data name="Multiline" xml:space="preserve">
+    <value>Viacriadkový</value>
+  </data>
+  <data name="TextWrapping" xml:space="preserve">
+    <value>Mód textu</value>
+  </data>
+  <data name="InkCanvasSett" xml:space="preserve">
+    <value>Nastavenia kresliaceho plátna</value>
+  </data>
+  <data name="AnswerButton" xml:space="preserve">
+    <value>Odpoveďové tlačidlo</value>
+  </data>
+  <data name="AnswerButtonSett" xml:space="preserve">
+    <value>Nastavenia Odpoveďového tlačidla</value>
+  </data>
+  <data name="AfterSelectFill" xml:space="preserve">
+    <value>Výplň po výbere</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Odpoveď</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Správne</value>
+  </data>
+  <data name="QuestionID" xml:space="preserve">
+    <value>ID otázka</value>
+  </data>
+  <data name="Wrong" xml:space="preserve">
+    <value>Nesprávne</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Obsah</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editovať</value>
+  </data>
+  <data name="MarginLeft" xml:space="preserve">
+    <value>Okraj vľavo</value>
+  </data>
+  <data name="ContentAlignment" xml:space="preserve">
+    <value>Zarovnanie obsahu</value>
+  </data>
+  <data name="ContentViewer" xml:space="preserve">
+    <value>Prehliadač obsahu</value>
+  </data>
+  <data name="ContentViewerSett" xml:space="preserve">
+    <value>Nastavenia prehliadača obsahu</value>
+  </data>
+  <data name="DeleteDialogMedia" xml:space="preserve">
+    <value>Naozaj chcete odstraniť médiá?</value>
+  </data>
+  <data name="Design" xml:space="preserve">
+    <value>Dizajn</value>
+  </data>
+  <data name="Splitter" xml:space="preserve">
+    <value>Rozdeľovač</value>
+  </data>
+  <data name="ErrorRunData" xml:space="preserve">
+    <value>Data.gtchp nebolo najdené!</value>
+  </data>
+  <data name="ExportToFolder" xml:space="preserve">
+    <value>Prosím, vyberte prázdnu zložku. Prezentácia a údaje budú exportované do tejto zložky.</value>
+  </data>
+  <data name="FailedExport" xml:space="preserve">
+    <value>Export zlyhal. Prosím, vyberte prázdnu zložku. Exportovaná cesta:</value>
+  </data>
+  <data name="ShowGoodAnswer" xml:space="preserve">
+    <value>Ukázať správnu odpoveď</value>
+  </data>
+  <data name="SuccessExport" xml:space="preserve">
+    <value>Export je úspešný. Exportovaná cesta:</value>
+  </data>
+  <data name="GifAnimatedImage" xml:space="preserve">
+    <value>Gif (Animovaný obrázok)</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galéria</value>
+  </data>
+  <data name="GallerySett" xml:space="preserve">
+    <value>Nastavenia galérie</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Obrázky</value>
+  </data>
+  <data name="CirclesVisibility" xml:space="preserve">
+    <value>Viditeľnosť kruhov</value>
+  </data>
+  <data name="RestTime" xml:space="preserve">
+    <value>Doba odpočinku</value>
+  </data>
+  <data name="TextVisibility" xml:space="preserve">
+    <value>Viditeľnosť textu</value>
+  </data>
+  <data name="TransitionSpeed" xml:space="preserve">
+    <value>Prechodová rýchlosť (Čas v sekundách)</value>
+  </data>
+  <data name="ArrowsVisibility" xml:space="preserve">
+    <value>Viditeľnosť šípok</value>
+  </data>
+  <data name="OptimizedMode" xml:space="preserve">
+    <value>Optimalizový režim</value>
+  </data>
+  <data name="OptimizedModeHelp" xml:space="preserve">
+    <value>Rýchlejšia prezentácia. Vyžaduje menej pamäte, ale znižuje kvalitu obrázkov.</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value>Animácie</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Skopírované do schránky</value>
+  </data>
+  <data name="Exported" xml:space="preserve">
+    <value>Exportované</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Uložené</value>
+  </data>
+  <data name="Checkbox" xml:space="preserve">
+    <value>Zaškrtávacie políčko</value>
+  </data>
+  <data name="Form" xml:space="preserve">
+    <value>Formulár</value>
+  </data>
+  <data name="AppSettings" xml:space="preserve">
+    <value>Nastavenia aplikácie</value>
+  </data>
+  <data name="CheckboxSett" xml:space="preserve">
+    <value>Nastavenia zaškrtávacieho políčka</value>
+  </data>
+  <data name="IsChecked" xml:space="preserve">
+    <value>Je začiarknuté</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Vybrané:</value>
+  </data>
+  <data name="AnimationType" xml:space="preserve">
+    <value>Typ animácie</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Pozícia</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Trvanie</value>
+  </data>
+  <data name="ToX" xml:space="preserve">
+    <value>Do X</value>
+  </data>
+  <data name="ToY" xml:space="preserve">
+    <value>Do Y</value>
+  </data>
+  <data name="AccelerationRatio" xml:space="preserve">
+    <value>Pomer zrýchlenia</value>
+  </data>
+  <data name="DecelerationRatio" xml:space="preserve">
+    <value>Pomer spomalenia</value>
+  </data>
+  <data name="BeginTime" xml:space="preserve">
+    <value>Čas začatia (sekundy)</value>
+  </data>
+  <data name="FontRenderMode" xml:space="preserve">
+    <value>Režim vykresľovania písma</value>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Nastaviť predvolené nastavenia</value>
+  </data>
+  <data name="DefaultSettingsQ" xml:space="preserve">
+    <value>Chcete odstrániť všetky zmeny a nastaviť predvolené nastavenia?</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Opakovať</value>
+  </data>
+  <data name="RunCurrent" xml:space="preserve">
+    <value>Spustiť z aktuálnej strany</value>
+  </data>
+  <data name="SaveOutput" xml:space="preserve">
+    <value>Uložiť výstupný súbor</value>
+  </data>
+  <data name="SaveOutputHint" xml:space="preserve">
+    <value>Uloží všetko, čo užívateľ vykonal. Získajte text v textovom poli, obrázok v kresliacom plátne a ďalšie...</value>
+  </data>
+  <data name="GoodTeacherRepairo" xml:space="preserve">
+    <value>Good Teacher Repairo</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Aplikácia</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Zobraziť</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>Maximálna dlžka</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Všetko</value>
+  </data>
+  <data name="BrowsedPages" xml:space="preserve">
+    <value>Pozreté strany</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Vytvorené</value>
+  </data>
+  <data name="GoodTeacherOutFormat" xml:space="preserve">
+    <value>Good Teacher výstupný súbor (*.gtout)</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ComboBox" xml:space="preserve">
+    <value>Kombinované pole</value>
+  </data>
+  <data name="ComboBoxSett" xml:space="preserve">
+    <value>Nastavenia kombinovaného poľa</value>
+  </data>
+  <data name="RadioButton" xml:space="preserve">
+    <value>Výberové tlačidlo</value>
+  </data>
+  <data name="RadioButtonSett" xml:space="preserve">
+    <value>Nastavenia Výberového tlačidla</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatický</value>
+  </data>
+  <data name="ControlsSound" xml:space="preserve">
+    <value>Ovláda hudbu pozadia.</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value>ID skupiny</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="LanguageChanged" xml:space="preserve">
+    <value>Jazyk zmenený</value>
+  </data>
+  <data name="LanguageChangedText" xml:space="preserve">
+    <value>Reštartujte aplikáciu, aby ste videli zmeny.</value>
+  </data>
+  <data name="NoAction" xml:space="preserve">
+    <value>Žiadna akcia</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Prehrať</value>
+    <comment>Play Music</comment>
+  </data>
+  <data name="Sound" xml:space="preserve">
+    <value>Zvuk</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Zastaviť</value>
+  </data>
+  <data name="TemporaryData" xml:space="preserve">
+    <value>Dočasné údaje</value>
+  </data>
+  <data name="TemporaryDataTooltip" xml:space="preserve">
+    <value>Uloženie aktuálneho stavu ovládacích prvkov počas prezentácie. Vyžaduje sa viac pamäte.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Áno</value>
+  </data>
+  <data name="PlayAgainStart" xml:space="preserve">
+    <value>Prehrať znova/Štart</value>
+  </data>
+  <data name="AGridSize" xml:space="preserve">
+    <value>Veľkosť mriežky zarovnania</value>
+  </data>
+  <data name="AlignmentToGrid" xml:space="preserve">
+    <value>Zarovnanie do mriežky</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Skontrolovať aktualizácie</value>
+  </data>
+  <data name="CantCheckVersion" xml:space="preserve">
+    <value>Nemožno skontrolovať, či je k dispozícii nová verzia.</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Stiahnuť</value>
+  </data>
+  <data name="GoodTeacherWebsite" xml:space="preserve">
+    <value>Webstránka Good Teacher</value>
+  </data>
+  <data name="ImportantV" xml:space="preserve">
+    <value>Dôležitá verzia!</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Nová verzia:</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>Nová dostupná verzia</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Aktuálna verzia</value>
+  </data>
+  <data name="CurrentValue" xml:space="preserve">
+    <value>Súčasná hodnota:</value>
+  </data>
+  <data name="Reverse" xml:space="preserve">
+    <value>Vrátiť sa</value>
+  </data>
+  <data name="ToH" xml:space="preserve">
+    <value>Do výšky</value>
+  </data>
+  <data name="ToW" xml:space="preserve">
+    <value>Do šírky</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>Nie je možné vymazať údaje.</value>
+  </data>
+  <data name="ClickToNextPage" xml:space="preserve">
+    <value>Kliknutím prejdete na ďalšiu stránku</value>
+  </data>
+  <data name="ClickToNextPageHint" xml:space="preserve">
+    <value>Kliknutím na prázdne miesto prejdete na ďalšiu stránku.</value>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>Číslo strany</value>
+  </data>
+  <data name="Repeating" xml:space="preserve">
+    <value>Opakovanie</value>
+  </data>
+  <data name="SubtractPages" xml:space="preserve">
+    <value>Odčítať strany</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Nástroje</value>
+  </data>
+  <data name="ViewContentViewer" xml:space="preserve">
+    <value>Zobrazenie prehliadača obsahu</value>
+  </data>
+  <data name="CanvasView" xml:space="preserve">
+    <value>Zobrazenie plátna</value>
+  </data>
+  <data name="Drawing" xml:space="preserve">
+    <value>Drawing</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Názov</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Pridať nové</value>
+  </data>
+  <data name="CurrentName" xml:space="preserve">
+    <value>Aktuálny názov</value>
+  </data>
+  <data name="NoShowPages" xml:space="preserve">
+    <value>Nezobrazovať na stránkach</value>
+  </data>
+  <data name="Hexagon" xml:space="preserve">
+    <value>Šesťuholník</value>
+  </data>
+  <data name="ShapeSett" xml:space="preserve">
+    <value>Nastavenia tvaru</value>
+  </data>
+  <data name="ToRepeatingElement" xml:space="preserve">
+    <value>Prenos do opakujúceho sa prvku.</value>
+  </data>
+  <data name="Triangle" xml:space="preserve">
+    <value>Trojuholník</value>
+  </data>
+  <data name="Arrow" xml:space="preserve">
+    <value>Šípka</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Cloud" xml:space="preserve">
+    <value>Mrak</value>
+    <comment>Cloud Shape</comment>
+  </data>
+  <data name="Diamond" xml:space="preserve">
+    <value>Diamant</value>
+  </data>
+  <data name="Heart" xml:space="preserve">
+    <value>Srdce</value>
+  </data>
+  <data name="Smiling" xml:space="preserve">
+    <value>Usmievajúca tvár</value>
+    <comment>Shape Smile Face</comment>
+  </data>
+  <data name="Speech" xml:space="preserve">
+    <value>Reč</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Star" xml:space="preserve">
+    <value>Hviezda</value>
+  </data>
+  <data name="CheckMark" xml:space="preserve">
+    <value>Fajka</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Cross" xml:space="preserve">
+    <value>Kríž</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Ribbon" xml:space="preserve">
+    <value>Stuha</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="ShowGoodAnswers" xml:space="preserve">
+    <value>Ukázať správne odpovede</value>
+  </data>
+  <data name="ShowWrongAnswers" xml:space="preserve">
+    <value>Ukázať nesprávne odpovede</value>
+  </data>
+  <data name="BitmapCache" xml:space="preserve">
+    <value>Vyrovnávacia pamäť bitovej mapy</value>
+  </data>
+  <data name="BitmapCacheHint" xml:space="preserve">
+    <value>Rýchlejšia prezentácia, ale nižšia kvalita a potreba väčšej pamäti. Môže spôsobiť problémy!</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Náhľad tlače</value>
+  </data>
+  <data name="FitPage" xml:space="preserve">
+    <value>Prispôsobiť stranu</value>
+    <comment>Print</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Ďalšia</value>
+    <comment>Next Page</comment>
+  </data>
+  <data name="OnePage" xml:space="preserve">
+    <value>Jedná strana</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Minulá</value>
+    <comment>Previous Page</comment>
+  </data>
+  <data name="RealPage" xml:space="preserve">
+    <value>Reálna strana</value>
+    <comment>Print</comment>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Ukážka</value>
+  </data>
+  <data name="Adjust" xml:space="preserve">
+    <value>Prispôsobiť</value>
+  </data>
+  <data name="RealView" xml:space="preserve">
+    <value>Reálne zobrazenie</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Odtiene sivej</value>
+  </data>
+  <data name="Monochrome" xml:space="preserve">
+    <value>Jednofarebne</value>
+  </data>
+  <data name="PrinterSettings" xml:space="preserve">
+    <value>Nastavenia tlačiarne</value>
+  </data>
+  <data name="Landscape" xml:space="preserve">
+    <value>Na šírku</value>
+  </data>
+  <data name="PageOrientation" xml:space="preserve">
+    <value>Orientácia strany</value>
+  </data>
+  <data name="Portrait" xml:space="preserve">
+    <value>Na výšku</value>
+  </data>
+  <data name="ReverseLandscape" xml:space="preserve">
+    <value>Obrátene na šírku</value>
+  </data>
+  <data name="ReversePortrait" xml:space="preserve">
+    <value>Obrátene na výšku</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="BestQuality" xml:space="preserve">
+    <value>Najlepšia kvalita (png)</value>
+    <comment>PDF export</comment>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Exportovať do PDF</value>
+  </data>
+  <data name="Keywords" xml:space="preserve">
+    <value>Kľúčové slová</value>
+  </data>
+  <data name="LowQuality" xml:space="preserve">
+    <value>Nízka kvalita (jpg)</value>
+    <comment>PDF export</comment>
+  </data>
+  <data name="Quality" xml:space="preserve">
+    <value>Kvalita</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="MovePage" xml:space="preserve">
+    <value>Presunúť stranu</value>
+  </data>
+  <data name="MoveToPosition" xml:space="preserve">
+    <value>Presunúť na pozíciu</value>
+  </data>
+  <data name="HidePage" xml:space="preserve">
+    <value>Skryť stranu</value>
+  </data>
+  <data name="HideInputFromPanel" xml:space="preserve">
+    <value>Skryť vstup z panelu</value>
+  </data>
+  <data name="HideInputFromPanelTooltip" xml:space="preserve">
+    <value>Skryť vstup len z panelu. Zakázať výber stránok.</value>
+  </data>
+  <data name="EditMenu" xml:space="preserve">
+    <value>Upraviť</value>
+    <comment>Top Menu</comment>
+  </data>
+  <data name="RedoN" xml:space="preserve">
+    <value>Znova</value>
+  </data>
+  <data name="UndoN" xml:space="preserve">
+    <value>Späť</value>
+  </data>
+  <data name="HistoryLimit" xml:space="preserve">
+    <value>Limit histórie</value>
+  </data>
+  <data name="InsertPageSelected" xml:space="preserve">
+    <value>Vložiť stranu na zvolenú pozíciu</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Deň</value>
+  </data>
+  <data name="DayOfYear" xml:space="preserve">
+    <value>Deň z roka</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hodina</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minúta</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mesiac</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Sekunda</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="ScalableImage" xml:space="preserve">
+    <value>Škálovateľný obrázok</value>
+  </data>
+  <data name="ControlAreaSize" xml:space="preserve">
+    <value>Veľkosť ovládacieho priestoru prvku</value>
+  </data>
+  <data name="Huge" xml:space="preserve">
+    <value>Obrovský</value>
+  </data>
+  <data name="Large" xml:space="preserve">
+    <value>Veľký</value>
+  </data>
+  <data name="Small" xml:space="preserve">
+    <value>Malý</value>
+  </data>
+  <data name="ScalableImageSett" xml:space="preserve">
+    <value>Nastavenia škálovateľného obrázka</value>
+  </data>
+  <data name="StarterZoom" xml:space="preserve">
+    <value>Štartovacie priblíženie</value>
+  </data>
+  <data name="DefaultCanvasPosition" xml:space="preserve">
+    <value>Predvolená poloha plátna</value>
+  </data>
+  <data name="BorderVisible" xml:space="preserve">
+    <value>Viditeľný okraj</value>
+  </data>
+  <data name="Tiny" xml:space="preserve">
+    <value>Veľmi malý</value>
+  </data>
+  <data name="FileInfo" xml:space="preserve">
+    <value>Informácie o súbore</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Naposledy zmenené</value>
+  </data>
+  <data name="NumberOfPages" xml:space="preserve">
+    <value>Počet strán</value>
+  </data>
+  <data name="BasicShapes" xml:space="preserve">
+    <value>Základné tvary</value>
+  </data>
+  <data name="SpecialShapes" xml:space="preserve">
+    <value>Špeciálne tvary</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Súbor nenájdený</value>
+  </data>
+  <data name="LoadPresentation" xml:space="preserve">
+    <value>Načítať prezentáciu</value>
+  </data>
+  <data name="Chevron" xml:space="preserve">
+    <value>Lomený pásik</value>
+  </data>
+  <data name="Drop" xml:space="preserve">
+    <value>Kvapka</value>
+  </data>
+  <data name="FlipX" xml:space="preserve">
+    <value>Prevrátiť X</value>
+  </data>
+  <data name="FlipXY" xml:space="preserve">
+    <value>Prevrátiť XY</value>
+  </data>
+  <data name="FlipY" xml:space="preserve">
+    <value>Prevrátiť Y</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>Posunúť</value>
+  </data>
+  <data name="RightAngledTriangle" xml:space="preserve">
+    <value>Pravouhlý trojuholník</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Veľkosť</value>
+  </data>
+  <data name="Tile" xml:space="preserve">
+    <value>Dlaždice</value>
+  </data>
+  <data name="TileMode" xml:space="preserve">
+    <value>Režim dlaždíc</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Vytvoriť</value>
+  </data>
+  <data name="Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Odstrániť</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Jednotky</value>
+  </data>
+  <data name="MultiSelect" xml:space="preserve">
+    <value>Viacnásobný výber</value>
+  </data>
+  <data name="MediaPlayer" xml:space="preserve">
+    <value>Prehravač médií</value>
+  </data>
+  <data name="MediaPlayerSett" xml:space="preserve">
+    <value>Nastavenia prehravača médií</value>
+  </data>
+  <data name="Autoplay" xml:space="preserve">
+    <value>Automatické prehrávanie</value>
+  </data>
+  <data name="DateOfUpdate" xml:space="preserve">
+    <value>Dátum aktualizácie:</value>
+    <comment>With ":"</comment>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Hlasitosť</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>Ovládací panel</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manuál</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Obsah</value>
+  </data>
+  <data name="FontPackage" xml:space="preserve">
+    <value>Balík písiem</value>
+  </data>
+  <data name="Script" xml:space="preserve">
+    <value>Skript</value>
+  </data>
+  <data name="ScriptEditor" xml:space="preserve">
+    <value>Editor skriptov</value>
+  </data>
+  <data name="SampleCode" xml:space="preserve">
+    <value>Ukážkový kód</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>Uložiť a zatvoriť</value>
+  </data>
+  <data name="EnableScripts" xml:space="preserve">
+    <value>Povoliť skripty</value>
+  </data>
+  <data name="EnableScriptsText" xml:space="preserve">
+    <value>Sú povolené skripty? Ak áno, zobrazí sa varovná správa. Napíšte svoju správu pre používateľov:</value>
+  </data>
+  <data name="AllowScripts" xml:space="preserve">
+    <value>Povoliť skripty?</value>
+  </data>
+  <data name="EnabledScripts" xml:space="preserve">
+    <value>Povolené skripty</value>
+  </data>
+  <data name="Debug" xml:space="preserve">
+    <value>Ladiť</value>
+  </data>
+  <data name="GetControlsID" xml:space="preserve">
+    <value>Získať ID prvkov</value>
+  </data>
+  <data name="LineNumber" xml:space="preserve">
+    <value>Číslo riadku</value>
+  </data>
+  <data name="ScriptsWarning" xml:space="preserve">
+    <value>Skripty môžu vykonávať špeciálne akcie, ale môžu byť nebezpečné. Chcete povoliť skripty? Správa od autora:</value>
+  </data>
+  <data name="ConfirmedScripts" xml:space="preserve">
+    <value>Potvrdené používanie skrípt</value>
+  </data>
+  <data name="HPadding" xml:space="preserve">
+    <value>Horizontálny posun</value>
+  </data>
+  <data name="VPadding" xml:space="preserve">
+    <value>Vertikálny posun</value>
+  </data>
+  <data name="Compress" xml:space="preserve">
+    <value>Komprimovať</value>
+  </data>
+  <data name="OverwriteImage" xml:space="preserve">
+    <value>Prepísať obrázok</value>
+  </data>
+  <data name="OriginalSize" xml:space="preserve">
+    <value>Originálna veľkosť</value>
+  </data>
+  <data name="SizeAfterCompression" xml:space="preserve">
+    <value>Veľkosť po kompresii</value>
+  </data>
+  <data name="NextC" xml:space="preserve">
+    <value>Ďalšie</value>
+    <comment>Next Controls</comment>
+  </data>
+  <data name="PreviousC" xml:space="preserve">
+    <value>Minulé</value>
+    <comment>Previous Controls</comment>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Neúspech</value>
+  </data>
+  <data name="UDownloading" xml:space="preserve">
+    <value>1/2 Sťahovanie:</value>
+    <comment>Downloading:</comment>
+  </data>
+  <data name="Updater" xml:space="preserve">
+    <value>Aktualizácia aplikácie</value>
+  </data>
+  <data name="UpdatingGT" xml:space="preserve">
+    <value>Aktualizácia Good Teacher</value>
+  </data>
+  <data name="DownloadVerFailed" xml:space="preserve">
+    <value>Overenie prevzatého súboru zlyhalo! Opakujte alebo stiahnite a nainštalujte manuálne. Chcete prejsť na webovú stránku a prevziať aktualizáciu manuálne?</value>
+  </data>
+  <data name="BulletSize" xml:space="preserve">
+    <value>Veľkosť bodu</value>
+  </data>
+</root>

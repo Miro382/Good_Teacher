@@ -1,0 +1,21 @@
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\bin\Release\x64\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\bin\Release\x86\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\bin\Release\Good Teacher Presentation.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\bin\Release\Good Teacher Presentation.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\bin\Release\Good Teacher Presentation.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Controls\FlatButton.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\MainWindow.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\App.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation_MarkupCompile.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation_MarkupCompile.lref
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Controls\FlatButton.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\MainWindow.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.g.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good_Teacher_Presentation.Properties.Resources.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good_Teacher_Presentation.Strings.StringText.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.csproj.GenerateResource.Cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.csproj.CoreCompileInputs.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Release\Good Teacher Presentation.csprojAssemblyReference.cache

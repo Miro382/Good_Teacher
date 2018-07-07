@@ -1,0 +1,27 @@
+﻿<Page x:Class="Good_Teacher.Pages.Manual.ManualP_1Start"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages.Manual"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignHeight="900" d:DesignWidth="400"
+      Title="ManualP_1Start">
+
+    <StackPanel>
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.P1Start}" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.HowToAddPage}" Margin="0,20" FontSize="14" />
+
+        <Image Margin="0,5" Width="230" RenderOptions.BitmapScalingMode="Fant" Source="/Good Teacher;component/Resources/Manual/Manual_AddPage.png" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.AfterAddingPage}" Margin="0,20" FontSize="14" />
+
+        <Image Margin="0,5" Width="350" RenderOptions.BitmapScalingMode="Fant" Source="/Good Teacher;component/Resources/Manual/Manual_Pages.png" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.AddControlToCanvas}" Margin="0,20" FontSize="14" />
+
+    </StackPanel>
+</Page>

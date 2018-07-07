@@ -1,0 +1,86 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Pages.Value_WebBrowser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+     xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignWidth="131"
+      Title="Value_WebBrowser" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <TextBlock Margin="0,10" x:Name="Label_SettingsName" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.WebPageSett}" HorizontalAlignment="Center"/>
+
+        <Label Content="{x:Static strings:ResStrings.WebAddress}"/>
+        <TextBox x:Name="Box_Web"  TextWrapping="NoWrap" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+        <CheckBox x:Name="NavCheckBox" Content="{x:Static strings:ResStrings.Buttons}" Checked="NavCheckBox_Checked" Unchecked="NavCheckBox_Checked" />
+        <CheckBox x:Name="ToolbarCheckBox" IsChecked="True" Margin="0,5" Content="{x:Static strings:ResStrings.ToolbarPanel}" Checked="ToolbarCheckBox_Checked"  Unchecked="ToolbarCheckBox_Checked"/>
+
+
+        <TextBlock Margin="5,10,5,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ControlPanel}" />
+        <Special:BrushSelector x:Name="BS_ControlPanel" Margin="0,0,0,5" />
+
+        <Separator/>
+        <Label Content="{x:Static strings:ResStrings.Effects}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+
+        <Expander Header="{x:Static strings:ResStrings.Shadow}" Margin="0,10,0,5" BorderBrush="Black" Background="#FFCFD8DC">
+            <StackPanel Margin="3,10,3,5">
+
+                <CheckBox x:Name="CheckBoxShadow" Content="{x:Static strings:ResStrings.Shadow}"/>
+                <Label Content="{x:Static strings:ResStrings.Direction}"/>
+                <TextBox x:Name="TextBox_ShadowDirection" Text="315" MaxLength="3"/>
+                <Label Content="{x:Static strings:ResStrings.Depth}"/>
+                <TextBox x:Name="TextBox_ShadowDepth" Text="5" MaxLength="3"/>
+
+                <Label Content="{x:Static strings:ResStrings.Color}"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Rectangle x:Name="Rect_ShadowColor" Fill="#000000" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" />
+                    <Button Width="32" Height="32" Click="ButtonShadowColor_Click" Margin="3">
+                        <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+                    </Button>
+                </StackPanel>
+
+                <Label Content="{x:Static strings:ResStrings.BlurRadius}"/>
+                <TextBox x:Name="TextBox_BlurRadius" Text="5" MaxLength="2"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{x:Static strings:ResStrings.Opacity}"/>
+                    <Label x:Name="OpacityValue" Content="100"/>
+                </StackPanel>
+                <Slider x:Name="SliderShadowOpacity" Maximum="100" IsSnapToTickEnabled="True" TickFrequency="1" Value="80" ValueChanged="SliderShadowOpacity_ValueChanged"/>
+
+                <Button Content="{x:Static strings:ResStrings.OK}" Click="ButtonCreateShadow_Click"/>
+
+            </StackPanel>
+        </Expander>
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

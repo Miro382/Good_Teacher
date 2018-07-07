@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Good_Teacher.Controls.CButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Good_Teacher.Controls"
+             mc:Ignorable="d" 
+             MouseEnter="UserControl_MouseEnter"
+             MouseLeave="UserControl_MouseLeave"
+             MouseLeftButtonDown="UserControl_MouseLeftButtonDown"
+             MouseLeftButtonUp="UserControl_MouseLeftButtonUp"
+             MouseUp="UserControl_MouseUp"
+             d:DesignHeight="300" d:DesignWidth="300" Background="#FFBDC3C7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid>
+
+    </Grid>
+</UserControl>

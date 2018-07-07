@@ -1,0 +1,1695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About application</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddHyperlink" xml:space="preserve">
+    <value>Add Hyperlink</value>
+  </data>
+  <data name="AddImage" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
+  <data name="AddPage" xml:space="preserve">
+    <value>Add New Page</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>All Files (*.*)</value>
+  </data>
+  <data name="Alpha" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>Angle</value>
+  </data>
+  <data name="Answers" xml:space="preserve">
+    <value>Answers</value>
+    <comment>Test Type</comment>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Good Teacher</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="BackgroundSettings" xml:space="preserve">
+    <value>Background Settings</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="BlurBox" xml:space="preserve">
+    <value>Box</value>
+    <comment>Blur Type</comment>
+  </data>
+  <data name="BlurRadius" xml:space="preserve">
+    <value>Blur Radius</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="BorderColor" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="BorderSettings" xml:space="preserve">
+    <value>Border Settings:</value>
+  </data>
+  <data name="BorderSize" xml:space="preserve">
+    <value>Border Size</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="BoxSett" xml:space="preserve">
+    <value>Box Settings</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear Page</value>
+  </data>
+  <data name="ClearCanvas" xml:space="preserve">
+    <value>Do you really want remove all controls from page?</value>
+  </data>
+  <data name="CloseApp" xml:space="preserve">
+    <value>Do you want to close application? If content is not saved you may lose your data.</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ColorFormat" xml:space="preserve">
+    <value>Color Format:
+hexadecimal 
+(#AARRGGBB)</value>
+  </data>
+  <data name="ColorPicker" xml:space="preserve">
+    <value>Color Picker</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Depth" xml:space="preserve">
+    <value>Depth</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="DuplicatePage" xml:space="preserve">
+    <value>Duplicate Page</value>
+  </data>
+  <data name="EditBox" xml:space="preserve">
+    <value>Edit Box</value>
+  </data>
+  <data name="EditBoxSettings" xml:space="preserve">
+    <value>Edit Box Settings</value>
+  </data>
+  <data name="Effects" xml:space="preserve">
+    <value>Effects</value>
+  </data>
+  <data name="Ellipse" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="EllipseSett" xml:space="preserve">
+    <value>Ellipse Settings</value>
+  </data>
+  <data name="EndColor" xml:space="preserve">
+    <value>End Color</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorLoad" xml:space="preserve">
+    <value>Error Load Data.</value>
+  </data>
+  <data name="ErrorSave" xml:space="preserve">
+    <value>Error Save Data.</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FillOptions" xml:space="preserve">
+    <value>Fill Options:</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="FormControls" xml:space="preserve">
+    <value>Form Controls</value>
+  </data>
+  <data name="Gaussian" xml:space="preserve">
+    <value>Gaussian</value>
+    <comment>Blur Type</comment>
+  </data>
+  <data name="GoodTeacherTestFormat" xml:space="preserve">
+    <value>Good Teacher file (*.gtch)</value>
+    <comment>Good Teacher file (*.gtch)</comment>
+  </data>
+  <data name="GradientColor" xml:space="preserve">
+    <value>Gradient Color</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="Hexadecimal" xml:space="preserve">
+    <value>Hexadecimal</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageSett" xml:space="preserve">
+    <value>Image Settings</value>
+  </data>
+  <data name="ImageSource" xml:space="preserve">
+    <value>Image Source</value>
+  </data>
+  <data name="ImageStretch" xml:space="preserve">
+    <value>Image Stretch</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="LabelSett" xml:space="preserve">
+    <value>Label Settings</value>
+  </data>
+  <data name="Linear" xml:space="preserve">
+    <value>Linear</value>
+  </data>
+  <data name="ListControls" xml:space="preserve">
+    <value>Controls list</value>
+  </data>
+  <data name="LoadRTF" xml:space="preserve">
+    <value>Load RTF document</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewColor" xml:space="preserve">
+    <value>New Color</value>
+  </data>
+  <data name="NewProject" xml:space="preserve">
+    <value>Do you want to remove all current content?</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OldColor" xml:space="preserve">
+    <value>Old Color</value>
+  </data>
+  <data name="Opacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="PathOrURL" xml:space="preserve">
+    <value>Path or URL</value>
+  </data>
+  <data name="PosX" xml:space="preserve">
+    <value>Position X</value>
+  </data>
+  <data name="PosY" xml:space="preserve">
+    <value>Position Y</value>
+  </data>
+  <data name="PosZ" xml:space="preserve">
+    <value>Position Z</value>
+  </data>
+  <data name="Radial" xml:space="preserve">
+    <value>Radial</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Redo (CTRL + Y)</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SavedTo" xml:space="preserve">
+    <value>Saved to</value>
+  </data>
+  <data name="SaveRTF" xml:space="preserve">
+    <value>Save to RTF document</value>
+  </data>
+  <data name="Setforallpages" xml:space="preserve">
+    <value>Set background for all pages</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Shadow" xml:space="preserve">
+    <value>Shadow</value>
+  </data>
+  <data name="Shapes" xml:space="preserve">
+    <value>Shapes</value>
+  </data>
+  <data name="StartColor" xml:space="preserve">
+    <value>Start Color</value>
+  </data>
+  <data name="Stretch_fill" xml:space="preserve">
+    <value>Fill</value>
+  </data>
+  <data name="Stretch_none" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Stretch_uniform" xml:space="preserve">
+    <value>Uniform</value>
+  </data>
+  <data name="Stretch_uniformToFill" xml:space="preserve">
+    <value>Uniform to fill</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="TextEditor" xml:space="preserve">
+    <value>Text Editor</value>
+  </data>
+  <data name="TextSettings" xml:space="preserve">
+    <value>Text Settings</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo (CTRL + Z)</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="UsedLibraries" xml:space="preserve">
+    <value>Used libraries:</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="VerticalScrollBar" xml:space="preserve">
+    <value>Vertical Scroll Bar</value>
+  </data>
+  <data name="Visible" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="WebAddress" xml:space="preserve">
+    <value>Web Address</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="WrongFormat" xml:space="preserve">
+    <value>Wrong Format</value>
+  </data>
+  <data name="WrongUrl" xml:space="preserve">
+    <value>Wrong URL</value>
+  </data>
+  <data name="DeleteDialog" xml:space="preserve">
+    <value>Do you really want to delete image?</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>Web Page</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="WebPageSett" xml:space="preserve">
+    <value>Web Page Settings</value>
+  </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Buttons</value>
+  </data>
+  <data name="Charts" xml:space="preserve">
+    <value>Charts</value>
+  </data>
+  <data name="PieChart" xml:space="preserve">
+    <value>Pie Chart</value>
+  </data>
+  <data name="PieChartSett" xml:space="preserve">
+    <value>Pie Chart Settings</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="AddColumn" xml:space="preserve">
+    <value>Add column</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RemoveColumn" xml:space="preserve">
+    <value>Remove column</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Customization" xml:space="preserve">
+    <value>Customization</value>
+  </data>
+  <data name="DataLabel" xml:space="preserve">
+    <value>Data Label</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="InteractiveChart" xml:space="preserve">
+    <value>Interactive chart</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PushOut" xml:space="preserve">
+    <value>Push out</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="RunProgramTooltip" xml:space="preserve">
+    <value>Starts a slideshow (F5)</value>
+  </data>
+  <data name="TestMakerPresentation" xml:space="preserve">
+    <value>Good Teacher Presentation</value>
+  </data>
+  <data name="Tooltip" xml:space="preserve">
+    <value>Tooltip</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="CustomColors" xml:space="preserve">
+    <value>Custom colors</value>
+  </data>
+  <data name="DefaultColors" xml:space="preserve">
+    <value>Default colors</value>
+  </data>
+  <data name="RemoveSelected" xml:space="preserve">
+    <value>Remove selected</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="LineSett" xml:space="preserve">
+    <value>Line Settings</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="RemoveLockedPage" xml:space="preserve">
+    <value>Page is locked. Do you really want to remove the page?</value>
+  </data>
+  <data name="RemoveLockedPageTitle" xml:space="preserve">
+    <value>Remove locked page</value>
+  </data>
+  <data name="RadiusX" xml:space="preserve">
+    <value>Radius X</value>
+  </data>
+  <data name="RadiusY" xml:space="preserve">
+    <value>Radius Y</value>
+  </data>
+  <data name="RoundedCorners" xml:space="preserve">
+    <value>Rounded Corners</value>
+  </data>
+  <data name="ColumnChart" xml:space="preserve">
+    <value>Column Chart</value>
+  </data>
+  <data name="InnerRadius" xml:space="preserve">
+    <value>Inner Radius</value>
+  </data>
+  <data name="StrokeColor" xml:space="preserve">
+    <value>Stroke Color</value>
+  </data>
+  <data name="AxisX" xml:space="preserve">
+    <value>Axis X</value>
+  </data>
+  <data name="AxisY" xml:space="preserve">
+    <value>Axis Y</value>
+  </data>
+  <data name="StrokeThickness" xml:space="preserve">
+    <value>Stroke Thickness</value>
+  </data>
+  <data name="CartesianChart" xml:space="preserve">
+    <value>Cartesian chart</value>
+  </data>
+  <data name="LineChart" xml:space="preserve">
+    <value>Line Chart</value>
+  </data>
+  <data name="RowChart" xml:space="preserve">
+    <value>Row Chart</value>
+  </data>
+  <data name="StackedColumnChart" xml:space="preserve">
+    <value>Stacked Column Chart</value>
+  </data>
+  <data name="StackedRowChart" xml:space="preserve">
+    <value>Stacked Row Chart</value>
+  </data>
+  <data name="AxisXTitle" xml:space="preserve">
+    <value>Axis X Title</value>
+  </data>
+  <data name="AxisYTitle" xml:space="preserve">
+    <value>Axis Y Title</value>
+  </data>
+  <data name="CustomFill" xml:space="preserve">
+    <value>Custom Fill</value>
+  </data>
+  <data name="ModelObject" xml:space="preserve">
+    <value>3D Model</value>
+  </data>
+  <data name="StackedAreaChart" xml:space="preserve">
+    <value>Stacked Area Chart</value>
+  </data>
+  <data name="StepLineChart" xml:space="preserve">
+    <value>Step Line Chart</value>
+  </data>
+  <data name="ImportModel" xml:space="preserve">
+    <value>Import new model</value>
+  </data>
+  <data name="ModelSelection" xml:space="preserve">
+    <value>Model selection</value>
+  </data>
+  <data name="ModelSettings" xml:space="preserve">
+    <value>3D Model Settings</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Texture" xml:space="preserve">
+    <value>Texture</value>
+  </data>
+  <data name="DefaultMaterialColor" xml:space="preserve">
+    <value>Default material color</value>
+  </data>
+  <data name="ErrorLoadModel" xml:space="preserve">
+    <value>Error when trying to load model.</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Please, save the project first.</value>
+  </data>
+  <data name="NotSavedTitle" xml:space="preserve">
+    <value>Project not saved</value>
+  </data>
+  <data name="SelectFolderModel" xml:space="preserve">
+    <value>Select a model in your own folder. The folder must contain only the necessary files. The folder with model and materials will be copied to resources folder.</value>
+  </data>
+  <data name="DeleteDialogModel" xml:space="preserve">
+    <value>Do you really want to delete model?</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Maximize" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintingTitle" xml:space="preserve">
+    <value>Printing pages</value>
+  </data>
+  <data name="RestoreDown" xml:space="preserve">
+    <value>Restore Down</value>
+  </data>
+  <data name="SpotHeadLight" xml:space="preserve">
+    <value>Spot headlight</value>
+  </data>
+  <data name="SunLight" xml:space="preserve">
+    <value>Sun light</value>
+  </data>
+  <data name="FixedModel" xml:space="preserve">
+    <value>Fixed model</value>
+  </data>
+  <data name="AddNewImage" xml:space="preserve">
+    <value>Add new image</value>
+  </data>
+  <data name="DisableAnimations" xml:space="preserve">
+    <value>Disable Animations</value>
+  </data>
+  <data name="FromDisk" xml:space="preserve">
+    <value>From disk</value>
+  </data>
+  <data name="ImageFromArchive" xml:space="preserve">
+    <value>Image from archive</value>
+  </data>
+  <data name="RemoveRow" xml:space="preserve">
+    <value>Remove row</value>
+  </data>
+  <data name="TestControls" xml:space="preserve">
+    <value>Test controls</value>
+  </data>
+  <data name="ImageSelection" xml:space="preserve">
+    <value>Image selection</value>
+  </data>
+  <data name="ScalingQuality" xml:space="preserve">
+    <value>Scaling quality</value>
+  </data>
+  <data name="HighQuality" xml:space="preserve">
+    <value>High quality</value>
+  </data>
+  <data name="NearestNeighbor" xml:space="preserve">
+    <value>Nearest neighbor (Low)</value>
+  </data>
+  <data name="NormalQuality" xml:space="preserve">
+    <value>Normal quality</value>
+  </data>
+  <data name="CurrentPage" xml:space="preserve">
+    <value>Current page</value>
+  </data>
+  <data name="DefaultPage" xml:space="preserve">
+    <value>Default page</value>
+  </data>
+  <data name="DefaultZoom" xml:space="preserve">
+    <value>To default zoom (100%)</value>
+  </data>
+  <data name="LockCanvas" xml:space="preserve">
+    <value>Lock canvas</value>
+  </data>
+  <data name="OnlyCanvas" xml:space="preserve">
+    <value>Only canvas</value>
+  </data>
+  <data name="CanvasSize" xml:space="preserve">
+    <value>Canvas size</value>
+  </data>
+  <data name="CanvasX" xml:space="preserve">
+    <value>Canvas X</value>
+  </data>
+  <data name="CanvasY" xml:space="preserve">
+    <value>Canvas Y</value>
+  </data>
+  <data name="ChangeCanvasSize" xml:space="preserve">
+    <value>Change canvas size</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>All pages</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="ExportToAllImages" xml:space="preserve">
+    <value>Choose folder where to save all images from presentation.</value>
+  </data>
+  <data name="Customize" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="Barcodes" xml:space="preserve">
+    <value>Barcodes</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>QR Code</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="BarcodeSett" xml:space="preserve">
+    <value>Barcode Settings</value>
+  </data>
+  <data name="Encode" xml:space="preserve">
+    <value>Encode</value>
+  </data>
+  <data name="DataLabelSize" xml:space="preserve">
+    <value>Data Label font size</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Button" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="Controls" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="FromClipboard" xml:space="preserve">
+    <value>From Clipboard</value>
+  </data>
+  <data name="ClipboardNoImage" xml:space="preserve">
+    <value>Clipboard does not contain an image.</value>
+  </data>
+  <data name="FromWeb" xml:space="preserve">
+    <value>From Web</value>
+  </data>
+  <data name="ButtonSett" xml:space="preserve">
+    <value>Button Settings</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="Hover" xml:space="preserve">
+    <value>Hover</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ChangeOnClick" xml:space="preserve">
+    <value>Change on click</value>
+  </data>
+  <data name="ChangeOnHover" xml:space="preserve">
+    <value>Change on hover</value>
+  </data>
+  <data name="HorizontalAlignment" xml:space="preserve">
+    <value>Horizontal alignment</value>
+  </data>
+  <data name="VerticalAlignment" xml:space="preserve">
+    <value>Vertical alignment</value>
+  </data>
+  <data name="CurrentAction" xml:space="preserve">
+    <value>Current action:</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Go to page</value>
+  </data>
+  <data name="MathFormula" xml:space="preserve">
+    <value>Math formula</value>
+  </data>
+  <data name="OnclickAction" xml:space="preserve">
+    <value>Onclick action</value>
+  </data>
+  <data name="OpenApplication" xml:space="preserve">
+    <value>Open application</value>
+  </data>
+  <data name="OpenLink" xml:space="preserve">
+    <value>Open link</value>
+  </data>
+  <data name="ShowMessageBox" xml:space="preserve">
+    <value>Show message box</value>
+  </data>
+  <data name="WrongInputData" xml:space="preserve">
+    <value>Wrong input data.</value>
+  </data>
+  <data name="FormulaSett" xml:space="preserve">
+    <value>Formula Settings</value>
+  </data>
+  <data name="SetFormula" xml:space="preserve">
+    <value>Set formula</value>
+  </data>
+  <data name="WriteFormula" xml:space="preserve">
+    <value>Write formula</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Presentation</value>
+  </data>
+  <data name="BlockPresentationInput" xml:space="preserve">
+    <value>Block presentation input</value>
+  </data>
+  <data name="BlockPresentationInputHelp" xml:space="preserve">
+    <value>Block default input (keyboard arrows, bottom panel). Move to the next page is possible by custom actions like buttons...</value>
+  </data>
+  <data name="Brush" xml:space="preserve">
+    <value>Brush</value>
+  </data>
+  <data name="ButtonBrushCheckedTooltip" xml:space="preserve">
+    <value>If checked, brush and opacity will be changed. Otherwise will be changed only opacity.</value>
+  </data>
+  <data name="ClosePresentation" xml:space="preserve">
+    <value>Close presentation</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="OnButtonClosePresentation" xml:space="preserve">
+    <value>Onclick close presentation. (Click OK to set Close action).</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="SpecificPage" xml:space="preserve">
+    <value>Go to a specific page</value>
+  </data>
+  <data name="ActualPath" xml:space="preserve">
+    <value>Actual path to file:</value>
+  </data>
+  <data name="UseLocalPath" xml:space="preserve">
+    <value>Use local path</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="MediaSett" xml:space="preserve">
+    <value>Media Settings</value>
+  </data>
+  <data name="OutsideColor" xml:space="preserve">
+    <value>Outside of canvas color</value>
+  </data>
+  <data name="AddNewMedia" xml:space="preserve">
+    <value>Add new media</value>
+  </data>
+  <data name="ToolbarPanel" xml:space="preserve">
+    <value>Toolbar panel</value>
+  </data>
+  <data name="RemoveImage" xml:space="preserve">
+    <value>Do you really want to remove image?</value>
+  </data>
+  <data name="Barcode" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="DrawingCanvas" xml:space="preserve">
+    <value>Drawing canvas</value>
+  </data>
+  <data name="Multiline" xml:space="preserve">
+    <value>Multiline</value>
+  </data>
+  <data name="TextWrapping" xml:space="preserve">
+    <value>Text Wrapping</value>
+  </data>
+  <data name="InkCanvasSett" xml:space="preserve">
+    <value>Ink Canvas Settings</value>
+  </data>
+  <data name="AnswerButton" xml:space="preserve">
+    <value>Answer button</value>
+  </data>
+  <data name="AnswerButtonSett" xml:space="preserve">
+    <value>Answer button settings</value>
+  </data>
+  <data name="AfterSelectFill" xml:space="preserve">
+    <value>After select fill</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="QuestionID" xml:space="preserve">
+    <value>Question ID</value>
+  </data>
+  <data name="Wrong" xml:space="preserve">
+    <value>Wrong</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="MarginLeft" xml:space="preserve">
+    <value>Margin left</value>
+  </data>
+  <data name="ContentAlignment" xml:space="preserve">
+    <value>Content alignment</value>
+  </data>
+  <data name="ContentViewer" xml:space="preserve">
+    <value>Content viewer</value>
+  </data>
+  <data name="ContentViewerSett" xml:space="preserve">
+    <value>Content Viewer Settings</value>
+  </data>
+  <data name="DeleteDialogMedia" xml:space="preserve">
+    <value>Do you really want to delete media?</value>
+  </data>
+  <data name="Design" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="Splitter" xml:space="preserve">
+    <value>Splitter</value>
+  </data>
+  <data name="ErrorRunData" xml:space="preserve">
+    <value>No Data.gtchp found!</value>
+  </data>
+  <data name="ExportToFolder" xml:space="preserve">
+    <value>Please, select an empty folder. Presentation data will be exported to this folder.</value>
+  </data>
+  <data name="FailedExport" xml:space="preserve">
+    <value>Export failed. Please select empty folder. Exported path:</value>
+  </data>
+  <data name="ShowGoodAnswer" xml:space="preserve">
+    <value>Show good answer</value>
+  </data>
+  <data name="SuccessExport" xml:space="preserve">
+    <value>Export is success. Exported path:</value>
+  </data>
+  <data name="GifAnimatedImage" xml:space="preserve">
+    <value>Gif (Animated Image)</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="GallerySett" xml:space="preserve">
+    <value>Gallery Settings</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="CirclesVisibility" xml:space="preserve">
+    <value>Circles visibility</value>
+  </data>
+  <data name="RestTime" xml:space="preserve">
+    <value>Rest time</value>
+  </data>
+  <data name="TextVisibility" xml:space="preserve">
+    <value>Text visibility</value>
+  </data>
+  <data name="TransitionSpeed" xml:space="preserve">
+    <value>Transition speed (Time in Sec)</value>
+  </data>
+  <data name="ArrowsVisibility" xml:space="preserve">
+    <value>Arrows visibility</value>
+  </data>
+  <data name="OptimizedMode" xml:space="preserve">
+    <value>Optimized mode</value>
+  </data>
+  <data name="OptimizedModeHelp" xml:space="preserve">
+    <value>Faster presentation. Less memory required, but lower image quality.</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value>Animations</value>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Copied to clipboard</value>
+  </data>
+  <data name="Exported" xml:space="preserve">
+    <value>Exported</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Checkbox" xml:space="preserve">
+    <value>Checkbox</value>
+  </data>
+  <data name="Form" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="AppSettings" xml:space="preserve">
+    <value>Application settings</value>
+  </data>
+  <data name="CheckboxSett" xml:space="preserve">
+    <value>Checkbox settings</value>
+  </data>
+  <data name="IsChecked" xml:space="preserve">
+    <value>Is checked</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selected:</value>
+  </data>
+  <data name="AnimationType" xml:space="preserve">
+    <value>Animation type</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="ToX" xml:space="preserve">
+    <value>To X</value>
+  </data>
+  <data name="ToY" xml:space="preserve">
+    <value>To Y</value>
+  </data>
+  <data name="AccelerationRatio" xml:space="preserve">
+    <value>Acceleration Ratio</value>
+  </data>
+  <data name="DecelerationRatio" xml:space="preserve">
+    <value>Deceleration Ratio</value>
+  </data>
+  <data name="BeginTime" xml:space="preserve">
+    <value>Begin time (From sec)</value>
+  </data>
+  <data name="FontRenderMode" xml:space="preserve">
+    <value>Font render mode</value>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Set default settings</value>
+  </data>
+  <data name="DefaultSettingsQ" xml:space="preserve">
+    <value>Do you want to remove all your changes and set default settings?</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="RunCurrent" xml:space="preserve">
+    <value>Run from current page</value>
+  </data>
+  <data name="SaveOutput" xml:space="preserve">
+    <value>Save output file</value>
+  </data>
+  <data name="SaveOutputHint" xml:space="preserve">
+    <value>Save everything what the user is doing. Get text in textbox, image in drawing canvas and more...</value>
+  </data>
+  <data name="GoodTeacherRepairo" xml:space="preserve">
+    <value>Good Teacher Repairo</value>
+  </data>
+  <data name="Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>Max length</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="BrowsedPages" xml:space="preserve">
+    <value>Browsed pages</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="GoodTeacherOutFormat" xml:space="preserve">
+    <value>Good teacher out file (*.gtout)</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ComboBox" xml:space="preserve">
+    <value>Combo box</value>
+  </data>
+  <data name="ComboBoxSett" xml:space="preserve">
+    <value>Combo box settings</value>
+  </data>
+  <data name="RadioButton" xml:space="preserve">
+    <value>Radio button</value>
+  </data>
+  <data name="RadioButtonSett" xml:space="preserve">
+    <value>Radio button settings</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="ControlsSound" xml:space="preserve">
+    <value>Controls background sound.</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value>Group ID</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageChanged" xml:space="preserve">
+    <value>Language changed</value>
+  </data>
+  <data name="LanguageChangedText" xml:space="preserve">
+    <value>Please, restart application to see changes.</value>
+  </data>
+  <data name="NoAction" xml:space="preserve">
+    <value>No action</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Sound" xml:space="preserve">
+    <value>Sound</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="TemporaryData" xml:space="preserve">
+    <value>Temporary data</value>
+  </data>
+  <data name="TemporaryDataTooltip" xml:space="preserve">
+    <value>Saving the current state of the controls during the presentation. More memory required.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="PlayAgainStart" xml:space="preserve">
+    <value>Play again/Start</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="AGridSize" xml:space="preserve">
+    <value>Alignment grid size</value>
+  </data>
+  <data name="AlignmentToGrid" xml:space="preserve">
+    <value>Alignment to grid</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="CantCheckVersion" xml:space="preserve">
+    <value>Can't check if new version is available.</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="GoodTeacherWebsite" xml:space="preserve">
+    <value>Good Teacher website</value>
+  </data>
+  <data name="ImportantV" xml:space="preserve">
+    <value>Important version!</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>New version:</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>New version available</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Up to date version</value>
+  </data>
+  <data name="CurrentValue" xml:space="preserve">
+    <value>Current value:</value>
+  </data>
+  <data name="Reverse" xml:space="preserve">
+    <value>Reverse</value>
+  </data>
+  <data name="ToH" xml:space="preserve">
+    <value>To height</value>
+  </data>
+  <data name="ToW" xml:space="preserve">
+    <value>To width</value>
+  </data>
+  <data name="ErrorDelete" xml:space="preserve">
+    <value>Can not delete data.</value>
+  </data>
+  <data name="ClickToNextPage" xml:space="preserve">
+    <value>Click to move to the next page</value>
+  </data>
+  <data name="ClickToNextPageHint" xml:space="preserve">
+    <value>Click on a blank space to move to the next page.</value>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>Page number</value>
+  </data>
+  <data name="Repeating" xml:space="preserve">
+    <value>Repeating</value>
+  </data>
+  <data name="SubtractPages" xml:space="preserve">
+    <value>Subtract pages</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="CanvasView" xml:space="preserve">
+    <value>Canvas view</value>
+  </data>
+  <data name="ViewContentViewer" xml:space="preserve">
+    <value>View of content viewer</value>
+  </data>
+  <data name="Drawing" xml:space="preserve">
+    <value>Drawing</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="CurrentName" xml:space="preserve">
+    <value>Current name</value>
+  </data>
+  <data name="NoShowPages" xml:space="preserve">
+    <value>Do not show on the pages</value>
+  </data>
+  <data name="Hexagon" xml:space="preserve">
+    <value>Hexagon</value>
+  </data>
+  <data name="ShapeSett" xml:space="preserve">
+    <value>Shape settings</value>
+  </data>
+  <data name="ToRepeatingElement" xml:space="preserve">
+    <value>Transfer to a repeating element.</value>
+  </data>
+  <data name="Arrow" xml:space="preserve">
+    <value>Arrow</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Cloud" xml:space="preserve">
+    <value>Cloud</value>
+    <comment>Cloud Shape</comment>
+  </data>
+  <data name="Diamond" xml:space="preserve">
+    <value>Diamond</value>
+  </data>
+  <data name="Heart" xml:space="preserve">
+    <value>Heart</value>
+  </data>
+  <data name="Smiling" xml:space="preserve">
+    <value>Smile</value>
+    <comment>Shape Smile Face</comment>
+  </data>
+  <data name="Speech" xml:space="preserve">
+    <value>Speech</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Star" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="Triangle" xml:space="preserve">
+    <value>Triangle</value>
+  </data>
+  <data name="CheckMark" xml:space="preserve">
+    <value>Check mark</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Cross" xml:space="preserve">
+    <value>Cross</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="Ribbon" xml:space="preserve">
+    <value>Ribbon</value>
+    <comment>Shape</comment>
+  </data>
+  <data name="ShowGoodAnswers" xml:space="preserve">
+    <value>Show good answers</value>
+  </data>
+  <data name="ShowWrongAnswers" xml:space="preserve">
+    <value>Show wrong answers</value>
+  </data>
+  <data name="BitmapCache" xml:space="preserve">
+    <value>Bitmap cache</value>
+  </data>
+  <data name="BitmapCacheHint" xml:space="preserve">
+    <value>Faster presentation but slightly lower quality and requires more memory. Can cause problems!</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Print preview</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>Next Page</comment>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+    <comment>Previous Page</comment>
+  </data>
+  <data name="FitPage" xml:space="preserve">
+    <value>Fit page</value>
+    <comment>Print</comment>
+  </data>
+  <data name="OnePage" xml:space="preserve">
+    <value>One page</value>
+  </data>
+  <data name="RealPage" xml:space="preserve">
+    <value>Real page</value>
+    <comment>Print</comment>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Adjust" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="RealView" xml:space="preserve">
+    <value>Real view</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Grayscale</value>
+  </data>
+  <data name="Landscape" xml:space="preserve">
+    <value>Landscape</value>
+  </data>
+  <data name="Monochrome" xml:space="preserve">
+    <value>Monochrome</value>
+  </data>
+  <data name="PageOrientation" xml:space="preserve">
+    <value>Page orientation</value>
+  </data>
+  <data name="Portrait" xml:space="preserve">
+    <value>Portrait</value>
+  </data>
+  <data name="PrinterSettings" xml:space="preserve">
+    <value>Printer settings</value>
+  </data>
+  <data name="ReverseLandscape" xml:space="preserve">
+    <value>Reverse landscape</value>
+  </data>
+  <data name="ReversePortrait" xml:space="preserve">
+    <value>Reverse portrait</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="BestQuality" xml:space="preserve">
+    <value>Best quality (png)</value>
+    <comment>PDF export</comment>
+  </data>
+  <data name="ExportToPDF" xml:space="preserve">
+    <value>Export to PDF</value>
+  </data>
+  <data name="LowQuality" xml:space="preserve">
+    <value>Low quality (jpg)</value>
+    <comment>PDF export</comment>
+  </data>
+  <data name="Quality" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+  <data name="Keywords" xml:space="preserve">
+    <value>Keywords</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="MovePage" xml:space="preserve">
+    <value>Move page</value>
+  </data>
+  <data name="MoveToPosition" xml:space="preserve">
+    <value>Move to position</value>
+  </data>
+  <data name="HidePage" xml:space="preserve">
+    <value>Hide page</value>
+  </data>
+  <data name="HideInputFromPanel" xml:space="preserve">
+    <value>Hide input from panel</value>
+  </data>
+  <data name="HideInputFromPanelTooltip" xml:space="preserve">
+    <value>Hide input only from panel. Disable page selection.</value>
+  </data>
+  <data name="EditMenu" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Top Menu</comment>
+  </data>
+  <data name="RedoN" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="UndoN" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="HistoryLimit" xml:space="preserve">
+    <value>History limit</value>
+  </data>
+  <data name="InsertPageSelected" xml:space="preserve">
+    <value>Insert page to selected position</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="DayOfYear" xml:space="preserve">
+    <value>Day of year</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="ScalableImage" xml:space="preserve">
+    <value>Scalable image</value>
+  </data>
+  <data name="ControlAreaSize" xml:space="preserve">
+    <value>Control area size of element</value>
+  </data>
+  <data name="Huge" xml:space="preserve">
+    <value>Huge</value>
+  </data>
+  <data name="Large" xml:space="preserve">
+    <value>Large</value>
+  </data>
+  <data name="Small" xml:space="preserve">
+    <value>Small</value>
+  </data>
+  <data name="ScalableImageSett" xml:space="preserve">
+    <value>Scalable image settings</value>
+  </data>
+  <data name="StarterZoom" xml:space="preserve">
+    <value>Starter zoom</value>
+  </data>
+  <data name="DefaultCanvasPosition" xml:space="preserve">
+    <value>Default canvas position</value>
+  </data>
+  <data name="BorderVisible" xml:space="preserve">
+    <value>Border visible</value>
+  </data>
+  <data name="Tiny" xml:space="preserve">
+    <value>Tiny</value>
+  </data>
+  <data name="FileInfo" xml:space="preserve">
+    <value>File info</value>
+  </data>
+  <data name="NumberOfPages" xml:space="preserve">
+    <value>Number of pages</value>
+  </data>
+  <data name="LastModified" xml:space="preserve">
+    <value>Last modified</value>
+  </data>
+  <data name="BasicShapes" xml:space="preserve">
+    <value>Basic shapes</value>
+  </data>
+  <data name="SpecialShapes" xml:space="preserve">
+    <value>Special shapes</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="LoadPresentation" xml:space="preserve">
+    <value>Load presentation</value>
+  </data>
+  <data name="Chevron" xml:space="preserve">
+    <value>Chevron</value>
+  </data>
+  <data name="Drop" xml:space="preserve">
+    <value>Drop</value>
+  </data>
+  <data name="FlipX" xml:space="preserve">
+    <value>Flip X</value>
+  </data>
+  <data name="FlipXY" xml:space="preserve">
+    <value>Flip XY</value>
+  </data>
+  <data name="FlipY" xml:space="preserve">
+    <value>Flip Y</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="RightAngledTriangle" xml:space="preserve">
+    <value>Right-angled triangle</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="Tile" xml:space="preserve">
+    <value>Tile</value>
+  </data>
+  <data name="TileMode" xml:space="preserve">
+    <value>Tile mode</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="MultiSelect" xml:space="preserve">
+    <value>Multiple selection</value>
+  </data>
+  <data name="MediaPlayer" xml:space="preserve">
+    <value>Media player</value>
+  </data>
+  <data name="MediaPlayerSett" xml:space="preserve">
+    <value>Media player settings</value>
+  </data>
+  <data name="Autoplay" xml:space="preserve">
+    <value>Autoplay</value>
+  </data>
+  <data name="DateOfUpdate" xml:space="preserve">
+    <value>Date of update:</value>
+    <comment>With ":"</comment>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>Control panel</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="FontPackage" xml:space="preserve">
+    <value>Font package</value>
+  </data>
+  <data name="Script" xml:space="preserve">
+    <value>Script</value>
+  </data>
+  <data name="ScriptEditor" xml:space="preserve">
+    <value>Script editor</value>
+  </data>
+  <data name="SampleCode" xml:space="preserve">
+    <value>Sample code</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>Save and close</value>
+  </data>
+  <data name="EnableScripts" xml:space="preserve">
+    <value>Enable scripts</value>
+  </data>
+  <data name="EnableScriptsText" xml:space="preserve">
+    <value>Are scripts allowed? If yes then warning message will be displayed. Write your message for users:</value>
+  </data>
+  <data name="AllowScripts" xml:space="preserve">
+    <value>Allow scripts?</value>
+  </data>
+  <data name="ConfirmedScripts" xml:space="preserve">
+    <value>Confirmed use of the scripts</value>
+  </data>
+  <data name="Debug" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="EnabledScripts" xml:space="preserve">
+    <value>Enabled scripts</value>
+  </data>
+  <data name="GetControlsID" xml:space="preserve">
+    <value>Get controls ID</value>
+  </data>
+  <data name="HPadding" xml:space="preserve">
+    <value>Horizontal padding</value>
+  </data>
+  <data name="LineNumber" xml:space="preserve">
+    <value>Line number</value>
+  </data>
+  <data name="ScriptsWarning" xml:space="preserve">
+    <value>Scripts can do special actions but they can be dangerous. Do you want enable scripts? Message from author:</value>
+  </data>
+  <data name="VPadding" xml:space="preserve">
+    <value>Vertical padding</value>
+  </data>
+  <data name="Compress" xml:space="preserve">
+    <value>Compress</value>
+  </data>
+  <data name="OverwriteImage" xml:space="preserve">
+    <value>Overwrite image</value>
+  </data>
+  <data name="OriginalSize" xml:space="preserve">
+    <value>Original size</value>
+  </data>
+  <data name="SizeAfterCompression" xml:space="preserve">
+    <value>Size after compression</value>
+  </data>
+  <data name="NextC" xml:space="preserve">
+    <value>Next</value>
+    <comment>Next Controls</comment>
+  </data>
+  <data name="PreviousC" xml:space="preserve">
+    <value>Previous</value>
+    <comment>Previous Controls</comment>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="UDownloading" xml:space="preserve">
+    <value>1/2 Downloading:</value>
+    <comment>Downloading:</comment>
+  </data>
+  <data name="Updater" xml:space="preserve">
+    <value>Updater</value>
+  </data>
+  <data name="UpdatingGT" xml:space="preserve">
+    <value>Updating Good Teacher</value>
+  </data>
+  <data name="DownloadVerFailed" xml:space="preserve">
+    <value>Verification of downloaded file failed! Retry or download and install manually. Do you want go to webpage and download update manually?</value>
+  </data>
+  <data name="BulletSize" xml:space="preserve">
+    <value>Bullet size</value>
+  </data>
+</root>

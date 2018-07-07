@@ -1,0 +1,756 @@
+﻿<Page x:Class="Good_Teacher.Page_Form"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      xmlns:local="clr-namespace:Good_Teacher"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="900"
+      Title="Page_Form" Height="85">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary 
+                  Source="../../ResourceDictionary.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,10,0,0" >
+                <Menu Background="#00F0F0F0">
+
+                    <!-- Text -->
+                    <MenuItem Margin="10,0,0,0" Tag="11" Click="AddControl_Click">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/text.png" />
+                                <ContentPresenter Content="{x:Static strings:ResStrings.Text}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+
+                    <!-- Label -->
+                    <MenuItem Margin="10,0,0,0" Tag="12" Click="AddControl_Click">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/label.png" />
+                                <ContentPresenter Content="{x:Static strings:ResStrings.Label}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+
+                    <!-- Image -->
+                    <MenuItem Margin="10,0,0,0" Tag="13" Click="AddControl_Click">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/image.png" />
+                                <ContentPresenter Content="{x:Static strings:ResStrings.Image}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+
+
+                    <!-- Shapes -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <WrapPanel Orientation="Vertical">
+                                <Image Width="32" Height="32" Source="../../Resources/Icons/Shapes.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Shapes}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+
+                            </WrapPanel>
+                        </MenuItem.Header>
+
+                        <MenuItem>
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.BasicShapes}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/BasicShape.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+
+                            <MenuItem Tag="21" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Box}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Box.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="22" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Ellipse}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16"  Source="../../Resources/Controls/Ellipse.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="24" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Hexagon}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16"  Source="../../Resources/Controls/Hexagon.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="25" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Triangle}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16"  Source="../../Resources/Controls/Triangle.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                            <MenuItem Tag="216" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.RightAngledTriangle}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Shapes/RATriangle.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="217" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.RightAngledTriangle}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Shapes/RATriangleSE.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.SpecialShapes}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/SpecialShapes.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+
+
+                            <MenuItem Tag="26" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Star}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Star.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="27" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Diamond}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Diamond.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="28" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Heart}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Heart.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="29" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Cloud}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Cloud.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="210" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Arrow}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Arrow.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="211" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Smiling}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/SmileFace.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="212" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Speech}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Speech.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="213" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Ribbon}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Ribbon.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="214" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.CheckMark}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/CheckMark.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="215" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Cross}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Cross.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="218" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Chevron}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Shapes/Chevron.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="219" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Drop}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Shapes/Drop.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="23" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Line}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Line.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                        </MenuItem>
+
+                    </MenuItem>
+
+
+                    <!--Charts -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <WrapPanel Orientation="Vertical">
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/Chart.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Charts}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+
+                            </WrapPanel>
+                        </MenuItem.Header>
+
+
+                        <MenuItem Tag="31" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.PieChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/PieChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="32" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.ColumnChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/ColumnGraph.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="33" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.StackedColumnChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/StackedChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="34" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.RowChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/RowChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="35" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.StackedRowChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/StackedRowChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="36" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.LineChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/LineChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="37" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.StackedAreaChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/StackedAreaGraph.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="38" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.StepLineChart}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Charts/StepLineChart.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                    </MenuItem>
+
+
+
+
+                    <!-- Form -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/Form.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Form}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+                            </StackPanel>
+                        </MenuItem.Header>
+
+
+                        <MenuItem Tag="43" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.EditBox}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/editbox.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="44" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Checkbox}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Checkbox.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="45" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.RadioButton}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/RadioButton.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="46" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.ComboBox}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/ComboBox.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                    </MenuItem>
+
+
+
+
+                    <!-- Controls -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <WrapPanel Orientation="Vertical">
+                                <Image Width="32" Height="32" Source="../../Resources/Icons/Controls/Controller.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Controls}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+
+                            </WrapPanel>
+                        </MenuItem.Header>
+
+                        <MenuItem Tag="41" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Button}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Controls/Button.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="42" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.AnswerButton}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Controls/Question.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                    </MenuItem>
+
+                    <!-- 3D Model -->
+                    <MenuItem Margin="10,0,0,0" Tag="14" Click="AddControl_Click">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/Models.png" />
+                                <ContentPresenter Content="{x:Static strings:ResStrings.ModelObject}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+
+                    <!-- Web Browser -->
+                    <MenuItem Margin="10,0,0,0" Tag="15" Click="AddControl_Click">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/WebBrowser.png" />
+                                <ContentPresenter Content="{x:Static strings:ResStrings.WebPage}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+
+
+                    <!-- Media -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Icons/Media/Media.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Media}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+                            </StackPanel>
+                        </MenuItem.Header>
+
+                        <MenuItem Tag="16" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Media}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Media/Media.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="19" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.MediaPlayer}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Media/MediaPlayer.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                    </MenuItem>
+
+
+                    <!-- Design -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Controls/Design.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Design}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+                            </StackPanel>
+                        </MenuItem.Header>
+
+
+                        <MenuItem Tag="17" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.ContentViewer}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Design/ContentViewer.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="18" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Gallery}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Design/Gallery.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <!--
+                        <MenuItem Tag="Drawing" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Drawing}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/Design/Drawing.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        -->
+
+                    </MenuItem>
+                    <!--Design End-->
+
+
+                    <!-- Special -->
+                    <MenuItem Margin="10,0,0,0">
+                        <MenuItem.Header>
+                            <StackPanel>
+                                <Image Width="32" Height="32" Source="../../Resources/Icons/Special/Special.png" />
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Special}" Margin="0,4,0,0" HorizontalAlignment="Center" />
+                                    <Image Margin="3,0,0,0" Width="12" Source="/Good Teacher;component/Resources/Down.png" VerticalAlignment="Bottom" />
+                                </StackPanel>
+                            </StackPanel>
+                        </MenuItem.Header>
+
+                        <MenuItem>
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.Barcodes}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Special/Barcodes.png"/>
+                            </MenuItem.Icon>
+
+
+                            <MenuItem Tag="51" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.QRCode}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16" Source="../../Resources/Icons/Special/QRCode.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="52" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:FormatStrings.EAN13}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16" Source="../../Resources/Icons/Special/BarcodeProduct.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="53" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:FormatStrings.EAN8}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16" Source="../../Resources/Icons/Special/BarcodeProduct.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="54" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:FormatStrings.Code128}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16" Source="../../Resources/Icons/Special/BarcodeProduct.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Tag="55" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:FormatStrings.Codabar}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16" Source="../../Resources/Icons/Special/BarcodeProduct.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                        </MenuItem>
+
+
+                        <MenuItem Tag="56" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.MathFormula}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Icons/Special/MathFormula.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="57" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.DrawingCanvas}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="/Good Teacher;component/Resources/Draw/ImageEditor.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem Tag="58" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.ScalableImage}" />
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="/Good Teacher;component/Resources/Icons/Special/ScaleImage.png" RenderOptions.BitmapScalingMode="Fant" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                    </MenuItem>
+                    <!--Special End-->
+
+
+                </Menu>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

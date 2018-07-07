@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddControlToCanvas" xml:space="preserve">
+    <value>V červených obdĺžnikoch sú stránky - ľavým tlačidlom môžete vybrať stránku ktorú chcete upravovať. Po kliknutí pravým tlačidlom na stránku sa otvorí kontextové menu. Aktuálne vybraná stránka na obrázku je 3 v poradí. V modrom obdĺžniku sú prvky ktoré môžeme pridávať do plátna. Prvok vyberieme tak, že klikneme ľavým tlačidlom myši na ten prvok, ktorý chceme pridať. Následne sa ikona kurzora zmení na obrázok: plus v kruhu. Ľavým kliknutím na plátno sa pridá daný vybraný prvok. Kliknutím pravým tlačidlom myši alebo pomocou klávesy ESC, zrušíte pridávanie nového prvku. Pomocou klávesy F5 alebo kliknutím na tlačidlo "Spustiť" (zelená elipsa s ikonou štartu) sa spustí prezentácia.</value>
+  </data>
+  <data name="AfterAddingPage" xml:space="preserve">
+    <value>Po pridaní stránky sa na ľavom paneli zobrazí nová prázdna stránka.</value>
+  </data>
+  <data name="BottomPanelDescription" xml:space="preserve">
+    <value>Na spodnom paneli sú špeciálne ovládacie prvky.
+
+1. Zámok – Zamkne plátno. Po zamknutí plátna už nie sú možné zmeny, čím sa zabráni náhodným chybám. Môžete ho odomknúť kliknutím na tlačidlo znova.
+
+2. Skryť stránku - Ak chcete skryť stránku z prezentácie alebo chcete vytvoriť špeciálnu stránku, na ktorú sa môžu používatelia dostať iba z akcie ( napríklad z tlačidla ).
+
+3. Priblíženie - Môžete priblížiť a oddialiť plátno. V textovom políčku je aktuálne priblíženie.
+
+4. Predvolené priblíženie - nastaví priblíženie na predvolenú hodnotu 100%.
+
+5. Len plátno - Skryť všetko mimo plátna.
+
+6. Zarovnanie do mriežky - Ak povolíte túto možnosť, všetky presúvané ovládacie prvky budú zarovnané. Hodnotu zarovnania môžete nastaviť v nastaveniach (Aplikácia -&gt; Nastavenia aplikácie -&gt; Veľkosť mriežky zarovnania).</value>
+  </data>
+  <data name="BuildWarning" xml:space="preserve">
+    <value>Ak chcete preniesť prezentáciu a používate špeciálny obsah, ako je 3D model, video alebo hudba, musíte preniesť súbor prezentácie (GTCH) spolu so zložkou "Resources".</value>
+  </data>
+  <data name="CanvasControl" xml:space="preserve">
+    <value>Klávesové skratky:
+* Ctrl + Kolečko myši - priblížiť alebo oddialiť plátno.
+* Ctrl + Šípky - posun plátna do daného smeru
+* Page down - zmena stránky +1
+* Page up - zmena stránky -1</value>
+  </data>
+  <data name="CanvasGoToSettings" xml:space="preserve">
+    <value>Ak chcete zmeniť nastavenia plátna alebo nastavenia prezentácie, musíte prejsť do nastavení. Môžete kliknúť na tlačidlo nastavenia (ozubené koliesko v zelenom obdĺžniku) alebo pravým tlačidlom myši na danú stránku v ľavom paneli a vybrať možnosť prispôsobiť.</value>
+  </data>
+  <data name="CanvasSettings" xml:space="preserve">
+    <value>Po vybratí nastavení sa zobrazí nové okno. Môžete zmeniť farbu pozadia, veľkosť plátna, nastavenia prezentácie alebo nastaviť hudbu na pozadí.
+Ak chcete zmeniť pozadie, môžete vybrať na karte 3 sekcie: farba, prechodová farba alebo obrázok.
+Ak ste vybrali farbu, kliknite na tlačidlo (farebný diagram) -&gt; vyberte farbu -&gt; OK.
+Ak ste vybrali prechodovú farbu, môžete vybrať radiálnu alebo lineárnu prechodovú farbu. Potom vyberte obidve farby (Štart a koniec), napíšte svoj uhol a kliknite na tlačidlo OK.
+Ak ste vybrali obrázok, kliknite na tlačidlo a vyberte svoj obrázok (Viac v časti Výber obrázka).
+Veľkosť plátna môžete zmeniť výberom predvolených veľkostí zo zoznamu, alebo napísaním vlastnej veľkosti a kliknutím na tlačidlo "Zmeniť veľkosť plátna".</value>
+  </data>
+  <data name="EditingControls" xml:space="preserve">
+    <value>Ak ste pridali ovládacie prvky, môžete ich upraviť. Kliknutím ľavým tlačidlom na ovládací prvok ho vyberiete. Môžete zmeniť veľkosť pomocou zelených a modrých bodov. Prvok môžete presunúť ľavou myšou do inej pozície. Tiež môžete zmeniť pozíciu ťahaním obdĺžnika s krížom vo vnútri. Ak je v pravom paneli vybratý ovládací prvok, uvidíte nastavenia daného prvku. Môžete meniť pozíciu, veľkosť, pridať efekt (tieň, rozostrenie), zmeniť pozadie ...
+Ak je zvolený prvok, môžete ho odstrániť pomocou klávesy "Delete" alebo tlačidla "Vymazať" v pravom paneli.
+Každý ovládací prvok má špecifické nastavenia.
+
+Môžete označiť aj viac ovládacích prvkov. Ak ste vybrali viac prvkov, môžete ich presunúť, zmeniť ich veľkosť alebo ich odstrániť.
+Môžete taktiež zmeniť jednotku. V zozname zložiek vyberte svoju jednotku. Môžete vybrať pixely (predvolené), centimetre, palce alebo body.</value>
+  </data>
+  <data name="HowToAddPage" xml:space="preserve">
+    <value>V ľavom hornom rohu sa nachádza ikona (papier s plusom), ktorý pridá novú stránku. Nová stránka sa automaticky vyberie na úpravu.</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>Príručka je momentálne neúplná.</value>
+  </data>
+  <data name="P1Start" xml:space="preserve">
+    <value>1. Začiatok - Pridať novú stranu, prvky...</value>
+    <comment>1. page</comment>
+  </data>
+  <data name="P2Canvas" xml:space="preserve">
+    <value>2. Nastavenia plátna</value>
+    <comment>2. page</comment>
+  </data>
+  <data name="P3ImageSelection" xml:space="preserve">
+    <value>3. Výber obrázka</value>
+    <comment>3. page</comment>
+  </data>
+  <data name="P4EditControls" xml:space="preserve">
+    <value>4. Úprava prvkov</value>
+    <comment>4. page</comment>
+  </data>
+  <data name="P5SaveExport" xml:space="preserve">
+    <value>5. Ukladanie a export</value>
+    <comment>5. page</comment>
+  </data>
+  <data name="SaveAndExport" xml:space="preserve">
+    <value>Na uloženie projektu môžete použiť klávesovú skratku Ctrl + S alebo Súbor -&gt; Úložiť. Ak chcete uložiť pod iným názvom tak Súbor -&gt; Uložiť ako. Každý obrázok je obsiahnutý v súbore. Ak nepoužívate niektoré obrázky, môžete ich odstrániť v archíve (tlačidlo so skriňou) (alebo Nástroje -&gt; Archív). Veľkosť súboru môžete zmenšiť odstránením nepoužívaných obrázkov. Každý špeciálny obsah, ako je video, hudba alebo 3D model, je obsiahnutý externe v priečinku "Resources". Priečinok nepremenujte. Ak chcete použiť prezentáciu na inom počítači presuňte súbor s prezentáciou (GTCH) s celým priečinkom "Resources".
+
+Dokonca môžete exportovať celú prezentáciu do samostatného spustiteľného programu a už nebude nutné inštalovať program na ostatné počítače. Kliknite na tlačidlo postaviť (kladivo) (Váš projekt musí byť uložený) a vyberte miesto exportu. Vyberte prázdnu zložku. Potom môžete spustiť prezentáciu alebo test kdekoľvek kde je .NET nainštalovaný. Presúvajte spolu celú zložku (exe, dátový súbor a priečinok "Resources").
+
+Ak chcete exportovať do formátu PDF, obrázku, skopírovať do schránky alebo do série obrázkov, vyberte možnosť Export a vyberte to čo potrebujete.</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>Ak chcete nastaviť obrázok ako pozadie pre plátno alebo prvok, kliknite v sekcii "obrázok" na tlačidlo (3 bodky). Po zobrazení nového okna môžete pridať nové obrázky. Máte tri možnosti: Z disku, z webu alebo zo schránky.
+Z disku - Zobrazí sa dialógové okno s výberom obrázkov. Vyberte obrázok alebo obrázky a potom potvrďte.
+Z webu - napíšte adresu URL obrázku a kliknite na tlačidlo OK.
+Zo schránky - ak ste skopírovali obrázok do schránky, vyberte túto možnosť. Zobrazí sa okno s náhľadom obrázka. Kliknite na tlačidlo Pridať.
+Obrázok bude pridaný do archívu a máte k nemu prístup. Po pridaní nového obrázka sa zobrazí miniatúra. Ak kliknete na miniatúru, obrázok sa vyberie.
+Obrázok môžete odstrániť kliknutím na tlačidlo s obrázkom koša.
+
+Ak chcete zobraziť všetok obsah v archíve, na hornom paneli kliknite na tlačidlo Archív (obrázok kabinetu) alebo Nástroje -&gt; Archív.</value>
+  </data>
+  <data name="ThanksForUsing" xml:space="preserve">
+    <value>Ďakujeme za používanie tohto programu. Good Teacher je bezplatný program slúžiaci na vytváranie interaktívnych prezentácií, hier, grafiky a testov.</value>
+  </data>
+</root>

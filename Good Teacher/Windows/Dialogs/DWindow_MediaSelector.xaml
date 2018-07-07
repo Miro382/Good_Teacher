@@ -1,0 +1,29 @@
+﻿<Window x:Class="Good_Teacher.Windows.Dialogs.DWindow_MediaSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Dialogs"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Media}" Height="500" Width="600" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/Media/Media.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/ImgBackground.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <StackPanel Grid.Row="0" Margin="20">
+            <Button Width="200" Height="40" FontSize="14" Click="ButtonAddNew_Click"  >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Good Teacher;component/Resources/Icons/Media/Media.png"/>
+                    <Label Margin="10,0" Content="{x:Static strings:ResStrings.AddNewMedia}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <ItemsControl Margin="30" Grid.Row="1" x:Name="ItemList" Grid.RowSpan="2" Background="#7FFFFFFF"  />
+    </Grid>
+</Window>

@@ -1,0 +1,70 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Pages.Value_Model"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+       xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignWidth="131"
+      Title="Value_Model" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <TextBlock Margin="0,10" x:Name="Label_SettingsName" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ModelSettings}" HorizontalAlignment="Center"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+        <Separator/>
+
+
+        <Label Content="{x:Static strings:ResStrings.ModelObject}" />
+        <Button Click="SetModel_Click" Margin="12,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="32" Height="32" Source="../Resources/Icons/ModelsColors.png"/>
+                <Label Content="{x:Static strings:ResStrings.Select}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+        
+        <Label Content="{x:Static strings:ResStrings.Light}"/>
+        <StackPanel>
+            <RadioButton x:Name="RB_DefaultLight" Content="{x:Static strings:ResStrings.Default}" IsChecked="True" Checked="RadioButtonLight_Checked" />
+            <RadioButton x:Name="RB_SunLight" Content="{x:Static strings:ResStrings.SunLight}" IsChecked="False" Checked="RadioButtonLight_Checked"/>
+            <RadioButton x:Name="RB_SpotLight" Content="{x:Static strings:ResStrings.SpotHeadLight}" IsChecked="False" Checked="RadioButtonLight_Checked" />
+        </StackPanel>
+
+        <CheckBox x:Name="CB_FixedModel" Margin="0,10,0,5" Content="{x:Static strings:ResStrings.FixedModel}" Checked="CB_FixedModel_Checked" Unchecked="CB_FixedModel_Checked" />
+
+        <Separator/>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,5" Text="{x:Static strings:ResStrings.FillOptions}" FontWeight="Bold"/>
+        
+        <Special:BrushSelector x:Name="brushselector"  />
+        
+        <Separator/>
+
+        <Special:EffectSelector x:Name="effectselector"  />
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

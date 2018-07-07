@@ -1,0 +1,101 @@
+﻿<Window x:Class="Good_Teacher.Windows.DWindow_Content"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        xmlns:local="clr-namespace:Good_Teacher.Windows"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Content}" Height="480" Width="700" MinWidth="700" MinHeight="480" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/Buttons/Content.png">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="Black" BorderThickness="1">
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.6"/>
+            </Border.Effect>
+            <Border.Background>
+                <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/BackgroundGeometric.jpg" Stretch="UniformToFill"/>
+            </Border.Background>
+            <StackPanel>
+                <Label Content="{x:Static strings:ResStrings.Edit}" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" >
+                    <Label.Effect>
+                        <DropShadowEffect Opacity="0.8" BlurRadius="2" ShadowDepth="3"/>
+                    </Label.Effect>
+                </Label>
+                
+                <Frame x:Name="editor" Margin="5,5" Height="50" NavigationUIVisibility="Hidden" Background="#B2FFFFFF">
+                </Frame>
+            </StackPanel>
+        </Border>
+
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel Margin="5" x:Name="ContentPanel" Orientation="Horizontal">
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <Border Grid.Row="2" BorderBrush="Black" BorderThickness="1">
+            <Border.Background>
+                <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/BackgroundGeometric.jpg" Stretch="UniformToFill"/>
+            </Border.Background>
+            <StackPanel>
+                <Label Content="{x:Static strings:ResStrings.Add}" FontSize="15" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" >
+                    <Label.Effect>
+                        <DropShadowEffect Opacity="0.8" BlurRadius="2" ShadowDepth="3"/>
+                    </Label.Effect>
+                </Label>
+                <WrapPanel Background="#7FFFFFFF">
+
+                    <Button Margin="5" Click="ButtonAddImage_Click" ToolTip="{x:Static strings:ResStrings.Image}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/ImageAdd.png" />
+                    </Button>
+
+                    <Button Margin="5" Click="ButtonAddText_Click" ToolTip="{x:Static strings:ResStrings.Text}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/LabelAdd.png" />
+                    </Button>
+
+                    <Button Margin="5" Click="ButtonAddSplitter_Click" ToolTip="{x:Static strings:ResStrings.Splitter}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/Split.png" />
+                    </Button>
+
+                    <Button Margin="5" Click="ButtonAddPageNumber_Click" ToolTip="{x:Static strings:ResStrings.PageNumber}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/PageNumber.png" />
+                    </Button>
+
+                    <Button Margin="5" Click="ButtonAddAnswersCount_Click" ToolTip="{x:Static strings:ResStrings.Answers}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/GaWAnswers.png" />
+                    </Button>
+
+                    <Button Margin="5" Click="ButtonAddDateCount_Click" ToolTip="{x:Static strings:ResStrings.Answers}">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/Buttons/calendar.png" />
+                    </Button>
+
+                    <Rectangle Margin="5,0" Width="2" Fill="Black" />
+
+
+                    <Button Margin="10,5,0,5" ToolTip="{x:Static strings:ResStrings.Left}" Click="ButtonLeft_Click">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/LeftArrow.png" />
+                    </Button>
+
+                    <Button Margin="10,5,0,5" ToolTip="{x:Static strings:ResStrings.Right}" Click="ButtonRight_Click">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/Icons/RightArrow.png" />
+                    </Button>
+
+                    <Button Margin="25,5" ToolTip="{x:Static strings:ResStrings.Delete}" Click="ButtonDelete_Click">
+                        <Image Width="38" Height="38" Source="/Good Teacher;component/Resources/delete.png" />
+                    </Button>
+
+                </WrapPanel>
+                <Button Margin="0,5" Width="100" FontSize="14" Height="30" Content="{x:Static strings:ResStrings.OK}" Click="ButtonOK_Click" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

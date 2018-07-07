@@ -1,0 +1,60 @@
+﻿<Page x:Class="Good_Teacher.Pages.AnimationSettings.Anim_Opacity"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages.AnimationSettings"
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="150"
+      Title="Anim_Opacity">
+
+    <StackPanel>
+
+
+        <CheckBox x:Name="CB_Repeat" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="20" Source="/Good Teacher;component/Resources/Animations/Repeat.png"/>
+                <TextBlock Margin="5,0" Text="{x:Static strings:ResStrings.Repeat}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            </StackPanel>
+        </CheckBox>
+
+
+        <CheckBox x:Name="CB_Reverse" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="20" Source="/Good Teacher;component/Resources/Animations/Reverse.png"/>
+                <TextBlock Margin="5,0" Text="{x:Static strings:ResStrings.Reverse}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            </StackPanel>
+        </CheckBox>
+
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.CurrentValue}" FontWeight="Bold" />
+            <TextBlock x:Name="T_ValueOp" TextWrapping="Wrap" Margin="10,0" Text="0" />
+        </StackPanel>
+
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <TextBlock Text="{x:Static strings:ResStrings.Opacity}" TextWrapping="Wrap"/>
+            <TextBlock x:Name="TB_Op" Margin="10,0" Text="0%" TextWrapping="Wrap"/>
+        </StackPanel>
+        <Slider x:Name="SL_ToOP" Maximum="100" SmallChange="1" ValueChanged="SL_ToOP_ValueChanged"/>
+
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <Image Source="/Good Teacher;component/Resources/Animations/Duration.png" Width="32" RenderOptions.BitmapScalingMode="Fant" />
+            <TextBlock Text="{x:Static strings:ResStrings.Duration}" TextWrapping="Wrap" VerticalAlignment="Center" />
+        </StackPanel>
+        <TextBox x:Name="TB_Duration" Height="20" VerticalAlignment="Center" Text="1" />
+
+
+        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <Image Source="/Good Teacher;component/Resources/Animations/BeginTime.png" Width="32" />
+            <TextBlock Text="{x:Static strings:ResStrings.BeginTime}" TextWrapping="Wrap" VerticalAlignment="Center" />
+        </StackPanel>
+        <TextBox x:Name="TB_Time" Height="20" VerticalAlignment="Center" Text="0" />
+
+        <Button x:Name="Button_OKEdit" Margin="10,15" Content="{x:Static strings:ResStrings.Add}" FontSize="14" Click="Button_Click" />
+
+        <Button x:Name="Button_Delete" Visibility="Collapsed"  Width="42" Click="Button_Delete_Click">
+            <Image Source="/Good Teacher;component/Resources/delete.png"/>
+        </Button>
+    </StackPanel>
+</Page>

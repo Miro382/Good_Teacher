@@ -1,0 +1,77 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        xmlns:h="http://helix-toolkit.org/wpf" x:Class="Good_Teacher.Windows.Window_AboutApp"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.About}"  Height="400" Width="520" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/help.png" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+            <Label Content="{x:Static strings:ResStrings.AppName}" Grid.Row="0" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Label.Foreground>
+                    <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/ThemeBackground.jpg" Stretch="UniformToFill"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <ImageBrush/>
+                </Label.Background>
+                <Label.Effect>
+                    <DropShadowEffect Opacity="0.7" ShadowDepth="3" BlurRadius="3"/>
+                </Label.Effect>
+            </Label>
+
+        <Image Grid.Column="0" Grid.Row="1" Height="100" Width="100" Source="/Good Teacher;component/Resources/test.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,5,0">
+            <Image.Effect>
+                <DropShadowEffect Opacity="0.7"/>
+            </Image.Effect>
+        </Image>
+
+
+        <StackPanel Margin="0,0,0,5" VerticalAlignment="Bottom" Grid.Row="2" Grid.ColumnSpan="2" >
+            <Separator/>
+
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="L_Web" Margin="5,0" MouseLeftButtonDown="LabelClick_MouseLeftButtonDown" Content="{x:Static strings:ResStrings.GoodTeacherWebsite}" Foreground="#FF0652DD" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Label x:Name="L_CheckForUpdate" Margin="10,0" MouseLeftButtonDown="LabelClick_MouseLeftButtonDown" Content="{x:Static strings:ResStrings.CheckForUpdates}" Foreground="#FF0652DD" Cursor="Hand" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Margin="15,5" Grid.Column="1" Grid.Row="1">
+
+            <StackPanel Orientation="Horizontal" Height="40" Margin="0,5,0,0">
+                <Label Content="{x:Static strings:ResStrings.Version}" FontSize="14" VerticalAlignment="Center" FontWeight="Bold"/>
+                <Label x:Name="Label_Version" Content="-" FontSize="14" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                <Label Content="{x:Static strings:ResStrings.CreatedBy}" FontSize="20" VerticalAlignment="Center" Foreground="#FFE91E63" FontWeight="Bold"/>
+                <Label Content="Miroslav Murin"  FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+                <Label Content="{x:Static strings:ResStrings.UsedLibraries}" VerticalAlignment="Center" Foreground="#FFE91E63" FontWeight="Bold" />
+                <Grid  Margin="5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" VerticalAlignment="Center"><Run Text="Newtonsoft.Json"/><LineBreak/><Run Text="LiveCharts"/><LineBreak/><Run Text="Helix Toolkit"/><LineBreak/><Run Text="ZXing.Net"/><LineBreak/><Run Text="WpfMath"/><LineBreak/><Run Text="AvalonEdit"/></TextBlock>
+                    <TextBlock Grid.Column="1"><Run Text="PDFsharp"/><LineBreak/><Run Text="ZstdNet"/><LineBreak/><Run Text="Zstandard"/><LineBreak/><Run Text="Fody Costura"/><LineBreak/><Run Text="Jint"/><LineBreak/><Run Text="Inno Setup"/></TextBlock>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

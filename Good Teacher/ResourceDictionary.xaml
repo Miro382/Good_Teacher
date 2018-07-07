@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Good_Teacher">
+
+    <Image x:Key="CloseImg" Source="Resources/cancel.png"  RenderOptions.BitmapScalingMode="Fant"/>
+
+    <Image x:Key="MinimizeImg" Source="Resources/minimize.png" RenderOptions.BitmapScalingMode="Fant" />
+    <Image x:Key="maximize_NormalImg" Source="Resources/NormalWindow.png" RenderOptions.BitmapScalingMode="Fant" />
+
+    <Image x:Key="SaveImg" Width="16" Height="16" Source="Resources/Icons/save.png" />
+    <Image x:Key="ClosesmallImg" Width="16" Height="16" Source="Resources/Icons/cancelsmall.png" />
+    <Image x:Key="NewImg" Width="16" Height="16" Source="Resources/Icons/New.png" />
+    <Image x:Key="OpenImg" Width="16" Height="16" Source="Resources/Icons/open.png" />
+    <Image x:Key="HelpImg" Width="16" Height="16" Source="Resources/Icons/help.png" />
+    <Image x:Key="PrintSmallImg" Width="16" Height="16" Source="Resources/Icons/print_small.png" />
+    <Image x:Key="ImageSmall" Width="16" Height="16" Source="Resources/EditValues/AddImage.png" />
+    <Image x:Key="OnePage" Width="16" Height="16" Source="Resources/Icons/OnePage.png" />
+    <Image x:Key="AllPages" Width="16" Height="16" Source="Resources/Icons/Pages.png" />
+
+    <Image x:Key="FileImageO" Width="16" Height="16" Source="Resources/Icons/FileImage.png" />
+    <Image x:Key="FileImageO2" Width="16" Height="16" Source="Resources/Icons/FileImage2.png" />
+    <Image x:Key="FileImage" Width="16" Height="16" Source="Resources/Icons/FileImage.png" />
+    <Image x:Key="FileImage2" Width="16" Height="16" Source="Resources/Icons/FileImage2.png" />
+    <Image x:Key="CopyToClipboard" Width="16" Height="16" Source="Resources/Icons/ToClipboard.png"/>
+
+    <TextBlock x:Key="CursorAdd" Cursor="Resources/add.cur"/>
+
+
+    <Image x:Key="Form_img" Width="16" Height="16" Source="Resources/Menu/form.png" RenderOptions.BitmapScalingMode="Fant" />
+    <Image x:Key="test_Answer" Width="16" Height="16" Source="Resources/Menu/classicTest.png" RenderOptions.BitmapScalingMode="Fant"/>
+</ResourceDictionary>

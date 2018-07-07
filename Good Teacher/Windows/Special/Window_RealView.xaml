@@ -1,0 +1,53 @@
+﻿<Window xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        xmlns:controls="clr-namespace:Good_Teacher.Controls"
+        x:Class="Good_Teacher.Windows.Special.Window_RealView"
+        mc:Ignorable="d"
+        PreviewMouseWheel="Window_PreviewMouseWheel"
+        PreviewKeyUp="Window_PreviewKeyUp"
+        Title="{x:Static strings:ResStrings.RealView}" WindowStartupLocation="CenterOwner" MinHeight="400" MinWidth="500" Height="550" Width="850" Icon="/Good Teacher;component/Resources/Icons/Buttons/RealView.png" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFC3C3C3" Offset="0"/>
+                <GradientStop Color="#FFE6E6E6" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid Grid.Row="0" Panel.ZIndex="1" Background="#FF2C3E50">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.7"/>
+            </Grid.Effect>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Slider x:Name="SliderZoom" Margin="0,5,5,5" Width="120" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Maximum="1000" Minimum="10" SmallChange="1" TickFrequency="100" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft"  ValueChanged="SliderZoom_ValueChanged" Value="100" />
+                <Special:NumberTextBox x:Name="TextBox_Zoom" Margin="10,5,2,5" Width="50" HorizontalAlignment="Center" Text="100" VerticalAlignment="Center" LostFocus="TB_Zoom_LostFocus" KeyDown="TB_Zoom_KeyDown" FontSize="14"/>
+                <TextBlock Text="%" VerticalAlignment="Center" Foreground="White" FontSize="14"/>
+
+                <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/ZoomCancel.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonZoomCancel_Click" ToolTip="{x:Static strings:ResStrings.DefaultZoom}"/>
+
+                <Special:NumberTextBox x:Name="TextBox_Page" Margin="30,0,0,0" Width="35" HorizontalAlignment="Center" Text="1" VerticalAlignment="Center" LostFocus="TB_Page_LostFocus" KeyDown="TB_Page_KeyDown" FontSize="14"/>
+                <Label x:Name="L_Pages" Content="/0" Foreground="White" FontSize="14" VerticalAlignment="Center" />
+                <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/Buttons/PreviousWhite.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonPrevious_Click" ToolTip="{x:Static strings:ResStrings.PreviousPage}"/>
+                <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/Buttons/NextWhite.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonNext_Click" ToolTip="{x:Static strings:ResStrings.NextPage}"/>
+                <controls:FlatButton Width="26" Margin="30,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/cancel.png" Hover="#7FFF0000" ClickBrush="#B2FF0000" Click="FlatButtonClose_Click" ToolTip="{x:Static strings:ResStrings.Close}"/>
+            </StackPanel>
+        </Grid>
+
+        <ScrollViewer Panel.ZIndex="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+            <Border RenderOptions.BitmapScalingMode="Fant"  x:Name="IMBorder" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect Opacity="0.7"/>
+                </Border.Effect>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Window>

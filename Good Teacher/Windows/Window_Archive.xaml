@@ -1,0 +1,34 @@
+﻿<Window x:Class="Good_Teacher.Windows.Window_Archive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Archive}" Height="500" Width="600"  MinWidth="300" MinHeight="300" Icon="/Good Teacher;component/Resources/Menu/archive.png" WindowStartupLocation="CenterOwner">
+
+    <Grid>
+        <TabControl >
+            <TabItem Header="{x:Static strings:ResStrings.Image}">
+                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <VirtualizingStackPanel VirtualizingPanel.VirtualizationMode="Recycling" x:Name="Menu_list" Background="#00F0F0F0">
+                    </VirtualizingStackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="{x:Static strings:ResStrings.ModelObject}">
+                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ListBox x:Name="MenuModels_list" Background="#00F0F0F0">
+                    </ListBox>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="{x:Static strings:ResStrings.Media}">
+                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ListBox x:Name="MenuMedia_list" Background="#00F0F0F0">
+                    </ListBox>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+    
+</Window>

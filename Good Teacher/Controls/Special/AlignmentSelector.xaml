@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Good_Teacher.Controls.Special.AlignmentSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Good_Teacher.Controls.Special"
+             xmlns:l="clr-namespace:Good_Teacher.Controls"
+             xmlns:strings="clr-namespace:Good_Teacher.Strings"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="130" Height="130">
+
+    <StackPanel>
+        <StackPanel x:Name="AlignmentPanel">
+            <TextBlock Margin="0,5" Text="{x:Static strings:ResStrings.VerticalAlignment}" HorizontalAlignment="Center" />
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <l:SelectButton x:Name="Button_VTopAlign" Width="28" Height="28"  Image_Source="/Good Teacher;component/Resources/EditValues/alignment_top.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+                <l:SelectButton x:Name="Button_VCenterAlign" Margin="5,0" Width="28" Height="28" Image_Source="/Good Teacher;component/Resources/EditValues/alignment_center.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+                <l:SelectButton x:Name="Button_VBottomAlign" Width="28" Height="28"  Image_Source="/Good Teacher;component/Resources/EditValues/alignment_bottom.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+            </StackPanel>
+
+            <TextBlock Margin="0,5" Text="{x:Static strings:ResStrings.HorizontalAlignment}" TextWrapping="Wrap" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <l:SelectButton x:Name="Button_LeftAlign" Width="28" Height="28"  Image_Source="/Good Teacher;component/Resources/EditValues/align_left.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+                <l:SelectButton x:Name="Button_CenterAlign" Margin="5,0" Width="28" Height="28" Image_Source="/Good Teacher;component/Resources/EditValues/align_center.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+                <l:SelectButton x:Name="Button_RightAlign" Width="28" Height="28"  Image_Source="/Good Teacher;component/Resources/EditValues/align_right.png" OnChecked="#FFF06292" Hover="#7FF06292" OnCheckChanged="Button_Align_OnCheckChanged" />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

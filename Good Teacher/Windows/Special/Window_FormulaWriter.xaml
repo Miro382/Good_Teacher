@@ -1,0 +1,80 @@
+﻿<Window x:Class="Good_Teacher.Windows.Special.Window_FormulaWriter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.WriteFormula}" MinHeight="400" MinWidth="500" Height="450" Width="600" Icon="/Good Teacher;component/Resources/Icons/Special/MathFormula.png" WindowStartupLocation="CenterOwner">
+    <Grid Background="#FFECF0F1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="100"/>
+            <RowDefinition Height="Auto" MinHeight="85"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" >
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="5">
+                <controls:FormulaControl x:Name="formulacontrol"/>
+            </ScrollViewer>
+        </Grid>
+
+        <GridSplitter Height="5" Grid.Row="1" HorizontalAlignment="Stretch" Background="#FF34495E" ResizeDirection="Rows"/>
+        <TextBox x:Name="TB_Formula" TextWrapping="Wrap" Grid.Row="2" FontSize="16" KeyUp="TB_Formula_KeyUp"></TextBox>
+        
+        <StackPanel Grid.Row="3">
+            <WrapPanel>
+                <Button Margin="5" Width="28" Height="28" Tag="0" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/EditValues/superscript.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="1" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/EditValues/subscript.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="14" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/CDot.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="2" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FSqrt.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="3" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FSqrtTo.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="4" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FFunction.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="5" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FFraction.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="6" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FPi.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="7" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FInfinity.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="8" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FLeft.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="9" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FRight.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="10" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FIntegral.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="11" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FDelta.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="12" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FSpace.png" />
+                </Button>
+                <Button Margin="5" Width="28" Height="28" Tag="13" Click="ButtonFastAdd_Click">
+                    <Image Source="/Good Teacher;component/Resources/Math/FLim.png" />
+                </Button>
+            </WrapPanel>
+            <Button Click="ButtonOK_Click" Margin="0,5" Width="100" Height="30" Content="{x:Static strings:ResStrings.OK}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

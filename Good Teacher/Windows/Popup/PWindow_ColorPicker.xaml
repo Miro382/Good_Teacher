@@ -1,0 +1,69 @@
+﻿<Window x:Name="colorpickerWindow" x:Class="Good_Teacher.Windows.Popup.PWindow_ColorPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Popup"
+        mc:Ignorable="d"
+        Title="PWindow_ColorPicker" Height="160" Width="200" MaxHeight="160" WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" Deactivated="Window_Deactivated">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard BeginTime="0" Duration="0:0:0.2">
+                        <DoubleAnimation Storyboard.TargetName="colorpickerWindow" Storyboard.TargetProperty="(Window.Height)" From="1" To="160" BeginTime="0:0:0" Duration="0:0:0.2" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Border BorderBrush="Black" BorderThickness="1">
+        <WrapPanel Margin="5,5">
+            <Rectangle Fill="Black" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,0,0,0" Fill="White" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle x:Name="DestroyColor" Margin="2,0,0,0" Fill="WhiteSmoke" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle Margin="2,0,0,0" Fill="#9E9E9E" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"  />
+            <Rectangle Margin="2,0,0,0" Fill="#607D8B" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle Margin="2,0,0,0" Fill="#34495e" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,0,0,0" Fill="#bdc3c7" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Fill="#FF00F7FF" Margin="0,5,0,0"  Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FF3F51B5" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle Margin="2,5,0,0" Fill="#2196F3" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle Margin="2,5,0,0" Fill="Blue" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"  />
+            <Rectangle Margin="2,5,0,0" Fill="#2980b9" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" />
+            <Rectangle Margin="2,5,0,0" Fill="#1A237E" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#9FA8DA" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Fill="#CDDC39" Margin="0,5,0,0"  Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#1abc9c" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#8BC34A" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#27ae60" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="Lime" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="Green" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#1B5E20" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="0,5,0,0" Fill="#e74c3c" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#c0392b" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="Red" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#E57373" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#B71C1C" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FFCDD2" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FF5A0000" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="0,5,0,0" Fill="#E91E63" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#F48FB1" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="PaleVioletRed" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#880E4F" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#9C27B0" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#9b59b6" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#4A148C" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="0,5,0,0" Fill="Yellow" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FFF59D" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FFC107" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FF9800" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#FF5722" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="Wheat" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+            <Rectangle Margin="2,5,0,0" Fill="#795548" Width="25" Height="20" Stroke="Black" StrokeThickness="1" MouseDown="Rectangle_MouseDown" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave"/>
+        </WrapPanel>
+    </Border>
+
+</Window>

@@ -1,0 +1,114 @@
+﻿<Window xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Windows.Special.Window_Repeating"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Repeating}" MinHeight="500" MinWidth="700" Height="500" Width="700" Icon="/Good Teacher;component/Resources/Menu/RepeatingControls.png" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" MaxWidth="500"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <VirtualizingStackPanel x:Name="VPanel_Repeaters" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" Background="#FFE8EAF6" >
+            </VirtualizingStackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Column="1">
+            <StackPanel Margin="10">
+
+                <Label x:Name="TypeLabel" Content="{x:Static strings:ResStrings.AddNew}" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FFB71540" Foreground="White" >
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                </Label>
+
+                <StackPanel x:Name="SP_EditName" Margin="0,10,0,0" Visibility="Collapsed">
+                    <Label Content="{x:Static strings:ResStrings.CurrentName}" FontWeight="Bold" />
+                    <TextBlock TextWrapping="Wrap" x:Name="TBL_EditName" MinHeight="24" Text="dssdfdsf" FontStyle="Italic"/>
+                </StackPanel>
+
+                <Label Margin="0,10,0,0" Content="{x:Static strings:ResStrings.Name}" FontWeight="Bold" />
+                <TextBox x:Name="TB_Name" MinHeight="24" Text="" MaxLength="50" />
+
+                <Label Margin="0,10,0,0" Content="{x:Static strings:ResStrings.NoShowPages}" FontWeight="Bold" />
+                <ListBox x:Name="LB_IgnorePages" Height="100" FontSize="14"  />
+                <Grid Margin="0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Special:NumberTextBox x:Name="NTB_Page" Grid.Column="0" Grid.RowSpan="2" Text="1"/>
+                        
+                        <Controls:OpacityButton Grid.Column="1" Grid.Row="0" Width="8" Background="#FFBDC3C7" HoverOpacity="0.5" ClickOpacity="0.3" MouseLeftButtonDown="OpacityButtonUp_MouseLeftButtonDown" >
+                            <Image Source="/Good Teacher;component/Resources/Icons/Buttons/Up.png"/> 
+                        </Controls:OpacityButton>
+
+                        <Controls:OpacityButton Grid.Column="1" Grid.Row="1" Width="8" Background="#FFBDC3C7" HoverOpacity="0.5" ClickOpacity="0.3" MouseLeftButtonDown="OpacityButtonDown_MouseLeftButtonDown">
+                            <Image Source="/Good Teacher;component/Resources/Icons/Buttons/Down.png"/>
+                        </Controls:OpacityButton>
+                    </Grid>
+                    
+                    <Button Content="{x:Static strings:ResStrings.Add}" Margin="5,0" Grid.Column="1" Click="Button_Click_AddToList" />
+                    <Button Content="{x:Static strings:ResStrings.RemoveSelected}" Grid.Column="2" Click="Button_Click_RemoveFromList"/>
+                </Grid>
+
+                <Label Content="{x:Static strings:ResStrings.CanvasView}" Margin="0,20" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FF0ABDE3" Foreground="White" >
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                </Label>
+
+                <Viewbox Margin="10" MaxHeight="200">
+                    <Viewbox.Effect>
+                        <DropShadowEffect Opacity="0.7"/>
+                    </Viewbox.Effect>
+                    <Border x:Name="R_DefaultCanvas" BorderThickness="3" RenderOptions.BitmapScalingMode="Fant" Width="1280" Height="720" Margin="0,5" HorizontalAlignment="Center" BorderBrush="Black" Background="White" >
+                        <Canvas x:Name="CanvasShow" Background="White" ClipToBounds="True" >
+                        </Canvas>
+                    </Border>
+                </Viewbox>
+
+                <Label Content="{x:Static strings:ResStrings.ViewContentViewer}" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FF2E86DE" Foreground="White" >
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                </Label>
+
+                <ScrollViewer x:Name="SCV_ContentViewer" Margin="0,15" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <Controls:ContentViewer MaxHeight="150" x:Name="ShowContentViewer" />
+                </ScrollViewer>
+
+                <Label Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Edit}" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FF5F27CD" Foreground="White" >
+                    <Label.Effect>
+                        <DropShadowEffect/>
+                    </Label.Effect>
+                </Label>
+
+                <Frame NavigationUIVisibility="Hidden" x:Name="CVEditor" />
+
+                <Button x:Name="B_Edit" Margin="15" Content="{x:Static strings:ResStrings.Edit}" MinHeight="30" Visibility="Collapsed" Click="ButtonEdit_Click"/>
+
+                <Button Margin="15" Content="{x:Static strings:ResStrings.Add}" MinHeight="30" Click="Button_Click"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

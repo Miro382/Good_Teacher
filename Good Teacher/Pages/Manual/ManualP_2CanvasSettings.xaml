@@ -1,0 +1,35 @@
+﻿<Page x:Class="Good_Teacher.Pages.Manual.ManualP_2CanvasSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages.Manual"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignHeight="1700" d:DesignWidth="400"
+      Title="ManualP_2CanvasSettings">
+
+    <StackPanel>
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.P2Canvas}" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" />
+
+        <Image Width="360" Margin="0,20" RenderOptions.BitmapScalingMode="Fant" Source="/Good Teacher;component/Resources/Manual/Manual_BottomControls.png" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.BottomPanelDescription}" FontSize="14" />
+
+        <Separator Margin="0,10" />
+        
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.CanvasControl}" FontSize="14" />
+
+        <Separator Margin="0,15" />
+
+        <Image Source="/Good Teacher;component/Resources/Manual/Manual_Settings.png" RenderOptions.BitmapScalingMode="Fant" Margin="0,0,0,15" Width="220" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.CanvasGoToSettings}" FontSize="14" />
+
+        <Image Source="/Good Teacher;component/Resources/Manual/Manual_SettingsWindow.png" RenderOptions.BitmapScalingMode="Fant" Margin="0,15" Width="390" />
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.CanvasSettings}" FontSize="14" />
+
+    </StackPanel>
+</Page>

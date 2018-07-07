@@ -1,0 +1,83 @@
+﻿<Page x:Class="Good_Teacher.Pages.Value_ScalableImage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      xmlns:Controls="clr-namespace:Good_Teacher.Controls"
+      xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"
+      mc:Ignorable="d" 
+      d:DesignWidth="131"
+      Title="Value_ScalableImage">
+
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+
+        <TextBlock Text="{x:Static strings:ResStrings.ScalableImageSett}" TextWrapping="Wrap" HorizontalAlignment="Center" />
+
+        <Label Content="{x:Static strings:ResStrings.ImageSource}"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Rectangle x:Name="R_ImageFill" Width="64" Height="38" Stroke="Black" StrokeThickness="1" RenderOptions.BitmapScalingMode="HighQuality" />
+            <Button Margin="6,0,2,0" Click="SelectButton_Click" Width="26" Height="26">
+                <Image Source="/Good Teacher;component/Resources/select.png"/>
+            </Button>
+        </StackPanel>
+
+        <Label x:Name="Label_imageWH" Content="---" Margin="0"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+        <Separator/>
+
+        <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ScalingQuality}"/>
+        <ComboBox x:Name="ComboBox_Quality" SelectionChanged="ComboBox_SelectionChanged" Margin="0,0,1,0">
+            <ComboBoxItem Content="{x:Static strings:ResStrings.HighQuality}"/>
+            <ComboBoxItem Content="{x:Static strings:ResStrings.NormalQuality}" IsSelected="True"/>
+            <ComboBoxItem Content="{x:Static strings:ResStrings.NearestNeighbor}" />
+        </ComboBox>
+
+
+
+        <TextBlock Margin="0,15,0,5" Text="{x:Static strings:ResStrings.StarterZoom}" TextWrapping="Wrap" />
+        <Slider x:Name="SliderZoom" Margin="3,3" Height="24" VerticalAlignment="Bottom" Maximum="700" Minimum="5" SmallChange="1" TickFrequency="50" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft"  ValueChanged="SliderZoom_ValueChanged" Value="100" />
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Special:NumberTextBox x:Name="NTB_Zoom" Text="100" Margin="0,10" Width="40" Height="20" LostFocus="NTB_Zoom_LostFocus" KeyDown="NTB_Zoom_KeyDown" />
+            <Label Content="%" HorizontalAlignment="Center" />
+        </StackPanel>
+
+
+        <TextBlock Margin="5,10,5,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ControlPanel}" />
+        <Special:BrushSelector x:Name="BS_ControlPanel" Margin="0,0,0,5" />
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.Effects}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+
+        <Special:EffectSelector x:Name="effectselector" />
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

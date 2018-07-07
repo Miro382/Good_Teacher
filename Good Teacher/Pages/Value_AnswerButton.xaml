@@ -1,0 +1,106 @@
+﻿<Page x:Class="Good_Teacher.Pages.Value_AnswerButton"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+    mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"
+      d:DesignWidth="131"
+      Title="Value_AnswerButton" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <TextBlock Margin="0,5" TextWrapping="Wrap" x:Name="Label_SettingsName" Text="{x:Static strings:ResStrings.AnswerButtonSett}" HorizontalAlignment="Center"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+
+        <Button Margin="0,5"  Click="Content_Click">
+            <StackPanel Margin="0,3" Orientation="Horizontal">
+                <Image Height="28" Source="/Good Teacher;component/Resources/Icons/Buttons/Content.png" />
+                <TextBlock Margin="5,0,0,0" Text="{x:Static strings:ResStrings.Content}" VerticalAlignment="Center" FontSize="14" />
+            </StackPanel>
+        </Button>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,8" Text="{x:Static strings:ResStrings.ContentAlignment}" FontWeight="Bold"/>
+
+        <Special:AlignmentSelector x:Name="alignmentSelector" />
+
+        <TextBlock Margin="0,10,0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.FillOptions}" FontWeight="Bold"/>
+
+        <Special:BrushSelector x:Name="brushselector"  />
+
+        <Expander Margin="0,5" Header="{x:Static strings:ResStrings.Opacity}" BorderBrush="Black" BorderThickness="1" Background="#FFCFD8DC"  >
+            <StackPanel Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{x:Static strings:ResStrings.Normal}" ContentStringFormat="{}{0}:" />
+                    <Label x:Name="Label_NOpacity" Content="100%" />
+                </StackPanel>
+                <Slider x:Name="Slider_NOpacity" ValueChanged="Slider_Opacity_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="{x:Static strings:ResStrings.Hover}" ContentStringFormat="{}{0}:" />
+                    <Label x:Name="Label_HOpacity" Content="100%" />
+                </StackPanel>
+                <Slider x:Name="Slider_HOpacity" ValueChanged="Slider_Opacity_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Label Content="{x:Static strings:ResStrings.Click}" ContentStringFormat="{}{0}:" />
+                    <Label x:Name="Label_COpacity" Content="100%" />
+                </StackPanel>
+                <Slider x:Name="Slider_COpacity" ValueChanged="Slider_Opacity_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+
+            </StackPanel>
+
+        </Expander>
+
+        <Separator/>
+
+        <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.AfterSelectFill}" FontWeight="Bold"/>
+        <Special:BrushSelector x:Name="SelectedBrushselector"  />
+
+        <Label Content="{x:Static strings:ResStrings.QuestionID}" FontWeight="Bold" />
+        <TextBox x:Name="TB_QuestionID" Text="1" KeyUp="TB_QuestionID_KeyUp" MaxLength="5"/>
+
+            <GroupBox Header="{x:Static strings:ResStrings.Answer}" Margin="0,10" BorderBrush="#FF7F8C8D" BorderThickness="1">
+            <StackPanel Margin="0,5">
+                <RadioButton x:Name="RB_Good" Content="{x:Static strings:ResStrings.Good}" IsChecked="True" Checked="RadioButton_Checked" Unchecked="RadioButton_Checked" />
+                <RadioButton x:Name="RB_Wrong" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Wrong}" Checked="RadioButton_Checked" Unchecked="RadioButton_Checked" />
+                <CheckBox x:Name="CB_ShowGood" Margin="5,5" IsChecked="True" Checked="CheckBoxShowGood_Checked" Unchecked="CheckBoxShowGood_Checked">
+                    <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ShowGoodAnswer}"/>
+                </CheckBox>
+            </StackPanel>
+        </GroupBox>
+
+        <Separator/>
+
+        <Special:EffectSelector x:Name="effectselector"  />
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

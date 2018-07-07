@@ -1,0 +1,40 @@
+﻿<Window x:Class="Good_Teacher_Repairo.Windows.Window_Answers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher_Repairo.Windows"
+        mc:Ignorable="d"
+        xmlns:strings="http://GoodTeacher/Strings"
+        Title="{x:Static strings:ResStrings.Answers}" Height="400" Width="500" MinWidth="350" MinHeight="250" Icon="/Good Teacher Repairo;component/Resources/Check.png">
+
+    <ScrollViewer>
+
+        <Grid x:Name="AnswersPanel">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" x:Name="PageP" Background="#FFFAFAFA">
+                <Label Content="{x:Static strings:ResStrings.Page}" FontSize="14" HorizontalContentAlignment="Center" FontWeight="Bold" Background="#FF3498DB" Foreground="White"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" x:Name="GoodP">
+                <Label Content="{x:Static strings:ResStrings.Good}" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="#FF2980B9" Foreground="White"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" x:Name="WrongP" Background="#FFFAFAFA">
+                <Label Content="{x:Static strings:ResStrings.Wrong}" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="#FF3498DB" Foreground="White"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" x:Name="AllP">
+                <Label Content="{x:Static strings:ResStrings.All}" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Background="#FF2980B9" Foreground="White"/>
+            </StackPanel>
+
+        </Grid>
+
+    </ScrollViewer>
+</Window>

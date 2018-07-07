@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A3" xml:space="preserve">
+    <value>A3 (1123x1587)</value>
+  </data>
+  <data name="A4" xml:space="preserve">
+    <value>A4 (794x1123)</value>
+  </data>
+  <data name="A5" xml:space="preserve">
+    <value>A5 (559x794)</value>
+  </data>
+  <data name="cm" xml:space="preserve">
+    <value>Cm (Centimeters)</value>
+  </data>
+  <data name="cmO" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default (1280x720)</value>
+  </data>
+  <data name="FullHD" xml:space="preserve">
+    <value>Full HD (1920x1080)</value>
+  </data>
+  <data name="inches" xml:space="preserve">
+    <value>Inch (Inches)</value>
+  </data>
+  <data name="inO" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="points" xml:space="preserve">
+    <value>Pt (Points)</value>
+  </data>
+  <data name="ptO" xml:space="preserve">
+    <value>pt</value>
+  </data>
+  <data name="px" xml:space="preserve">
+    <value>Px (Pixels)</value>
+  </data>
+  <data name="pxO" xml:space="preserve">
+    <value>px</value>
+  </data>
+  <data name="SVGA" xml:space="preserve">
+    <value>SVGA 4:3 (800x600)</value>
+  </data>
+  <data name="WXGA" xml:space="preserve">
+    <value>WXGA 16:10 (1280x800)</value>
+  </data>
+  <data name="XGA" xml:space="preserve">
+    <value>XGA 4:3 (1024x768)</value>
+  </data>
+  <data name="Jpg" xml:space="preserve">
+    <value>Jpg</value>
+  </data>
+  <data name="Png" xml:space="preserve">
+    <value>Png</value>
+  </data>
+  <data name="UHD" xml:space="preserve">
+    <value>UHD (3840x2160)</value>
+  </data>
+  <data name="Code128" xml:space="preserve">
+    <value>Code128</value>
+  </data>
+  <data name="EAN13" xml:space="preserve">
+    <value>EAN-13</value>
+  </data>
+  <data name="EAN8" xml:space="preserve">
+    <value>EAN-8</value>
+  </data>
+  <data name="Codabar" xml:space="preserve">
+    <value>Codabar</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>QR Code</value>
+  </data>
+  <data name="PDF" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Display</value>
+    <comment>Font render mode type</comment>
+  </data>
+  <data name="Ideal" xml:space="preserve">
+    <value>Ideal</value>
+    <comment>Font render mode type</comment>
+  </data>
+</root>

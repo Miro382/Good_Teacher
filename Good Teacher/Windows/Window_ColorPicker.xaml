@@ -1,0 +1,131 @@
+﻿<Window x:Class="Good_Teacher.Windows.Window_ColorPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.ColorPicker}" Height="500" Width="550" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/EditValues/colorpicker.png" ResizeMode="NoResize">
+    <Grid>
+        <Image x:Name="palette" Height="300" Width="300" Source="../Resources/Specific/palette.png" Margin="10,10,0,0" MouseDown="palette_MouseDown" MouseUp="palette_MouseUp" MouseMove="palette_MouseMove" MouseLeave="palette_MouseLeave" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="310" Margin="405,6,0,0" VerticalAlignment="Top" Width="80">
+
+            <StackPanel  Margin="0,0,0,5" Background="#FFF7CECE">
+                <Label Content="{x:Static strings:ResStrings.Red}"/>
+                <TextBox x:Name="Red" Text="0" MaxLength="3" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"/>
+                <Slider x:Name="SliderRed" Margin="0,5" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+            </StackPanel>
+
+            <StackPanel  Margin="0,0,0,5" Background="#FFCEF7D2">
+                <Label Content="{x:Static strings:ResStrings.Green}"/>
+                <TextBox x:Name="Green" Text="0" MaxLength="3" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"/>
+                <Slider x:Name="SliderGreen" Margin="0,5" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,5" Background="#FFDEE2FF">
+                <Label Content="{x:Static strings:ResStrings.Blue}"/>
+                <TextBox x:Name="Blue" Text="0" MaxLength="3" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"/>
+                <Slider x:Name="SliderBlue" Margin="0,5" Maximum="255" ValueChanged="Slider_ValueChanged"/>
+            </StackPanel>
+
+            <StackPanel Background="#FFF0F0F0">
+                <Label Content="{x:Static strings:ResStrings.Alpha}"/>
+                <TextBox x:Name="Alpha" Text="255" MaxLength="3" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"/>
+                <Slider x:Name="SliderAlpha" Margin="0,5" Maximum="255" ValueChanged="Slider_ValueChanged" />
+            </StackPanel>
+        </StackPanel>
+
+        <DockPanel Margin="313,383,10,0">
+            <StackPanel HorizontalAlignment="Right" DockPanel.Dock="Right">
+                <Rectangle x:Name="OldColor" Fill="#FFF4F4F5" Stroke="Black" Width="50" Height="50" />
+                <Label Content="{x:Static strings:ResStrings.OldColor}" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" DockPanel.Dock="Right" >
+                <Rectangle x:Name="CurColor" Fill="#FFF4F4F5" Stroke="Black" Width="50" Height="50" />
+                <Label Content="{x:Static strings:ResStrings.NewColor}" />
+            </StackPanel>
+        </DockPanel>
+
+        <StackPanel HorizontalAlignment="Left" Height="54" Margin="405,314,0,0" VerticalAlignment="Top" Width="109">
+            <Label Content="{x:Static strings:ResStrings.Hexadecimal}"/>
+            <TextBox x:Name="hexadecimal" Height="23" TextWrapping="Wrap" Text="#FFFFFFFF" KeyDown="hexadecimal_KeyDown" LostFocus="hexadecimal_LostFocus" MaxLength="9"/>
+        </StackPanel>
+        <Button Content="{x:Static strings:ResStrings.OK}" HorizontalAlignment="Left" Margin="228,416,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="ButtonOK_Click" />
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="202" Margin="330,53,0,0" VerticalAlignment="Top" Width="32">
+            <Image x:Name="brightness" Width="30"  Height="200" MouseDown="brightness_MouseDown" MouseLeave="brightness_MouseLeave" MouseMove="brightness_MouseMove" MouseUp="brightness_MouseUp" />
+        </Border>
+        <WrapPanel HorizontalAlignment="Left" Height="68" Margin="10,315,0,0" VerticalAlignment="Top" Width="362">
+            <Button Tag="#000000" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="Black" />
+            </Button>
+            <Button Tag="#f1c40f" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#f1c40f" />
+            </Button>
+            <Button Tag="#1abc9c" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#1abc9c" />
+            </Button>
+            <Button Tag="#e67e22" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#e67e22" />
+            </Button>
+            <Button Tag="#2ecc71" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#2ecc71" />
+            </Button>
+            <Button Tag="#3498db" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#3498db" />
+            </Button>
+            <Button Tag="#e74c3c" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#e74c3c" />
+            </Button>
+            <Button Tag="#9b59b6" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#9b59b6" />
+            </Button>
+            <Button Tag="#03A9F4" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#03A9F4" />
+            </Button>
+            <Button Tag="#34495e" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#34495e" />
+            </Button>
+            <Button Tag="#bdc3c7" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#bdc3c7" />
+            </Button>
+            <!-- New Line -->
+            <Button Tag="#ffffff" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="White" />
+            </Button>
+            <Button Tag="#E91E63" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#E91E63" />
+            </Button>
+            <Button Tag="#8BC34A" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#8BC34A" />
+            </Button>
+            <Button Tag="#d35400" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#d35400" />
+            </Button>
+            <Button Tag="#2E7D32" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#2E7D32" />
+            </Button>
+            <Button Tag="#795548" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#795548" />
+            </Button>
+            <Button Tag="#B71C1C" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#B71C1C" />
+            </Button>
+            <Button Tag="#8e44ad" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#673AB7" />
+            </Button>
+            <Button Tag="#3F51B5" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#3F51B5" />
+            </Button>
+            <Button Tag="#00695C" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#00695C" />
+            </Button>
+            <Button Tag="#7f8c8d" Click="ButtonColor_Click">
+                <Border Width="28" Height="28" Background="#7f8c8d" />
+            </Button>
+        </WrapPanel>
+
+
+    </Grid>
+</Window>

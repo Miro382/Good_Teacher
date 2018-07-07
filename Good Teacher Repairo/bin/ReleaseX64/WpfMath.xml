@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfMath</name>
+    </assembly>
+    <members>
+        <member name="M:WpfMath.CharSymbol.GetStyledFont(WpfMath.TexEnvironment)">
+            <summary>Returns the preferred font to render this character.</summary>
+        </member>
+        <member name="M:WpfMath.CharSymbol.GetCharInfo(WpfMath.ITeXFont,WpfMath.TexStyle)">
+            <summary>Returns a <see cref="T:WpfMath.CharInfo"/> for this character.</summary>
+        </member>
+        <member name="M:WpfMath.CharSymbol.IsSupportedByFont(WpfMath.ITeXFont,WpfMath.TexStyle)">
+            <summary>Checks if the symbol can be rendered by font.</summary>
+        </member>
+        <member name="M:WpfMath.CharSymbol.GetCharFont(WpfMath.ITeXFont)">
+            <summary>Returns the symbol rendered by font.</summary>
+        </member>
+        <member name="T:WpfMath.DelimiterInfo">
+            <summary>
+            Information about the body between a pair of delimiters.
+            </summary>
+        </member>
+        <member name="T:WpfMath.Controls.FormulaControl">
+            <summary>
+            Interaction logic for FormulaControl.xaml
+            </summary>
+            <summary>
+            FormulaControl
+            </summary>
+        </member>
+        <member name="M:WpfMath.Controls.FormulaControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfMath.Rendering.GeometryElementRenderer">
+            <summary>A renderer that renders the elements to a provided <see cref="T:System.Windows.Media.GeometryGroup"/> instance.</summary>
+        </member>
+        <member name="T:WpfMath.Rendering.IElementRenderer">
+            <summary>Renderer interface for WPF-Math elements.</summary>
+        </member>
+        <member name="M:WpfMath.Rendering.IElementRenderer.RenderElement(WpfMath.Box,System.Double,System.Double)">
+            <summary>Renders a <see cref="T:WpfMath.Box"/> to the renderer drawing context.</summary>
+            <param name="box">The element that should be rendered.</param>
+            <param name="x">An X coordinate of the top left corner.</param>
+            <param name="y">An Y coordinate of the top left corner.</param>
+            <remarks>Should be called for every element of the formula (including nested ones).</remarks>
+            <remarks>
+            Usually this method should call <see cref="M:WpfMath.Box.RenderTo(WpfMath.Rendering.IElementRenderer,System.Double,System.Double)"/> with optional code common for all elements.
+            </remarks>
+        </member>
+        <member name="M:WpfMath.Rendering.IElementRenderer.RenderGlyphRun(System.Func{System.Double,System.Windows.Media.GlyphRun},System.Double,System.Double,System.Windows.Media.Brush)">
+            <summary>Renders a glyph run (e.g. a character).</summary>
+            <param name="scaledGlyphFactory">Function to generate a glyph run for the chosen scale.</param>
+            <param name="x">An X coordinate of the top left corner.</param>
+            <param name="y">An Y coordinate of the top left corner.</param>
+            <param name="foreground">Glyph foreground color.</param>
+        </member>
+        <member name="M:WpfMath.Rendering.IElementRenderer.RenderRectangle(System.Windows.Rect,System.Windows.Media.Brush)">
+            <summary>Renders a rectangle.</summary>
+            <param name="rectangle">Rectangle to render.</param>
+            <param name="foreground">Rectangle foreground color.</param>
+        </member>
+        <member name="M:WpfMath.Rendering.IElementRenderer.RenderTransformed(WpfMath.Box,WpfMath.Rendering.Transformations.Transformation[],System.Double,System.Double)">
+            <summary>Renders a box applying the geometry transforms.</summary>
+            <param name="box">A box to render.</param>
+            <param name="transforms">A transform array.</param>
+            <param name="x">An X coordinate of the top left corner.</param>
+            <param name="y">An Y coordinate of the top left corner.</param>
+        </member>
+        <member name="T:WpfMath.Rendering.Transformations.Transformation">
+            <summary>Geometrical transformation.</summary>
+        </member>
+        <member name="P:WpfMath.Rendering.Transformations.Transformation.Kind">
+            <summary>Kind of a transformation.</summary>
+        </member>
+        <member name="M:WpfMath.Rendering.Transformations.Transformation.Scale(System.Double)">
+            <summary>Scale of a transformation.</summary>
+            <param name="scale">Scale coefficient.</param>
+            <returns></returns>
+        </member>
+        <member name="T:WpfMath.Rendering.Transformations.TransformationKind">
+            <summary>Kind of a geometrical transformation.</summary>
+        </member>
+        <member name="F:WpfMath.Rendering.Transformations.TransformationKind.Translate">
+            <summary>Translate transformation.</summary>
+        </member>
+        <member name="F:WpfMath.Rendering.Transformations.TransformationKind.Rotate">
+            <summary>Rotate transformation.</summary>
+        </member>
+        <member name="T:WpfMath.Rendering.WpfElementRenderer">
+            <summary>The renderer that uses WPF drawing context.</summary>
+        </member>
+        <member name="M:WpfMath.Rendering.WpfElementRenderer.GenerateGuidelines(WpfMath.Box,System.Double,System.Double)">
+            <summary>
+            Generates the guidelines for WPF render to snap the box boundaries onto the device pixel grid.
+            </summary>
+        </member>
+        <member name="P:WpfMath.ITeXFont.SupportsMetrics">
+            <summary>Whether the font supports <see cref="T:WpfMath.CharInfo"/>.</summary>
+        </member>
+        <member name="T:WpfMath.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WpfMath.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WpfMath.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="F:WpfMath.SymbolAtom.EmptyDelimiterName">
+            <summary>
+            Special name of empty delimiter symbol that shouldn't be rendered.
+            </summary>
+        </member>
+        <member name="M:WpfMath.TexFontInfo.GetMetrics(System.Char)">
+            <summary>Return the character metrics or <c>null</c> if the metrics weren't found.</summary>
+        </member>
+        <member name="M:WpfMath.TexFormula.Add(WpfMath.Atom,WpfMath.SourceSpan)">
+            <summary>
+            Adds an atom to the formula. If the <see cref="P:WpfMath.TexFormula.RootAtom"/> exists and is not a <see cref="T:WpfMath.RowAtom"/>, it
+            will become one.
+            </summary>
+            <param name="atom">The atom to add.</param>
+            <param name="rowSource">The source that will be set for the resulting row atom.</param>
+        </member>
+    </members>
+</doc>

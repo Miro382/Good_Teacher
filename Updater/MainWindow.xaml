@@ -1,0 +1,27 @@
+﻿<Window x:Class="Updater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Updater"
+        xmlns:strings="http://GoodTeacher/Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Updater}" Height="300" Width="400" MinHeight="300" MinWidth="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Good Teacher;Component/Resources/Background/ThemeBackground.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" Margin="20" Background="#B2FFFFFF" >
+            <StackPanel Margin="15,30">
+                <Label Content="{x:Static strings:ResStrings.UpdatingGT}" Margin="0,0,0,15" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" />
+                <TextBlock Padding="5">
+                <Run Text="{x:Static strings:ResStrings.UDownloading}" FontWeight="Bold"/>
+                <Run x:Name="R_Percentage" Text="0%"/>
+                </TextBlock>
+                <ProgressBar x:Name="PB_Download" Height="15" Foreground="#FF341F97"/>
+                <Label x:Name="LB_Size" Content=""/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

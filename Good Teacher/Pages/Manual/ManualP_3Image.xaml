@@ -1,0 +1,21 @@
+﻿<Page x:Class="Good_Teacher.Pages.Manual.ManualP_3Image"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages.Manual"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignHeight="800" d:DesignWidth="400"
+      Title="ManualP_3Image">
+
+    <StackPanel>
+        
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ManualStrings.P3ImageSelection}" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" />
+
+        <TextBlock TextWrapping="Wrap" Margin="0,20" Text="{x:Static strings:ManualStrings.SelectImage}" FontSize="14" />
+
+        <Image Source="/Good Teacher;component/Resources/Manual/Manual_ImageSelection.png" RenderOptions.BitmapScalingMode="Fant" Margin="0,0,0,15" Width="390" />
+
+    </StackPanel>
+</Page>

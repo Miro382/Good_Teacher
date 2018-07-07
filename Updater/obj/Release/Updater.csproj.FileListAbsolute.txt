@@ -1,0 +1,52 @@
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\x64\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\x86\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Updater.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Updater.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Updater.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.csprojAssemblyReference.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\MainWindow.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\App.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater_MarkupCompile.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater_MarkupCompile.lref
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\MainWindow.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.g.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.Properties.Resources.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.csproj.GenerateResource.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.csproj.CoreCompileInputs.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Good Teacher.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\WpfMath.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\PdfSharp-wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.presentation.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\ICSharpCode.AvalonEdit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\ZstdNet.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Jint.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Newtonsoft.Json.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Good Teacher.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Good Teacher.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\WpfMath.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\WpfMath.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\LiveCharts.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\PdfSharp-wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.presentation.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.presentation.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\ICSharpCode.AvalonEdit.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\Newtonsoft.Json.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\zxing.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\HelixToolkit.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\sk\Good Teacher.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Release\de\PdfSharp-wpf.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Release\Updater.csproj.CopyComplete

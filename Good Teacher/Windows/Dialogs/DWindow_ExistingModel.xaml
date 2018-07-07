@@ -1,0 +1,34 @@
+﻿<Window x:Class="Good_Teacher.Windows.Dialogs.DWindow_ExistingModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Dialogs"
+        mc:Ignorable="d"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        Title="{x:Static strings:ResStrings.ModelObject}" Height="290" Width="350" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Icon="/Good Teacher;component/Resources/Icons/ModelsColors.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/SelectModelBackground.jpg"/>
+    </Window.Background>
+    <Grid>
+
+        <StackPanel Margin="10" Background="#7FFFFFFF">
+
+            <Label x:Name="ObjectName" Content="{x:Static strings:ResStrings.ModelObject}" Margin="20,10,20,0" FontWeight="Bold" FontSize="15" HorizontalContentAlignment="Center"/>
+
+            <CheckBox x:Name="Checkbox_Texture" Content="{x:Static strings:ResStrings.Texture}" Margin="20,20,20,0" FontSize="15" VerticalContentAlignment="Center" FontWeight="Bold" IsChecked="True"/>
+
+            <Label Content="{x:Static strings:ResStrings.DefaultMaterialColor}"  Margin="20,10,20,0" FontSize="14"/>
+
+            <StackPanel Orientation="Horizontal"  Margin="20,5,20,0">
+                <Rectangle x:Name="Rect_BackColor" Fill="LightGray" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                <Button Width="32" Height="32" Click="ButtonColor_Click" Margin="3">
+                    <Image Stretch="Uniform" Source="/Good Teacher;component/Resources/EditValues/colorpicker.png" />
+                </Button>
+            </StackPanel>
+
+            <Button Click="AddNewModel_Click" Content="{x:Static strings:ResStrings.Load}" Width="100" Height="30" Margin="0,20,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

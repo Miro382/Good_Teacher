@@ -1,0 +1,61 @@
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\x64\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\x86\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\PdfSharp-wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\WpfMath.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\ZstdNet.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Newtonsoft.Json.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Good Teacher.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\PdfSharp-wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\WpfMath.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\WpfMath.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\LiveCharts.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\zxing.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Newtonsoft.Json.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\MainWindow.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Answers.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_FullView.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Info.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\App.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo_MarkupCompile.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo_MarkupCompile.lref
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\MainWindow.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Answers.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_FullView.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Info.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.g.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good_Teacher_Repairo.Properties.Resources.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.GenerateResource.Cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.CoreCompileInputs.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\sk\Good Teacher.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\PdfSharp.Charting-wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\PdfSharp.Charting-wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\de\PdfSharp-wpf.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\de\PdfSharp.Charting-wpf.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.CopyComplete
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\ICSharpCode.AvalonEdit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Jint.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\ICSharpCode.AvalonEdit.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csprojAssemblyReference.cache

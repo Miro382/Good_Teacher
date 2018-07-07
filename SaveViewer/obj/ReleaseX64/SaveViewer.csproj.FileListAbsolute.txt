@@ -1,0 +1,52 @@
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\x64\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\x86\libzstd.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\SaveViewer.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\SaveViewer.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\SaveViewer.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Good Teacher.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Newtonsoft.Json.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\WpfMath.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.Wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\PdfSharp-wpf.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.presentation.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\ZstdNet.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Good Teacher.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Good Teacher.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Newtonsoft.Json.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\WpfMath.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\WpfMath.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.Wpf.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.Wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\LiveCharts.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\PdfSharp-wpf.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.presentation.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.presentation.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\zxing.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\HelixToolkit.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\sk\Good Teacher.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\de\PdfSharp-wpf.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.csprojAssemblyReference.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\MainWindow.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\App.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer_MarkupCompile.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer_MarkupCompile.lref
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\MainWindow.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.g.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.Properties.Resources.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.csproj.GenerateResource.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.csproj.CoreCompileInputs.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.csproj.CopyComplete
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\ReleaseX64\SaveViewer.pdb
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\ICSharpCode.AvalonEdit.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\Jint.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\bin\ReleaseX64\ICSharpCode.AvalonEdit.xml

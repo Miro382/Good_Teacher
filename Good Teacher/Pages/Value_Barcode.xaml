@@ -1,0 +1,50 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  x:Class="Good_Teacher.Pages.Value_Barcode"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+      d:DesignWidth="131"
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      Title="Value_Barcode">
+
+    <Grid>
+        <StackPanel Margin="10,5,10,10">
+
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                </Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                </Style>
+                <Style TargetType="{x:Type Separator}">
+                    <Setter Property="Margin" Value="0,10"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <TextBlock Margin="0,10" x:Name="Label_SettingsName" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.BarcodeSett}" HorizontalAlignment="Center"/>
+            
+            <TextBlock x:Name="TBL_BarcodeType" Margin="0,10,0,5" TextWrapping="Wrap" Text="-" FontWeight="Bold" />
+
+            <Label Content="{x:Static strings:ResStrings.Text}"/>
+            <TextBox x:Name="Box_Text" AcceptsReturn="True" TextWrapping="Wrap" Height="80"/>
+
+            <Button Content="{x:Static strings:ResStrings.Encode}" Click="ButtonEncode_Click"/>
+            <Separator/>
+            
+            <Special:PositionSelector x:Name="positionselector" />
+
+            <Separator/>
+
+            <Button  Click="Delete_Click" Margin="2,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                    <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,88 @@
+﻿<Page x:Class="Good_Teacher.Pages.Value_Gallery"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"
+      d:DesignWidth="131"
+      Title="Value_InkCanvas" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <TextBlock Margin="0,5" TextWrapping="Wrap" x:Name="Label_SettingsName" Text="{x:Static strings:ResStrings.GallerySett}" HorizontalAlignment="Center"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+
+        <Button Margin="0,5"  Click="ImagesGallery_Click">
+            <StackPanel Margin="0,3" Orientation="Horizontal">
+                <Image Height="28" Source="/Good Teacher;component/Resources/Controls/Design/Gallery.png" />
+                <TextBlock Margin="5,0,0,0" Text="{x:Static strings:ResStrings.Images}" VerticalAlignment="Center" FontSize="14" />
+            </StackPanel>
+        </Button>
+
+        <CheckBox x:Name="CB_TextVis" IsChecked="True" Margin="0,10,0,5" Checked="CB_TextVis_Checked" Unchecked="CB_TextVis_Checked">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.TextVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </CheckBox>
+
+        <CheckBox x:Name="CB_CircleVis" IsChecked="True" Checked="CB_CircleVis_Checked" Unchecked="CB_CircleVis_Checked">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.CirclesVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </CheckBox>
+
+        <CheckBox x:Name="CB_ControlVis" Margin="0,5,0,5" IsChecked="True" Checked="CB_ControlVis_Checked" Unchecked="CB_ControlVis_Checked">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ArrowsVisibility}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </CheckBox>
+
+        <TextBlock Margin="0,10,0,3" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.RestTime}" />
+        <TextBox x:Name="TB_RestTime" Text="3" MaxLength="6" KeyUp="TB_RestTime_KeyUp" />
+
+        <TextBlock Margin="0,10,0,3" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.TransitionSpeed}" />
+        <TextBox x:Name="TB_TransitionSpeed" Text="0.5" MaxLength="12" LostFocus="TB_TransitionSpeed_LostFocus" KeyDown="TB_TransitionSpeed_KeyDown"/>
+
+        <Label Content="{x:Static strings:ResStrings.ImageStretch}"/>
+        <ComboBox x:Name="ComboBox_Stretch" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_none}"/>
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_fill}"/>
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniform}" IsSelected="True" />
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniformToFill}"/>
+        </ComboBox>
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.FontColor}" />
+
+        <Special:BrushSelector x:Name="brushselectorFor" />
+
+        <Special:FontEditorPanel x:Name="fontEditorPanel" />
+
+        <Separator/>
+
+        <Special:EffectSelector x:Name="effectselector"  />
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

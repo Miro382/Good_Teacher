@@ -1,0 +1,15 @@
+﻿<Window x:Class="Good_Teacher.Windows.Special.Window_PlayMedia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Media}" Height="450" Width="600" Icon="/Good Teacher;component/Resources/Icons/Media/Play.png" WindowStartupLocation="CenterOwner">
+    <Grid x:Name="MGrid">
+
+        <MediaElement x:Name="MediaPlay"/>
+
+    </Grid>
+</Window>

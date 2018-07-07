@@ -1,0 +1,25 @@
+﻿<Window x:Class="SaveViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SaveViewer"
+        mc:Ignorable="d"
+        Title="Good Teacher Save Viewer" Height="600" Width="800">
+    <Grid Margin="3">
+        <RichTextBox x:Name="richtextbox" HorizontalAlignment="Left" VerticalContentAlignment="Stretch" Margin="0,25,0,0" VerticalScrollBarVisibility="Auto">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Beautify" HorizontalAlignment="Left" Margin="130,0,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Normal" HorizontalAlignment="Left" Margin="210,0,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Big/Small font" HorizontalAlignment="Left" Margin="364,0,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_3"/>
+        <Label Content="Code:" HorizontalAlignment="Left" Margin="87,-3,0,0" VerticalAlignment="Top"/>
+        <Label Content="Font:" HorizontalAlignment="Left" Margin="321,-3,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

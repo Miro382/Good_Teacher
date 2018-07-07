@@ -1,0 +1,66 @@
+﻿<Page xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Pages.Special.Page_MultiSelect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages.Special"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"
+      d:DesignWidth="131"
+      Title="Page_MultiSelect">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <TextBlock Margin="0,5" TextWrapping="Wrap" x:Name="Label_SettingsName" Text="{x:Static strings:ResStrings.MultiSelect}" HorizontalAlignment="Center"/>
+
+        <Label Content="{x:Static strings:ResStrings.Units}" Margin="0,5,0,0" />
+        <ComboBox x:Name="ComboBox_SizeUnits" Margin="0,0,0,10" SelectionChanged="ComboBox_SizeUnits_SelectionChanged">
+            <ComboBoxItem Content="{x:Static strings:FormatStrings.px}" IsSelected="True"/>
+            <ComboBoxItem Content="{x:Static strings:FormatStrings.cm}"/>
+            <ComboBoxItem Content="{x:Static strings:FormatStrings.inches}"/>
+            <ComboBoxItem Content="{x:Static strings:FormatStrings.points}"/>
+        </ComboBox>
+
+        <TextBlock Padding="5" TextWrapping="Wrap">
+            <Run Text="{x:Static strings:ResStrings.Width}"/>
+            <Run x:Name="R_Un3" Text=" (Px)"/>
+        </TextBlock>
+        <TextBox x:Name="Box_W" TextWrapping="NoWrap" MaxLength="12" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus"  PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+        <TextBlock Padding="5" TextWrapping="Wrap">
+            <Run Text="{x:Static strings:ResStrings.Height}"/>
+            <Run x:Name="R_Un4" Text=" (Px)"/>
+        </TextBlock>
+        <TextBox x:Name="Box_H" Margin="0,0,0,10" TextWrapping="NoWrap" MaxLength="12" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+        <Separator/>
+
+        <TextBlock Padding="5" TextWrapping="Wrap">
+            <Run Text="{x:Static strings:ResStrings.PosX}"/>
+            <Run x:Name="R_Un1" Text=" (Px)"/>
+        </TextBlock>
+        <TextBox x:Name="Box_X" TextWrapping="NoWrap" MaxLength="12" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+        <TextBlock Padding="5" TextWrapping="Wrap">
+            <Run Text="{x:Static strings:ResStrings.PosY}"/>
+            <Run x:Name="R_Un2" Text=" (Px)"/>
+        </TextBlock>
+        <TextBox x:Name="Box_Y" TextWrapping="NoWrap" MaxLength="12" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+
+        <Separator Margin="0,5"/>
+
+        <StackPanel x:Name="SP_AllControls" Margin="0,5">
+        </StackPanel>
+
+        <Separator Margin="0,5"/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="/Good Teacher;component/Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

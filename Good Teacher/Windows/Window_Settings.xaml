@@ -1,0 +1,298 @@
+﻿<Window xmlns:Controls="clr-namespace:Good_Teacher.Controls" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        xmlns:local="clr-namespace:Good_Teacher.Windows"
+        xmlns:h="http://helix-toolkit.org/wpf" x:Class="Good_Teacher.Windows.Window_Settings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Settings}" Height="525" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Menu/Settings.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/ThemeBackground.jpg"/>
+    </Window.Background>
+    <Grid Background="#7FFFFFFF" Margin="25">
+        <TabControl Background="{x:Null}">
+            <TabItem Header="{x:Static strings:ResStrings.Page}">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Grid.Column="0" Margin="10,0,0,0">
+
+                        <Label Content="{x:Static strings:ResStrings.CurrentPage}" Margin="0,10" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                        <Label Content="{x:Static strings:ResStrings.BackgroundSettings}" FontSize="14" HorizontalContentAlignment="Center" FontWeight="Bold" />
+                        <StackPanel >
+
+                            <TabControl x:Name="TabControlFill" Height="230" Background="#ecf0f1">
+
+                                <TabItem Header="{x:Static strings:ResStrings.Color}">
+
+                                    <StackPanel Background="#ecf0f1">
+
+                                        <Label Content="{x:Static strings:ResStrings.BackgroundColor}"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Rectangle x:Name="Rect_BackColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" />
+                                            <Button Width="32" Height="32" Click="ButtonColor_Click" Margin="3">
+                                                <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+                                            </Button>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </TabItem>
+
+                                <TabItem Header="{x:Static strings:ResStrings.Image}">
+                                    <StackPanel Background="#ecf0f1">
+
+                                        <Label Content="{x:Static strings:ResStrings.ImageSource}"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Rectangle x:Name="R_ImageFill" Width="58" Height="36" Stroke="Black" StrokeThickness="1" RenderOptions.BitmapScalingMode="HighQuality" />
+                                            <Button Margin="4,0,2,0" Click="SelectButton_Click" Width="24" Height="24">
+                                                <Image Source="/Good Teacher;component/Resources/select.png"/>
+                                            </Button>
+                                        </StackPanel>
+
+                                        <Label Content="{x:Static strings:ResStrings.ImageStretch}"/>
+                                        <ComboBox x:Name="ComboBox_Stretch" SelectionChanged="ComboBox_SelectionChanged" Margin="0,0,1,0">
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_none}"/>
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_fill}"/>
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniform}" />
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniformToFill}" IsSelected="True"/>
+                                        </ComboBox>
+
+                                        <Label Content="{x:Static strings:ResStrings.ScalingQuality}"/>
+                                        <ComboBox x:Name="ComboBox_Quality" SelectionChanged="ComboBox_SelectionChanged" Margin="0,0,1,0">
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.HighQuality}"/>
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.NormalQuality}" IsSelected="True"/>
+                                            <ComboBoxItem Content="{x:Static strings:ResStrings.NearestNeighbor}" />
+                                        </ComboBox>
+                                    </StackPanel>
+
+                                </TabItem>
+
+
+                                <TabItem Header="{x:Static strings:ResStrings.GradientColor}">
+
+                                    <ScrollViewer>
+                                        <StackPanel Background="#ecf0f1">
+
+                                            <RadioButton x:Name="RadioButton_LinearGradient" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Linear}" IsChecked="True"/>
+                                            <RadioButton x:Name="RadioButton_RadialGradient" Margin="0,5" Content="{x:Static strings:ResStrings.Radial}"/>
+
+                                            <Label Content="{x:Static strings:ResStrings.StartColor}"/>
+
+
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Rectangle x:Name="Rect_StartColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                                                <Button Width="32" Height="32" Click="ButtonStartColor_Click" Margin="3">
+                                                    <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+                                                </Button>
+                                            </StackPanel>
+
+
+                                            <Label Content="{x:Static strings:ResStrings.EndColor}"/>
+
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Rectangle x:Name="Rect_EndColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                                                <Button Width="32" Height="32" Click="ButtonEndColor_Click" Margin="3">
+                                                    <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+                                                </Button>
+                                            </StackPanel>
+
+                                            <Label Content="{x:Static strings:ResStrings.Angle}"/>
+                                            <TextBox x:Name="Box_Angle" TextWrapping="NoWrap" MaxLength="3"  Text="90"/>
+
+                                            <Button Margin="0,5" Content="{x:Static strings:ResStrings.OK}" Click="ButtonGradient_Click"/>
+
+                                        </StackPanel>
+                                    </ScrollViewer>
+
+                                </TabItem>
+
+                            </TabControl>
+                        </StackPanel>
+
+                        <Button Content="{x:Static strings:ResStrings.Setforallpages}" HorizontalAlignment="Center" Margin="0,10" Padding="10" Click="ButtonSetAllBackground_Click"/>
+
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0">
+                        <Label Content="{x:Static strings:ResStrings.DefaultPage}" FontSize="14" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+
+                        <Viewbox Width="200" Height="110">
+                            <Viewbox.Effect>
+                                <DropShadowEffect Opacity="0.6"/>
+                            </Viewbox.Effect>
+                            <Rectangle x:Name="R_DefaultCanvas" Stroke="Black" StrokeThickness="1" RenderOptions.BitmapScalingMode="Fant" Width="180" Height="100"  Margin="0,5" HorizontalAlignment="Center" Fill="White" />
+                        </Viewbox>
+
+                        <StackPanel Margin="0,5,0,0" Width="175" VerticalAlignment="Top" >
+
+                            <Label Content="{x:Static strings:ResStrings.CanvasSize}"  FontWeight="Bold" FontSize="14"/>
+
+                            <ComboBox x:Name="ComboBox_SizeUnits" SelectionChanged="ComboBox_SizeUnits_SelectionChanged">
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.px}" IsSelected="True"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.cm}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.inches}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.points}"/>
+                            </ComboBox>
+
+                            <ComboBox x:Name="ComboBox_PredefinedSizes" Margin="0,10,0,0" SelectionChanged="ComboBox_PredefinedSizes_SelectionChanged" >
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.Custom}" IsSelected="True"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.Default}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.A5}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.A4}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.A3}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.FullHD}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.XGA}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.WXGA}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.SVGA}"/>
+                                <ComboBoxItem Content="{x:Static strings:FormatStrings.UHD}"/>
+                            </ComboBox>
+                            <Label Margin="0,5,0,0" Content="{x:Static strings:ResStrings.CanvasX}" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <TextBox x:Name="CanvasSizeX" Grid.Row="0" Grid.Column="0" Text="1280" Height="22" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLength="12" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+                                <Label x:Name="Label_Unit1" Grid.Row="0" Grid.Column="1" Content="{x:Static strings:FormatStrings.pxO}"/>
+
+                                <Label Grid.Row="1" Grid.Column="0" Content="{x:Static strings:ResStrings.CanvasY}" />
+                                <TextBox x:Name="CanvasSizeY" Grid.Row="2" Grid.Column="0" Text="720" Height="22" VerticalContentAlignment="Center" TextWrapping="NoWrap" MaxLength="12" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+                                <Label x:Name="Label_Unit2" Grid.Row="2" Grid.Column="1" Content="{x:Static strings:FormatStrings.pxO}"/>
+                            </Grid>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                                <Controls:FlatButton Image_Source="/Good Teacher;component/Resources/Icons/Replace.png" Click="FlatButtonReverseXY_Click" RenderOptions.BitmapScalingMode="Fant" Width="24" Height="24" Hover="#FFCF6A87" ClickBrush="#FFC44569" />
+                            </StackPanel>
+
+                            <Button x:Name="SetCanvasSize" Margin="0,10,0,0" Height="30" Content="{x:Static strings:ResStrings.ChangeCanvasSize}" Click="SetCanvasSize_Click"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+
+            <!-- Presentation Settings -->
+            <TabItem Header="{x:Static strings:ResStrings.Presentation}">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Margin="10" Grid.Column="0">
+                        <CheckBox x:Name="CB_BlockPresentationInput" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.BlockPresentationInputHelp}" Content="{x:Static strings:ResStrings.BlockPresentationInput}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.BlockPresentationInputHelp}" />
+                        <CheckBox x:Name="CB_HideInput" Margin="15,10,0,0" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.HideInputFromPanelTooltip}" Content="{x:Static strings:ResStrings.HideInputFromPanel}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                        <TextBlock Margin="15,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.HideInputFromPanelTooltip}" />
+                        
+                        <Separator Margin="0,5"/>
+                        <CheckBox x:Name="CB_OptimizedMode" Margin="0,10,0,0" IsChecked="True" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.OptimizedModeHelp}" Content="{x:Static strings:ResStrings.OptimizedMode}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.OptimizedModeHelp}" />
+
+                        <Separator Margin="0,5"/>
+                        <CheckBox x:Name="CB_SaveTemp" Margin="0,10,0,0" IsChecked="True" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.TemporaryDataTooltip}" Content="{x:Static strings:ResStrings.TemporaryData}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.TemporaryDataTooltip}" />
+
+                        <Separator Margin="0,5"/>
+                        <CheckBox x:Name="CB_SaveOutput" Margin="0,10,0,0" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.SaveOutputHint}" Content="{x:Static strings:ResStrings.SaveOutput}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.SaveOutputHint}" />
+
+                    </StackPanel>
+
+                    <StackPanel Margin="10" Grid.Column="1">
+
+                        <CheckBox x:Name="CB_ClickToNext" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.ClickToNextPageHint}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ClickToNextPage}" VerticalAlignment="Center" />
+                        </CheckBox>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ClickToNextPageHint}" />
+
+                        <Separator Margin="0,5"/>
+
+                        <CheckBox x:Name="CB_BitmapCache"  Margin="0,10,0,0" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.BitmapCacheHint}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.BitmapCache}" VerticalAlignment="Center" />
+                        </CheckBox>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.BitmapCacheHint}" />
+
+                        <Separator Margin="0,5"/>
+
+                        <CheckBox x:Name="CB_AreScriptsAllowed"  Margin="0,10,0,0" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.EnableScripts}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.EnableScripts}" VerticalAlignment="Center" />
+                        </CheckBox>
+                        <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.EnableScriptsText}" />
+                        
+                        <TextBox x:Name="TB_WarningScriptMessage" KeyUp="TB_WarningScriptMessage_KeyUp" Margin="0,7,0,2" Padding="2,3" MaxLength="500" />
+
+                        <CheckBox x:Name="CB_DebugScript"  Margin="0,10,0,0" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" ToolTip="{x:Static strings:ResStrings.Debug}" FontSize="14" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.Debug}" VerticalAlignment="Center" />
+                        </CheckBox>
+
+                        <Separator Margin="0,5"/>
+
+
+                        <TextBlock Margin="0,10,0,0" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.OutsideColor}" FontWeight="Bold" FontSize="14" />
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle x:Name="Rect_OutsideColor" Fill="#FF2C3E50" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" />
+                            <Button Width="32" Height="32" Click="ButtonOutsideColor_Click" Margin="3">
+                                <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </TabItem>
+
+
+
+
+            <!-- Sound Settings -->
+            <TabItem Header="{x:Static strings:ResStrings.Sound}">
+
+                <StackPanel Margin="10" Grid.Column="0">
+
+                    <RadioButton x:Name="RB_NoAction" Content="{x:Static strings:ResStrings.NoAction}" IsChecked="True" GroupName="Sound" Checked="RadioButton_Checked" />
+
+                    <Separator Margin="0,5"/>
+
+                    <RadioButton x:Name="RB_Stop" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Stop}" GroupName="Sound" Checked="RadioButton_Checked" />
+
+                    <Separator Margin="0,5"/>
+
+                    <RadioButton x:Name="RB_Play" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Play}" GroupName="Sound" Checked="RadioButton_Checked" />
+
+                    <CheckBox x:Name="CB_SoundRepeat" Margin="20,10" Content="{x:Static strings:ResStrings.Repeat}" IsChecked="True" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+
+                    <Button Margin="20,0" HorizontalAlignment="Left" Click="ButtonPlaySound_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image RenderOptions.BitmapScalingMode="Fant" Margin="3" Width="24" Height="24" Source="/Good Teacher;component/Resources/Icons/Media/Music.png" />
+                            <Label Margin="3,0" Content="{x:Static strings:ResStrings.Select}" VerticalAlignment="Center" FontSize="14"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Label x:Name="L_SoundPlay" Margin="20,5,0,0" Content="-" />
+                    <Separator Margin="0,5"/>
+
+                </StackPanel>
+            </TabItem>
+
+
+        </TabControl>
+    </Grid>
+</Window>

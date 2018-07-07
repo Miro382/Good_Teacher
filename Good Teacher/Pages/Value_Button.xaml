@@ -1,0 +1,151 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  
+      xmlns:Controls="clr-namespace:Good_Teacher.Controls"  
+      x:Class="Good_Teacher.Pages.Value_Button"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+      d:DesignWidth="131"
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      Title="Value_Button">
+
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="Separator">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+
+        <Label Content="{x:Static strings:ResStrings.ButtonSett}" HorizontalContentAlignment="Center"/>
+
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+
+        <Button x:Name="Button_OnClickActions" Margin="0,10,0,5" Height="35" Click="Button_OnClickActions_Click" >
+            <StackPanel Orientation="Horizontal">
+                <Image Width="28" Source="/Good Teacher;component/Resources/Icons/OnClick.png"/>
+                <TextBlock TextWrapping="Wrap" Width="78" Text="{x:Static strings:ResStrings.OnclickAction}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.CurrentAction}" FontWeight="Bold"/>
+        <TextBlock x:Name="CurrentAction" Margin="0,5" TextWrapping="Wrap" Text="-"/>
+
+
+        <Label Content="{x:Static strings:ResStrings.Tooltip}" Margin="0,10,0,0" />
+        <TextBox x:Name="TB_Tooltip" LostFocus="Control_LostFocus" KeyDown="Control_KeyDown" Text=""/>
+
+        <Separator/>
+
+        <Button Margin="0,5"  Click="Content_Click">
+            <StackPanel Margin="0,3" Orientation="Horizontal">
+                <Image Height="28" Source="/Good Teacher;component/Resources/Icons/Buttons/Content.png" />
+                <TextBlock Margin="5,0,0,0" Text="{x:Static strings:ResStrings.Content}" VerticalAlignment="Center" FontSize="14" />
+            </StackPanel>
+        </Button>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,8" Text="{x:Static strings:ResStrings.ContentAlignment}" FontWeight="Bold"/>
+
+        <Special:AlignmentSelector x:Name="alignmentSelector" />
+
+
+        <Separator/>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,5" Text="{x:Static strings:ResStrings.FillOptions}" FontWeight="Bold"/>
+
+        <TabControl Margin="-5,0" Height="353" Background="#FFDCE3E5">
+
+            <TabItem  Header="{x:Static strings:ResStrings.Normal}">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFC5CAE9" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{x:Static strings:ResStrings.Opacity}" ContentStringFormat="{}{0}:" />
+                        <Label x:Name="Label_ImageOpacityNormal" Content="100%" />
+                    </StackPanel>
+                    <Slider x:Name="Slider_ImgOpacityNormal" ValueChanged="Slider_ImgOpacityNormal_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+                    <Special:BrushSelector Margin="0,5" x:Name="BrushSelector_Normal"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem  Header="{x:Static strings:ResStrings.Hover}">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFFFE0B2" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{x:Static strings:ResStrings.Opacity}" ContentStringFormat="{}{0}:" />
+                        <Label x:Name="Label_ImageOpacityHover" Content="100%" />
+                    </StackPanel>
+                    <Slider x:Name="Slider_ImgOpacityHover" ValueChanged="Slider_ImgOpacityHover_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+
+                    <Label Content="{x:Static strings:ResStrings.Brush}" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FFBDC3C7"/>
+                    <CheckBox x:Name="CheckBoxHover" Margin="0,10" Content="{x:Static strings:ResStrings.ChangeOnHover}" ToolTip="{x:Static strings:ResStrings.ButtonBrushCheckedTooltip}"  Checked="CheckBoxHover_Checked" Unchecked="CheckBoxHover_Checked" IsChecked="True" />
+                    <Special:BrushSelector Margin="0,5"  x:Name="BrushSelector_Hover"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem  Header="{x:Static strings:ResStrings.Click}">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="#FFFFCDD2" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+
+                <StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{x:Static strings:ResStrings.Opacity}" ContentStringFormat="{}{0}:" />
+                        <Label x:Name="Label_ImageOpacityClick" Content="100%" />
+                    </StackPanel>
+                    <Slider x:Name="Slider_ImgOpacityClick" ValueChanged="Slider_ImgOpacityClick_ValueChanged" Margin="0,5,0,0" Maximum="100" Value="100"/>
+
+                    <Label Content="{x:Static strings:ResStrings.Brush}" FontWeight="Bold" HorizontalContentAlignment="Center" Background="#FFBDC3C7"/>
+                    <CheckBox x:Name="CheckBoxClick" ToolTip="{x:Static strings:ResStrings.ButtonBrushCheckedTooltip}" Margin="0,10" Content="{x:Static strings:ResStrings.ChangeOnClick}"  Checked="CheckBoxClick_Checked" Unchecked="CheckBoxClick_Checked" IsChecked="True"/>
+
+                    <Special:BrushSelector Margin="0,5"  x:Name="BrushSelector_Click"/>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.Effects}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+
+        <Special:EffectSelector x:Name="effectselector" />
+
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+
+    </StackPanel>
+</Page>

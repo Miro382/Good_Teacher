@@ -1,0 +1,1 @@
+x64 version contains all files from RELEASEX64 except Good Teacher Presentation (This app is ever 32 bit for compatibility and portability)

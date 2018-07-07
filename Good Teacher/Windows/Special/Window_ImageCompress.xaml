@@ -1,0 +1,88 @@
+﻿<Window xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  x:Class="Good_Teacher.Windows.Special.Window_ImageCompress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Compress}" MinHeight="400" MinWidth="720" Height="450" Width="720" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/Compress.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="IMG_Before" Margin="10,0" Grid.Column="0" Grid.Row="0" />
+        <Image x:Name="IMG_After" Margin="10,0" Grid.Column="1" Grid.Row="0" />
+
+        <Grid Grid.ColumnSpan="3" Grid.Row="1" Background="WhiteSmoke">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="0,5" Grid.Column="0">
+                
+                <TextBlock Margin="0,5" HorizontalAlignment="Center">
+                    <Run Text="{x:Static strings:ResStrings.Size}" />
+                    <Run Text=": " />
+                    <Run x:Name="Run_BeforeSize" Text="-" />
+                </TextBlock>
+
+                <TextBlock Margin="5,5" HorizontalAlignment="Center">
+                    <Run Text="{x:Static strings:ResStrings.Quality}" />
+                    <Run Text=": " />
+                    <Run x:Name="Run_Quality" Text="-" />
+                    <Run Text="%" />
+                </TextBlock>
+                <Special:SliderFinalChange x:Name="Slider_Quality" Margin="0,5,0,0" MaxWidth="200" AutoToolTipPlacement="TopLeft" Maximum="100" Minimum="1" Value="100" TickPlacement="TopLeft" TickFrequency="20" ThumbDragCompleted="Slider_Quality_ThumbDragCompleted" PreviewMouseUp="Slider_Quality_PreviewMouseUp" PreviewKeyUp="Slider_Quality_PreviewKeyUp" SmallChange="1"  />
+            </StackPanel>
+
+
+            <StackPanel Margin="5,5" Grid.Column="1" VerticalAlignment="Bottom">
+
+                <TextBlock Margin="0,5" HorizontalAlignment="Center">
+                    <Run Text="{x:Static strings:ResStrings.OriginalSize}" />
+                    <Run Text=": " />
+                    <Run x:Name="Run_OrSize" Text="-" />
+                    <Run Text="px" />
+                </TextBlock>
+
+                <TextBlock Margin="0,5" HorizontalAlignment="Center">
+                    <Run Text="{x:Static strings:ResStrings.Size}" />
+                    <Run Text=": " />
+                    <Run x:Name="Run_Size" Text="-" />
+                    <Run Text="px" />
+                </TextBlock>
+                <Special:SliderFinalChange x:Name="Slider_Size" Margin="0,5,0,0" MaxWidth="200" AutoToolTipPlacement="TopLeft" Maximum="100" Minimum="1" Value="100" TickPlacement="TopLeft" TickFrequency="20" ThumbDragCompleted="Slider_Size_ThumbDragCompleted" PreviewMouseUp="Slider_Size_PreviewMouseUp" PreviewKeyUp="Slider_Size_PreviewKeyUp" SmallChange="1" />
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
+                
+                <TextBlock Margin="0,5" HorizontalAlignment="Center">
+                    <Run Text="{x:Static strings:ResStrings.SizeAfterCompression}" />
+                    <Run Text=": " />
+                    <Run x:Name="Run_AfterSize" Text="-" />
+                </TextBlock>
+                
+                <Button VerticalAlignment="Center" Padding="10,8" Click="ButtonOverwrite_Click" HorizontalAlignment="Center" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Margin="0,0,5,0" Width="24" Height="24" Source="/Good Teacher;component/Resources/Icons/Compress.png" />
+                        <Label Content="{x:Static strings:ResStrings.OverwriteImage}" />
+                    </StackPanel>
+                </Button>
+                
+            </StackPanel>
+        </Grid>
+        
+        
+
+    </Grid>
+</Window>

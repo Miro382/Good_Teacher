@@ -1,0 +1,73 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Pages.Value_TextBox"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      mc:Ignorable="d" d:DesignWidth="131"
+      Title="Value_Label" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="Separator">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <Label Content="{x:Static strings:ResStrings.EditBoxSettings}" HorizontalContentAlignment="Center"/>
+
+        <Label Content="{x:Static strings:ResStrings.ID}"/>
+        <TextBox x:Name="Box_ID" TextWrapping="NoWrap" MaxLength="12" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" />
+
+        <Separator />
+
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+        
+        <Special:FontEditorPanel x:Name="fontEditorPanel" />
+
+        <CheckBox x:Name="CB_TextWrapping" Margin="0,15,0,5" Content="{x:Static strings:ResStrings.TextWrapping}" Checked="Checkbox_Checked"  Unchecked="Checkbox_Checked" />
+        <CheckBox x:Name="CB_MultiLine" Margin="0,5" Content="{x:Static strings:ResStrings.Multiline}" Checked="Checkbox_Checked"  Unchecked="Checkbox_Checked" />
+
+
+        <TextBlock Margin="0,10,0,3" Text="{x:Static strings:ResStrings.MaxLength}"/>
+        <TextBox x:Name="TB_MaxLength" TextWrapping="Wrap" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+        <Separator />
+
+        <TextBlock TextWrapping="Wrap" Margin="0,5" Text="{x:Static strings:ResStrings.FillOptions}" FontWeight="Bold"/>
+        <Special:BrushSelector x:Name="brushselector" />
+
+        <Label Content="{x:Static strings:ResStrings.FontColor}" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Rectangle x:Name="Rect_ForColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+            <Button Width="32" Height="32" Click="ButtonColorFont_Click" Margin="3">
+                <Image Stretch="Uniform" Source="../Resources/EditValues/colorpicker.png" />
+            </Button>
+        </StackPanel>
+
+
+        <Separator/>
+
+        <Special:EffectSelector x:Name="effectselector" />
+        
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Page>

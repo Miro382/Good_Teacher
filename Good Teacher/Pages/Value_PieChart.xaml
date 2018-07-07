@@ -1,0 +1,117 @@
+﻿<Page xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Pages.Value_PieChart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Good_Teacher.Pages"
+      mc:Ignorable="d" 
+      xmlns:strings="clr-namespace:Good_Teacher.Strings"
+      d:DesignWidth="131"
+      Title="Value_PieChart" VerticalAlignment="Top">
+
+    <StackPanel Margin="10,5,10,10">
+
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="0,5,0,0"/>
+            </Style>
+            <Style TargetType="{x:Type Separator}">
+                <Setter Property="Margin" Value="0,10"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <TextBlock Margin="0,10" x:Name="Label_SettingsName" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.PieChartSett}" HorizontalAlignment="Center"/>
+        
+        <Special:PositionSelector x:Name="positionselector" />
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.Customization}" />
+        <Button  Click="Data_Click" Margin="12,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="32" Height="32" Source="../Resources/EditValues/Data.png"/>
+                <Label Content="{x:Static strings:ResStrings.Data}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+
+        <Separator/>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,5" Text="{x:Static strings:ResStrings.FillOptions}" FontWeight="Bold"/>
+        
+        <Special:BrushSelector x:Name="brushselector" />
+
+
+
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.Chart}" FontWeight="Bold" />
+
+        <CheckBox VerticalContentAlignment="Center" x:Name="CB_DisableAnimations" Margin="0,5" IsChecked="False" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.DisableAnimations}" />
+        </CheckBox>
+
+        <CheckBox x:Name="CB_interactive" VerticalContentAlignment="Center" Margin="0,5" IsChecked="True" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.InteractiveChart}" />
+        </CheckBox>
+        
+        <Label Content="{x:Static strings:ResStrings.InnerRadius}" />
+        <TextBox x:Name="Box_InnerRadius" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+        <Label Content="{x:Static strings:ResStrings.PushOut}" />
+        <TextBox x:Name="Box_PushOut"  KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+        <Label Content="{x:Static strings:ResStrings.Legend}" FontWeight="Bold" />
+        
+        <Label Content="{x:Static strings:ResStrings.FontSize}" />
+        <TextBox x:Name="Box_LegFont" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+        <Label Content="{x:Static strings:ResStrings.BulletSize}" />
+        <TextBox x:Name="Box_LegBullet" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" Margin="0,0,0,5" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+        <ComboBox x:Name="ComboBox_LegLoc" IsEditable="False" Margin="0,8,0,0" SelectionChanged="ComboBoxLegLoc_SelectionChanged">
+            <ComboBoxItem Content="{x:Static strings:ResStrings.None}" />
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Top}" />
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Bottom}" IsSelected="True" />
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Left}" />
+            <ComboBoxItem Content="{x:Static strings:ResStrings.Right}" />
+        </ComboBox>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Rectangle x:Name="Rect_LegendColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+            <Button Width="32" Height="32" Click="ButtonLegendColor_Click" Margin="3">
+                <Image Stretch="Uniform" Source="/Good Teacher;component/Resources/EditValues/colorpicker.png" />
+            </Button>
+        </StackPanel>
+
+
+        <Label Content="{x:Static strings:ResStrings.Tooltip}" FontWeight="Bold" />
+
+        <CheckBox x:Name="CB_ToolVis" Margin="0,5,0,5" IsChecked="True" Content="{x:Static strings:ResStrings.Visible}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" />
+
+        <Label Content="{x:Static strings:ResStrings.FontSize}"  />
+        <TextBox x:Name="Box_ToolFont" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+        <Label Content="{x:Static strings:ResStrings.BulletSize}" />
+        <TextBox x:Name="Box_ToolBullet" KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" Margin="0,0,0,5" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+
+        <Separator/>
+
+        <Label Content="{x:Static strings:ResStrings.Effects}" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+
+        <Special:EffectSelector x:Name="effectselector" />
+        
+        <Separator/>
+
+        <Button  Click="Delete_Click" Margin="2,0">
+            <StackPanel Orientation="Horizontal">
+                <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>
+                <Label Content="{x:Static strings:ResStrings.Delete}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0"/>
+            </StackPanel>
+        </Button>
+    </StackPanel>
+</Page>

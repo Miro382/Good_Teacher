@@ -1,0 +1,144 @@
+﻿<UserControl xmlns:Controls="clr-namespace:Good_Teacher.Controls"  x:Class="Good_Teacher.Controls.Special.BrushSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Good_Teacher.Controls.Special"
+             xmlns:strings="clr-namespace:Good_Teacher.Strings"
+             mc:Ignorable="d" 
+             d:DesignHeight="220" d:DesignWidth="130">
+    <TabControl x:Name="TabControlFill" Height="220" Background="#ecf0f1">
+
+        <TabItem Header="{x:Static strings:ResStrings.Color}">
+
+            <StackPanel Background="#ecf0f1">
+
+                <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.BackgroundColor}"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Rectangle x:Name="Rect_BackColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                    <Button Width="32" Height="32" Click="ButtonColor_Click" Margin="3">
+                        <Image Stretch="Uniform" Source="/Good Teacher;component/Resources/EditValues/colorpicker.png" />
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="{x:Static strings:ResStrings.Image}">
+
+            <ScrollViewer>
+                <StackPanel Background="#ecf0f1">
+
+                    <Label Content="{x:Static strings:ResStrings.ImageSource}"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Rectangle x:Name="R_ImageFill" Width="58" Height="36" Stroke="Black" StrokeThickness="1" RenderOptions.BitmapScalingMode="HighQuality" />
+                        <Button Margin="4,0,2,0" Click="SelectButton_Click" Width="24" Height="24">
+                            <Image Source="/Good Teacher;component/Resources/select.png"/>
+                        </Button>
+                    </StackPanel>
+
+                    <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ImageStretch}"/>
+                    <ComboBox x:Name="ComboBox_Stretch" SelectionChanged="ComboBoxStretch_SelectionChanged" Margin="0,0,1,0">
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_none}"/>
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_fill}"/>
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniform}" IsSelected="True" />
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.Stretch_uniformToFill}"/>
+                    </ComboBox>
+
+                    <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ScalingQuality}"/>
+                    <ComboBox x:Name="ComboBox_Quality" SelectionChanged="ComboBox_SelectionChanged" Margin="0,0,1,0">
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.HighQuality}"/>
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.NormalQuality}" IsSelected="True"/>
+                        <ComboBoxItem Content="{x:Static strings:ResStrings.NearestNeighbor}" />
+                    </ComboBox>
+
+                    <Separator Margin="0,15,0,5"/>
+                    <Expander Header="{x:Static strings:ResStrings.Settings}" Background="#FFDEDEDE" >
+                        <StackPanel>
+                            <Label Content="{x:Static strings:ResStrings.Rotation}" FontWeight="Bold"/>
+
+                            <StackPanel Margin="2" Orientation="Horizontal">
+                                <Controls:RotationButton x:Name="rotationbutton" Margin="0,5" Click="RotationButton_Click" />
+                                <StackPanel Margin="5,0">
+                                    <Label Content="{x:Static strings:ResStrings.Angle}" FontSize="11"/>
+                                    <TextBox x:Name="TextBox_RotationAngle" Text="0" MaxLength="5" Width="50"  KeyDown="Control_KeyDown" LostFocus="Control_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <Label Content="{x:Static strings:ResStrings.Scale}" Margin="0,5,0,0" FontWeight="Bold" />
+
+                            <Label Content="{x:Static strings:ResStrings.Width}" />
+                            <TextBox x:Name="TB_SCW" Text="1" KeyDown="TB_SCW_KeyDown" LostFocus="TB_SCW_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+                            <Label Content="{x:Static strings:ResStrings.Height}" />
+                            <TextBox x:Name="TB_SCH" KeyDown="TB_SCH_KeyDown" LostFocus="TB_SCH_LostFocus" Text="1" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+
+                            <Label Content="{x:Static strings:ResStrings.Move}" Margin="0,5,0,0" FontWeight="Bold" />
+
+                            <Label Content="{x:Static strings:ResStrings.AxisX}" />
+                            <TextBox x:Name="TB_MVX" Text="0" KeyDown="TB_MVX_KeyDown" LostFocus="TB_MVX_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting" />
+
+                            <Label Content="{x:Static strings:ResStrings.AxisY}" />
+                            <TextBox x:Name="TB_MVY" Text="0" KeyDown="TB_MVY_KeyDown" LostFocus="TB_MVY_LostFocus" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
+
+                            <Label Content="{x:Static strings:ResStrings.TileMode}" Margin="0,5,0,0" FontWeight="Bold" />
+                            <ComboBox x:Name="CB_TileMode" SelectionChanged="CB_TileMode_SelectionChanged" >
+                                <ComboBoxItem Content="{x:Static strings:ResStrings.None}" IsSelected="True" />
+                                <ComboBoxItem Content="{x:Static strings:ResStrings.FlipX}" />
+                                <ComboBoxItem Content="{x:Static strings:ResStrings.FlipY}" />
+                                <ComboBoxItem Content="{x:Static strings:ResStrings.FlipXY}" />
+                                <ComboBoxItem Content="{x:Static strings:ResStrings.Tile}" />
+                            </ComboBox>
+
+
+                        </StackPanel>
+                    </Expander>
+
+                </StackPanel>
+            </ScrollViewer>
+
+        </TabItem>
+
+
+        <TabItem Header="{x:Static strings:ResStrings.GradientColor}">
+
+            <ScrollViewer>
+                <StackPanel Background="#ecf0f1">
+
+                    <RadioButton x:Name="RadioButton_LinearGradient" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Linear}" IsChecked="True"/>
+                    <RadioButton x:Name="RadioButton_RadialGradient" Margin="0,5" Content="{x:Static strings:ResStrings.Radial}"/>
+
+                    <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.StartColor}"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Rectangle x:Name="Rect_StartColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                        <Button Width="32" Height="32" Click="ButtonStartColor_Click" Margin="3">
+                            <Image Stretch="Uniform" Source="/Good Teacher;component/Resources/EditValues/colorpicker.png" />
+                        </Button>
+                    </StackPanel>
+
+
+                    <TextBlock Margin="0,5" TextWrapping="Wrap" Text="{x:Static strings:ResStrings.EndColor}"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Rectangle x:Name="Rect_EndColor" Fill="#FFFFFF" Height="25" Width="35" Stroke="Black" StrokeThickness="1" Margin="3" VerticalAlignment="Center" />
+                        <Button Width="32" Height="32" Click="ButtonEndColor_Click" Margin="3">
+                            <Image Stretch="Uniform" Source="/Good Teacher;component/Resources/EditValues/colorpicker.png" />
+                        </Button>
+                    </StackPanel>
+
+
+                    <Label Content="{x:Static strings:ResStrings.Angle}"/>
+                    <TextBox x:Name="Box_Angle" TextWrapping="NoWrap" MaxLength="3"  Text="90"/>
+
+                    <Button Content="{x:Static strings:ResStrings.OK}" Margin="0,5" Click="ButtonGradient_Click"/>
+
+                </StackPanel>
+            </ScrollViewer>
+
+        </TabItem>
+
+    </TabControl>
+</UserControl>

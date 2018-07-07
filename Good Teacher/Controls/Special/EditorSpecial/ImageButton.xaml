@@ -1,0 +1,13 @@
+﻿<UserControl x:Name="ImageButtonUC"
+             x:Class="Good_Teacher.Controls.Special.EditorSpecial.ImageButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Good_Teacher.Controls.Special.EditorSpecial"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="ImageButtonUC_Loaded" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave" MouseDown="UserControl_MouseDown" MouseUp="UserControl_MouseUp">
+    <Image x:Name="img" Stretch="Uniform" Source="{Binding ElementName=ImageButtonUC, Path=DefaultBrush}">
+            
+    </Image>
+</UserControl>

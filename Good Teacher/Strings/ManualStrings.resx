@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddControlToCanvas" xml:space="preserve">
+    <value>In the red rectangle are pages - With left click you can select page that you want to modify. Right click on page will open context menu. Currently selected page on image is third in sequence. In blue rectangle are elements that we can add to canvas. With left click on required element we will select element. After that cursor icon will change to image: plus in circle. Left click on canvas will add selected element. With right click or with key ESC you will cancel adding new element. With F5 or click on button "Run" ( Green ellipse with start icon ) will run presentation.</value>
+  </data>
+  <data name="AfterAddingPage" xml:space="preserve">
+    <value>After adding page you will see in the left panel new blank page.</value>
+  </data>
+  <data name="BottomPanelDescription" xml:space="preserve">
+    <value>On bottom panel are special control elements.
+
+1. Lock - you can lock canvas to disable changes, it can prevent random mistakes. You can unlock it by click on that button again.
+
+2. Hide page - If you want to hide page from presentation or you want to create special page, which users can only reach by action (button).
+
+3. Zoom - You can zoom in and zoom out canvas. In textbox is current zoom.
+
+4. Default zoom - Set zoom to default value: 100%.
+
+5. Canvas only - Hide everything outside of canvas.
+
+6. Alignment to grid - if you enable this option every moved element will be aligned. Alignment value can be set in settings ( Application -&gt; Application settings -&gt; Alignment grid size ).</value>
+  </data>
+  <data name="BuildWarning" xml:space="preserve">
+    <value>If you want transfer presentation and you are using specific content like 3D, video or music, you must transfer together presentation file (GTCH) with "Resources" folder.</value>
+  </data>
+  <data name="CanvasControl" xml:space="preserve">
+    <value>Keyboard shortcuts:
+* Ctrl + Mouse wheel - you can zoom in and zoom out.
+* Ctrl + Arrows - move canvas to direction
+* Page down - change page to +1
+* Page up - change page to -1</value>
+  </data>
+  <data name="CanvasGoToSettings" xml:space="preserve">
+    <value>If you want to change canvas settings or presentation settings you must go to settings. You may click on settings button (Cogwheel in green rectangle) or right click on page in left panel and select customize.</value>
+  </data>
+  <data name="CanvasSettings" xml:space="preserve">
+    <value>After selecting settings new window appear. You can change background color, canvas size, presentation settings or set background music.
+If you want change background you can select in tab 3 sections: color, gradient color or image. 
+If you selected color, click on button ( color diagram ) -&gt; select color -&gt; OK.
+If you selected gradient color, you can select radial or linear gradient color. Then select both colors ( Start and end ), write your angle and click OK.
+If you selected image, click on button and select your image (More in Image selection section).
+You can change your canvas size by selecting default sizes from combo box or write your own size and click on button "Change canvas size".</value>
+  </data>
+  <data name="EditingControls" xml:space="preserve">
+    <value>If you added elements to canvas, you can edit them. Left click on the control will select it. You can resize it with green and blue points around. You can drag element with left mouse to another position. Also you can change position by dragging rectangle with cross inside it. If control is selected in right panel you will see element settings. You can change it‘s position, size, add effect ( shadow, blur ), change background...
+If element is selected you can delete it with delete key or button "Delete" in right panel.
+Every control element have specific settings.
+
+You can select more control elements. If you selected more elements, you manipulate with all of them at same time, you can move, resize or delete all of them.
+You can change measurement unit. In combo box units you can select your unit. You can select pixels (default), centimeters, inches or points.</value>
+  </data>
+  <data name="HowToAddPage" xml:space="preserve">
+    <value>In the upper left corner, there is an icon (paper with plus) that adds a new page. New page is automatically selected to be edited.</value>
+  </data>
+  <data name="Incomplete" xml:space="preserve">
+    <value>The manual is currently incomplete.</value>
+  </data>
+  <data name="P1Start" xml:space="preserve">
+    <value>1. Start - Add new page, controls...</value>
+    <comment>1. page</comment>
+  </data>
+  <data name="P2Canvas" xml:space="preserve">
+    <value>2. Canvas settings</value>
+    <comment>2. page</comment>
+  </data>
+  <data name="P3ImageSelection" xml:space="preserve">
+    <value>3. Image selection</value>
+    <comment>3. page</comment>
+  </data>
+  <data name="P4EditControls" xml:space="preserve">
+    <value>4. Editing controls</value>
+    <comment>4. page</comment>
+  </data>
+  <data name="P5SaveExport" xml:space="preserve">
+    <value>5. Save and export</value>
+    <comment>5. page</comment>
+  </data>
+  <data name="SaveAndExport" xml:space="preserve">
+    <value>To save your project you can use shortcut Ctrl + S or File -&gt; Save. If you want save to another file then File -&gt; Save As. Every added image is contained in the file. If you don't use some images, you can remove them in Archive ( button with cabinet ) ( or Tools - &gt; Archive ). You can reduce size of file by removing unused images. Every special content like video, music or 3D model is contained externally in "Resources" folder. Do not rename this folder. If you want use presentation on another computer move presentation file (GTCH) with whole "Resources" folder.
+
+You can export the entire presentation to a standalone executable program, leaving out the option of installing the program on all computers. Click on build button ( hammer ) ( Your project must be saved ) and select where to export. Select empty folder. After that you can run presentation or test anywhere where is .Net installed. Transfer whole folder (exe, data file and "Resources" folder).
+
+If you want export to pdf, image, copy to clipboard or into series of images select export and your option.</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>If you want to set image as background for canvas or element click in the section "image" on button (3 dots). After appearing of new window, you may add new images. You have 3 options: From disk, web or from clipboard.
+From disk – Dialog box to select images will appear. Select your image or images and then confirm.
+From web - write image url and click OK.
+From clipboard - if you have copied image in clipboard, select this option. Window with image preview will appear. Click on Add.
+Image will be added in to archive, and you can access it. After adding new image, thumbnail will appear. If you click on thumbnail, picture will be selected.
+You may delete image by click on button with trash image.
+
+If you want view all content in archive on top panel click on Archive button ( Cabinet image ) or Tools -&gt; Archive.</value>
+  </data>
+  <data name="ThanksForUsing" xml:space="preserve">
+    <value>Thanks for using this software. Good Teacher is a free program used for creating interactive presentations, games, graphics and tests.</value>
+  </data>
+</root>
