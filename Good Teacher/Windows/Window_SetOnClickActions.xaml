@@ -1,4 +1,4 @@
-﻿<Window x:Class="Good_Teacher.Windows.Window_SetOnClickActions"
+﻿<Window xmlns:Controls="clr-namespace:Good_Teacher.Controls"  xmlns:Special="clr-namespace:Good_Teacher.Controls.Special"  x:Class="Good_Teacher.Windows.Window_SetOnClickActions"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Good_Teacher.Windows"
         mc:Ignorable="d"
         xmlns:strings="clr-namespace:Good_Teacher.Strings"
-        Title="{x:Static strings:ResStrings.OnclickAction}" MinHeight="420" MinWidth="550" Height="420" Width="550" Icon="/Good Teacher;component/Resources/Icons/OnClick.png" WindowStartupLocation="CenterOwner">
+        Title="{x:Static strings:ResStrings.OnclickAction}" MinHeight="450" MinWidth="600" Height="450" Width="600" Icon="/Good Teacher;component/Resources/Icons/OnClick.png" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Good Teacher;component/Resources/Background/BackgroundMat.jpg" Stretch="UniformToFill"/>
@@ -18,8 +18,8 @@
                 <TabControl x:Name="tabcontrol_actions" Background="{x:Null}" BorderBrush="{x:Null}">
 
                     <!--Go to page-->
-                    <TabItem Header="{x:Static strings:ResStrings.GoToPage}">
-                        
+                    <TabItem Header="{x:Static strings:ResStrings.GoToPage}" Selector.IsSelected="True">
+
                         <StackPanel Margin="10,10" HorizontalAlignment="Left">
                             <Label Content="{x:Static strings:ResStrings.GoToPage}" FontWeight="Bold" FontSize="14" />
 
@@ -53,7 +53,7 @@
                             </StackPanel>
 
                         </StackPanel>
-                        
+
                     </TabItem>
 
 
@@ -69,7 +69,7 @@
 
 
                             </StackPanel>
-                            
+
                         </StackPanel>
 
                     </TabItem>
@@ -114,7 +114,7 @@
                     <TabItem Header="{x:Static strings:ResStrings.ShowMessageBox}">
 
                         <StackPanel Margin="10,10" HorizontalAlignment="Left">
-                            
+
                             <Label Content="{x:Static strings:ResStrings.ShowMessageBox}" FontSize="14" FontWeight="Bold" />
 
                             <Label Content="{x:Static strings:ResStrings.Title}" FontWeight="Bold"/>
@@ -138,7 +138,7 @@
                             <RadioButton x:Name="RB_Stop" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.Stop}" GroupName="Sound" IsChecked="True"/>
 
                             <Separator Margin="0,5"/>
-                            
+
                             <RadioButton x:Name="RB_PlayAgain" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.PlayAgainStart}" GroupName="Sound"/>
 
                             <Separator Margin="0,5"/>
@@ -155,7 +155,7 @@
                                 </Button>
 
                                 <CheckBox x:Name="CB_SoundRepeat" Margin="20,10" Content="{x:Static strings:ResStrings.Repeat}" IsChecked="True" VerticalAlignment="Center" />
-                                
+
                             </StackPanel>
 
                             <Label x:Name="L_SoundPlay" Margin="20,5,0,0" Content="" />
@@ -189,14 +189,89 @@
 
                     </TabItem>
 
-                    <!--No Action-->
-                    <TabItem Header="{x:Static strings:ResStrings.NoAction}" Selector.IsSelected="True">
+
+
+                    <!--Set Visibility-->
+                    <TabItem Header="{x:Static strings:ResStrings.Visibility}">
+
+                        <StackPanel Margin="10,10" HorizontalAlignment="Left">
+                            <Label Content="{x:Static strings:ResStrings.Visibility}" FontSize="14" FontWeight="Bold" />
+
+                            <RadioButton x:Name="RB_SVisible" Margin="0,10,0,0" Content="{x:Static strings:ResStrings.SetVisible}" />
+                            <RadioButton x:Name="RB_SInvisible" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.SetInvisible}" />
+                            <RadioButton x:Name="RB_TVisibility" Margin="0,5,0,0" Content="{x:Static strings:ResStrings.ToggleVisibility}" IsChecked="True" />
+
+                            <Label Margin="0,10,0,0" Content="{x:Static strings:ResStrings.ID}" FontWeight="Bold" />
+                            <Controls:NumberBox Text="0" x:Name="NB_ID"  Width="120" HorizontalAlignment="Left" Padding="2"/>
+
+                        </StackPanel>
+
+                    </TabItem>
+
+                    <!--Do Animation-->
+                    <TabItem Header="{x:Static strings:ResStrings.DoAnimation}">
 
                         <StackPanel Margin="10,10" HorizontalAlignment="Left">
 
-                            <Label Content="{x:Static strings:ResStrings.NoAction}" FontSize="14" FontWeight="Bold" />
-                        </StackPanel>
+                            <Label Content="{x:Static strings:ResStrings.DoAnimation}" FontSize="14" FontWeight="Bold" />
 
+                            <Label Content="{x:Static strings:ResStrings.AnimationID}" Margin="0,10,0,0" />
+                            <ComboBox x:Name="CB_Animation" Width="200" Height="35" />
+
+                        </StackPanel>
+                    </TabItem>
+
+
+                    <!--Do Animation-->
+                    <TabItem Header="{x:Static strings:ResStrings.Position}">
+
+                        <StackPanel Margin="10,10">
+
+                            <Label Content="{x:Static strings:ResStrings.Position}" FontSize="14" FontWeight="Bold" />
+
+                            <Label Content="{x:Static strings:ResStrings.ID}" Margin="0,10,0,0" FontWeight="Bold" />
+                            <Controls:NumberBox x:Name="NB_PositionID" Width="120" Text="0" Padding="1" Margin="0,0,0,10" HorizontalAlignment="Left" />
+
+                            <Grid Margin="0,5">
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <StackPanel Grid.Column="0">
+                                    <CheckBox x:Name="CB_ChangeX" Margin="0,10"  Content="{x:Static strings:ResStrings.AxisX}" />
+
+                                    <ComboBox x:Name="CB_AXSign" Width="70" HorizontalAlignment="Left">
+                                        <ComboBoxItem Content="=" IsSelected="True"/>
+                                        <ComboBoxItem Content="+" />
+                                        <ComboBoxItem Content="-" />
+                                        <ComboBoxItem Content="*" />
+                                        <ComboBoxItem Content="/" />
+                                    </ComboBox>
+
+                                    <Controls:NumberBox x:Name="NB_AX" Width="120" Text="0" Padding="1" Margin="0,10" HorizontalAlignment="Left" />
+
+                                </StackPanel>
+
+
+                                <StackPanel Grid.Column="1">
+                                    <CheckBox x:Name="CB_ChangeY" Margin="0,10"  Content="{x:Static strings:ResStrings.AxisY}" />
+
+                                    <ComboBox x:Name="CB_AYSign" Width="70" HorizontalAlignment="Left">
+                                        <ComboBoxItem Content="=" IsSelected="True"/>
+                                        <ComboBoxItem Content="+" />
+                                        <ComboBoxItem Content="-" />
+                                        <ComboBoxItem Content="*" />
+                                        <ComboBoxItem Content="/" />
+                                    </ComboBox>
+
+                                    <Controls:NumberBox x:Name="NB_AY" Width="120" Text="0" Padding="1" Margin="0,10" HorizontalAlignment="Left" />
+
+                                </StackPanel>
+                            </Grid>
+
+                        </StackPanel>
                     </TabItem>
 
                 </TabControl>

@@ -36,6 +36,8 @@ namespace Good_Teacher.Controls.Special
             Box_Y.Text = "" + (double)cont.GetValue(Canvas.TopProperty);
             Box_Z.Text = "" + Panel.GetZIndex(cont);
 
+            Run_ID.Text = "" + ControlWorker.GetID(cont.Name);
+
             ComboBox_SizeUnits.SelectedIndex = MainWindow.CUnit;
         }
 

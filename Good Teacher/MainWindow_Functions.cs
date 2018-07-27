@@ -1,6 +1,7 @@
 ﻿using Good_Teacher.Class.History;
 using Good_Teacher.Class.Serialization;
 using Good_Teacher.Class.Workers;
+using Good_Teacher.Controls;
 using Good_Teacher.Windows.Special;
 using Microsoft.Win32;
 using System;
@@ -505,6 +506,44 @@ namespace Good_Teacher
             {
                 ImgB_PreviousActions.Visibility = Visibility.Hidden;
                 ImgB_NextActions.Visibility = Visibility.Visible;
+            }
+        }
+
+
+        void Copy()
+        {
+            if (SelectedControl != null)
+                CopyObject = SelectedControl;
+        }
+
+        void Cut()
+        {
+            if (SelectedControl != null)
+            {
+                CopyObject = SelectedControl;
+
+                DesignCanvas.Children.Remove((FrameworkElement)SelectedControl);
+                ValueEditor.Content = "";
+                UnselectControl();
+            }
+        }
+
+        void Paste()
+        {
+            try
+            {
+                if (CopyObject != null && !(CopyObject is Gallery))
+                {
+
+                    DesignCanvas.Children.Add(CreateCopyObject(CopyObject, 30));
+
+                    SaveCanvas();
+                    LoadCanvas();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Paste object not successfull: " + ex);
             }
         }
 

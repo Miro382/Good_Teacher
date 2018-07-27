@@ -29,12 +29,12 @@
             </Grid.Effect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Slider x:Name="SliderZoom" Margin="0,5,5,5" Width="120" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Maximum="1000" Minimum="10" SmallChange="1" TickFrequency="100" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft"  ValueChanged="SliderZoom_ValueChanged" Value="100" />
-                <Special:NumberTextBox x:Name="TextBox_Zoom" Margin="10,5,2,5" Width="50" HorizontalAlignment="Center" Text="100" VerticalAlignment="Center" LostFocus="TB_Zoom_LostFocus" KeyDown="TB_Zoom_KeyDown" FontSize="14"/>
+                <controls:NumberBox x:Name="TextBox_Zoom" Margin="10,5,2,5" Width="50" HorizontalAlignment="Center" Text="100" VerticalAlignment="Center" LostFocus="TB_Zoom_LostFocus" KeyDown="TB_Zoom_KeyDown" FontSize="14"/>
                 <TextBlock Text="%" VerticalAlignment="Center" Foreground="White" FontSize="14"/>
 
                 <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/ZoomCancel.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonZoomCancel_Click" ToolTip="{x:Static strings:ResStrings.DefaultZoom}"/>
 
-                <Special:NumberTextBox x:Name="TextBox_Page" Margin="30,0,0,0" Width="35" HorizontalAlignment="Center" Text="1" VerticalAlignment="Center" LostFocus="TB_Page_LostFocus" KeyDown="TB_Page_KeyDown" FontSize="14"/>
+                <controls:NumberBox x:Name="TextBox_Page" Margin="30,0,0,0" Width="35" HorizontalAlignment="Center" Text="1" VerticalAlignment="Center" LostFocus="TB_Page_LostFocus" KeyDown="TB_Page_KeyDown" FontSize="14"/>
                 <Label x:Name="L_Pages" Content="/0" Foreground="White" FontSize="14" VerticalAlignment="Center" />
                 <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/Buttons/PreviousWhite.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonPrevious_Click" ToolTip="{x:Static strings:ResStrings.PreviousPage}"/>
                 <controls:FlatButton Width="26" Margin="10,0,0,0" VerticalAlignment="Center" Height="26" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/Buttons/NextWhite.png" Hover="#7FFFFFFF" ClickBrush="#B2FFFFFF" Click="FlatButtonNext_Click" ToolTip="{x:Static strings:ResStrings.NextPage}"/>

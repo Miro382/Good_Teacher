@@ -10,7 +10,7 @@
              MouseLeftButtonDown="UserControl_MouseLeftButtonDown"
              MouseLeftButtonUp="UserControl_MouseLeftButtonUp"
              MouseUp="UserControl_MouseUp"
-             d:DesignHeight="300" d:DesignWidth="300" Background="#FFBDC3C7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+             d:DesignHeight="300" d:DesignWidth="300" Background="#FFBDC3C7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand">
     <Grid>
 
     </Grid>

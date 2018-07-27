@@ -46,6 +46,7 @@ namespace Good_Teacher.Controls.Special.CodeEditor
                 data.Add(new ScriptCompletionData("GetY", "(double)GetY(element)"));
                 data.Add(new ScriptCompletionData("GetW", "(double)GetW(element)"));
                 data.Add(new ScriptCompletionData("GetH", "(double)GetH(element)"));
+                data.Add(new ScriptCompletionData("FindByID", "(FrameworkElement)FindByID(long id, FrameworkElement parent [use Canvas for example])"));
                 completionWindow.Show();
                 completionWindow.Closed += delegate {
                     completionWindow = null;

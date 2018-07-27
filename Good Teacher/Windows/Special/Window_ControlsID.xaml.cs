@@ -17,7 +17,7 @@ namespace Good_Teacher.Windows.Special
 
             for(int i=0;i<canvas.Children.Count;i++)
             {
-                SP_ControlsID.Children.Add(new Label() { Content = "[" + i + "] - " + ControlWorker.GetTypeName(canvas.Children[i], out prp) });
+                SP_ControlsID.Children.Add(new Label() { Content = "[" + ControlWorker.GetID(((FrameworkElement)canvas.Children[i]).Name) + "] - " + ControlNameWorker.GetTypeName(canvas.Children[i], out prp) });
             }
         }
     }

@@ -7,6 +7,7 @@ namespace Good_Teacher.Class.Serialization
         public Effect_Serializer effect;
         public PositionSize position;
         public ControlDefaultData ControlDef = new ControlDefaultData();
+        public string ContID = "";
 
 
         protected void SerializeDefault(FrameworkElement elm)
@@ -14,6 +15,8 @@ namespace Good_Teacher.Class.Serialization
             position = new PositionSize(elm);
 
             ControlDef.Serialize(elm);
+
+            ContID = elm.Name;
 
             if (elm.Effect != null)
             {
@@ -29,6 +32,8 @@ namespace Good_Teacher.Class.Serialization
         {
             position.SetControlPositionSize(elm);
             ControlDef.Deserialize(elm);
+
+            elm.Name = ContID;
 
             if(effect!=null)
             elm.Effect = effect.CreateEffect();

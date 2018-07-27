@@ -1,5 +1,6 @@
 ﻿using Good_Teacher.Class.Actions;
 using Good_Teacher.Class.Serialization.Content_Ser;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -16,109 +17,34 @@ namespace Good_Teacher.Controls
         public delegate void ClickDelegate(CButton sender, MouseButtonEventArgs e);
         public event ClickDelegate Click;
 
-        public double OpacityN
-        {
-            get { return OpacityNs; }
-            set { OpacityNs = value; }
-        }
+        public double OpacityN { get; set; } = 1;
+        public double OpacityHover { get; set; } = 1;
 
-        public double OpacityHover
-        {
-            get { return OpacityHovers; }
-            set { OpacityHovers = value; }
-        }
+        public double OpacityClick { get; set; } = 1;
 
-        public double OpacityClick
-        {
-            get { return OpacityClicks; }
-            set { OpacityClicks = value; }
-        }
+        public ContentCreator contentCreator { get; set; } = new ContentCreator();
 
-        public ContentCreator contentCreator
-        {
-            get { return contentCreators; }
-            set { contentCreators = value; }
-        }
+        public bool ChangeHover { get; set; } = true;
 
-        public IActions action
-        {
-            get { return actions; }
-            set { actions = value; }
-        }
+        public bool ChangeClick { get; set; } = true;
 
-        public bool ChangeHover
-        {
-            get { return ChangeHovers; }
-            set { ChangeHovers = value; }
-        }
+        public Stretch stretchN { get; set; }
 
-        public bool ChangeClick
-        {
-            get { return ChangeClicks; }
-            set { ChangeClicks = value; }
-        }
+        public Stretch stretchH { get; set; }
 
-        public Stretch stretchN
-        {
-            get { return stretchNs; }
-            set { stretchNs = value; }
-        }
+        public Stretch stretchC { get; set; }
 
-        public Stretch stretchH
-        {
-            get { return stretchHs; }
-            set { stretchHs = value; }
-        }
+        public Stretch stretchFor { get; set; }
 
-        public Stretch stretchC
-        {
-            get { return stretchCs; }
-            set { stretchCs = value; }
-        }
+        public string keyN { get; set; }
 
-        public Stretch stretchFor
-        {
-            get { return stretchFors; }
-            set { stretchFors = value; }
-        }
+        public string keyH { get; set; }
 
-        public string keyN
-        {
-            get { return keyNs; }
-            set { keyNs = value; }
-        }
+        public string keyC { get; set; }
 
-        public string keyH
-        {
-            get { return keyHs; }
-            set { keyHs = value; }
-        }
+        public string keyFor { get; set; }
 
-        public string keyC
-        {
-            get { return keyCs; }
-            set { keyCs = value; }
-        }
-
-        public string keyFor
-        {
-            get { return keyFors; }
-            set { keyFors = value; }
-        }
-
-        private double OpacityHovers = 1;
-        private double OpacityClicks = 1;
-        private double OpacityNs = 1;
-
-        private ContentCreator contentCreators = new ContentCreator();
-
-        private IActions actions = null;
-
-        private bool ChangeHovers = true, ChangeClicks = true;
-
-        private Stretch stretchNs,stretchHs,stretchCs, stretchFors;
-
-        private string keyNs, keyHs, keyCs, keyFors;
+        public List<IActions> actions = new List<IActions>();
 
         public static readonly DependencyProperty DefaultProperty =
             DependencyProperty.Register("Button_Default_Brush", typeof(Brush), typeof(FlatButton), new PropertyMetadata(null));

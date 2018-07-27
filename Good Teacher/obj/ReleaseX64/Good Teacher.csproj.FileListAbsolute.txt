@@ -58,7 +58,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Co
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\BrushSelector.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\EffectSelector.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\FontEditorPanel.g.cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\NumberTextBox.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\PositionSelector.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\TestType_ControlN.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\WebPage_Control.g.cs
@@ -170,7 +169,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Co
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\BrushSelector.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\EffectSelector.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\FontEditorPanel.baml
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\NumberTextBox.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\Special\PositionSelector.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\TestType_ControlN.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Controls\WebPage_Control.baml
@@ -291,3 +289,8 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\ReleaseX64\Go
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Good Teacher.TrustInfo.xml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Good Teacher.exe.manifest
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Good Teacher.application
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Windows\Special\Window_Transitions.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Windows\Window_ClickActionsList.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\ScrollViewer_HorizontalSliderTop.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Windows\Special\Window_Transitions.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\ReleaseX64\Windows\Window_ClickActionsList.baml

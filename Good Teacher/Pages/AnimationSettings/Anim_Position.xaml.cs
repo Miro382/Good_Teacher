@@ -56,6 +56,7 @@ namespace Good_Teacher.Pages.AnimationSettings
             TB_TimeY.Text = "" + Canimation_Position.BTimeY;
             CB_Repeat.IsChecked = Canimation_Position.Repeat;
             CB_Reverse.IsChecked = Canimation_Position.Reverse;
+            CB_OnStart.IsChecked = Canimation_Position.DoAnimationOnStart;
             Button_OKEdit.Content = Strings.ResStrings.Edit;
             animation_Position = Canimation_Position;
             Edit = true;
@@ -124,10 +125,11 @@ namespace Good_Teacher.Pages.AnimationSettings
                     animation_Position.BTimeY = Bty;
                     animation_Position.Repeat = CB_Repeat.IsChecked == true;
                     animation_Position.Reverse = CB_Reverse.IsChecked == true;
+                    animation_Position.DoAnimationOnStart = (CB_OnStart.IsChecked == true);
                 }
                 else
                 {
-                    AddAnimation?.Invoke(new Animation_Position(id, CB_X.IsChecked == true, CB_Y.IsChecked == true,
+                    AddAnimation?.Invoke(new Animation_Position(id, CB_OnStart.IsChecked == true, CB_X.IsChecked == true, CB_Y.IsChecked == true,
                         x, y, dx, dy, (SL_XAR.Value / 100), (SL_YAR.Value / 100), (SL_XDR.Value / 100), (SL_YDR.Value / 100),Btx,Bty, (CB_Repeat.IsChecked == true), (CB_Reverse.IsChecked == true)));
                 }
             }

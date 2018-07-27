@@ -56,7 +56,7 @@
         <Slider x:Name="SliderZoom" Margin="3,3" Height="24" VerticalAlignment="Bottom" Maximum="700" Minimum="5" SmallChange="1" TickFrequency="50" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft"  ValueChanged="SliderZoom_ValueChanged" Value="100" />
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Special:NumberTextBox x:Name="NTB_Zoom" Text="100" Margin="0,10" Width="40" Height="20" LostFocus="NTB_Zoom_LostFocus" KeyDown="NTB_Zoom_KeyDown" />
+            <Controls:NumberBox x:Name="NTB_Zoom" Text="100" Margin="0,10" Width="40" Height="20" LostFocus="NTB_Zoom_LostFocus" KeyDown="NTB_Zoom_KeyDown" />
             <Label Content="%" HorizontalAlignment="Center" />
         </StackPanel>
 

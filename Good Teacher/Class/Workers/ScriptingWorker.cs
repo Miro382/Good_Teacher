@@ -24,6 +24,7 @@ namespace Good_Teacher.Class.Workers
                     .SetValue("GetY", new Func<UIElement, double>(GetY))
                     .SetValue("GetW", new Func<FrameworkElement, double>(GetW))
                     .SetValue("GetH", new Func<FrameworkElement, double>(GetH))
+                    .SetValue("FindByID", new Func<long,FrameworkElement, FrameworkElement>(GetControlByID))
                     .SetValue("Canvas", canvas)
                     .SetValue("Element", canvas.Children)
                     .SetValue("CurrentPage", new Func<int>(CurrentPage))
@@ -110,6 +111,11 @@ namespace Good_Teacher.Class.Workers
         public double GetH(FrameworkElement element)
         {
             return element.Height;
+        }
+
+        public FrameworkElement GetControlByID(long ID, FrameworkElement parent)
+        {
+            return ControlWorker.FindChild<FrameworkElement>(parent, "ID_" + ID);
         }
 
     }

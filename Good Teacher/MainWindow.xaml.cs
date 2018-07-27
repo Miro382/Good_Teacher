@@ -35,9 +35,12 @@ namespace Good_Teacher
         /// <summary>
         /// Good Teacher Version Code
         /// </summary>
-        public const float VersionCode = 0.91f;
+        public const float VersionCode = 0.92f;
 
-        public const string VersionSpecialIdentificationName = "Beta REV 10";
+        /// <summary>
+        /// Text Version code
+        /// </summary>
+        public const string VersionSpecialIdentificationName = "Beta REV 11";
 
         /// <summary>
         /// Good Teacher Home Web URL
@@ -137,6 +140,9 @@ namespace Good_Teacher
         /// </summary>
         int ControlTag = 0;
 
+        /// <summary>
+        /// Path to opened presentation
+        /// </summary>
         public static string pathtofile = "";
 
         DispatcherTimer timer;
@@ -285,8 +291,7 @@ namespace Good_Teacher
                 if (!(focusedControl is TextBoxBase))
                 {
                     Debug.WriteLine("CTRL + C pressed - COPY");
-                    if (SelectedControl != null)
-                        CopyObject = SelectedControl;
+                    Copy();
                 }
             }
 
@@ -296,14 +301,22 @@ namespace Good_Teacher
 
                 if (!(focusedControl is TextBoxBase))
                 {
-                    Debug.WriteLine("CTRL + C pressed - CUT");
-                    if (SelectedControl != null)
-                        CopyObject = SelectedControl;
-
-                    DesignCanvas.Children.Remove((FrameworkElement)SelectedControl);
-                    ValueEditor.Content = "";
+                    Debug.WriteLine("CTRL + X pressed - CUT");
+                    Cut();
                 }
             }
+
+            if (e.Key == Key.V && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                IInputElement focusedControl = Keyboard.FocusedElement;
+
+                if (!(focusedControl is TextBoxBase))
+                {
+                    Debug.WriteLine("CTRL + V pressed - Paste");
+                    Paste();
+                }
+            }
+
 
             if (e.Key == Key.Z && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
@@ -313,30 +326,6 @@ namespace Good_Teacher
             if (e.Key == Key.Y && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
                 Item_Redo_Click(null, null);
-            }
-
-            if (e.Key == Key.V && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
-            {
-                try
-                {
-                    IInputElement focusedControl = Keyboard.FocusedElement;
-
-                    if (!(focusedControl is TextBoxBase))
-                    {
-                        Debug.WriteLine("CTRL + V pressed - Paste");
-                        if (CopyObject != null && !(CopyObject is Gallery))
-                        {
-
-                            DesignCanvas.Children.Add(CreateCopyObject(CopyObject, 30));
-
-                            SaveCanvas();
-                            LoadCanvas();
-                        }
-                    }
-                }catch(Exception ex)
-                {
-                    Debug.WriteLine("Paste object not successfull: "+ex);
-                }
             }
 
 
@@ -409,6 +398,7 @@ namespace Good_Teacher
 
         }
 
+
         private void FlatButtonDefaultCanvasPosition_Click(object sender, MouseEventArgs e)
         {
             viewboxDC.Margin = new Thickness(0, 0, 0, 0);
@@ -429,10 +419,12 @@ namespace Good_Teacher
 
             AddEvents(copy);
 
+            /*
             string guid = Guid.NewGuid().ToString();
             guid = guid.Replace("-", "");
             guid = "G" + guid;
-            copy.Name = guid;
+            */
+            copy.Name = "ID_" + data.pages[SelectedPosition].LastID++;
 
             return copy;
         }
@@ -701,13 +693,16 @@ namespace Good_Teacher
 
         private void Item_Animations_Click(object sender, RoutedEventArgs e)
         {
-            DWindow_Animations dWindow_Animations = new DWindow_Animations(SelectedPosition,DesignCanvas,data,SelectedControl);
-            dWindow_Animations.Owner = this;
+            if (data.pages.Count > 0)
+            {
+                DWindow_Animations dWindow_Animations = new DWindow_Animations(SelectedPosition, DesignCanvas, data, SelectedControl);
+                dWindow_Animations.Owner = this;
 
-            dWindow_Animations.ClickControl -= Windowall_ClickControl;
-            dWindow_Animations.ClickControl += Windowall_ClickControl;
+                dWindow_Animations.ClickControl -= Windowall_ClickControl;
+                dWindow_Animations.ClickControl += Windowall_ClickControl;
 
-            dWindow_Animations.ShowDialog();
+                dWindow_Animations.ShowDialog();
+            }
         }
 
 
@@ -736,6 +731,7 @@ namespace Good_Teacher
 
         private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
+            
             bool handle = (Keyboard.Modifiers & ModifierKeys.Control) > 0;
             if (!handle)
                 return;
@@ -744,6 +740,18 @@ namespace Good_Teacher
                 SliderZoom.Value += 10;
             else
                 SliderZoom.Value -= 10;
+                
+        }
+
+        private void ScrollViewerZoom_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            bool handle = (Keyboard.Modifiers & ModifierKeys.Control) > 0;
+
+            if (handle)
+            {
+                e.Handled = handle;
+                return;
+            }
         }
 
         private void CheckForUpdates_Click(object sender, RoutedEventArgs e)
@@ -833,6 +841,31 @@ namespace Good_Teacher
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             FontWorker.RemoveTemporaryFolder();
+        }
+
+        private void Item_Transition_Click(object sender, RoutedEventArgs e)
+        {
+            if (data.pages.Count > 0)
+            {
+                Window_Transitions window_Transitions = new Window_Transitions(ActualPage, data);
+                window_Transitions.Owner = this;
+                window_Transitions.ShowDialog();
+            }
+        }
+
+        private void Item_Cut_Click(object sender, RoutedEventArgs e)
+        {
+            Cut();
+        }
+
+        private void Item_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            Copy();
+        }
+
+        private void Item_Paste_Click(object sender, RoutedEventArgs e)
+        {
+            Paste();
         }
 
         private void Item_Archive_Click(object sender, RoutedEventArgs e)

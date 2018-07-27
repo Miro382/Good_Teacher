@@ -58,6 +58,9 @@
             </StackPanel>
         </Expander>
 
+        <CheckBox x:Name="CB_IsVisible" Margin="0,5" IsChecked="True" Checked="CB_IsVisible_Checked" Unchecked="CB_IsVisible_Checked" >
+            <TextBlock Text="{x:Static strings:ResStrings.Visible}" TextWrapping="Wrap"/>
+        </CheckBox>
 
         <WrapPanel x:Name="OpacityPanel" Margin="0,5"  Orientation="Horizontal">
             <TextBlock TextWrapping="Wrap" >

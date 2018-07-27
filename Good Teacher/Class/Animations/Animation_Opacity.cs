@@ -12,8 +12,9 @@ namespace Good_Teacher.Class.Animations
         public double FromSec { get; set; } = 0;
         public bool Repeat { get; set; } = false;
         public bool Reverse { get; set; } = false;
+        public bool DoAnimationOnStart { get; set; } = true;
 
-        public Animation_Opacity(int ControlID,double Opacity, double time, double fromSec, bool repeat, bool reverse)
+        public Animation_Opacity(int ControlID, bool OnStart, double Opacity, double time, double fromSec, bool repeat, bool reverse)
         {
             id = ControlID;
             opacity = Opacity;
@@ -21,6 +22,7 @@ namespace Good_Teacher.Class.Animations
             FromSec = fromSec;
             Repeat = repeat;
             Reverse = reverse;
+            DoAnimationOnStart = OnStart;
         }
 
         public int GetID()
@@ -40,5 +42,11 @@ namespace Good_Teacher.Class.Animations
             Anim.BeginTime = TimeSpan.FromSeconds(FromSec);
             elm.BeginAnimation(UIElement.OpacityProperty, Anim);
         }
+
+        public bool DoAnimationAtStart()
+        {
+            return DoAnimationOnStart;
+        }
+
     }
 }

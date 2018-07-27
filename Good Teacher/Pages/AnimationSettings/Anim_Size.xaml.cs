@@ -61,6 +61,7 @@ namespace Good_Teacher.Pages.AnimationSettings
             TB_TimeY.Text = "" + Canimation.BTimeY;
             CB_Repeat.IsChecked = Canimation.Repeat;
             CB_Reverse.IsChecked = Canimation.Reverse;
+            CB_OnStart.IsChecked = Canimation.DoAnimationOnStart;
             Button_OKEdit.Content = Strings.ResStrings.Edit;
             animation = Canimation;
             Edit = true;
@@ -129,10 +130,11 @@ namespace Good_Teacher.Pages.AnimationSettings
                     animation.BTimeY = Bty;
                     animation.Repeat = CB_Repeat.IsChecked == true;
                     animation.Reverse = CB_Reverse.IsChecked == true;
+                    animation.DoAnimationOnStart = (CB_OnStart.IsChecked == true);
                 }
                 else
                 {
-                    AddAnimation?.Invoke(new Animation_Size(id, CB_X.IsChecked == true, CB_Y.IsChecked == true,
+                    AddAnimation?.Invoke(new Animation_Size(id, CB_OnStart.IsChecked == true, CB_X.IsChecked == true, CB_Y.IsChecked == true,
                         x, y, dx, dy, (SL_XAR.Value / 100), (SL_YAR.Value / 100), (SL_XDR.Value / 100), (SL_YDR.Value / 100), Btx, Bty, (CB_Repeat.IsChecked == true), (CB_Reverse.IsChecked == true)));
                 }
             }

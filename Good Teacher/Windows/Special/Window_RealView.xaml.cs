@@ -21,8 +21,8 @@ namespace Good_Teacher.Windows.Special
         {
             InitializeComponent();
 
-            TextBox_Zoom.TB_Number.HorizontalContentAlignment = HorizontalAlignment.Right;
-            TextBox_Page.TB_Number.HorizontalContentAlignment = HorizontalAlignment.Right;
+            TextBox_Zoom.HorizontalContentAlignment = HorizontalAlignment.Right;
+            TextBox_Page.HorizontalContentAlignment = HorizontalAlignment.Right;
             data = datas;
             curloaded = LoadIndex;
             LoadCanvas();

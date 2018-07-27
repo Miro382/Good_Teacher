@@ -4,4 +4,10 @@ Good Teacher is a free program used for creating interactive presentations, game
 
 Webpage for Good Teacher: http://goodteacher.diodegames.eu/
 
-![Good Teacher Image](http://goodteacher.diodegames.eu/images/GTC1.jpg)
+Languages: EN,SK
+
+![Good Teacher Image - Preview](http://goodteacher.diodegames.eu/images/GTC1.jpg)
+
+![Good Teacher Image - 3D model](http://goodteacher.diodegames.eu/images/GTC2.jpg)
+
+![Good Teacher Image - Chart](http://goodteacher.diodegames.eu/images/GTC3.jpg)

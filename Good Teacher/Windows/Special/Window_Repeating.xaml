@@ -54,7 +54,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
-                        <Special:NumberTextBox x:Name="NTB_Page" Grid.Column="0" Grid.RowSpan="2" Text="1"/>
+                        <Controls:NumberBox x:Name="NTB_Page" Grid.Column="0" Grid.RowSpan="2" Text="1"/>
                         
                         <Controls:OpacityButton Grid.Column="1" Grid.Row="0" Width="8" Background="#FFBDC3C7" HoverOpacity="0.5" ClickOpacity="0.3" MouseLeftButtonDown="OpacityButtonUp_MouseLeftButtonDown" >
                             <Image Source="/Good Teacher;component/Resources/Icons/Buttons/Up.png"/> 

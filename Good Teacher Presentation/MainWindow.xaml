@@ -5,20 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Good_Teacher_Presentation"
         xmlns:strings="clr-namespace:Good_Teacher_Presentation.Strings"
+        xmlns:gstrings="http://GoodTeacher/Strings"
         mc:Ignorable="d"
         PreviewKeyDown="Window_PreviewKeyDown"
         PreviewKeyUp="Window_PreviewKeyUp"
-        Title="{x:Static strings:StringText.Title}" ResizeMode="NoResize"  MinWidth="600" MinHeight="400" Height="600" Width="800" WindowStartupLocation="CenterOwner" WindowState="Maximized" Icon="/Good Teacher;component/Resources/Menu/Play.png" WindowStyle="None">
+        Title="{x:Static strings:StringText.Title}" ResizeMode="NoResize"  MinWidth="600" MinHeight="400" Height="600" Width="800" WindowStartupLocation="CenterOwner" WindowState="Maximized" Icon="/Good Teacher;component/Resources/Menu/Play.png" WindowStyle="None"  PreviewMouseWheel="Window_PreviewMouseWheel">
+    
+        <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Good Teacher;component/ScrollViewer_HorizontalSliderTop.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid x:Name="MainGrid" Background="Black">
 
-        <Viewbox Panel.ZIndex="0">
-            <!-- 1280x720 -->
-            <Border x:Name="Border_CanvasSize" BorderBrush="Black" BorderThickness="0" Background="White" Width="1280" Height="720">
-                
-                <Canvas ClipToBounds="True" Panel.ZIndex="1" x:Name="PlayCanvas" Background="White" MouseLeftButtonUp="PlayCanvas_MouseLeftButtonUp"  />
+        <ScrollViewer x:Name="ScrollViewerZoom" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled" Template="{DynamicResource ScrollViewerControlTemplate_HSliderTop}" PreviewMouseWheel="ScrollViewerZoom_PreviewMouseWheel">
 
-            </Border>
-        </Viewbox>
+            <Viewbox x:Name="viewboxDC" Panel.ZIndex="0">
+                <!-- 1280x720 -->
+                <Border x:Name="Border_CanvasSize" BorderBrush="Black" BorderThickness="0" Background="White" Width="1280" Height="720">
+
+                    <Canvas ClipToBounds="True" Panel.ZIndex="1" x:Name="PlayCanvas" Background="White" MouseLeftButtonUp="PlayCanvas_MouseLeftButtonUp"  >
+                    </Canvas>
+
+                </Border>
+            </Viewbox>
+        </ScrollViewer>
 
         <Border Panel.ZIndex="3" BorderBrush="Black" BorderThickness="0" x:Name="ControlPanelC" VerticalAlignment="Bottom">
             <Border.Background>
@@ -40,11 +54,15 @@
                     <TextBox x:Name="TB_CNumber" Text="0" FontSize="14" FontWeight="Bold" MinWidth="30" Background="{x:Null}" BorderBrush="White" MaxLength="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" KeyDown="TB_CNumber_KeyDown" PreviewTextInput="TextBox_PreviewTextInput" DataObject.Pasting="TextBox_Pasting"/>
                     <Label x:Name="Label_Number"  Content="/0" FontSize="14" VerticalContentAlignment="Center" FontWeight="Bold" />
                     <Controls:FlatButton x:Name="FB_PageList" Margin="10,0" Click="FlatButton_Click" Grid.Column="1" Width="32" Height="32" Image_Source="/Good Teacher;component/Resources/Presentation/ShowListPages.png" Hover="#4CE91E63" ClickBrush="#99E91E63"/>
+
+                    <Slider x:Name="SliderZoom" Margin="3,0" Width="120" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Maximum="1000" Minimum="10" SmallChange="1" TickFrequency="100" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft"  ValueChanged="SliderZoom_ValueChanged" Value="100" />
+                    <TextBox x:Name="TextBox_Zoom" VerticalAlignment="Bottom" Height="20" MaxLength="3" TextWrapping="NoWrap" Text="100" Width="40" HorizontalAlignment="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#7FFFFFFF" LostFocus="TB_Zoom_LostFocus" KeyDown="TB_Zoom_KeyDown"/>
+                    <Controls:FlatButton Width="22" Margin="3,0,0,0" VerticalAlignment="Bottom" Height="22" HorizontalAlignment="Left" Image_Source="/Good Teacher;component/Resources/Icons/ZoomCancel.png" Hover="#4CE91E63" ClickBrush="#99E91E63" Click="FlatButtonZoomCancel_Click" ToolTip="{x:Static gstrings:ResStrings.DefaultZoom}"/>
                 </StackPanel>
                 
                 <Controls:FlatButton x:Name="FB_Left" Margin="10,0" Click="FlatButton_Click" Grid.Column="1" Width="32" Height="32" Image_Source="/Good Teacher;component/Resources/Presentation/Back.png" Hover="#4CE91E63" ClickBrush="#99E91E63"/>
                 <Controls:FlatButton x:Name="FB_Right" Margin="10,0" Click="FlatButton_Click" Grid.Column="2" Width="32" Height="32" Image_Source="/Good Teacher;component/Resources/Presentation/Forward.png" Hover="#4CE91E63" ClickBrush="#99E91E63"/>
-                <Controls:FlatButton x:Name="FB_Close" Click="FlatButton_Click" Grid.Column="3" Width="32" Height="32" Image_Source="/Good Teacher;component/Resources/Presentation/ClosePresentation.png" Hover="#B2C0392B" ClickBrush="#FFC0392B" HorizontalAlignment="Right"/>
+                <Controls:FlatButton x:Name="FB_Close" Click="FlatButton_Click" Grid.Column="3" Width="32" Height="32" Image_Source="/Good Teacher;component/Resources/Presentation/ClosePresentation.png" Hover="#e74c3c" ClickBrush="#912c21" HorizontalAlignment="Right"/>
                 
 
             </Grid>
