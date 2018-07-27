@@ -20,14 +20,17 @@ namespace Good_Teacher.Pages
     {
         CButton cont;
         DataStore data;
+        int selpos;
 
-        public Value_Button(DataStore datas, CButton button)
+        public Value_Button(DataStore datas, CButton button, int selectedPosition)
         {
             InitializeComponent();
 
             data = datas;
 
             cont = button;
+
+            selpos = selectedPosition;
 
             positionselector.SetData(cont);
             positionselector.LoadData();
@@ -63,13 +66,20 @@ namespace Good_Teacher.Pages
             CheckBoxClick.IsChecked = cont.ChangeClick;
             CheckBoxHover.IsChecked = cont.ChangeHover;
 
-
-            SetCurrentAction();
-
+            CurrentActionsCount.Text = ""+cont.actions.Count;
 
             if(cont.ToolTip!=null)
             {
                 TB_Tooltip.Text = cont.ToolTip.ToString();
+            }
+
+            if(cont.Cursor != null)
+            {
+                CB_Cursor.IsChecked = true;
+            }
+            else
+            {
+                CB_Cursor.IsChecked = false;
             }
 
         }
@@ -78,52 +88,6 @@ namespace Good_Teacher.Pages
         {
             cont.VerticalContentAlignment = vertical;
             cont.HorizontalContentAlignment = horizontal;
-        }
-
-        private void SetCurrentAction()
-        {
-            if (cont.action != null)
-            {
-                switch (cont.action.GetActionType())
-                {
-                    case ActionType.Action_Type.GoToPage:
-                        if(((Action_GoToPage)cont.action).ToSpecific)
-                            CurrentAction.Text = Strings.ResStrings.GoToPage + " (" + ((Action_GoToPage)cont.action).ToPage + ")";
-                        else if(((Action_GoToPage)cont.action).Next)
-                            CurrentAction.Text = Strings.ResStrings.GoToPage + " (" + Strings.ResStrings.NextPage + ")";
-                        else
-                            CurrentAction.Text = Strings.ResStrings.GoToPage + " (" + Strings.ResStrings.PreviousPage + ")";
-                        break;
-                    case ActionType.Action_Type.OpenWeb:
-                        CurrentAction.Text = Strings.ResStrings.OpenLink + " (" + ((Action_OpenWeb)cont.action).Url + ")";
-                        break;
-                    case ActionType.Action_Type.ClosePresentation:
-                        CurrentAction.Text = Strings.ResStrings.ClosePresentation;
-                        break;
-                    case ActionType.Action_Type.OpenApplication:
-                        CurrentAction.Text = Strings.ResStrings.OpenApplication + " ("+ ((Action_OpenApp)cont.action).AppPath + ")";
-                        break;
-                    case ActionType.Action_Type.ShowMessageBox:
-                        CurrentAction.Text = Strings.ResStrings.ShowMessageBox + " ("+ ((Action_ShowMessageBox)cont.action).Title + " - " + Environment.NewLine + "[ "+((Action_ShowMessageBox)cont.action).Text + " ] )";
-                        break;
-                    case ActionType.Action_Type.Sound:
-
-                        if(((Action_Sound)cont.action).Stop)
-                            CurrentAction.Text = Strings.ResStrings.Sound + " ("+Strings.ResStrings.Stop+")";
-                        else if (((Action_Sound)cont.action).PlayAgain)
-                            CurrentAction.Text = Strings.ResStrings.Sound + " (" + Strings.ResStrings.PlayAgainStart + ")";
-                        else
-                            CurrentAction.Text = Strings.ResStrings.Sound + " (" + Strings.ResStrings.Play + ": ["+ ((Action_Sound)cont.action).PathToPlay + " , "+
-                                Strings.ResStrings.Repeat+": "+ LocalizationWorker.BoolToYesNo(((Action_Sound)cont.action).Repeat)+ "] )";
-                        break;
-                    case ActionType.Action_Type.LoadPresentation:
-                        CurrentAction.Text = Strings.ResStrings.LoadPresentation + " (" + ((Action_LoadPresentation)cont.action).PresentationPath + ")";
-                        break;
-                    case ActionType.Action_Type.NoAction:
-                        CurrentAction.Text = "-";
-                        break;
-                }
-            }
         }
 
 
@@ -259,23 +223,10 @@ namespace Good_Teacher.Pages
 
         private void Button_OnClickActions_Click(object sender, RoutedEventArgs e)
         {
-            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(cont,data);
-            window_SetOnClickActions.Owner = Window.GetWindow(this);
-            window_SetOnClickActions.ShowDialog();
-
-            if (window_SetOnClickActions.isOK)
-            {
-                cont.action = window_SetOnClickActions.actions;
-                Debug.WriteLine(window_SetOnClickActions.actions);
-
-                if (window_SetOnClickActions.action_type == ActionType.Action_Type.NoAction)
-                {
-                    cont.action = null;
-                    CurrentAction.Text = "-";
-                }
-
-                SetCurrentAction();
-            }
+            Window_ClickActionsList window_ClickActionsList = new Window_ClickActionsList(data, cont, selpos);
+            window_ClickActionsList.Owner = Window.GetWindow(this);
+            window_ClickActionsList.ShowDialog();
+            CurrentActionsCount.Text = "" + cont.actions.Count;
         }
 
         private void Content_Click(object sender, RoutedEventArgs e)
@@ -289,6 +240,22 @@ namespace Good_Teacher.Pages
                 cont.contentCreator = window_Content.content;
                 cont.Content = "";
                 cont.Content = cont.contentCreator.Create(data);
+            }
+        }
+
+
+        private void CheckBoxCursor_Checked(object sender, RoutedEventArgs e)
+        {
+            if(cont != null)
+            {
+                if(CB_Cursor.IsChecked == true)
+                {
+                    cont.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    cont.Cursor = null;
+                }
             }
         }
 

@@ -165,13 +165,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Class\Actions\Action_ClosePresentation.cs" />
+    <Compile Include="Class\Actions\Action_DoAnimation.cs" />
     <Compile Include="Class\Actions\Action_GoToPage.cs" />
     <Compile Include="Class\Actions\Action_LoadPresentation.cs" />
     <Compile Include="Class\Actions\Action_OpenApp.cs" />
     <Compile Include="Class\Actions\Action_OpenWeb.cs" />
+    <Compile Include="Class\Actions\Action_Position.cs" />
+    <Compile Include="Class\Actions\Action_SetVisibility.cs" />
     <Compile Include="Class\Actions\Action_ShowMessageBox.cs" />
     <Compile Include="Class\Actions\Action_Sound.cs" />
     <Compile Include="Class\Actions\IActions.cs" />
+    <Compile Include="Class\Actions\SetVisibilityEnum.cs" />
     <Compile Include="Class\Animations\Animation_Opacity.cs" />
     <Compile Include="Class\Animations\Animation_Position.cs" />
     <Compile Include="Class\Animations\Animation_Size.cs" />
@@ -182,8 +186,10 @@
     <Compile Include="Class\Enumerators\ChartType.cs" />
     <Compile Include="Class\Enumerators\DateTypeShow.cs" />
     <Compile Include="Class\Enumerators\LanguageSettings.cs" />
+    <Compile Include="Class\Enumerators\MathSignEnum.cs" />
     <Compile Include="Class\Enumerators\ModelLightType.cs" />
     <Compile Include="Class\Enumerators\SoundAction.cs" />
+    <Compile Include="Class\Enumerators\TransitionTypeEnum.cs" />
     <Compile Include="Class\History\EventList.cs" />
     <Compile Include="Class\History\HistoryCommand.cs" />
     <Compile Include="Class\History\His_AddControl.cs" />
@@ -236,6 +242,7 @@
     <Compile Include="Class\Workers\ClassWorker.cs" />
     <Compile Include="Class\Save\Compression.cs" />
     <Compile Include="Class\Serialization\ImageRepresentation.cs" />
+    <Compile Include="Class\Workers\ControlNameWorker.cs" />
     <Compile Include="Class\Workers\ControlWorker.cs" />
     <Compile Include="Class\Workers\FileWorker.cs" />
     <Compile Include="Class\Workers\FontWorker.cs" />
@@ -276,6 +283,7 @@
     <Compile Include="Controls\MediaPlayerController_Control.xaml.cs">
       <DependentUpon>MediaPlayerController_Control.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NumberBox.cs" />
     <Compile Include="Controls\PageMiniature.xaml.cs">
       <DependentUpon>PageMiniature.xaml</DependentUpon>
     </Compile>
@@ -354,9 +362,6 @@
     </Compile>
     <Compile Include="Controls\Special\FontEditorPanel.xaml.cs">
       <DependentUpon>FontEditorPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\NumberTextBox.xaml.cs">
-      <DependentUpon>NumberTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Special\PositionSelector.xaml.cs">
       <DependentUpon>PositionSelector.xaml</DependentUpon>
@@ -653,6 +658,9 @@
     <Compile Include="Windows\Special\Window_TextEditor.xaml.cs">
       <DependentUpon>Window_TextEditor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Special\Window_Transitions.xaml.cs">
+      <DependentUpon>Window_Transitions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Window_AboutApp.xaml.cs">
       <DependentUpon>Window_AboutApp.xaml</DependentUpon>
     </Compile>
@@ -664,6 +672,9 @@
     </Compile>
     <Compile Include="Windows\Window_ChartData.xaml.cs">
       <DependentUpon>Window_ChartData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Window_ClickActionsList.xaml.cs">
+      <DependentUpon>Window_ClickActionsList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Window_ColorPicker.xaml.cs">
       <DependentUpon>Window_ColorPicker.xaml</DependentUpon>
@@ -775,10 +786,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Special\FontEditorPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\NumberTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -974,6 +981,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ScrollViewer_HorizontalSliderTop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Dialogs\DWindow_AddFromClipboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1114,6 +1125,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Special\Window_Transitions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Window_AboutApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1127,6 +1142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Window_ChartData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window_ClickActionsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1879,6 +1898,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GTFileIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Transition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Animations\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Specific\Copy.png" />
+    <Resource Include="Resources\Specific\Cut.png" />
+    <Resource Include="Resources\Specific\Paste.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\ZstdNet.1.3.3\build\ZstdNet.targets" Condition="Exists('..\packages\ZstdNet.1.3.3\build\ZstdNet.targets')" />

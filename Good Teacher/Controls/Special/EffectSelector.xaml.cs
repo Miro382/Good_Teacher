@@ -67,6 +67,15 @@ namespace Good_Teacher.Controls.Special
                 rotationbutton.SetAngleToPointer(((RotateTransform)cont.RenderTransform).Angle);
             }
 
+            if(cont.Visibility == Visibility.Visible)
+            {
+                CB_IsVisible.IsChecked = true;
+            }
+            else
+            {
+                CB_IsVisible.IsChecked = false;
+            }
+
         }
 
 
@@ -246,6 +255,22 @@ namespace Good_Teacher.Controls.Special
         {
             cont.Effect = null;
             B_RemoveBlur.Visibility = Visibility.Collapsed;
+        }
+
+
+        private void CB_IsVisible_Checked(object sender, RoutedEventArgs e)
+        {
+            if (cont != null)
+            {
+                if (CB_IsVisible.IsChecked == true)
+                {
+                    cont.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    cont.Visibility = Visibility.Collapsed;
+                }
+            }
         }
 
     }

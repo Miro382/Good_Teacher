@@ -2,6 +2,7 @@
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Pages.AnimationSettings;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,6 +43,8 @@ namespace Good_Teacher.Windows.Dialogs
            // CB_Type_SelectionChanged(null, null);
            if(data.pages.Count>0)
             RefreshAnimList();
+
+            //Debug.WriteLine(data.pages[sind].AnimationList.Count);
         }
 
 
@@ -53,7 +56,7 @@ namespace Good_Teacher.Windows.Dialogs
                 {
                     StackPanel item = new StackPanel();
                     item.Tag = i;
-                    Label lab = new Label() { Content = "[" + i + "] "+ ControlWorker.GetTypeName(canvas.Children[i], out txt) };
+                    Label lab = new Label() { Content = "[" + ControlWorker.GetID(((FrameworkElement)canvas.Children[i]).Name) + "] "+ ControlNameWorker.GetTypeName(canvas.Children[i], out txt) };
                     item.Children.Add(lab);
                     ListControls.Items.Add(item);
 
@@ -63,7 +66,7 @@ namespace Good_Teacher.Windows.Dialogs
                         if(OBJSelected == canvas.Children[i])
                         {
                             ListControls.SelectedIndex = i;
-                            Sel_Label.Content = "[" + i + "] " + ControlWorker.GetTypeName(canvas.Children[i], out txt);
+                            Sel_Label.Content = "[" + ControlWorker.GetID(((FrameworkElement)canvas.Children[i]).Name) + "] " + ControlNameWorker.GetTypeName(canvas.Children[i], out txt);
                             SelectedI = i;
                         }
                     }
@@ -84,7 +87,7 @@ namespace Good_Teacher.Windows.Dialogs
                 if (ClickControl != null)
                     ClickControl(canvas.Children[iC]);
 
-                Sel_Label.Content = "[" + iC + "] " + ControlWorker.GetTypeName(canvas.Children[iC], out txt);
+                Sel_Label.Content = "[" + ControlWorker.GetID(((FrameworkElement)canvas.Children[iC]).Name) + "] " + ControlNameWorker.GetTypeName(canvas.Children[iC], out txt);
                 SelectedI = iC;
                 CB_Type_SelectionChanged(null, null);
 
@@ -102,21 +105,21 @@ namespace Good_Teacher.Windows.Dialogs
                 if (CB_Type.SelectedIndex == 0)
                 {
                     AnimationSettings.Content = null;
-                    Anim_Position anim_Position = new Anim_Position(SelectedI, Canvas.GetLeft( canvas.Children[SelectedI]), Canvas.GetTop(canvas.Children[SelectedI]) );
+                    Anim_Position anim_Position = new Anim_Position(ControlWorker.GetID(((FrameworkElement)canvas.Children[SelectedI]).Name), Canvas.GetLeft( canvas.Children[SelectedI]), Canvas.GetTop(canvas.Children[SelectedI]) );
                     anim_Position.AddAnimation += Anim_Position_AddAnimation;
                     AnimationSettings.Content = anim_Position;
                 }
                 else if(CB_Type.SelectedIndex == 1)
                 {
                     AnimationSettings.Content = null;
-                    Anim_Opacity anim_Position = new Anim_Opacity(SelectedI, canvas.Children[SelectedI].Opacity);
+                    Anim_Opacity anim_Position = new Anim_Opacity(ControlWorker.GetID(((FrameworkElement)canvas.Children[SelectedI]).Name), canvas.Children[SelectedI].Opacity);
                     anim_Position.AddAnimation += Anim_Position_AddAnimation;
                     AnimationSettings.Content = anim_Position;
                 }
                 else
                 {
                     AnimationSettings.Content = null;
-                    Anim_Size anim_Position = new Anim_Size(SelectedI, ((FrameworkElement)canvas.Children[SelectedI]).Width, ((FrameworkElement)canvas.Children[SelectedI]).Height);
+                    Anim_Size anim_Position = new Anim_Size(ControlWorker.GetID(((FrameworkElement)canvas.Children[SelectedI]).Name), ((FrameworkElement)canvas.Children[SelectedI]).Width, ((FrameworkElement)canvas.Children[SelectedI]).Height);
                     anim_Position.AddAnimation += Anim_Position_AddAnimation;
                     AnimationSettings.Content = anim_Position;
                 }
@@ -136,12 +139,15 @@ namespace Good_Teacher.Windows.Dialogs
             {
                 AnimPanel.Items.Clear();
                 int k = 0;
+
+                List<IAnimation> Removelist = new List<IAnimation>();
+
                 foreach (IAnimation ian in data.pages[Pid].AnimationList)
                 {
+                    FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(canvas, "ID_" + ian.GetID());
 
-                    if (canvas.Children.Count >= ian.GetID() + 1)
+                    if (felm != null)
                     {
-
                         StackPanel stc = new StackPanel();
                         stc.Orientation = Orientation.Horizontal;
 
@@ -150,11 +156,11 @@ namespace Good_Teacher.Windows.Dialogs
                             stc.Background = new SolidColorBrush(Color.FromRgb(189, 195, 199));
                         else
                             stc.Background = new SolidColorBrush(Color.FromRgb(236, 240, 241));
-                            */
+                        */
 
 
                         Label lbl = new Label();
-                        lbl.Content = "[" + ian.GetID() + "] " + ControlWorker.GetTypeName(canvas.Children[ian.GetID()], out txt);
+                        lbl.Content =  (k+1) + ".   [" + ian.GetID() + "] " + ControlNameWorker.GetTypeName(felm, out txt);
 
                         Image img = new Image();
 
@@ -178,7 +184,17 @@ namespace Good_Teacher.Windows.Dialogs
                         AnimPanel.Items.Add(stc);
                         k++;
                     }
+                    else
+                    {
+                        Removelist.Add(ian);
+                    }
                 }
+
+                foreach(IAnimation ian in Removelist)
+                {
+                    data.pages[Pid].AnimationList.Remove(ian);
+                }
+
             }
         }
 

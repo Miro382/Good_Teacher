@@ -1693,4 +1693,64 @@ hexadecimal
   <data name="BulletSize" xml:space="preserve">
     <value>Veľkosť bodu</value>
   </data>
+  <data name="SetInvisible" xml:space="preserve">
+    <value>Nastaviť na neviditeľné</value>
+  </data>
+  <data name="SetVisible" xml:space="preserve">
+    <value>Nastaviť na viditeľné</value>
+  </data>
+  <data name="ToggleVisibility" xml:space="preserve">
+    <value>Prepínať viditeľné / neviditeľné</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Viditeľnosť</value>
+  </data>
+  <data name="Transitions" xml:space="preserve">
+    <value>Prechody</value>
+  </data>
+  <data name="ManualTransition" xml:space="preserve">
+    <value>Manuálny prechod na ďalšiu stránku</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Čas (sek)</value>
+  </data>
+  <data name="TimeTransition" xml:space="preserve">
+    <value>Prechod na ďalšiu stránku po čase</value>
+  </data>
+  <data name="SetUp" xml:space="preserve">
+    <value>Nastaviť</value>
+  </data>
+  <data name="SetUpPages" xml:space="preserve">
+    <value>Nastaviť pre všetky stránky</value>
+  </data>
+  <data name="TransitionClose" xml:space="preserve">
+    <value>Zavrieť prezentáciu po čase</value>
+  </data>
+  <data name="ActionsCount" xml:space="preserve">
+    <value>Počet akcií:</value>
+  </data>
+  <data name="AnimationAtStart" xml:space="preserve">
+    <value>Urob animáciu na začiatku</value>
+  </data>
+  <data name="AnimationID" xml:space="preserve">
+    <value>ID animácie</value>
+  </data>
+  <data name="DoAnimation" xml:space="preserve">
+    <value>Urobiť animáciu</value>
+  </data>
+  <data name="ListOfActions" xml:space="preserve">
+    <value>Zoznam akcií</value>
+  </data>
+  <data name="ChangeCursor" xml:space="preserve">
+    <value>Zmeniť kurzor</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopírovať</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Vystrihnúť</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Prilepiť</value>
+  </data>
 </root>

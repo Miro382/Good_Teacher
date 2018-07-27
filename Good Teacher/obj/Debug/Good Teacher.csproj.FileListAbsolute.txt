@@ -287,6 +287,8 @@ D:\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_FontManager.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\x64\libzstd.dll
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\x86\libzstd.dll
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.exe.config
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.exe.manifest
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.application
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.pdb
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\sk\Good Teacher.resources.dll
@@ -349,7 +351,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Control
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\EditorSpecial\ImageButton.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\EffectSelector.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\FontEditorPanel.g.cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\NumberTextBox.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\PositionSelector.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\TestType_ControlN.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\WebPage_Control.g.cs
@@ -430,6 +431,7 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_ShowImage.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_ShowModel.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_TextEditor.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_Transitions.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_AboutApp.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_AllControls.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_Archive.g.cs
@@ -467,7 +469,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Control
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\EditorSpecial\ImageButton.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\EffectSelector.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\FontEditorPanel.baml
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\NumberTextBox.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\Special\PositionSelector.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\TestType_ControlN.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\WebPage_Control.baml
@@ -514,6 +515,7 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Pages\V
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Pages\Value_WebBrowser.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\ResourceDictionary.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Pages\Value_Label.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\ScrollViewer_HorizontalSliderTop.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Dialogs\DWindow_AddFromClipboard.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Dialogs\DWindow_AddFromWeb.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Dialogs\DWindow_AddImage.baml
@@ -549,6 +551,7 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_ShowImage.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_ShowModel.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_TextEditor.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_Transitions.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_AboutApp.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_AllControls.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_Archive.baml
@@ -568,12 +571,12 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good_Te
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.csproj.GenerateResource.cache
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.csproj.CoreCompileInputs.cache
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\sk\Good Teacher.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.TrustInfo.xml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.exe.manifest
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.application
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.csproj.CopyComplete
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.pdb
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.csprojAssemblyReference.cache
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.exe.manifest
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\bin\Debug\Good Teacher.application
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.TrustInfo.xml
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.exe.manifest
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.application
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_ClickActionsList.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_ClickActionsList.baml

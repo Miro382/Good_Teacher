@@ -11,6 +11,9 @@
             ShowMessageBox,
             Sound,
             LoadPresentation,
+            SetVisibility,
+            DoAnimation,
+            Position,
             NoAction
 
         };

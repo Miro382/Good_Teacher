@@ -21,6 +21,7 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
         public void Serialize(Barcode control)
         {
             position = new PositionSize(control);
+            ContID = control.Name;
             EnText = control.GetEncodedText();
             type = control.GetBarcodeType();
         }
@@ -29,6 +30,7 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
         public void Deserialize(Barcode control)
         {
             position.SetControlPositionSize(control);
+            control.Name = ContID;
             control.SetNewBarcode(EnText, type);
         }
 

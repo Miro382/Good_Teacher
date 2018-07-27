@@ -41,7 +41,7 @@ namespace Good_Teacher.Pages.Special
 
                 TextBlock label = new TextBlock();
                 label.TextWrapping = TextWrapping.Wrap;
-                label.Inlines.Add(new Run(ControlWorker.GetTypeName(cont, out par)+Environment.NewLine) {FontWeight = FontWeights.Bold } );
+                label.Inlines.Add(new Run(ControlNameWorker.GetTypeName(cont, out par)+Environment.NewLine) {FontWeight = FontWeights.Bold } );
                 label.Inlines.Add(new Run("X: "+ Math.Round(Canvas.GetLeft(cont),2) + Environment.NewLine ));
                 label.Inlines.Add(new Run("Y: " + Math.Round(Canvas.GetTop(cont),2) + Environment.NewLine ));
                 label.Inlines.Add(new Run("W: " + Math.Round(cont.Width,2) + Environment.NewLine ));

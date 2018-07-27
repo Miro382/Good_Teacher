@@ -28,10 +28,10 @@ namespace Good_Teacher.Windows
                     MenuItem item = new MenuItem();
                     StackPanel panel = new StackPanel();
                     Label lab = new Label();
-                    lab.Content = ControlWorker.GetTypeName(elem, out property);
+                    lab.Content = ControlNameWorker.GetTypeName(elem, out property);
                     lab.FontWeight = FontWeights.Bold;
                     Label lab2 = new Label();
-                    lab2.Content = "X: " + elem.GetValue(Canvas.LeftProperty) + "   Y: " + elem.GetValue(Canvas.TopProperty) + "   Z: " + Panel.GetZIndex(elem) + "    " + property;
+                    lab2.Content = "X: " + elem.GetValue(Canvas.LeftProperty) + "   Y: " + elem.GetValue(Canvas.TopProperty) + "   Z: " + Panel.GetZIndex(elem)+ "   "+Strings.ResStrings.ID+": "+ ControlWorker.GetID(elem.Name) + "    " + property;
                     panel.Children.Add(lab);
                     panel.Children.Add(lab2);
                     panel.Orientation = Orientation.Horizontal;

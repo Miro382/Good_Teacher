@@ -40,12 +40,16 @@
             </StackPanel>
         </Button>
 
-        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.CurrentAction}" FontWeight="Bold"/>
-        <TextBlock x:Name="CurrentAction" Margin="0,5" TextWrapping="Wrap" Text="-"/>
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.ActionsCount}" FontWeight="Bold"/>
+        <TextBlock x:Name="CurrentActionsCount" Margin="0,5" TextWrapping="Wrap" Text="-"/>
 
 
         <Label Content="{x:Static strings:ResStrings.Tooltip}" Margin="0,10,0,0" />
         <TextBox x:Name="TB_Tooltip" LostFocus="Control_LostFocus" KeyDown="Control_KeyDown" Text=""/>
+
+        <CheckBox x:Name="CB_Cursor" Margin="0,10,0,5" Checked="CheckBoxCursor_Checked" Unchecked="CheckBoxCursor_Checked" IsChecked="True" >
+            <TextBlock Text="{x:Static strings:ResStrings.ChangeCursor}" TextWrapping="Wrap" />
+        </CheckBox>
 
         <Separator/>
 

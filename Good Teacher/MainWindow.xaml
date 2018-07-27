@@ -266,6 +266,33 @@
                                     Height="16" />
                                 </MenuItem.Icon>
                             </MenuItem>
+
+                            <Separator/>
+
+                            <MenuItem x:Name="Cut_MI" Header="{x:Static strings:ResStrings.Cut}" Click="Item_Cut_Click" InputGestureText="{x:Static strings:HardStrings.Cut}" RenderOptions.BitmapScalingMode="Fant">
+                                <MenuItem.Icon>
+                                    <Image Source="Resources/Specific/Cut.png" 
+                                    Width="16"
+                                    Height="16" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem x:Name="Copy_MI" Header="{x:Static strings:ResStrings.Copy}" Click="Item_Copy_Click" InputGestureText="{x:Static strings:HardStrings.Copy}" RenderOptions.BitmapScalingMode="Fant">
+                                <MenuItem.Icon>
+                                    <Image Source="Resources/Specific/Copy.png" 
+                                    Width="16"
+                                    Height="16" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem x:Name="Paste_MI" Header="{x:Static strings:ResStrings.Paste}" Click="Item_Paste_Click" InputGestureText="{x:Static strings:HardStrings.Paste}" RenderOptions.BitmapScalingMode="Fant">
+                                <MenuItem.Icon>
+                                    <Image Source="Resources/Specific/Paste.png" 
+                                    Width="16"
+                                    Height="16" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
                         </MenuItem>
 
 
@@ -444,6 +471,14 @@
                             <MenuItem Header="{x:Static strings:ResStrings.FontPackage}" Tag="0" Click="Item_FontManager_Click">
                                 <MenuItem.Icon>
                                     <Image Source="Resources/Menu/FontPackage.png" 
+                                    Width="16"
+                                    Height="16" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
+                            <MenuItem Header="{x:Static strings:ResStrings.Transitions}" Tag="0" Click="Item_Transition_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="Resources/Icons/Buttons/Transition.png" 
                                     Width="16"
                                     Height="16" />
                                 </MenuItem.Icon>
@@ -671,7 +706,7 @@
                                 <MenuItem Margin="10,0,0,0" Click="MenuItem_Print_Click" >
                                     <MenuItem.Header>
                                         <StackPanel>
-                                            <Image Width="32" Height="32" Source="Resources/Menu/Print.png" />
+                                            <Image Width="32" Height="32" Source="Resources/Menu/Print.png" RenderOptions.BitmapScalingMode="Fant" />
                                             <ContentPresenter Content="{x:Static strings:ResStrings.Print}" HorizontalAlignment="Center" />
                                         </StackPanel>
                                     </MenuItem.Header>
@@ -754,6 +789,16 @@
                                     </MenuItem.Header>
                                 </MenuItem>
 
+
+                                <MenuItem x:Name="Item_Transitions" Margin="10,0,0,0" Click="Item_Transition_Click">
+                                    <MenuItem.Header>
+                                        <StackPanel>
+                                            <Image Width="32" Height="32" Source="Resources/Icons/Buttons/Transition.png" RenderOptions.BitmapScalingMode="Fant" />
+                                            <ContentPresenter Content="{x:Static strings:ResStrings.Transitions}" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+                                </MenuItem>
+
                             </Menu>
 
                         </StackPanel>
@@ -784,7 +829,7 @@
 
 
 
-            <ScrollViewer x:Name="ScrollViewerZoom" Margin="184,228,150,32" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled" PreviewMouseLeftButtonDown="ScrollViewerZoom_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="ScrollViewerZoom_PreviewMouseLeftButtonUp" PreviewMouseMove="ScrollViewerZoom_PreviewMouseMove" MouseLeave="ScrollViewerZoom_MouseLeave">
+            <ScrollViewer x:Name="ScrollViewerZoom" Margin="184,228,150,32" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled" PreviewMouseLeftButtonDown="ScrollViewerZoom_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="ScrollViewerZoom_PreviewMouseLeftButtonUp" PreviewMouseMove="ScrollViewerZoom_PreviewMouseMove" MouseLeave="ScrollViewerZoom_MouseLeave" PreviewMouseWheel="ScrollViewerZoom_PreviewMouseWheel">
 
                 <!-- Window -->
                 <Viewbox x:Name="viewboxDC" >

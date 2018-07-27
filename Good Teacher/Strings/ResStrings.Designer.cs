@@ -79,6 +79,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actions count:.
+        /// </summary>
+        public static string ActionsCount {
+            get {
+                return ResourceManager.GetString("ActionsCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Actual path to file:.
         /// </summary>
         public static string ActualPath {
@@ -246,6 +255,24 @@ namespace Good_Teacher.Strings {
         public static string Angle {
             get {
                 return ResourceManager.GetString("Angle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do animation at start.
+        /// </summary>
+        public static string AnimationAtStart {
+            get {
+                return ResourceManager.GetString("AnimationAtStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Animation ID.
+        /// </summary>
+        public static string AnimationID {
+            get {
+                return ResourceManager.GetString("AnimationID", resourceCulture);
             }
         }
         
@@ -790,6 +817,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change cursor.
+        /// </summary>
+        public static string ChangeCursor {
+            get {
+                return ResourceManager.GetString("ChangeCursor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change on click.
         /// </summary>
         public static string ChangeOnClick {
@@ -1134,6 +1170,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy to clipboard.
         /// </summary>
         public static string CopyToClipboard {
@@ -1247,6 +1292,15 @@ namespace Good_Teacher.Strings {
         public static string Customize {
             get {
                 return ResourceManager.GetString("Customize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cut.
+        /// </summary>
+        public static string Cut {
+            get {
+                return ResourceManager.GetString("Cut", resourceCulture);
             }
         }
         
@@ -1472,6 +1526,15 @@ namespace Good_Teacher.Strings {
         public static string DisableAnimations {
             get {
                 return ResourceManager.GetString("DisableAnimations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do animation.
+        /// </summary>
+        public static string DoAnimation {
+            get {
+                return ResourceManager.GetString("DoAnimation", resourceCulture);
             }
         }
         
@@ -2574,6 +2637,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to List of actions.
+        /// </summary>
+        public static string ListOfActions {
+            get {
+                return ResourceManager.GetString("ListOfActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load.
         /// </summary>
         public static string Load {
@@ -2633,6 +2705,15 @@ namespace Good_Teacher.Strings {
         public static string Manual {
             get {
                 return ResourceManager.GetString("Manual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual transition to next page.
+        /// </summary>
+        public static string ManualTransition {
+            get {
+                return ResourceManager.GetString("ManualTransition", resourceCulture);
             }
         }
         
@@ -3146,6 +3227,15 @@ namespace Good_Teacher.Strings {
         public static string PageOrientation {
             get {
                 return ResourceManager.GetString("PageOrientation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paste.
+        /// </summary>
+        public static string Paste {
+            get {
+                return ResourceManager.GetString("Paste", resourceCulture);
             }
         }
         
@@ -3870,11 +3960,47 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set to invisible.
+        /// </summary>
+        public static string SetInvisible {
+            get {
+                return ResourceManager.GetString("SetInvisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         public static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set up.
+        /// </summary>
+        public static string SetUp {
+            get {
+                return ResourceManager.GetString("SetUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set up for all pages.
+        /// </summary>
+        public static string SetUpPages {
+            get {
+                return ResourceManager.GetString("SetUpPages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set to visible.
+        /// </summary>
+        public static string SetVisible {
+            get {
+                return ResourceManager.GetString("SetVisible", resourceCulture);
             }
         }
         
@@ -4320,6 +4446,24 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Time (sec).
+        /// </summary>
+        public static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transition to next page after time.
+        /// </summary>
+        public static string TimeTransition {
+            get {
+                return ResourceManager.GetString("TimeTransition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tiny.
         /// </summary>
         public static string Tiny {
@@ -4334,6 +4478,15 @@ namespace Good_Teacher.Strings {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle visible/invisible.
+        /// </summary>
+        public static string ToggleVisibility {
+            get {
+                return ResourceManager.GetString("ToggleVisibility", resourceCulture);
             }
         }
         
@@ -4415,6 +4568,24 @@ namespace Good_Teacher.Strings {
         public static string ToY {
             get {
                 return ResourceManager.GetString("ToY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close presentation after time.
+        /// </summary>
+        public static string TransitionClose {
+            get {
+                return ResourceManager.GetString("TransitionClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transitions.
+        /// </summary>
+        public static string Transitions {
+            get {
+                return ResourceManager.GetString("Transitions", resourceCulture);
             }
         }
         
@@ -4586,6 +4757,15 @@ namespace Good_Teacher.Strings {
         public static string ViewContentViewer {
             get {
                 return ResourceManager.GetString("ViewContentViewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visibility.
+        /// </summary>
+        public static string Visibility {
+            get {
+                return ResourceManager.GetString("Visibility", resourceCulture);
             }
         }
         

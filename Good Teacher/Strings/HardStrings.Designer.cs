@@ -61,6 +61,24 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ctrl + C.
+        /// </summary>
+        public static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ctrl + X.
+        /// </summary>
+        public static string Cut {
+            get {
+                return ResourceManager.GetString("Cut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         public static string English {
@@ -93,6 +111,15 @@ namespace Good_Teacher.Strings {
         public static string Open {
             get {
                 return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ctrl + V.
+        /// </summary>
+        public static string Paste {
+            get {
+                return ResourceManager.GetString("Paste", resourceCulture);
             }
         }
         

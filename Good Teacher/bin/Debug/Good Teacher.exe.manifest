@@ -53,26 +53,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3664896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3697664">
       <assemblyIdentity name="Good Teacher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IpnaKX8aNRC5xGDMkLDMqg5GejAAc+6CkRw6WLG7gLk=</dsig:DigestValue>
+        <dsig:DigestValue>4R2tiAxTF24EAYTv/f2xqcd/vg7GKjcJkdM+/ZyQZV4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="39936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="40960">
       <assemblyIdentity name="Good Teacher.resources" version="1.0.0.0" language="sk" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f6C4JsZwZe/5C1Fvkw7EfXVz6YJaykIEU7WzdR9n28c=</dsig:DigestValue>
+        <dsig:DigestValue>m6lBMwtUONNk20Ik/SazGcLT8616BgKCHOrypD48T+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -46,6 +46,7 @@ namespace Good_Teacher.Pages.AnimationSettings
             animation_Position = Canimation_Position;
             CB_Repeat.IsChecked = Canimation_Position.Repeat;
             CB_Reverse.IsChecked = Canimation_Position.Reverse;
+            CB_OnStart.IsChecked = Canimation_Position.DoAnimationOnStart;
             Edit = true;
             Button_OKEdit.Content = Strings.ResStrings.Edit;
 
@@ -80,10 +81,11 @@ namespace Good_Teacher.Pages.AnimationSettings
                     animation_Position.opacity = (SL_ToOP.Value / 100);
                     animation_Position.Repeat = (CB_Repeat.IsChecked == true);
                     animation_Position.Reverse = (CB_Reverse.IsChecked == true);
+                    animation_Position.DoAnimationOnStart = (CB_OnStart.IsChecked == true);
                 }
                 else
                 {
-                    AddAnimation?.Invoke(new Animation_Opacity(id, (SL_ToOP.Value / 100),dur,btime, (CB_Repeat.IsChecked==true), (CB_Reverse.IsChecked == true)));
+                    AddAnimation?.Invoke(new Animation_Opacity(id, CB_OnStart.IsChecked == true, (SL_ToOP.Value / 100),dur,btime, (CB_Repeat.IsChecked==true), (CB_Reverse.IsChecked == true)));
                 }
             }
             

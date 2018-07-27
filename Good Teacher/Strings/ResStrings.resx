@@ -1692,4 +1692,64 @@ hexadecimal
   <data name="BulletSize" xml:space="preserve">
     <value>Bullet size</value>
   </data>
+  <data name="SetInvisible" xml:space="preserve">
+    <value>Set to invisible</value>
+  </data>
+  <data name="SetVisible" xml:space="preserve">
+    <value>Set to visible</value>
+  </data>
+  <data name="ToggleVisibility" xml:space="preserve">
+    <value>Toggle visible/invisible</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="Transitions" xml:space="preserve">
+    <value>Transitions</value>
+  </data>
+  <data name="ManualTransition" xml:space="preserve">
+    <value>Manual transition to next page</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time (sec)</value>
+  </data>
+  <data name="TimeTransition" xml:space="preserve">
+    <value>Transition to next page after time</value>
+  </data>
+  <data name="SetUp" xml:space="preserve">
+    <value>Set up</value>
+  </data>
+  <data name="SetUpPages" xml:space="preserve">
+    <value>Set up for all pages</value>
+  </data>
+  <data name="TransitionClose" xml:space="preserve">
+    <value>Close presentation after time</value>
+  </data>
+  <data name="ActionsCount" xml:space="preserve">
+    <value>Actions count:</value>
+  </data>
+  <data name="AnimationAtStart" xml:space="preserve">
+    <value>Do animation at start</value>
+  </data>
+  <data name="AnimationID" xml:space="preserve">
+    <value>Animation ID</value>
+  </data>
+  <data name="DoAnimation" xml:space="preserve">
+    <value>Do animation</value>
+  </data>
+  <data name="ListOfActions" xml:space="preserve">
+    <value>List of actions</value>
+  </data>
+  <data name="ChangeCursor" xml:space="preserve">
+    <value>Change cursor</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
 </root>

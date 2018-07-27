@@ -3,18 +3,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\x86\libzstd.
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\Updater.exe.config
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\Updater.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\Updater.pdb
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\MainWindow.g.cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\App.g.cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater_MarkupCompile.cache
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater_MarkupCompile.lref
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\MainWindow.baml
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.g.resources
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.Properties.Resources.resources
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.exe
-D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.pdb
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\Good Teacher.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\WpfMath.dll
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\LiveCharts.Wpf.dll
@@ -49,4 +37,16 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\HelixToolkit
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\HelixToolkit.xml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\sk\Good Teacher.resources.dll
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\bin\Debug\de\PdfSharp-wpf.resources.dll
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\MainWindow.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\App.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater_MarkupCompile.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater_MarkupCompile.lref
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\MainWindow.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.g.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.Properties.Resources.resources
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.CopyComplete
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.exe
+D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.pdb

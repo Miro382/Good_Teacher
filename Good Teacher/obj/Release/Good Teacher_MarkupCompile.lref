@@ -1,4 +1,4 @@
-﻿
+﻿D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Release\GeneratedInternalTypeHelper.g.cs
 
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\AnswerButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Barcode.xaml;;
@@ -26,7 +26,6 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\EditorSpecial\ImageButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\EffectSelector.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\FontEditorPanel.xaml;;
-FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\NumberTextBox.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\PositionSelector.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\TestType_ControlN.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\WebPage_Control.xaml;;
@@ -73,6 +72,7 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Text
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_WebBrowser.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\ResourceDictionary.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Label.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\ScrollViewer_HorizontalSliderTop.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\DWindow_AddFromClipboard.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\DWindow_AddFromWeb.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\DWindow_AddImage.xaml;;
@@ -108,10 +108,12 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ShowImage.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ShowModel.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_TextEditor.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Transitions.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AboutApp.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AllControls.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Archive.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ChartData.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ClickActionsList.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ColorPicker.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_SetOnClickActions.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Settings.xaml;;

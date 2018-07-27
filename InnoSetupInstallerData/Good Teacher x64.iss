@@ -10,8 +10,8 @@ AppName=Good Teacher
 AppVersion=1.0.0
 VersionInfoProductName=Good Teacher
 VersionInfoProductVersion=1.0.0
-VersionInfoProductTextVersion=1.0.0 Beta Rev 10 x64
-VersionInfoTextVersion=1.0.0 Beta Rev 10 x64
+VersionInfoProductTextVersion=1.0.0 Beta Rev 11 x64
+VersionInfoTextVersion=1.0.0 Beta Rev 11 x64
 VersionInfoVersion=1.0.0
 ;AppVerName=Good Teacher 1.0.0
 AppPublisher=Miroslav Murin
@@ -47,8 +47,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "Good Teacher ReleaseX64\Good Teacher.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "Good Teacher ReleaseX64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Good Teacher ReleaseX64\Good Teacher Repairo.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Good Teacher ReleaseX64\Data\GTFileIcon.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Good Teacher ReleaseX64\Data\GTRFileIcon.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Good Teacher ReleaseX64\Data\GTFileIcon.ico"; DestDir: "{app}\Data\"; Flags: ignoreversion
+Source: "Good Teacher ReleaseX64\Data\GTRFileIcon.ico"; DestDir: "{app}\Data\"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\Good Teacher"; Filename: "{app}\Good Teacher.exe"

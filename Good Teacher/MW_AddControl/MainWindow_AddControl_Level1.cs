@@ -45,7 +45,6 @@ namespace Good_Teacher
                         label.MouseMove += Control_MouseMove;
                         label.MouseLeave += Control_MouseLeave;
 
-
                         AddEvents(label);
                         DesignCanvas.Children.Add(label);
                     }
@@ -141,6 +140,8 @@ namespace Good_Teacher
                         Canvas.SetTop(web, p.Y - web.DesiredSize.Height / 2);
 
                         web.ControlPanelBack = new LinearGradientBrush(Color.FromRgb(222, 222, 222), Colors.White, 90);
+
+                        web.Name = "ID_" + data.pages[SelectedPosition].LastID++;
 
                         AddEvents(web);
                         DesignCanvas.Children.Add(web);
@@ -250,6 +251,8 @@ namespace Good_Teacher
                         Canvas.SetTop(con, p.Y - con.DesiredSize.Height / 2);
 
                         con.G_ControlPanel.Background = new LinearGradientBrush(Color.FromRgb(162, 162, 162), Color.FromRgb(230, 230, 230), 90);
+
+                        con.Name = "ID_" + data.pages[SelectedPosition].LastID++;
 
                         AddEvents(con);
                         DesignCanvas.Children.Add(con);

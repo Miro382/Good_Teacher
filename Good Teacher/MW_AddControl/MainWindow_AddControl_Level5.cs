@@ -173,6 +173,8 @@ namespace Good_Teacher
 
                         con.ControlPanelBack = new LinearGradientBrush(Color.FromRgb(162, 162, 162), Color.FromRgb(230, 230, 230), 90);
 
+                        con.Name = "ID_" + data.pages[SelectedPosition].LastID++;
+
                         AddEvents(con);
                         DesignCanvas.Children.Add(con);
 
@@ -197,6 +199,8 @@ namespace Good_Teacher
                         Canvas.SetTop(con, p.Y - con.DesiredSize.Height / 2);
 
                         con.ControlPanelBack = new LinearGradientBrush(Colors.White, Color.FromRgb(236, 240, 241), 90);
+
+                        con.Name = "ID_" + data.pages[SelectedPosition].LastID++;
 
                         AddEvents(con);
                         DesignCanvas.Children.Add(con);

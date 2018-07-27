@@ -20,6 +20,9 @@ namespace Good_Teacher.Windows.Special
     //Remove first element
 	//Element.RemoveAt(0);
 
+    //Hide element with ID 0
+    //FindByID(0,Canvas).Visibility = Collapsed;
+
     //After click on first element - removes second element
     //Element[0].add_MouseLeftButtonDown(function(sender, eventArgs) { Element.RemoveAt(1); });
 };

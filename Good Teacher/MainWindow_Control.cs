@@ -30,6 +30,11 @@ namespace Good_Teacher
                     ((Control)SelectedControl).Background = selbackground;
                     */
 
+            if(sender is FrameworkElement)
+            {
+                Debug.WriteLine("Clicked on: " + ((FrameworkElement)sender).Name);
+            }
+
             if (sender is Label)
             {
                 Value_Label value = new Value_Label(data,(Label)sender);
@@ -68,7 +73,7 @@ namespace Good_Teacher
             }
             else if (sender is CButton)
             {
-                Value_Button value = new Value_Button(data,(CButton)sender);
+                Value_Button value = new Value_Button(data,(CButton)sender, SelectedPosition);
                 ValueEditor.Content = value;
             }
             else if (sender is PieChart)
@@ -159,10 +164,13 @@ namespace Good_Teacher
         }
 
 
-
         void AddEvents(FrameworkElement cont)
         {
-            
+            if (string.IsNullOrWhiteSpace(cont.Name))
+            {
+                cont.Name = "ID_" + data.pages[SelectedPosition].LastID++;
+            }
+
             if (cont is RichTextBox)
             {
                 cont.GotFocus += Control_GotFocus;

@@ -11,6 +11,12 @@
 
     <StackPanel>
 
+        <CheckBox x:Name="CB_OnStart" IsChecked="True" Margin="0,0,0,10">
+            <WrapPanel Orientation="Horizontal">
+                <Image Width="20" Source="/Good Teacher;component/Resources/Animations/Start.png"/>
+                <TextBlock Margin="5,0" Text="{x:Static strings:ResStrings.AnimationAtStart}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+            </WrapPanel>
+        </CheckBox>
 
         <CheckBox x:Name="CB_Repeat" Margin="0,0,0,10">
             <StackPanel Orientation="Horizontal">

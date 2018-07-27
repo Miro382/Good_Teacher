@@ -19,6 +19,7 @@ using System.Windows.Media;
 using Good_Teacher.Class.Save;
 using System.Text.RegularExpressions;
 using Good_Teacher.Class.Workers;
+using Good_Teacher.Class.Enumerators;
 
 namespace Good_Teacher.Windows.Special
 {
@@ -30,6 +31,7 @@ namespace Good_Teacher.Windows.Special
         private const int ToHoverVisible = 120;
         DataStore data;
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
+        DispatcherTimer dispatcherTimerTransition = new DispatcherTimer();
         short t = 0,m=0;
         public int currentC = 0;
         private int LoadedPage = 0;
@@ -106,6 +108,13 @@ namespace Good_Teacher.Windows.Special
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1);
             dispatcherTimer.IsEnabled = true;
 
+
+            dispatcherTimerTransition.Tick -= DispatcherTimerTransition_Tick;
+            dispatcherTimerTransition.Tick += DispatcherTimerTransition_Tick;
+            dispatcherTimerTransition.Interval = TimeSpan.FromMilliseconds(data.pages[LoadedPage].TransitionMove);
+            dispatcherTimerTransition.IsEnabled = (data.pages[LoadedPage].transitionType != Class.Enumerators.TransitionTypeEnum.TransitionType.Manual);
+
+
             if (data.BlockPresentationInput)
                 ControlPanelC.Visibility = Visibility.Collapsed;
 
@@ -130,6 +139,17 @@ namespace Good_Teacher.Windows.Special
             ContentRendered += Window_Presentation_ContentRendered;
         }
 
+        private void DispatcherTimerTransition_Tick(object sender, EventArgs e)
+        {
+            if(data.pages[LoadedPage].transitionType == Class.Enumerators.TransitionTypeEnum.TransitionType.Automatic)
+            {
+                GoForward();
+            }
+            else if(data.pages[LoadedPage].transitionType == Class.Enumerators.TransitionTypeEnum.TransitionType.AutomaticClose)
+            {
+                Close();
+            }
+        }
 
         private void Window_Presentation_ContentRendered(object sender, EventArgs e)
         {
@@ -354,6 +374,9 @@ namespace Good_Teacher.Windows.Special
             }
 
             DoScript();
+
+            dispatcherTimerTransition.Interval = TimeSpan.FromMilliseconds(data.pages[LoadedPage].TransitionMove);
+            dispatcherTimerTransition.IsEnabled = (data.pages[LoadedPage].transitionType != Class.Enumerators.TransitionTypeEnum.TransitionType.Manual);
         }
 
 
@@ -500,8 +523,29 @@ namespace Good_Teacher.Windows.Special
         {
             foreach( IAnimation ian in  data.pages[pos].AnimationList)
             {
-                if (PlayCanvas.Children.Count >= ian.GetID()+1)
-                    ian.MakeAnimation((FrameworkElement)PlayCanvas.Children[ian.GetID()]);
+                FrameworkElement felm =  ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ian.GetID());
+
+                if (felm != null)
+                {
+                    if (ian.DoAnimationAtStart())
+                    {
+                        ian.MakeAnimation(felm);
+                    }
+                }
+            }
+        }
+
+
+        void MakeAnimation(int pos, int ID)
+        {
+            if (ID >= 0 && ID < data.pages[pos].AnimationList.Count)
+            {
+                FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + data.pages[pos].AnimationList[ID].GetID());
+
+                if (felm != null)
+                {
+                    data.pages[pos].AnimationList[ID].MakeAnimation(felm);
+                }
             }
         }
 
@@ -582,18 +626,19 @@ namespace Good_Teacher.Windows.Special
 
         private void Window_Presentation_Click(CButton sender, MouseButtonEventArgs e)
         {
-            if (sender.action != null)
+            foreach (IActions action in sender.actions)
             {
-                int act = sender.action.DoAction();
+                int act = action.DoAction();
 
                 switch (act)
                 {
                     case 1:
-                        if (((Action_GoToPage)sender.action).ToSpecific)
+                        if (((Action_GoToPage)action).ToSpecific)
                         {
-                            LoadCanvas(((Action_GoToPage)sender.action).ToPage - 1,true);
+                            LoadCanvas(((Action_GoToPage)action).ToPage - 1, true);
                             UpdateNumberLabel();
-                        }else if(((Action_GoToPage)sender.action).Next)
+                        }
+                        else if (((Action_GoToPage)action).Next)
                         {
                             GoForward();
                         }
@@ -606,24 +651,73 @@ namespace Good_Teacher.Windows.Special
                         Close();
                         break;
                     case 3:
-                        if (((Action_Sound)sender.action).Stop)
+                        if (((Action_Sound)action).Stop)
                         {
                             mediaplayer.Stop();
                         }
-                        else if (((Action_Sound)sender.action).PlayAgain)
+                        else if (((Action_Sound)action).PlayAgain)
                         {
                             mediaplayer.Position = TimeSpan.Zero;
                             mediaplayer.Play();
                         }
                         else
                         {
-                            if(!String.IsNullOrWhiteSpace(((Action_Sound)sender.action).PathToPlay))
-                            SetSoundToBePlayed(((Action_Sound)sender.action).PathToPlay, ((Action_Sound)sender.action).Repeat);
+                            if (!String.IsNullOrWhiteSpace(((Action_Sound)action).PathToPlay))
+                                SetSoundToBePlayed(((Action_Sound)action).PathToPlay, ((Action_Sound)action).Repeat);
                         }
                         break;
                     case 4:
-                        LoadNewPresentation(((Action_LoadPresentation)sender.action).PresentationPath);
+                        LoadNewPresentation(((Action_LoadPresentation)action).PresentationPath);
                         break;
+                    case 5:
+                        {
+                            FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_SetVisibility)action).ID);
+
+                            if (felm != null)
+                            {
+                                if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToVisible)
+                                {
+                                    felm.Visibility = Visibility.Visible;
+                                }
+                                else if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToInvisible)
+                                {
+                                    felm.Visibility = Visibility.Collapsed;
+                                }
+                                else
+                                {
+                                    if (felm.Visibility == Visibility.Collapsed || felm.Visibility == Visibility.Hidden)
+                                    {
+                                        felm.Visibility = Visibility.Visible;
+                                    }
+                                    else
+                                    {
+                                        felm.Visibility = Visibility.Collapsed;
+                                    }
+                                }
+                            }
+                            break;
+                        }
+                    case 6:
+                        MakeAnimation(currentLoaded, ((Action_DoAnimation)action).AnimationID);
+                        break;
+                    case 7:
+                        {
+                            FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_Position)action).ID);
+
+                            if (felm != null)
+                            {
+                                if (((Action_Position)action).ChangeX)
+                                {
+                                    MathSignEnum.SetPositionX(((Action_Position)action).CX, ((Action_Position)action).SignX, felm);
+                                }
+
+                                if (((Action_Position)action).ChangeY)
+                                {
+                                    MathSignEnum.SetPositionY(((Action_Position)action).CY, ((Action_Position)action).SignY, felm);
+                                }
+                            }
+                            break;
+                        }
                 }
             }
         }
@@ -806,6 +900,101 @@ namespace Good_Teacher.Windows.Special
             {
                 e.CancelCommand();
             }
+        }
+
+
+        private void SliderZoom_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (ScrollViewerZoom.ActualWidth > 1)
+            {
+                //Debug.WriteLine("Viewbox W: " + viewboxDC.Width + "   AW: " + viewboxDC.ActualWidth + "    Viewbox H: " + viewboxDC.Height + "   AH: " + viewboxDC.ActualHeight);
+                //Debug.WriteLine("ScrollViewerZoom W: " + ScrollViewerZoom.Width + "   AW: " + ScrollViewerZoom.ActualWidth + "    Viewbox H: " + ScrollViewerZoom.Height + "   AH: " + ScrollViewerZoom.ActualHeight);
+
+                if (SliderZoom.Value == 100)
+                {
+                    ScrollViewerZoom.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                    ScrollViewerZoom.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                    viewboxDC.Width = double.NaN;
+                    viewboxDC.Height = double.NaN;
+                }
+                else if (SliderZoom.Value < 100)
+                {
+                    ScrollViewerZoom.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                    ScrollViewerZoom.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
+                    viewboxDC.Width = ScrollViewerZoom.ActualWidth * (SliderZoom.Value / 100);
+                    viewboxDC.Height = ScrollViewerZoom.ActualHeight * (SliderZoom.Value / 100);
+                }
+                else
+                {
+                    ScrollViewerZoom.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+                    ScrollViewerZoom.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+                    viewboxDC.Width = ScrollViewerZoom.ActualWidth * (SliderZoom.Value / 100);
+                    viewboxDC.Height = ScrollViewerZoom.ActualHeight * (SliderZoom.Value / 100);
+                }
+
+                TextBox_Zoom.Text = "" + ((int)SliderZoom.Value);
+            }
+        }
+
+        private void TB_Zoom_LostFocus(object sender, RoutedEventArgs e)
+        {
+            UpdateZoomValueByZoomTextBox();
+        }
+
+        private void FlatButtonZoomCancel_Click(object sender, MouseEventArgs e)
+        {
+            SliderZoom.Value = 100;
+            ScrollViewerZoom.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+            ScrollViewerZoom.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
+            viewboxDC.Width = double.NaN;
+            viewboxDC.Height = double.NaN;
+            TextBox_Zoom.Text = "100";
+        }
+
+        private void TB_Zoom_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape || e.Key == Key.Enter)
+            {
+                UpdateZoomValueByZoomTextBox();
+                Keyboard.ClearFocus();
+            }
+        }
+
+        void UpdateZoomValueByZoomTextBox()
+        {
+            try
+            {
+                int zm = int.Parse(TextBox_Zoom.Text);
+                SliderZoom.Value = zm;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Zoom edit: " + ex);
+                TextBox_Zoom.Text = "" + SliderZoom.Value;
+            }
+        }
+
+        private void ScrollViewerZoom_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            bool handle = (Keyboard.Modifiers & ModifierKeys.Control) > 0;
+
+            if (handle)
+            {
+                e.Handled = handle;
+                return;
+            }
+        }
+
+        private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            bool handle = (Keyboard.Modifiers & ModifierKeys.Control) > 0;
+            if (!handle)
+                return;
+
+            if (e.Delta > 0)
+                SliderZoom.Value += 10;
+            else
+                SliderZoom.Value -= 10;
         }
 
 

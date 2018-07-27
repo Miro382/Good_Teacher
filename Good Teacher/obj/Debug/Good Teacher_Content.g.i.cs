@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/specific/fontfile.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/specific/copy.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/specific/cut.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/specific/paste.png")]
 
 

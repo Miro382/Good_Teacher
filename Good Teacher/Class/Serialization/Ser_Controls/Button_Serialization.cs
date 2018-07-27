@@ -3,7 +3,9 @@ using Good_Teacher.Class.Save;
 using Good_Teacher.Class.Serialization.Content_Ser;
 using Good_Teacher.Controls;
 using System;
+using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace Good_Teacher.Class.Serialization.Ser_Controls
@@ -28,9 +30,11 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
 
         public bool ChangeHover = true, ChangeClick = true;
 
-        public IActions action = null;
+        public List<IActions> action = new List<IActions>();
 
         public string Tooltip = "";
+
+        public bool ChangeCursor = true;
 
         public ContentCreator content = new ContentCreator();
 
@@ -49,7 +53,7 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
         {
             SerializeDefault(control);
 
-            action = control.action;
+            action = new List<IActions>(control.actions);
 
             keyN = control.keyN;
             keyH = control.keyH;
@@ -96,6 +100,15 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
 
             horizontalAlignment = control.HorizontalContentAlignment;
             verticalAlignment = control.VerticalContentAlignment;
+
+            if (control.Cursor != null)
+            {
+                ChangeCursor = true;
+            }
+            else
+            {
+                ChangeCursor = false;
+            }
         }
 
 
@@ -111,7 +124,7 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
             control.HorizontalContentAlignment = horizontalAlignment;
             control.VerticalContentAlignment = verticalAlignment;
 
-            control.action = action;
+            control.actions = new List<IActions>(action);
 
             control.ChangeHover = ChangeHover;
             control.ChangeClick = ChangeClick;
@@ -140,7 +153,18 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
             control.Opacity = opacity;
             control.OpacityHover = opacityhover;
             control.OpacityClick = opacityclick;
+
+            if(ChangeCursor)
+            {
+                control.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                control.Cursor = null;
+            }
+
         }
+
 
         public CButton CreateControl(DataStore data)
         {

@@ -22,6 +22,10 @@ namespace Good_Teacher.Class.TestClass
         public bool SoundLoop = true;
 
         public string ScriptCode = "";
+        public int LastID = 0;
+
+        public int TransitionMove = 0;
+        public TransitionTypeEnum.TransitionType transitionType = TransitionTypeEnum.TransitionType.Manual;
 
         abstract public TestTypeID.Test_Type TestType { get; }
 

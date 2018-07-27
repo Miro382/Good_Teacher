@@ -6,5 +6,6 @@ namespace Good_Teacher.Class.Animations
     {
         void MakeAnimation(FrameworkElement elm);
         int GetID();
+        bool DoAnimationAtStart();
     }
 }

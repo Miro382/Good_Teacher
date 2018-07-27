@@ -22,6 +22,7 @@ namespace Good_Teacher.Class.Serialization
             Buttons = control.BackForwardVisibility;
             URL = control.WebUrl;
             Toolbar = control.ToolbarPanel.Visibility;
+            ContID = control.Name;
 
             if (control.Effect != null)
                 effect = new Effect_Serializer((DropShadowEffect)control.Effect);
@@ -49,6 +50,8 @@ namespace Good_Teacher.Class.Serialization
             control.ControlPanelBack = CPbrush.DeserializeToBrushWithKey(data, out ikey);
             control.PathToCPImage = ikey;
             control.CPStretch = CPbrush.GetStretch();
+
+            control.Name = ContID;
 
             CPbrush.DeserializeQuality(control);
 

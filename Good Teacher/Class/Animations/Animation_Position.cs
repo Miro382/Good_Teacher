@@ -22,13 +22,14 @@ namespace Good_Teacher.Class.Animations
         public double BTimeY { get; set; } = 0;
         public bool Repeat { get; set; } = false;
         public bool Reverse { get; set; } = false;
+        public bool DoAnimationOnStart { get; set; } = true;
 
         public Animation_Position()
         {
 
         }
 
-        public Animation_Position(int ControlID,bool mx, bool my, double tox, double toy,
+        public Animation_Position(int ControlID,bool OnStart, bool mx, bool my, double tox, double toy,
             double durationx, double durationy, double acx, double acy, double dcx, double dcy, double btx, double bty,bool repeat, bool reverse)
         {
             id = ControlID;
@@ -46,6 +47,7 @@ namespace Good_Teacher.Class.Animations
             BTimeY = bty;
             Repeat = repeat;
             Reverse = reverse;
+            DoAnimationOnStart = OnStart;
         }
 
         public int GetID()
@@ -98,6 +100,11 @@ namespace Good_Teacher.Class.Animations
 
                 elm.BeginAnimation(Canvas.TopProperty, moveAnim);
             }
+        }
+
+        public bool DoAnimationAtStart()
+        {
+            return DoAnimationOnStart;
         }
 
     }
