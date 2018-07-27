@@ -23,6 +23,7 @@ namespace Good_Teacher.Class.Serialization
             URL = control.WebUrl;
             Toolbar = control.ToolbarPanel.Visibility;
             ContID = control.Name;
+            ControlVisibility = control.Visibility;
 
             if (control.Effect != null)
                 effect = new Effect_Serializer((DropShadowEffect)control.Effect);
@@ -42,6 +43,8 @@ namespace Good_Teacher.Class.Serialization
             control.webBrowser.Navigate(URL);
             control.WebUrl = URL;
             control.ToolbarPanel.Visibility = Toolbar;
+
+
             if (effect != null)
                 control.Effect = effect.CreateShadow();
 
@@ -52,6 +55,8 @@ namespace Good_Teacher.Class.Serialization
             control.CPStretch = CPbrush.GetStretch();
 
             control.Name = ContID;
+
+            control.Visibility = ControlVisibility;
 
             CPbrush.DeserializeQuality(control);
 

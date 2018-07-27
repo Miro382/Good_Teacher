@@ -24,6 +24,8 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
             ContID = control.Name;
             EnText = control.GetEncodedText();
             type = control.GetBarcodeType();
+
+            ControlVisibility = control.Visibility;
         }
 
 
@@ -32,6 +34,8 @@ namespace Good_Teacher.Class.Serialization.Ser_Controls
             position.SetControlPositionSize(control);
             control.Name = ContID;
             control.SetNewBarcode(EnText, type);
+
+            control.Visibility = ControlVisibility;
         }
 
 

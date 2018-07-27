@@ -5282,6 +5282,26 @@
             The action.
             </param>
         </member>
+        <member name="M:HelixToolkit.Wpf.Model3DHelper.Traverse``1(System.Windows.Media.Media3D.Model3D,System.Windows.Media.Media3D.Visual3D,System.Windows.Media.Media3D.Transform3D,System.Action{``0,System.Windows.Media.Media3D.Visual3D,System.Windows.Media.Media3D.Transform3D})">
+            <summary>
+            Traverses the Model3D tree and invokes the specified action on each Model3D of the specified type.
+            </summary>
+            <typeparam name="T">
+            The type.
+            </typeparam>
+            <param name="model">
+            The model.
+            </param>
+            <param name="visual">
+            The visual.
+            </param>
+            <param name="transform">
+            The transform.
+            </param>
+            <param name="action">
+            The action.
+            </param>
+        </member>
         <member name="T:HelixToolkit.Wpf.Billboard">
             <summary>
             Represents a billboard.
@@ -8618,6 +8638,245 @@
             A line without comments.
             </returns>
         </member>
+        <member name="T:HelixToolkit.Wpf.PlyReader">
+            <summary>
+            Polygon File Format Reader.
+            </summary>
+            https://www.cc.gatech.edu/projects/large_models/ply.html
+            http://graphics.stanford.edu/data/3Dscanrep/
+            <remarks>
+            This reader only reads ascii ply formats.
+            This was initially meant to read models exported by Blender 3D Software.
+            </remarks>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.#ctor(System.Windows.Threading.Dispatcher)">
+            <summary>
+            Initializes a new <see cref="T:HelixToolkit.Wpf.PlyReader"/>.
+            </summary>
+            <param name="dispatcher"></param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Read(System.IO.Stream)">
+            <summary>
+            Reads the model from the specified stream.
+            </summary>
+            <param name="s">The stream.</param>
+            <returns>A <see cref="T:System.Windows.Media.Media3D.Model3DGroup" />.</returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Read(System.String)">
+            <summary>
+            Reads the model from the specified path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>The model.</returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.CreateMesh">
+            <summary>
+            Creates a mesh from the loaded file.
+            </summary>
+            <returns>
+            A <see cref="T:HelixToolkit.Wpf.Mesh3D" />.
+            </returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.CreateMeshGeometry3D">
+            <summary>
+            Creates a <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" /> object from the loaded file. Polygons are triangulated using triangle fans.
+            </summary>
+            <returns>
+            A <see cref="T:System.Windows.Media.Media3D.MeshGeometry3D" />.
+            </returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.CreateModel3D">
+            <summary>
+            Creates a <see cref="T:System.Windows.Media.Media3D.Model3DGroup" /> from the loaded file.
+            </summary>
+            <returns>A <see cref="T:System.Windows.Media.Media3D.Model3DGroup" />.</returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Load(System.IO.Stream)">
+            <summary>
+            Loads a ply file from the <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="s">The stream containing the ply file.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Load(System.String)">
+            <summary>
+            Loads the specified filepath.
+            </summary>
+            <param name="filepath">The filepath.</param>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.Vertices">
+            <summary>
+            Gets or sets the vertices of this ply model.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.Faces">
+            <summary>
+            Gets the faces.
+            </summary>
+            <value>
+            The faces.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.Normals">
+            <summary>
+            Gets or sets the normal vectors of this ply model.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.TextureCoordinates">
+            <summary>
+            Gets or sets the texture coordinates of the ply model.
+            </summary>
+            <remarks>S,T->X,Y</remarks>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.VerticesNumber">
+            <summary>
+            Gets or sets the number of vertices.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.FacesNumber">
+            <summary>
+            Gets or sets the number of faces.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.ObjectInformation">
+            <summary>
+            Contains information about the Ply file received.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.modelFormat">
+            <summary>
+            Stores the type of ply format in the <see cref="T:System.IO.Stream"/>.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.currentElement">
+            <summary>
+            Tells us what the current element in the header is, 
+            so we can pick its property values in the subsequent lines.
+            </summary>
+            <remarks>
+            Only useful in reading the ply header.
+            </remarks>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.elementLine_Current">
+            <summary>
+            The line containing data about an element(It starts just after the "end_header" statement).
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.elementLines_Count">
+            <summary>
+            Gets the number of lines that contains element data.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.PlyReader.PlyFormatTypes">
+            <summary>
+            Contains a list of ply formatted model types.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyFormatTypes.ascii">
+            <summary>
+            ASCII ply format.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyFormatTypes.binary_big_endian">
+            <summary>
+            Binary big endian ply format.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyFormatTypes.binary_little_endian">
+            <summary>
+            Binary little endian ply format.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyFormatTypes.none">
+            <summary>
+            An unrecognized format.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.PlyReader.PlyElements">
+            <summary>
+            Contains a list of supported ply elements.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyElements.vertex">
+            <summary>
+            The vertex ply element.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyElements.face">
+            <summary>
+            The face ply element.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PlyElements.none">
+            <summary>
+            An unrecognized element.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.PlyReader.PLYElement">
+            <summary>
+            A class that attempts to define ply elements.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.PlyReader.PLYElement.Property_with_Index">
+            <summary>
+            Stores the property string with its index.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.PLYElement.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new PLY element.
+            </summary>
+            <param name="_y1">The lower or start range.</param>
+            <param name="_y2">The upper or end range.</param>
+            <param name="hasNormals"></param>
+            <param name="hasTextures"></param>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.PLYElement.StartRange">
+            <summary>
+            The point from which the current element starts to get picked.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.PLYElement.EndRange">
+            <summary>
+            The point at which the current element stops to get picked.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.PLYElement.ContainsNormals">
+            <summary>
+            Specifies whether or not the vertex element has a normal.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.PLYElement.ContainsTextureCoordinates">
+            <summary>
+            Whether or not the vertex element has a texture coordinate.
+            </summary>
+            <remarks>
+            for vertices only.
+            </remarks>
+        </member>
+        <member name="P:HelixToolkit.Wpf.PlyReader.PLYElement.ElementCount">
+            <summary>
+            Stores the number of the specified element in the current Ply model.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.PLYElement.ContainsNumber(System.Int32)">
+            <summary>
+            Returns a value specifying whether the index: <paramref name="num"/> is in this <see cref="T:HelixToolkit.Wpf.PlyReader.PLYElement"/> range.
+            </summary>
+            <param name="num">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Load_ascii(System.IO.Stream)">
+            <summary>
+            Loads an ascii format ply file.
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PlyReader.Load_binaryBE(System.IO.Stream)">
+            <summary>
+            Loads a binary_big_endian format ply file.
+            </summary>
+            <param name="s"></param>
+        </member>
         <member name="T:HelixToolkit.Wpf.KeyGestureExtension">
             <summary>
             Markup extension for key and mouse gestures.
@@ -8885,7 +9144,22 @@
             Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.PointSelectionCommand" /> class.
             </summary>
             <param name="viewport">The viewport.</param>
-            <param name="eventHandler">The selection event handler.</param>
+            <param name="modelsSelectedEventHandler">The selection event handler.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PointSelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.VisualsSelectedEventArgs})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.PointSelectionCommand" /> class.
+            </summary>
+            <param name="viewport">The viewport.</param>
+            <param name="visualsSelectedEventHandler">The selection event handler.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.PointSelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.ModelsSelectedEventArgs},System.EventHandler{HelixToolkit.Wpf.VisualsSelectedEventArgs})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.PointSelectionCommand" /> class.
+            </summary>
+            <param name="viewport">The viewport.</param>
+            <param name="modelsSelectedEventHandler">The selection event handler.</param>
+            <param name="visualsSelectedEventHandler">The selection event handler.</param>
         </member>
         <member name="M:HelixToolkit.Wpf.PointSelectionCommand.Started(HelixToolkit.Wpf.ManipulationEventArgs)">
             <summary>
@@ -8928,7 +9202,22 @@
             Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.RectangleSelectionCommand" /> class.
             </summary>
             <param name="viewport">The viewport.</param>
-            <param name="eventHandler">The selection event handler.</param>
+            <param name="modelsSelectedEventHandler">The selection event handler.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.RectangleSelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.VisualsSelectedEventArgs})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.RectangleSelectionCommand" /> class.
+            </summary>
+            <param name="viewport">The viewport.</param>
+            <param name="visualsSelectedEventHandler">The selection event handler.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.RectangleSelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.ModelsSelectedEventArgs},System.EventHandler{HelixToolkit.Wpf.VisualsSelectedEventArgs})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.RectangleSelectionCommand" /> class.
+            </summary>
+            <param name="viewport">The viewport.</param>
+            <param name="modelsSelectedEventHandler">The selection event handler.</param>
+            <param name="visualsSelectedEventHandler">The selection event handler.</param>
         </member>
         <member name="M:HelixToolkit.Wpf.RectangleSelectionCommand.Started(HelixToolkit.Wpf.ManipulationEventArgs)">
             <summary>
@@ -8988,12 +9277,13 @@
             Keeps track of the old cursor.
             </summary>
         </member>
-        <member name="M:HelixToolkit.Wpf.SelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.ModelsSelectedEventArgs})">
+        <member name="M:HelixToolkit.Wpf.SelectionCommand.#ctor(System.Windows.Controls.Viewport3D,System.EventHandler{HelixToolkit.Wpf.ModelsSelectedEventArgs},System.EventHandler{HelixToolkit.Wpf.VisualsSelectedEventArgs})">
             <summary>
             Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SelectionCommand"/> class.
             </summary>
             <param name="viewport">The viewport.</param>
-            <param name="eventHandler">The selection event handler.</param>
+            <param name="eventHandlerModels">The selection event handler for models.</param>
+            <param name="eventHandlerVisuals">The selection event handler for visuals.</param>
         </member>
         <member name="E:HelixToolkit.Wpf.SelectionCommand.CanExecuteChanged">
             <summary>
@@ -9003,6 +9293,11 @@
         <member name="E:HelixToolkit.Wpf.SelectionCommand.ModelsSelected">
             <summary>
             Occurs when models are selected.
+            </summary>
+        </member>
+        <member name="E:HelixToolkit.Wpf.SelectionCommand.VisualsSelected">
+            <summary>
+            Occurs when visuals are selected.
             </summary>
         </member>
         <member name="P:HelixToolkit.Wpf.SelectionCommand.SelectionHitMode">
@@ -9063,6 +9358,12 @@
             Raises the <see cref="E:ModelsSelected" /> event.
             </summary>
             <param name="e">The <see cref="T:HelixToolkit.Wpf.ModelsSelectedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SelectionCommand.OnVisualsSelected(HelixToolkit.Wpf.VisualsSelectedEventArgs)">
+            <summary>
+            Raises the <see cref="E:VisualsSelected" /> event.
+            </summary>
+            <param name="e">The <see cref="T:HelixToolkit.Wpf.VisualsSelectedEventArgs"/> instance containing the event data.</param>
         </member>
         <member name="M:HelixToolkit.Wpf.SelectionCommand.GetCursor">
             <summary>
@@ -9127,6 +9428,71 @@
             <summary>
             Selects models completely inside selection range.
             </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.VisualsSelectedByPointEventArgs">
+            <summary>
+            Provides event data for the VisualsSelected event of the <see cref="T:HelixToolkit.Wpf.PointSelectionCommand" />.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.VisualsSelectedByPointEventArgs.#ctor(System.Collections.Generic.IList{System.Windows.Media.Media3D.Visual3D},System.Windows.Point)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.VisualsSelectedByPointEventArgs"/> class.
+            </summary>
+            <param name="selectedVisuals">The selected visuals.</param>
+            <param name="position">The position.</param>
+            <remarks>
+            For the visuals selected by point, they are sorted by distance in ascending order.
+            </remarks>
+        </member>
+        <member name="P:HelixToolkit.Wpf.VisualsSelectedByPointEventArgs.Position">
+            <summary>
+            Gets the rectangle of selection.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.VisualsSelectedByRectangleEventArgs">
+            <summary>
+            Provides event data for the VisualsSelected event of the <see cref="T:HelixToolkit.Wpf.RectangleSelectionCommand" />.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.VisualsSelectedByRectangleEventArgs.#ctor(System.Collections.Generic.IList{System.Windows.Media.Media3D.Visual3D},System.Windows.Rect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.VisualsSelectedByRectangleEventArgs"/> class.
+            </summary>
+            <param name="selectedVisuals">The selected visuals.</param>
+            <param name="rectangle">The selection rectangle.</param>
+            <remarks>
+            For the visuals selected by rectangle, they are not sorted by distance in ascending order.
+            </remarks>
+        </member>
+        <member name="P:HelixToolkit.Wpf.VisualsSelectedByRectangleEventArgs.Rectangle">
+            <summary>
+            Gets the rectangle of selection.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.VisualsSelectedEventArgs">
+            <summary>
+            Provides event data for the VisualsSelected event of the <see cref="T:HelixToolkit.Wpf.SelectionCommand" />.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.VisualsSelectedEventArgs.#ctor(System.Collections.Generic.IList{System.Windows.Media.Media3D.Visual3D},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.VisualsSelectedEventArgs" /> class.
+            </summary>
+            <param name="selected">The selected.</param>
+            <param name="areSortedByDistanceAscending">if set to <c>true</c> the selected visuals are sorted by distance in ascending order.</param>
+        </member>
+        <member name="P:HelixToolkit.Wpf.VisualsSelectedEventArgs.SelectedVisuals">
+            <summary>
+            Gets the selected visuals.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.VisualsSelectedEventArgs.AreSortedByDistanceAscending">
+            <summary>
+            Gets a value indicating whether the selected visuals are sorted by distance in ascending order.
+            </summary>
+            <value>
+            <c>true</c> if the selected visuals are sorted by distance in ascending order; otherwise, <c>false</c>.
+            </value>
         </member>
         <member name="T:HelixToolkit.Wpf.InterlacedEffect">
             <summary>
@@ -16727,15 +17093,21 @@
             Represents a rectangle hit result.
             </summary>
         </member>
-        <member name="M:HelixToolkit.Wpf.Viewport3DHelper.RectangleHitResult.#ctor(System.Windows.Media.Media3D.Model3D)">
+        <member name="M:HelixToolkit.Wpf.Viewport3DHelper.RectangleHitResult.#ctor(System.Windows.Media.Media3D.Model3D,System.Windows.Media.Media3D.Visual3D)">
             <summary>
             Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.Viewport3DHelper.RectangleHitResult" /> class.
             </summary>
             <param name="model">The hit model.</param>
+            <param name="visual">The hit visual.</param>
         </member>
         <member name="P:HelixToolkit.Wpf.Viewport3DHelper.RectangleHitResult.Model">
             <summary>
             Gets the hit model.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.Viewport3DHelper.RectangleHitResult.Visual">
+            <summary>
+            Gets the hit visual.
             </summary>
         </member>
         <member name="T:HelixToolkit.Wpf.Viewport3DHelper.HitResult">
@@ -16892,7 +17264,35 @@
             The action.
             </param>
         </member>
+        <member name="M:HelixToolkit.Wpf.Visual3DHelper.Traverse``1(System.Windows.Media.Media3D.Visual3DCollection,System.Action{``0,System.Windows.Media.Media3D.Visual3D,System.Windows.Media.Media3D.Transform3D})">
+            <summary>
+            Traverses the Visual3D/Model3D tree and invokes the specified action on each Model3D of the specified type.
+            </summary>
+            <typeparam name="T">
+            The type filter.
+            </typeparam>
+            <param name="visuals">
+            The visuals.
+            </param>
+            <param name="action">
+            The action.
+            </param>
+        </member>
         <member name="M:HelixToolkit.Wpf.Visual3DHelper.Traverse``1(System.Windows.Media.Media3D.Visual3D,System.Action{``0,System.Windows.Media.Media3D.Transform3D})">
+            <summary>
+            Traverses the Visual3D/Model3D tree and invokes the specified action on each Model3D of the specified type.
+            </summary>
+            <typeparam name="T">
+            The type filter.
+            </typeparam>
+            <param name="visual">
+            The visual.
+            </param>
+            <param name="action">
+            The action.
+            </param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.Visual3DHelper.Traverse``1(System.Windows.Media.Media3D.Visual3D,System.Action{``0,System.Windows.Media.Media3D.Visual3D,System.Windows.Media.Media3D.Transform3D})">
             <summary>
             Traverses the Visual3D/Model3D tree and invokes the specified action on each Model3D of the specified type.
             </summary>

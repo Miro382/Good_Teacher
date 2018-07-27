@@ -8,6 +8,7 @@ namespace Good_Teacher.Class.Serialization
         public PositionSize position;
         public ControlDefaultData ControlDef = new ControlDefaultData();
         public string ContID = "";
+        public Visibility ControlVisibility = Visibility.Visible;
 
 
         protected void SerializeDefault(FrameworkElement elm)
@@ -17,6 +18,8 @@ namespace Good_Teacher.Class.Serialization
             ControlDef.Serialize(elm);
 
             ContID = elm.Name;
+
+            ControlVisibility = elm.Visibility;
 
             if (elm.Effect != null)
             {
@@ -34,6 +37,8 @@ namespace Good_Teacher.Class.Serialization
             ControlDef.Deserialize(elm);
 
             elm.Name = ContID;
+
+            elm.Visibility = ControlVisibility;
 
             if(effect!=null)
             elm.Effect = effect.CreateEffect();
