@@ -60,7 +60,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oDBM29Y1H8mq2MsUYWrgGnucNW3eUGoE/ygspzZiUlo=</dsig:DigestValue>
+        <dsig:DigestValue>qkp9G89CJXoqrSzTPeuUHzciryGwLG/AUHLItI4QN00=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,31 +72,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C8Qo82pmpnfWjp7HONv5eg6Xp6pP9kyF9MdYxfX3Q9k=</dsig:DigestValue>
+        <dsig:DigestValue>3oNprhhkcBV8iYHXaSbTFxO03NXCOoMI3k1bIx5jIuk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.dll" size="6144">
-      <assemblyIdentity name="HelixToolkit" version="2.2.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HelixToolkit" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A1hkkr5ocZb+okvSDj4WFygnPoxQT1gm9JgBb6O53EY=</dsig:DigestValue>
+        <dsig:DigestValue>H3FUrU0Z9sGG1HN1snkh4u+6v/N2c15kKGpuF82/CgQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="532992">
-      <assemblyIdentity name="HelixToolkit.Wpf" version="2.2.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="567296">
+      <assemblyIdentity name="HelixToolkit.Wpf" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JKEdew075Av1kPyXN52NrahisPSq9F1eClu5ziigaHA=</dsig:DigestValue>
+        <dsig:DigestValue>m71Fz3Oe4YIS1sTSaLuThsed1NvO+3GAirnM3kTFDQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
