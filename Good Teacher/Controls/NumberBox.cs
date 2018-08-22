@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,7 +8,7 @@ namespace Good_Teacher.Controls
     public class NumberBox : TextBox
     {
         public bool Success { get { return success; } }
-        public bool success = false;
+        private bool success = false;
 
         public NumberBox()
         {

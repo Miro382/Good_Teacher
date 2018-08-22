@@ -39,6 +39,8 @@ namespace Good_Teacher.Pages
             positionselector.SetData(cont);
             positionselector.LoadData();
 
+            CB_IsVisible.IsChecked = (cont.Visibility == Visibility.Visible);
+
             if (cont.Tag != null)
                 TBL_Media.Text = cont.Tag.ToString();
 
@@ -163,6 +165,20 @@ namespace Good_Teacher.Pages
             }
         }
 
+        private void CB_IsVisible_Checked(object sender, RoutedEventArgs e)
+        {
+            if (cont != null)
+            {
+                if (CB_IsVisible.IsChecked == true)
+                {
+                    cont.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    cont.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
 
     }
 }

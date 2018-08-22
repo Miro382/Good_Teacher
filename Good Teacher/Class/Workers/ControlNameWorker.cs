@@ -112,6 +112,10 @@ namespace Good_Teacher.Class.Workers
                 {
                     return Strings.ResStrings.ScalableImage;
                 }
+                else if (uie is ToggleButton_Control)
+                {
+                    return Strings.ResStrings.ToggleButton;
+                }
             }
 
 
@@ -201,6 +205,10 @@ namespace Good_Teacher.Class.Workers
             else if (uie is RightAngledTriangle || uie is RightAngledTriangleSE)
             {
                 return Strings.ResStrings.RightAngledTriangle;
+            }
+            else if (uie is Cogwheel)
+            {
+                return Strings.ResStrings.Cogwheel;
             }
 
             return uie.GetType().Name;

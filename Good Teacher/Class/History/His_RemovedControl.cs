@@ -21,7 +21,7 @@ namespace Good_Teacher.Class.History
 
         public void DoUndoAction(Canvas canvas, DataStore data)
         {
-            canvas.Children.Insert(ID, frameworkElement);
+            canvas.Children.Add(frameworkElement);
         }
     }
 }

@@ -14,10 +14,11 @@ namespace Good_Teacher.Controls
     public partial class CButton : UserControl
     {
 
-        public delegate void ClickDelegate(CButton sender, MouseButtonEventArgs e);
+        public delegate void ClickDelegate(FrameworkElement sender, MouseButtonEventArgs e);
         public event ClickDelegate Click;
 
         public double OpacityN { get; set; } = 1;
+
         public double OpacityHover { get; set; } = 1;
 
         public double OpacityClick { get; set; } = 1;

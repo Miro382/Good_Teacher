@@ -55,5 +55,31 @@ namespace Good_Teacher.Class.Serialization.Content_Ser
         }
 
 
+        public string GetText()
+        {
+            string text = "";
+
+            int k = 0;
+
+            foreach(Content_Default txt in contents)
+            {
+                if (txt is Content_Text)
+                {
+                    if (k == 0)
+                    {
+                        text += ((Content_Text)txt).text;
+                    }
+                    else
+                    {
+                        text += " " + ((Content_Text)txt).text;
+                    }
+
+                    k++;
+                }
+            }
+
+            return text;
+        }
+
     }
 }

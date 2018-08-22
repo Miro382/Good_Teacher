@@ -118,10 +118,10 @@
                             <Label Content="{x:Static strings:ResStrings.ShowMessageBox}" FontSize="14" FontWeight="Bold" />
 
                             <Label Content="{x:Static strings:ResStrings.Title}" FontWeight="Bold"/>
-                            <TextBox x:Name="TB_MBTitle" Width="400" />
+                            <TextBox x:Name="TB_MBTitle" Padding="1,2,1,2" Width="400" />
 
                             <Label Content="{x:Static strings:ResStrings.Text}" FontWeight="Bold"/>
-                            <TextBox x:Name="TB_MBText" Height="100" AcceptsReturn="True"/>
+                            <TextBox x:Name="TB_MBText" Padding="1,2,1,2" Height="100" AcceptsReturn="True"/>
                         </StackPanel>
 
                     </TabItem>

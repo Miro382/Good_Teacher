@@ -53,50 +53,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3697664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3752960">
       <assemblyIdentity name="Good Teacher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>S5JjGANwYrKpfApvpye10QGqat4K5rlyse5nrqg1J94=</dsig:DigestValue>
+        <dsig:DigestValue>GNQp5tZNnZiEBdhjPHO5/CN5X04RYZc18vj80674uNc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="40960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="41472">
       <assemblyIdentity name="Good Teacher.resources" version="1.0.0.0" language="sk" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0nn6o1rZ8TeGs22g+Pz02pkvmgQyymdEhQ3VP3LiIdA=</dsig:DigestValue>
+        <dsig:DigestValue>+gmsc6iKT6GmoJkKdp1rkgwXUb2SZKfxccLAV0kbSUQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.dll" size="6144">
-      <assemblyIdentity name="HelixToolkit" version="2.2.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HelixToolkit" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A1hkkr5ocZb+okvSDj4WFygnPoxQT1gm9JgBb6O53EY=</dsig:DigestValue>
+        <dsig:DigestValue>H3FUrU0Z9sGG1HN1snkh4u+6v/N2c15kKGpuF82/CgQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="532992">
-      <assemblyIdentity name="HelixToolkit.Wpf" version="2.2.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="567296">
+      <assemblyIdentity name="HelixToolkit.Wpf" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JKEdew075Av1kPyXN52NrahisPSq9F1eClu5ziigaHA=</dsig:DigestValue>
+        <dsig:DigestValue>m71Fz3Oe4YIS1sTSaLuThsed1NvO+3GAirnM3kTFDQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

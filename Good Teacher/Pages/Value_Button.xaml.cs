@@ -1,10 +1,6 @@
-﻿using Good_Teacher.Class.Actions;
-using Good_Teacher.Class.Enumerators;
-using Good_Teacher.Class.Workers;
-using Good_Teacher.Controls;
+﻿using Good_Teacher.Controls;
 using Good_Teacher.Windows;
 using System;
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -223,7 +219,7 @@ namespace Good_Teacher.Pages
 
         private void Button_OnClickActions_Click(object sender, RoutedEventArgs e)
         {
-            Window_ClickActionsList window_ClickActionsList = new Window_ClickActionsList(data, cont, selpos);
+            Window_ClickActionsList window_ClickActionsList = new Window_ClickActionsList(data, cont.actions, selpos);
             window_ClickActionsList.Owner = Window.GetWindow(this);
             window_ClickActionsList.ShowDialog();
             CurrentActionsCount.Text = "" + cont.actions.Count;

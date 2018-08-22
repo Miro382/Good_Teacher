@@ -38,6 +38,12 @@
 
             <Separator/>
 
+            <CheckBox x:Name="CB_IsVisible" Margin="0,5" IsChecked="True" Checked="CB_IsVisible_Checked" Unchecked="CB_IsVisible_Checked" >
+                <TextBlock Text="{x:Static strings:ResStrings.Visible}" TextWrapping="Wrap"/>
+            </CheckBox>
+
+            <Separator/>
+
             <Button  Click="Delete_Click" Margin="2,0">
                 <StackPanel Orientation="Horizontal">
                     <Image RenderOptions.BitmapScalingMode="Fant" Width="32" Height="32" Source="../Resources/delete.png"/>

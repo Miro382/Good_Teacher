@@ -5,17 +5,11 @@ using Good_Teacher.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Good_Teacher.Windows
 {
@@ -24,15 +18,15 @@ namespace Good_Teacher.Windows
     /// </summary>
     public partial class Window_ClickActionsList : Window
     {
-        CButton cont;
+        List<IActions> Actionlist;
         DataStore data;
         int selpos;
 
-        public Window_ClickActionsList(DataStore datastore, CButton button, int selectedPosition)
+        public Window_ClickActionsList(DataStore datastore, List<IActions> actionlist, int selectedPosition)
         {
             InitializeComponent();
 
-            cont = button;
+            Actionlist = actionlist;
             data = datastore;
             selpos = selectedPosition;
 
@@ -44,7 +38,7 @@ namespace Good_Teacher.Windows
         {
             SP_Actions.Children.Clear();
 
-            foreach (IActions action in cont.actions)
+            foreach (IActions action in Actionlist)
             {
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Orientation = Orientation.Horizontal;
@@ -107,8 +101,8 @@ namespace Good_Teacher.Windows
 
         private void EditAction_Click(object sender, MouseEventArgs e)
         {
-            int id = cont.actions.IndexOf((IActions)((FlatButton)sender).Tag);
-            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(cont, data, id, selpos);
+            int id = Actionlist.IndexOf((IActions)((FlatButton)sender).Tag);
+            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(Actionlist, data, id, selpos);
             window_SetOnClickActions.Owner = Window.GetWindow(this);
             window_SetOnClickActions.ShowDialog();
 
@@ -116,7 +110,7 @@ namespace Good_Teacher.Windows
             {
                 if (window_SetOnClickActions.actions != null)
                 {
-                    cont.actions[id] = window_SetOnClickActions.actions;
+                    Actionlist[id] = window_SetOnClickActions.actions;
                     Debug.WriteLine(window_SetOnClickActions.actions);
                     AddActions();
                 }
@@ -125,7 +119,7 @@ namespace Good_Teacher.Windows
 
         private void DeleteAction_Click(object sender, MouseEventArgs e)
         {
-            cont.actions.Remove((IActions)((FlatButton)sender).Tag);
+            Actionlist.Remove((IActions)((FlatButton)sender).Tag);
             AddActions();
         }
 
@@ -244,7 +238,7 @@ namespace Good_Teacher.Windows
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(cont, data, selpos);
+            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(data, selpos);
             window_SetOnClickActions.Owner = Window.GetWindow(this);
             window_SetOnClickActions.ShowDialog();
 
@@ -252,7 +246,7 @@ namespace Good_Teacher.Windows
             {
                 if (window_SetOnClickActions.actions != null)
                 {
-                    cont.actions.Add(window_SetOnClickActions.actions);
+                    Actionlist.Add(window_SetOnClickActions.actions);
                     Debug.WriteLine(window_SetOnClickActions.actions);
                     AddActions();
                 }

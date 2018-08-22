@@ -1,0 +1,30 @@
+﻿<Window x:Class="Good_Teacher.Windows.Popup.PWindow_SpecialDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Popup"
+        mc:Ignorable="d"
+        Title="" Width="450" MaxWidth="450" SizeToContent="Height" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Icon="/Good Teacher;component/Resources/Icons/Special/Attention.png">
+    <StackPanel Orientation="Vertical">
+        <TextBlock x:Name="TB_Text" Margin="10,15" TextWrapping="Wrap" Text="Text" />
+
+        <Grid Margin="5,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="B_Opt1" Margin="5" Padding="5,7" Grid.Column="0" Click="B_Opt1_Click">
+                <TextBlock x:Name="TB_B1" TextWrapping="Wrap" Text="Option 1"/>
+            </Button>
+            <Button x:Name="B_Opt2" Margin="5" Padding="5,7" Grid.Column="1" Click="B_Opt2_Click" >
+                <TextBlock x:Name="TB_B2" TextWrapping="Wrap" Text="Option 2"/>
+            </Button>
+            <Button x:Name="B_Opt3" Margin="5" Padding="5,7" Grid.Column="2" Click="B_Opt3_Click" >
+                <TextBlock x:Name="TB_B3" TextWrapping="Wrap" Text="Option 3"/>
+            </Button>
+            
+        </Grid>
+    </StackPanel>
+</Window>

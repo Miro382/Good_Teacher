@@ -114,6 +114,14 @@ namespace Good_Teacher
 
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
+
+            SaveFile(sender);
+          //  RefreshRichTextBox();
+        }
+
+
+        public bool SaveFile(object sender)
+        {
             if (data.pages.Count > 0)
             {
                 if (sender == MenuItem_SaveAs || string.IsNullOrWhiteSpace(pathtofile))
@@ -122,7 +130,7 @@ namespace Good_Teacher
                     SaveEditor save = new SaveEditor();
 
                     SaveFileDialog savefile = new SaveFileDialog();
-                    savefile.FileName = Strings.ResStrings.File+"." + TestMakerFileExtension;
+                    savefile.FileName = Strings.ResStrings.File + "." + TestMakerFileExtension;
                     savefile.Filter = Strings.ResStrings.GoodTeacherTestFormat + "|*." + TestMakerFileExtension + "|" + Strings.ResStrings.AllFiles + "|*.*";
 
                     if (savefile.ShowDialog() == true)
@@ -134,12 +142,19 @@ namespace Good_Teacher
                             pathtofile = savefile.FileName;
                             SetWorkingFileLabel(pathtofile);
                             ShowNotification(Strings.ResStrings.Saved);
+                            MainWindow.IsChanged = false;
+                            return true;
                         }
                         else
                         {
                             MessageBox.Show(Strings.ResStrings.ErrorSave, Strings.ResStrings.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                            return false;
                         }
 
+                    }
+                    else
+                    {
+                        return false;
                     }
                 }
                 else
@@ -150,13 +165,22 @@ namespace Good_Teacher
                     LoadCanvas();
 
                     if (!save.SaveWithCompression(pathtofile, data))
+                    {
                         MessageBox.Show(Strings.ResStrings.ErrorSave, Strings.ResStrings.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                        return false;
+                    }
                     else
+                    {
                         ShowNotification(Strings.ResStrings.Saved);
+                        MainWindow.IsChanged = false;
+                        return true;
+                    }
                 }
             }
-
-          //  RefreshRichTextBox();
+            else
+            {
+                return false;
+            }
         }
 
         public void OpenFile(string path)
@@ -191,6 +215,8 @@ namespace Good_Teacher
                 //UpdateCanvasIcon();
 
                 ScrollViewer_TestList.ScrollToHome();
+
+                MainWindow.IsChanged = false;
             }
             catch (Exception ex)
             {

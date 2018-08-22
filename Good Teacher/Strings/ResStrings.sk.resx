@@ -1753,4 +1753,41 @@ hexadecimal
   <data name="Paste" xml:space="preserve">
     <value>Prilepiť</value>
   </data>
+  <data name="DontSave" xml:space="preserve">
+    <value>Neuložiť</value>
+  </data>
+  <data name="SaveUnsaved" xml:space="preserve">
+    <value>Chcete uložiť zmeny vykonané v prezentácii?
+Ak vyberiete možnosť "Neuložiť", zmeny sa stratia. Ak vyberiete možnosť "Zatvoriť", môžete pokračovať v práci s programom.</value>
+  </data>
+  <data name="UnsavedChanges" xml:space="preserve">
+    <value>Neuložené zmeny</value>
+  </data>
+  <data name="Cogwheel" xml:space="preserve">
+    <value>Ozubené koleso</value>
+  </data>
+  <data name="Checked" xml:space="preserve">
+    <value>Zaškrtnuté</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Vyp.</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Zap.</value>
+  </data>
+  <data name="ToggleButton" xml:space="preserve">
+    <value>Prepínacie tlačidlo</value>
+  </data>
+  <data name="Unchecked" xml:space="preserve">
+    <value>Odškrtnuté</value>
+  </data>
+  <data name="CornerRadius" xml:space="preserve">
+    <value>Polomer rohov</value>
+  </data>
+  <data name="Timers" xml:space="preserve">
+    <value>Časovače</value>
+  </data>
+  <data name="Timer" xml:space="preserve">
+    <value>Časovač</value>
+  </data>
 </root>

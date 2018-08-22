@@ -442,6 +442,28 @@ namespace Good_Teacher
                         DesignCanvas.Children.Add(con);
                     }
                     break;
+                case 220:
+                    {
+                        Cogwheel con = new Cogwheel();
+
+                        con.Fill = Brushes.LightGray;
+                        con.Stroke = Brushes.Black;
+
+                        con.Width = 128;
+                        con.Height = 128;
+
+                        con.Focusable = true;
+
+                        con.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+
+                        Panel.SetZIndex(con, -1);
+                        Canvas.SetLeft(con, p.X - con.DesiredSize.Width / 2);
+                        Canvas.SetTop(con, p.Y - con.DesiredSize.Height / 2);
+
+                        AddEvents(con);
+                        DesignCanvas.Children.Add(con);
+                    }
+                    break;
 
 
             }

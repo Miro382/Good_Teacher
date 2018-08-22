@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Good_Teacher.Class.Enumerators;
+﻿using Good_Teacher.Class.Enumerators;
 
 namespace Good_Teacher.Class.Actions
 {

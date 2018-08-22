@@ -880,6 +880,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checked.
+        /// </summary>
+        public static string Checked {
+            get {
+                return ResourceManager.GetString("Checked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check for updates.
         /// </summary>
         public static string CheckForUpdates {
@@ -1002,6 +1011,15 @@ namespace Good_Teacher.Strings {
         public static string Cloud {
             get {
                 return ResourceManager.GetString("Cloud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cogwheel.
+        /// </summary>
+        public static string Cogwheel {
+            get {
+                return ResourceManager.GetString("Cogwheel", resourceCulture);
             }
         }
         
@@ -1184,6 +1202,15 @@ namespace Good_Teacher.Strings {
         public static string CopyToClipboard {
             get {
                 return ResourceManager.GetString("CopyToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corner radius.
+        /// </summary>
+        public static string CornerRadius {
+            get {
+                return ResourceManager.GetString("CornerRadius", resourceCulture);
             }
         }
         
@@ -1535,6 +1562,15 @@ namespace Good_Teacher.Strings {
         public static string DoAnimation {
             get {
                 return ResourceManager.GetString("DoAnimation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t save.
+        /// </summary>
+        public static string DontSave {
+            get {
+                return ResourceManager.GetString("DontSave", resourceCulture);
             }
         }
         
@@ -3069,6 +3105,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Off.
+        /// </summary>
+        public static string Off {
+            get {
+                return ResourceManager.GetString("Off", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string OK {
@@ -3083,6 +3128,15 @@ namespace Good_Teacher.Strings {
         public static string OldColor {
             get {
                 return ResourceManager.GetString("OldColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to On.
+        /// </summary>
+        public static string On {
+            get {
+                return ResourceManager.GetString("On", resourceCulture);
             }
         }
         
@@ -3843,6 +3897,16 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you want to save changes made in the presentation?
+        ///If you select &quot;Don&apos;t save&quot; changes will be lost. If you select &quot;Close&quot; you can continue work with the program..
+        /// </summary>
+        public static string SaveUnsaved {
+            get {
+                return ResourceManager.GetString("SaveUnsaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scalable image.
         /// </summary>
         public static string ScalableImage {
@@ -4455,6 +4519,24 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Timer.
+        /// </summary>
+        public static string Timer {
+            get {
+                return ResourceManager.GetString("Timer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timers.
+        /// </summary>
+        public static string Timers {
+            get {
+                return ResourceManager.GetString("Timers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Transition to next page after time.
         /// </summary>
         public static string TimeTransition {
@@ -4478,6 +4560,15 @@ namespace Good_Teacher.Strings {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle button.
+        /// </summary>
+        public static string ToggleButton {
+            get {
+                return ResourceManager.GetString("ToggleButton", resourceCulture);
             }
         }
         
@@ -4617,6 +4708,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unchecked.
+        /// </summary>
+        public static string Unchecked {
+            get {
+                return ResourceManager.GetString("Unchecked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Undo (CTRL + Z).
         /// </summary>
         public static string Undo {
@@ -4640,6 +4740,15 @@ namespace Good_Teacher.Strings {
         public static string Units {
             get {
                 return ResourceManager.GetString("Units", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsaved changes.
+        /// </summary>
+        public static string UnsavedChanges {
+            get {
+                return ResourceManager.GetString("UnsavedChanges", resourceCulture);
             }
         }
         

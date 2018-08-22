@@ -484,6 +484,14 @@
                                 </MenuItem.Icon>
                             </MenuItem>
 
+                            <MenuItem Header="{x:Static strings:ResStrings.Timers}" Tag="0" Click="Item_Timers_Click">
+                                <MenuItem.Icon>
+                                    <Image Source="Resources/Icons/Buttons/Timer.png" 
+                                    Width="16"
+                                    Height="16" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
                             <MenuItem RenderOptions.BitmapScalingMode="Fant" Header="{x:Static strings:ResStrings.Script}" Tag="0" Click="Item_Script_Click">
                                 <MenuItem.Icon>
                                     <Image Source="Resources/Menu/Script.png" 
@@ -795,6 +803,15 @@
                                         <StackPanel>
                                             <Image Width="32" Height="32" Source="Resources/Icons/Buttons/Transition.png" RenderOptions.BitmapScalingMode="Fant" />
                                             <ContentPresenter Content="{x:Static strings:ResStrings.Transitions}" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </MenuItem.Header>
+                                </MenuItem>
+
+                                <MenuItem x:Name="Item_Timer" Margin="10,0,0,0" Click="Item_Timers_Click">
+                                    <MenuItem.Header>
+                                        <StackPanel>
+                                            <Image Width="32" Height="32" Source="Resources/Icons/Buttons/Timer.png" RenderOptions.BitmapScalingMode="Fant" />
+                                            <ContentPresenter Content="{x:Static strings:ResStrings.Timers}" HorizontalAlignment="Center"/>
                                         </StackPanel>
                                     </MenuItem.Header>
                                 </MenuItem>

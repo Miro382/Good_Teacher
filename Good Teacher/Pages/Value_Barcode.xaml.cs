@@ -26,6 +26,8 @@ namespace Good_Teacher.Pages
 
             Box_Text.Text = cont.GetEncodedText();
 
+            CB_IsVisible.IsChecked = (cont.Visibility == Visibility.Visible);
+
 
             switch (cont.GetBarcodeType())
             {
@@ -74,6 +76,21 @@ namespace Good_Teacher.Pages
                 MessageBox.Show(Strings.ResStrings.WrongFormat, Strings.ResStrings.Error);
                 Box_Text.Text = oldt;
                 cont.SetNewBarcode(oldt, cont.GetBarcodeType());
+            }
+        }
+
+        private void CB_IsVisible_Checked(object sender, RoutedEventArgs e)
+        {
+            if (cont != null)
+            {
+                if (CB_IsVisible.IsChecked == true)
+                {
+                    cont.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    cont.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
