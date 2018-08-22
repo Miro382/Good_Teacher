@@ -538,6 +538,14 @@ namespace Good_Teacher.Class.Serialization
                     data.pages[pos].CustomControls.Add(new MediaPlayerController_Serialization(cont, data));
                     dsl.Add(cont);
                 }
+                else if (canvas.Children[i] is ToggleButton_Control)
+                {
+                    ToggleButton_Control cont = (ToggleButton_Control)canvas.Children[i];
+                    Debug.WriteLine("MediaPlayerController_Control serializing");
+
+                    data.pages[pos].CustomControls.Add(new ToggleButton_Serialization(cont, data));
+                    dsl.Add(cont);
+                }
             }
 
             for (int i = 0; i < dsl.Count; i++)
@@ -663,6 +671,14 @@ namespace Good_Teacher.Class.Serialization
                     MediaPlayerController_Serialization ser = (MediaPlayerController_Serialization)data.pages[pos].CustomControls[i];
 
                     MediaPlayerController_Control cont = ser.CreateControl(data);
+
+                    canvas.Children.Add(cont);
+                }
+                else if (data.pages[pos].CustomControls[i] is ToggleButton_Serialization)
+                {
+                    ToggleButton_Serialization ser = (ToggleButton_Serialization)data.pages[pos].CustomControls[i];
+
+                    ToggleButton_Control cont = ser.CreateControl(data);
 
                     canvas.Children.Add(cont);
                 }

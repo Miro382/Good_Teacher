@@ -174,6 +174,37 @@ namespace Good_Teacher
                     }
                     break;
 
+
+                case 47:
+                    {
+                        ToggleButton_Control con = new ToggleButton_Control();
+
+                        con.Width = 150;
+                        con.Height = 50;
+
+                        con.contentCreatorUnchecked.contents.Add(new Content_Text(Strings.ResStrings.Off, 20, 10));
+
+                        con.contentCreatorChecked.contents.Add(new Content_Text(Strings.ResStrings.On, 20, 10));
+
+                        con.SetData(data);
+
+                        con.SetChecked(false, true);
+
+                        Panel.SetZIndex(con, 2);
+
+                        con.Ccontent.VerticalAlignment = VerticalAlignment.Center;
+                        con.Ccontent.HorizontalAlignment = HorizontalAlignment.Left;
+
+                        con.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+
+                        Canvas.SetLeft(con, p.X - con.DesiredSize.Width / 2);
+                        Canvas.SetTop(con, p.Y - con.DesiredSize.Height / 2);
+
+                        AddEvents(con);
+                        DesignCanvas.Children.Add(con);
+                    }
+                    break;
+
             }
         }
     }

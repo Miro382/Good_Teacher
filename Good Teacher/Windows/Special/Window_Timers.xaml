@@ -1,0 +1,28 @@
+﻿<Window x:Class="Good_Teacher.Windows.Special.Window_Timers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Special"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.Timers}" Height="420" Width="600" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/Buttons/Timer.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="0">
+            <StackPanel x:Name="SP_Actions" Margin="10">
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <StackPanel Grid.Row="1" Background="#FFF3F3F3" >
+            <Button Padding="50,5" Margin="10" Content="{x:Static strings:ResStrings.Add}" HorizontalAlignment="Center" Click="ButtonAdd_Click" FontSize="16" />
+        </StackPanel>
+
+    </Grid>
+</Window>

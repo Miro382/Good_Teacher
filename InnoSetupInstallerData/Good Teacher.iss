@@ -10,8 +10,8 @@ AppName=Good Teacher
 AppVersion=1.0.0
 VersionInfoProductName=Good Teacher
 VersionInfoProductVersion=1.0.0
-VersionInfoProductTextVersion=1.0.0 Beta Rev 11
-VersionInfoTextVersion=1.0.0 Beta Rev 11
+VersionInfoProductTextVersion=1.0.0 Beta Rev 12
+VersionInfoTextVersion=1.0.0 Beta Rev 12
 VersionInfoVersion=1.0.0
 ;AppVerName=Good Teacher 1.0.0
 AppPublisher=Miroslav Murin
@@ -40,7 +40,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "slovak"; MessagesFile: "compiler:Languages\Slovak.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
 Source: "Good Teacher Release\Good Teacher.exe"; DestDir: "{app}"; Flags: ignoreversion

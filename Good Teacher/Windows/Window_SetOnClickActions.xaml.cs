@@ -2,10 +2,9 @@
 using Good_Teacher.Class.Animations;
 using Good_Teacher.Class.Enumerators;
 using Good_Teacher.Class.Save;
-using Good_Teacher.Class.Workers;
-using Good_Teacher.Controls;
 using Good_Teacher.Windows.Dialogs;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,7 +29,7 @@ namespace Good_Teacher.Windows
 
         int selpos;
 
-        public Window_SetOnClickActions(CButton button,DataStore dataStore, int selectedPosition)
+        public Window_SetOnClickActions(DataStore dataStore, int selectedPosition)
         {
             InitializeComponent();
             data = dataStore;
@@ -59,7 +58,7 @@ namespace Good_Teacher.Windows
         }
 
 
-        public Window_SetOnClickActions(CButton button, DataStore dataStore, int EditID, int selectedPosition)
+        public Window_SetOnClickActions(List<IActions> actionlist, DataStore dataStore, int EditID, int selectedPosition)
         {
             InitializeComponent();
             data = dataStore;
@@ -68,7 +67,7 @@ namespace Good_Teacher.Windows
 
             selpos = selectedPosition;
 
-            Edit(button, EditID);
+            Edit(actionlist, EditID);
 
             if (LocalPath.GetDirectoryPath(out dirpath))
             {
@@ -122,24 +121,24 @@ namespace Good_Teacher.Windows
         }
 
 
-        void Edit(CButton button, int pos)
+        void Edit(List<IActions> actionlist, int pos)
         {
 
-            if (button.actions[pos] != null)
+            if (actionlist[pos] != null)
             {
-                switch (button.actions[pos].GetActionType())
+                switch (actionlist[pos].GetActionType())
                 {
                     case ActionType.Action_Type.GoToPage:
-                        InputToPage.Text = "" + ((Action_GoToPage)button.actions[pos]).ToPage;
+                        InputToPage.Text = "" + ((Action_GoToPage)actionlist[pos]).ToPage;
                         tabcontrol_actions.SelectedIndex = 0;
 
-                        RB_Next.IsChecked = ((Action_GoToPage)button.actions[pos]).Next;
-                        RB_Previous.IsChecked = ((Action_GoToPage)button.actions[pos]).Previous;
-                        RB_Specific.IsChecked = ((Action_GoToPage)button.actions[pos]).ToSpecific;
+                        RB_Next.IsChecked = ((Action_GoToPage)actionlist[pos]).Next;
+                        RB_Previous.IsChecked = ((Action_GoToPage)actionlist[pos]).Previous;
+                        RB_Specific.IsChecked = ((Action_GoToPage)actionlist[pos]).ToSpecific;
 
                         break;
                     case ActionType.Action_Type.OpenWeb:
-                        TB_OpenLink.Text = ((Action_OpenWeb)button.actions[pos]).Url;
+                        TB_OpenLink.Text = ((Action_OpenWeb)actionlist[pos]).Url;
                         tabcontrol_actions.SelectedIndex = 1;
                         break;
                     case ActionType.Action_Type.ClosePresentation:
@@ -147,38 +146,38 @@ namespace Good_Teacher.Windows
                         break;
                     case ActionType.Action_Type.OpenApplication:
                         tabcontrol_actions.SelectedIndex = 3;
-                        TB_OpenApp.Text = ((Action_OpenApp)button.actions[pos]).AppPath;
+                        TB_OpenApp.Text = ((Action_OpenApp)actionlist[pos]).AppPath;
                         break;
                     case ActionType.Action_Type.ShowMessageBox:
                         tabcontrol_actions.SelectedIndex = 4;
-                        TB_MBText.Text = ((Action_ShowMessageBox)button.actions[pos]).Text;
-                        TB_MBTitle.Text = ((Action_ShowMessageBox)button.actions[pos]).Title;
+                        TB_MBText.Text = ((Action_ShowMessageBox)actionlist[pos]).Text;
+                        TB_MBTitle.Text = ((Action_ShowMessageBox)actionlist[pos]).Title;
                         break;
                     case ActionType.Action_Type.Sound:
                         tabcontrol_actions.SelectedIndex = 5;
-                        L_SoundPlay.Content = ((Action_Sound)button.actions[pos]).PathToPlay;
-                        RB_Stop.IsChecked = ((Action_Sound)button.actions[pos]).Stop;
-                        RB_PlayAgain.IsChecked = ((Action_Sound)button.actions[pos]).PlayAgain;
+                        L_SoundPlay.Content = ((Action_Sound)actionlist[pos]).PathToPlay;
+                        RB_Stop.IsChecked = ((Action_Sound)actionlist[pos]).Stop;
+                        RB_PlayAgain.IsChecked = ((Action_Sound)actionlist[pos]).PlayAgain;
 
                         if (RB_Stop.IsChecked == false && RB_PlayAgain.IsChecked == false)
                             RB_Play.IsChecked = true;
 
-                        CB_SoundRepeat.IsChecked = ((Action_Sound)button.actions[pos]).Repeat;
+                        CB_SoundRepeat.IsChecked = ((Action_Sound)actionlist[pos]).Repeat;
                         break;
                     case ActionType.Action_Type.LoadPresentation:
                         tabcontrol_actions.SelectedIndex = 6;
-                        TB_LoadPres.Text = ((Action_LoadPresentation)button.actions[pos]).PresentationPath;
+                        TB_LoadPres.Text = ((Action_LoadPresentation)actionlist[pos]).PresentationPath;
                         break;
                     case ActionType.Action_Type.SetVisibility:
                         tabcontrol_actions.SelectedIndex = 7;
-                        NB_ID.Text = "" + ((Action_SetVisibility)button.actions[pos]).ID;
+                        NB_ID.Text = "" + ((Action_SetVisibility)actionlist[pos]).ID;
 
-                        if (((Action_SetVisibility)button.actions[pos]).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToVisible)
+                        if (((Action_SetVisibility)actionlist[pos]).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToVisible)
                         {
                             RB_SVisible.IsChecked = true;
 
                         }
-                        else if (((Action_SetVisibility)button.actions[pos]).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToInvisible)
+                        else if (((Action_SetVisibility)actionlist[pos]).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToInvisible)
                         {
                             RB_SInvisible.IsChecked = true;
                         }
@@ -190,17 +189,17 @@ namespace Good_Teacher.Windows
                         break;
                     case ActionType.Action_Type.DoAnimation:
                         tabcontrol_actions.SelectedIndex = 8;
-                        CB_Animation.SelectedIndex = ((Action_DoAnimation)button.actions[pos]).AnimationID;
+                        CB_Animation.SelectedIndex = ((Action_DoAnimation)actionlist[pos]).AnimationID;
                         break;
                     case ActionType.Action_Type.Position:
                         tabcontrol_actions.SelectedIndex = 9;
-                        CB_AXSign.SelectedIndex = (int)((Action_Position)button.actions[pos]).SignX;
-                        CB_AYSign.SelectedIndex = (int)((Action_Position)button.actions[pos]).SignY;
-                        CB_ChangeX.IsChecked = ((Action_Position)button.actions[pos]).ChangeX;
-                        CB_ChangeY.IsChecked = ((Action_Position)button.actions[pos]).ChangeY;
-                        NB_AX.Text = ""+((Action_Position)button.actions[pos]).CX;
-                        NB_AY.Text = "" + ((Action_Position)button.actions[pos]).CY;
-                        NB_PositionID.Text = "" + ((Action_Position)button.actions[pos]).ID;
+                        CB_AXSign.SelectedIndex = (int)((Action_Position)actionlist[pos]).SignX;
+                        CB_AYSign.SelectedIndex = (int)((Action_Position)actionlist[pos]).SignY;
+                        CB_ChangeX.IsChecked = ((Action_Position)actionlist[pos]).ChangeX;
+                        CB_ChangeY.IsChecked = ((Action_Position)actionlist[pos]).ChangeY;
+                        NB_AX.Text = ""+((Action_Position)actionlist[pos]).CX;
+                        NB_AY.Text = "" + ((Action_Position)actionlist[pos]).CY;
+                        NB_PositionID.Text = "" + ((Action_Position)actionlist[pos]).ID;
                         break;
 
                 }

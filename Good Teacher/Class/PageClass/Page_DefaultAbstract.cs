@@ -1,5 +1,6 @@
 ﻿using Good_Teacher.Class.Animations;
 using Good_Teacher.Class.Enumerators;
+using Good_Teacher.Class.Special;
 using System.Collections.Generic;
 
 namespace Good_Teacher.Class.TestClass
@@ -27,6 +28,7 @@ namespace Good_Teacher.Class.TestClass
         public int TransitionMove = 0;
         public TransitionTypeEnum.TransitionType transitionType = TransitionTypeEnum.TransitionType.Manual;
 
+        public List<TimerAction> Timers = new List<TimerAction>();
         abstract public TestTypeID.Test_Type TestType { get; }
 
     }

@@ -35,12 +35,12 @@ namespace Good_Teacher
         /// <summary>
         /// Good Teacher Version Code
         /// </summary>
-        public const float VersionCode = 0.92f;
+        public const float VersionCode = 0.93f;
 
         /// <summary>
         /// Text Version code
         /// </summary>
-        public const string VersionSpecialIdentificationName = "Beta REV 11";
+        public const string VersionSpecialIdentificationName = "Beta REV 12";
 
         /// <summary>
         /// Good Teacher Home Web URL
@@ -67,6 +67,11 @@ namespace Good_Teacher
         public static float ControlAreaSize = 0f;
 
         public static AppSettings appSettings = new AppSettings();
+
+        /// <summary>
+        /// Is something in presentation changed? For unsaved changes dialog
+        /// </summary>
+        public static bool IsChanged = false;
 
         /// <summary>
         /// Actual page of presentation
@@ -377,6 +382,8 @@ namespace Good_Teacher
 
             if (e.Key == Key.Delete && MSelectedItemEffect != null && SelectedAreaElements.Count > 0)
             {
+                Debug.WriteLine("Delete");
+
                 foreach (FrameworkElement elm in SelectedAreaElements)
                 {
                     DesignCanvas.Children.Remove(elm);
@@ -384,6 +391,7 @@ namespace Good_Teacher
                 ValueEditor.Content = "";
                 RemoveSelectedItemEffect();
                 SelectedAreaElements.Clear();
+                MainWindow.IsChanged = true;
             }
 
             if (SelectedControl != null && e.Key == Key.Delete)
@@ -393,7 +401,7 @@ namespace Good_Teacher
                 DesignCanvas.Children.Remove((FrameworkElement)SelectedControl);
                 ValueEditor.Content = "";
                 RemoveSelectedItemEffect();
-
+                MainWindow.IsChanged = true;
             }
 
         }
@@ -424,7 +432,6 @@ namespace Good_Teacher
             guid = guid.Replace("-", "");
             guid = "G" + guid;
             */
-            copy.Name = "ID_" + data.pages[SelectedPosition].LastID++;
 
             return copy;
         }
@@ -502,7 +509,7 @@ namespace Good_Teacher
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            CloseApplication();
         }
 
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
@@ -610,6 +617,7 @@ namespace Good_Teacher
                 BorderWindowSize.Height = 722;
                 L_FileName.Content = "";
                 FontWorker.RemoveTemporaryFolder();
+                MainWindow.IsChanged = false;
             }
         }
 
@@ -868,6 +876,16 @@ namespace Good_Teacher
             Paste();
         }
 
+        private void Item_Timers_Click(object sender, RoutedEventArgs e)
+        {
+            if (data.pages.Count > 0 && SelectedPosition >= 0)
+            {
+                Window_Timers window_Timers = new Window_Timers(data, SelectedPosition);
+                window_Timers.Owner = this;
+                window_Timers.ShowDialog();
+            }
+        }
+
         private void Item_Archive_Click(object sender, RoutedEventArgs e)
         {
             Window_Archive archive = new Window_Archive(data);
@@ -941,12 +959,7 @@ namespace Good_Teacher
 
         private void MenuItem_Close_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = MessageBox.Show(Strings.ResStrings.CloseApp, Strings.ResStrings.Exit, System.Windows.MessageBoxButton.YesNo);
-
-            if (messageBoxResult == MessageBoxResult.Yes)
-            {
-                Application.Current.Shutdown();
-            }
+            CloseApplication();
         }
 
 

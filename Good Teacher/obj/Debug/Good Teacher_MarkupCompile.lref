@@ -15,7 +15,6 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\MediaPl
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\MediaPlayer_Control.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\OpacityButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\PageMiniature.xaml;;
-FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\PanoramaViewer.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\RepeatingInfoControl.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\RotationButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\ScalableImage.xaml;;
@@ -28,6 +27,7 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\FontEditorPanel.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Special\PositionSelector.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\TestType_ControlN.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\ToggleButton_Control.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\WebPage_Control.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\MainWindow.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\AnimationSettings\Anim_Opacity.xaml;;
@@ -69,6 +69,7 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Scal
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Shapes.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Text.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_TextBox.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_ToggleButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_WebBrowser.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\ResourceDictionary.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Pages\Value_Label.xaml;;
@@ -88,6 +89,7 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\DWindow_NewModel.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\DWindow_Content.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Popup\PWindow_ColorPicker.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Popup\PWindow_SpecialDialog.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_AppSettings.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_CheckForUpdates.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_CodeEditor.xaml;;
@@ -113,8 +115,9 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_A
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AllControls.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Archive.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ChartData.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ClickActionsList.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ColorPicker.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_SetOnClickActions.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Settings.xaml;;
-FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ClickActionsList.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Timers.xaml;;
 

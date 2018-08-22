@@ -156,6 +156,11 @@ namespace Good_Teacher
                 Value_ScalableImage value = new Value_ScalableImage(data, (ScalableImage)sender);
                 ValueEditor.Content = value;
             }
+            else if (sender is ToggleButton_Control)
+            {
+                Value_ToggleButton value = new Value_ToggleButton(data, (ToggleButton_Control)sender, SelectedPosition);
+                ValueEditor.Content = value;
+            }
 
             SelectedControl = sender;
             SelectedControlID = DesignCanvas.Children.IndexOf((UIElement)sender);
@@ -170,6 +175,8 @@ namespace Good_Teacher
             {
                 cont.Name = "ID_" + data.pages[SelectedPosition].LastID++;
             }
+
+            MainWindow.IsChanged = true;
 
             if (cont is RichTextBox)
             {

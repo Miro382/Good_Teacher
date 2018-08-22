@@ -213,6 +213,7 @@
     <Compile Include="Class\Save\Output\Temporary\Temporary_Save.cs" />
     <Compile Include="Class\Save\Output\Temporary\TextBox_TempSave.cs" />
     <Compile Include="Class\Save\Output\TextboxInput.cs" />
+    <Compile Include="Class\Save\Output\ToggleButtonInput.cs" />
     <Compile Include="Class\Save\RepeatingData.cs" />
     <Compile Include="Class\Serialization\AxisSerializer.cs" />
     <Compile Include="Class\Serialization\Camera_Serializer.cs" />
@@ -239,6 +240,9 @@
     <Compile Include="Class\Serialization\Ser_Controls\MediaPlayerController_Serialization.cs" />
     <Compile Include="Class\Serialization\Ser_Controls\Model_Serialization.cs" />
     <Compile Include="Class\Serialization\Ser_Controls\ScalableImage_Serialization.cs" />
+    <Compile Include="Class\Serialization\Ser_Controls\ToggleButton_Serialization.cs" />
+    <Compile Include="Class\Special\BrushAnimation.cs" />
+    <Compile Include="Class\Special\TimerAction.cs" />
     <Compile Include="Class\Workers\ClassWorker.cs" />
     <Compile Include="Class\Save\Compression.cs" />
     <Compile Include="Class\Serialization\ImageRepresentation.cs" />
@@ -301,6 +305,7 @@
       <DependentUpon>ContentViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Linkers\ControlsLinker.cs" />
+    <Compile Include="Controls\Shapes\Cogwheel.cs" />
     <Compile Include="Controls\Shapes\Cross.cs" />
     <Compile Include="Controls\Shapes\Diamond.cs" />
     <Compile Include="Controls\DrawingImage_Control.xaml.cs">
@@ -326,9 +331,6 @@
     </Compile>
     <Compile Include="Controls\OpacityButton.xaml.cs">
       <DependentUpon>OpacityButton.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PanoramaViewer.xaml.cs">
-      <DependentUpon>PanoramaViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\RepeatingInfoControl.xaml.cs">
       <DependentUpon>RepeatingInfoControl.xaml</DependentUpon>
@@ -372,6 +374,9 @@
       <DependentUpon>TestType_ControlN.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Shapes\Triangle.cs" />
+    <Compile Include="Controls\ToggleButton_Control.xaml.cs">
+      <DependentUpon>ToggleButton_Control.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\WebPage_Control.xaml.cs">
       <DependentUpon>WebPage_Control.xaml</DependentUpon>
     </Compile>
@@ -509,6 +514,9 @@
       <DependentUpon>Value_TextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Save\DataStore.cs" />
+    <Compile Include="Pages\Value_ToggleButton.xaml.cs">
+      <DependentUpon>Value_ToggleButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Value_WebBrowser.xaml.cs">
       <DependentUpon>Value_WebBrowser.xaml</DependentUpon>
     </Compile>
@@ -598,6 +606,9 @@
     <Compile Include="Windows\Popup\PWindow_ColorPicker.xaml.cs">
       <DependentUpon>PWindow_ColorPicker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Popup\PWindow_SpecialDialog.xaml.cs">
+      <DependentUpon>PWindow_SpecialDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Special\Window_AppSettings.xaml.cs">
       <DependentUpon>Window_AppSettings.xaml</DependentUpon>
     </Compile>
@@ -657,6 +668,9 @@
     </Compile>
     <Compile Include="Windows\Special\Window_TextEditor.xaml.cs">
       <DependentUpon>Window_TextEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Special\Window_Timers.xaml.cs">
+      <DependentUpon>Window_Timers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Special\Window_Transitions.xaml.cs">
       <DependentUpon>Window_Transitions.xaml</DependentUpon>
@@ -745,10 +759,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PanoramaViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\RepeatingInfoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -794,6 +804,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\TestType_ControlN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ToggleButton_Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -969,6 +983,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Value_ToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Value_WebBrowser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1042,6 +1060,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Popup\PWindow_ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Popup\PWindow_SpecialDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1122,6 +1144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Special\Window_TextEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Special\Window_Timers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1912,6 +1938,18 @@
     <Resource Include="Resources\Specific\Copy.png" />
     <Resource Include="Resources\Specific\Cut.png" />
     <Resource Include="Resources\Specific\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Special\Attention.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\Shapes\Cogwheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Controls\ToggleButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Buttons\Timer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\ZstdNet.1.3.3\build\ZstdNet.targets" Condition="Exists('..\packages\ZstdNet.1.3.3\build\ZstdNet.targets')" />

@@ -7,6 +7,7 @@ using Good_Teacher.Class.Save;
 using Good_Teacher.Class.Save.Output;
 using Good_Teacher.Class.Save.Output.Temporary;
 using Good_Teacher.Class.Serialization;
+using Good_Teacher.Class.Special;
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Controls;
 using Good_Teacher.Windows.Special;
@@ -34,6 +35,9 @@ namespace Good_Teacher_Presentation
         DataStore data;
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
         DispatcherTimer dispatcherTimerTransition = new DispatcherTimer();
+        DispatcherTimer dispatcherTimer_Timers = new DispatcherTimer();
+        long Timer_TimersLast = 0;
+
         short t = 0, m = 0;
         int currentC = 0;
         private int LoadedPage = 0;
@@ -118,6 +122,13 @@ namespace Good_Teacher_Presentation
                 dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 1);
                 dispatcherTimer.IsEnabled = true;
 
+	
+	            Timer_TimersLast = DateTime.Now.Ticks;
+	
+	            dispatcherTimer_Timers.Tick -= DispatcherTimer_Timers_Tick;
+	            dispatcherTimer_Timers.Tick += DispatcherTimer_Timers_Tick;
+	            dispatcherTimer_Timers.Interval = new TimeSpan(0, 0, 0, 0, 100);
+	            dispatcherTimer_Timers.IsEnabled = true;
 
                 dispatcherTimerTransition.Tick -= DispatcherTimerTransition_Tick;
                 dispatcherTimerTransition.Tick += DispatcherTimerTransition_Tick;
@@ -148,6 +159,27 @@ namespace Good_Teacher_Presentation
 
                 ContentRendered += MainWindow_ContentRendered;
             }
+        }
+
+        private void DispatcherTimer_Timers_Tick(object sender, EventArgs e)
+        {
+            foreach (TimerAction timer in data.pages[currentLoaded].Timers)
+            {
+                if (!timer.Stop)
+                {
+                    timer.ActualTime -= (float)((float)(DateTime.Now.Ticks - Timer_TimersLast) / TimeSpan.TicksPerMillisecond) / 1000;
+
+                    if (timer.ActualTime <= 0)
+                    {
+                        timer.Stop = true;
+                        foreach (IActions action in timer.Actions)
+                        {
+                            DoAction(action);
+                        }
+                    }
+                }
+            }
+            Timer_TimersLast = DateTime.Now.Ticks;
         }
 
         private void DispatcherTimerTransition_Tick(object sender, EventArgs e)
@@ -377,6 +409,12 @@ namespace Good_Teacher_Presentation
                 }
             }
 
+            foreach (TimerAction timer in data.pages[currentLoaded].Timers)
+            {
+                timer.SetActualTime();
+                timer.Stop = false;
+            }
+
             DoScript();
 
             dispatcherTimerTransition.Interval = TimeSpan.FromMilliseconds(data.pages[LoadedPage].TransitionMove);
@@ -455,6 +493,20 @@ namespace Good_Teacher_Presentation
                 {
                     output.Pages[currentLoaded].InputList.Add(new RadioButtonInput(((RadioButton)elm).Content?.ToString(), ((RadioButton)elm).IsChecked == true, ((RadioButton)elm).GroupName));
                 }
+                else if (elm is ToggleButton_Control)
+                {
+                    string checkSTR = "";
+                    if (((ToggleButton_Control)elm).IsChecked)
+                    {
+                        checkSTR = ((ToggleButton_Control)elm).contentCreatorChecked.GetText();
+                    }
+                    else
+                    {
+                        checkSTR = ((ToggleButton_Control)elm).contentCreatorUnchecked.GetText();
+                    }
+
+                    output.Pages[currentLoaded].InputList.Add(new ToggleButtonInput("" + ControlWorker.GetID(((ToggleButton_Control)elm).Name), checkSTR, ((ToggleButton_Control)elm).IsChecked));
+                }
             }
         }
 
@@ -518,6 +570,9 @@ namespace Good_Teacher_Presentation
 
             mediaplayer.Stop();
 
+            dispatcherTimer_Timers.Stop();
+            dispatcherTimer_Timers.IsEnabled = false;
+
             FontWorker.RemoveTemporaryFolder();
         }
 
@@ -562,6 +617,10 @@ namespace Good_Teacher_Presentation
                 if (PlayCanvas.Children[i] is CButton)
                 {
                     ((CButton)PlayCanvas.Children[i]).Click += Window_Presentation_Click;
+                }
+                else if (PlayCanvas.Children[i] is ToggleButton_Control)
+                {
+                    ((ToggleButton_Control)PlayCanvas.Children[i]).Click += Window_Presentation_Click;
                 }
                 else if (PlayCanvas.Children[i] is AnswerButton)
                 {
@@ -627,104 +686,127 @@ namespace Good_Teacher_Presentation
         }
 
 
-        private void Window_Presentation_Click(CButton sender, MouseButtonEventArgs e)
+        private void Window_Presentation_Click(FrameworkElement sender, MouseButtonEventArgs e)
         {
-            foreach (IActions action in sender.actions)
+            List<IActions> actions = new List<IActions>();
+
+            if (sender is CButton)
             {
-                int act = action.DoAction();
-
-                switch (act)
+                actions = new List<IActions>(((CButton)sender).actions);
+            }
+            else if (sender is ToggleButton_Control)
+            {
+                if (((ToggleButton_Control)sender).IsChecked)
                 {
-                    case 1:
-                        if (((Action_GoToPage)action).ToSpecific)
-                        {
-                            LoadCanvas(((Action_GoToPage)action).ToPage - 1, true);
-                            UpdateNumberLabel();
-                        }
-                        else if (((Action_GoToPage)action).Next)
-                        {
-                            GoForward();
-                        }
-                        else
-                        {
-                            GoBack();
-                        }
-                        break;
-                    case 2:
-                        Close();
-                        break;
-                    case 3:
-                        if (((Action_Sound)action).Stop)
-                        {
-                            mediaplayer.Stop();
-                        }
-                        else if (((Action_Sound)action).PlayAgain)
-                        {
-                            mediaplayer.Position = TimeSpan.Zero;
-                            mediaplayer.Play();
-                        }
-                        else
-                        {
-                            if (!String.IsNullOrWhiteSpace(((Action_Sound)action).PathToPlay))
-                                SetSoundToBePlayed(((Action_Sound)action).PathToPlay, ((Action_Sound)action).Repeat);
-                        }
-                        break;
-                    case 4:
-                        LoadNewPresentation(((Action_LoadPresentation)action).PresentationPath);
-                        break;
-                    case 5:
-                        {
-                            FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_SetVisibility)action).ID);
-
-                            if (felm != null)
-                            {
-                                if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToVisible)
-                                {
-                                    felm.Visibility = Visibility.Visible;
-                                }
-                                else if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToInvisible)
-                                {
-                                    felm.Visibility = Visibility.Collapsed;
-                                }
-                                else
-                                {
-                                    if (felm.Visibility == Visibility.Collapsed || felm.Visibility == Visibility.Hidden)
-                                    {
-                                        felm.Visibility = Visibility.Visible;
-                                    }
-                                    else
-                                    {
-                                        felm.Visibility = Visibility.Collapsed;
-                                    }
-                                }
-                            }
-                            break;
-                        }
-                    case 6:
-                        MakeAnimation(currentLoaded, ((Action_DoAnimation)action).AnimationID);
-                        break;
-                    case 7:
-                        {
-                            FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_Position)action).ID);
-
-                            if (felm != null)
-                            {
-                                if (((Action_Position)action).ChangeX)
-                                {
-                                    MathSignEnum.SetPositionX(((Action_Position)action).CX, ((Action_Position)action).SignX, felm);
-                                }
-
-                                if (((Action_Position)action).ChangeY)
-                                {
-                                    MathSignEnum.SetPositionY(((Action_Position)action).CY, ((Action_Position)action).SignY, felm);
-                                }
-                            }
-                            break;
-                        }
+                    actions = new List<IActions>(((ToggleButton_Control)sender).CheckedActions);
                 }
+                else
+                {
+                    actions = new List<IActions>(((ToggleButton_Control)sender).UncheckedActions);
+                }
+            }
+
+            foreach (IActions action in actions)
+            {
+                DoAction(action);
             }
         }
 
+
+        public void DoAction(IActions action)
+        {
+            int act = action.DoAction();
+
+            switch (act)
+            {
+                case 1:
+                    if (((Action_GoToPage)action).ToSpecific)
+                    {
+                        LoadCanvas(((Action_GoToPage)action).ToPage - 1, true);
+                        UpdateNumberLabel();
+                    }
+                    else if (((Action_GoToPage)action).Next)
+                    {
+                        GoForward();
+                    }
+                    else
+                    {
+                        GoBack();
+                    }
+                    break;
+                case 2:
+                    Close();
+                    break;
+                case 3:
+                    if (((Action_Sound)action).Stop)
+                    {
+                        mediaplayer.Stop();
+                    }
+                    else if (((Action_Sound)action).PlayAgain)
+                    {
+                        mediaplayer.Position = TimeSpan.Zero;
+                        mediaplayer.Play();
+                    }
+                    else
+                    {
+                        if (!String.IsNullOrWhiteSpace(((Action_Sound)action).PathToPlay))
+                            SetSoundToBePlayed(((Action_Sound)action).PathToPlay, ((Action_Sound)action).Repeat);
+                    }
+                    break;
+                case 4:
+                    LoadNewPresentation(((Action_LoadPresentation)action).PresentationPath);
+                    break;
+                case 5:
+                    {
+                        FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_SetVisibility)action).ID);
+
+                        if (felm != null)
+                        {
+                            if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToVisible)
+                            {
+                                felm.Visibility = Visibility.Visible;
+                            }
+                            else if (((Action_SetVisibility)action).VisibilityValue == SetVisibilityEnum.SetVisibilityValue.SetToInvisible)
+                            {
+                                felm.Visibility = Visibility.Collapsed;
+                            }
+                            else
+                            {
+                                if (felm.Visibility == Visibility.Collapsed || felm.Visibility == Visibility.Hidden)
+                                {
+                                    felm.Visibility = Visibility.Visible;
+                                }
+                                else
+                                {
+                                    felm.Visibility = Visibility.Collapsed;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                case 6:
+                    MakeAnimation(currentLoaded, ((Action_DoAnimation)action).AnimationID);
+                    break;
+                case 7:
+                    {
+                        FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Action_Position)action).ID);
+
+                        if (felm != null)
+                        {
+                            if (((Action_Position)action).ChangeX)
+                            {
+                                MathSignEnum.SetPositionX(((Action_Position)action).CX, ((Action_Position)action).SignX, felm);
+                            }
+
+                            if (((Action_Position)action).ChangeY)
+                            {
+                                MathSignEnum.SetPositionY(((Action_Position)action).CY, ((Action_Position)action).SignY, felm);
+                            }
+                        }
+                        break;
+                    }
+            }
+        }
 
         void GoBack()
         {
@@ -785,7 +867,7 @@ namespace Good_Teacher_Presentation
                         }
                         else
                         {
-                            LoadCanvas(sn - 1);
+                            LoadCanvas(sn - 1,true);
                         }
                     }
                     else

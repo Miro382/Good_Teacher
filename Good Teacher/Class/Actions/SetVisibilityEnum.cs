@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Good_Teacher.Class.Actions
+﻿namespace Good_Teacher.Class.Actions
 {
     public static class SetVisibilityEnum
     {

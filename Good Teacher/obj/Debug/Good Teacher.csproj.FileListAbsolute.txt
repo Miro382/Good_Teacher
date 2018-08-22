@@ -340,7 +340,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Control
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\MediaPlayer_Control.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\OpacityButton.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\PageMiniature.g.cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\PanoramaViewer.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\RepeatingInfoControl.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\RotationButton.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\ScalableImage.g.cs
@@ -458,7 +457,6 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Control
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\MediaPlayer_Control.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\OpacityButton.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\PageMiniature.baml
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\PanoramaViewer.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\RepeatingInfoControl.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\RotationButton.baml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\ScalableImage.baml
@@ -580,3 +578,11 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Te
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Good Teacher.csprojAssemblyReference.cache
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_ClickActionsList.g.cs
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Window_ClickActionsList.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Popup\PWindow_SpecialDialog.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Popup\PWindow_SpecialDialog.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\ToggleButton_Control.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Controls\ToggleButton_Control.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Pages\Value_ToggleButton.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Pages\Value_ToggleButton.baml
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_Timers.g.cs
+D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\obj\Debug\Windows\Special\Window_Timers.baml

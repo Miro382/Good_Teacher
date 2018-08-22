@@ -2,6 +2,7 @@
 using Good_Teacher.Class.Serialization;
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Controls;
+using Good_Teacher.Windows.Popup;
 using Good_Teacher.Windows.Special;
 using Microsoft.Win32;
 using System;
@@ -373,6 +374,8 @@ namespace Good_Teacher
             Redo_MI.IsEnabled = false;
             Undo_MI.IsEnabled = true;
 
+            MainWindow.IsChanged = true;
+
             if(HistoryUndo.Count>=HistoryLimit)
             {
                 HistoryUndo.RemoveAt(0);
@@ -534,8 +537,9 @@ namespace Good_Teacher
             {
                 if (CopyObject != null && !(CopyObject is Gallery))
                 {
-
-                    DesignCanvas.Children.Add(CreateCopyObject(CopyObject, 30));
+                    FrameworkElement copy = CreateCopyObject(CopyObject, 30);
+                    copy.Name = "ID_" + data.pages[SelectedPosition].LastID++;
+                    DesignCanvas.Children.Add(copy);
 
                     SaveCanvas();
                     LoadCanvas();
@@ -547,6 +551,32 @@ namespace Good_Teacher
             }
         }
 
+
+        public void CloseApplication()
+        {
+            if (MainWindow.IsChanged)
+            {
+                PWindow_SpecialDialog window_SpecialDialog = new PWindow_SpecialDialog(Strings.ResStrings.UnsavedChanges, Strings.ResStrings.SaveUnsaved, Strings.ResStrings.Save, Strings.ResStrings.DontSave, Strings.ResStrings.Close, 1);
+                window_SpecialDialog.Owner = this;
+                window_SpecialDialog.ShowDialog();
+
+                if(window_SpecialDialog.option == PWindow_SpecialDialog.ButtonOption.Button1)
+                {
+                    if (SaveFile(MenuItem_Save))
+                    {
+                        Application.Current.Shutdown();
+                    }
+                }
+                else if(window_SpecialDialog.option == PWindow_SpecialDialog.ButtonOption.Button2)
+                {
+                    Application.Current.Shutdown();
+                }
+            }
+            else
+            {
+                Application.Current.Shutdown();
+            }
+        }
 
     }
 }

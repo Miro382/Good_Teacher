@@ -691,6 +691,58 @@ namespace Good_Teacher_Repairo
 
                         }
                         break;
+
+                    case 3:
+                        {
+                            ToggleButtonInput Input = (ToggleButtonInput)intype;
+
+
+                            Image image = new Image();
+                            image.Width = 24;
+                            image.Height = 24;
+                            image.Source = new BitmapImage(new Uri(@"pack://application:,,,/Good Teacher;Component/Resources/Controls/ToggleButton.png"));
+
+                            TextBlock textBlock = new TextBlock();
+                            textBlock.VerticalAlignment = VerticalAlignment.Center;
+                            textBlock.TextWrapping = TextWrapping.Wrap;
+                            textBlock.Margin = new Thickness(5, 0, 0, 0);
+                            textBlock.Text = Input.ID;
+
+                            StackPanel idPanel = new StackPanel();
+                            idPanel.Orientation = Orientation.Horizontal;
+                            idPanel.Children.Add(image);
+                            idPanel.Children.Add(textBlock);
+
+                            idPanel.Margin = new Thickness(0, 0, 0, 5);
+
+                            TextBlock textBlockTXT = new TextBlock();
+                            textBlockTXT.VerticalAlignment = VerticalAlignment.Center;
+                            textBlockTXT.TextWrapping = TextWrapping.Wrap;
+                            textBlockTXT.Margin = new Thickness(0, 5, 0, 15);
+                            textBlockTXT.Text = Input.Text;
+
+                            CheckBox checkBox = new CheckBox();
+                            checkBox.Content = Good_Teacher.Strings.ResStrings.IsChecked;
+                            checkBox.IsChecked = Input.Check;
+                            checkBox.IsEnabled = false;
+
+                            StackPanel stackPanel = new StackPanel();
+                            stackPanel.Margin = new Thickness(0, 5, 0, 10);
+                            stackPanel.Children.Add(idPanel);
+
+                            if (!String.IsNullOrWhiteSpace(Input.Text))
+                            {
+                                stackPanel.Children.Add(textBlockTXT);
+                            }
+
+                            stackPanel.Children.Add(checkBox);
+
+                            ControlInputPanel.Children.Add(stackPanel);
+
+                            ControlInputPanel.Children.Add(new Separator() { Margin = new Thickness(0, 0, 0, 10) });
+
+                        }
+                        break;
                 }
             }
         }

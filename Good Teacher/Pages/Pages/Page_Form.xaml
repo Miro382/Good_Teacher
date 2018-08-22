@@ -292,6 +292,17 @@
                                 </MenuItem.Icon>
                             </MenuItem>
 
+                            <MenuItem Tag="220" Click="AddControl_Click">
+                                <MenuItem.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <ContentPresenter Content="{x:Static strings:ResStrings.Cogwheel}" />
+                                    </StackPanel>
+                                </MenuItem.Header>
+                                <MenuItem.Icon>
+                                    <Image Width="16" Height="16"  Source="../../Resources/Controls/Shapes/Cogwheel.png" RenderOptions.BitmapScalingMode="Fant" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+
                             <MenuItem Tag="23" Click="AddControl_Click">
                                 <MenuItem.Header>
                                     <StackPanel Orientation="Horizontal">
@@ -474,7 +485,7 @@
                                 <Image Width="16" Height="16" Source="../../Resources/Controls/ComboBox.png" RenderOptions.BitmapScalingMode="Fant"/>
                             </MenuItem.Icon>
                         </MenuItem>
-
+                        
                     </MenuItem>
 
 
@@ -512,6 +523,18 @@
                             </MenuItem.Header>
                             <MenuItem.Icon>
                                 <Image Width="16" Height="16" Source="../../Resources/Icons/Controls/Question.png" RenderOptions.BitmapScalingMode="Fant"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+
+                        <MenuItem Tag="47" Click="AddControl_Click">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter Content="{x:Static strings:ResStrings.ToggleButton}"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+                            <MenuItem.Icon>
+                                <Image Width="16" Height="16" Source="../../Resources/Controls/ToggleButton.png" RenderOptions.BitmapScalingMode="Fant"/>
                             </MenuItem.Icon>
                         </MenuItem>
 
