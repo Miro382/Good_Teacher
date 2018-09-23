@@ -578,5 +578,31 @@ namespace Good_Teacher
             }
         }
 
+
+        void CheckState()
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                MaximizeButton.Content = new Image
+                {
+                    Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/maximize.png")),
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+
+                BorderThickness = new Thickness(0, 0, 0, 0);
+            }
+            else
+            {
+                MaximizeButton.Content = new Image
+                {
+                    Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/NormalWindow.png")),
+                    VerticalAlignment = VerticalAlignment.Center
+                };
+
+                BorderThickness = new Thickness(5, 5, 5, 5);
+            }
+        }
+
+
     }
 }

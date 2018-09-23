@@ -10,5 +10,14 @@
             else
                 return Strings.ResStrings.No;
         }
+
+
+        public static string BoolCheckedUnchecked(bool booleanB)
+        {
+            if (booleanB)
+                return Strings.ResStrings.Checked;
+            else
+                return Strings.ResStrings.Unchecked;
+        }
     }
 }

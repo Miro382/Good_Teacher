@@ -43,60 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.ComponentModel.Annotations" version="4.0.10.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Net.Http.Rtc" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3752960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3787776">
       <assemblyIdentity name="Good Teacher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GNQp5tZNnZiEBdhjPHO5/CN5X04RYZc18vj80674uNc=</dsig:DigestValue>
+        <dsig:DigestValue>X8ZevNiN7IHRF+pOVCCRnGwVq7noI3tACOBaH3n/agU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="41472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\Good Teacher.resources.dll" size="43008">
       <assemblyIdentity name="Good Teacher.resources" version="1.0.0.0" language="sk" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+gmsc6iKT6GmoJkKdp1rkgwXUb2SZKfxccLAV0kbSUQ=</dsig:DigestValue>
+        <dsig:DigestValue>2jDpoNGuul8B8MgdQ/VbDh+lslBqj+9t2AG7xY/tIRA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.dll" size="6144">
-      <assemblyIdentity name="HelixToolkit" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HelixToolkit" version="2.4.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H3FUrU0Z9sGG1HN1snkh4u+6v/N2c15kKGpuF82/CgQ=</dsig:DigestValue>
+        <dsig:DigestValue>Y9MwOVsEYLn/X6Nv7EUAnl8TbsjqaZmo+NRdG69k3Nk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="567296">
-      <assemblyIdentity name="HelixToolkit.Wpf" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HelixToolkit.Wpf" version="2.4.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m71Fz3Oe4YIS1sTSaLuThsed1NvO+3GAirnM3kTFDQE=</dsig:DigestValue>
+        <dsig:DigestValue>I09LISRixRaG1Id5wyyKCwei4q3wCt84+SPJOITK9yU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,7 +163,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.Charting-wpf.resources.dll" size="4608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.Charting-wpf.resources.dll" size="4608">
       <assemblyIdentity name="PdfSharp.Charting-wpf.resources" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
@@ -197,7 +187,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp-wpf.resources.dll" size="5120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp-wpf.resources.dll" size="5120">
       <assemblyIdentity name="PdfSharp-wpf.resources" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
@@ -205,6 +195,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>ld+a1Wx2t90qaVLbFkF7MEbVWegTOgvkd5GZAhz1XLM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SharpAvi.dll" size="65536">
+      <assemblyIdentity name="SharpAvi" version="2.1.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>IYjzJ9rXqWjpu0d/7CDg8PbQ8r7nvxAofmhBdwr6WPQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

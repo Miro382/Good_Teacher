@@ -224,6 +224,12 @@
 
                                 <MenuItem Icon="{StaticResource CopyToClipboard}" Header="{x:Static strings:ResStrings.CopyToClipboard}" Click="ExportToImage_Click" Tag="OneClipboard"/>
 
+                                <MenuItem Header="{x:Static strings:ResStrings.Video}" Click="ExportToVideo_Click">
+                                    <MenuItem.Icon>
+                                        <Image Width="16" Height="16" Source="Resources/Icons/Media/Video.png" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
                             </MenuItem>
 
                             <MenuItem x:Name="MenuItem_Build" Header="{x:Static strings:ResStrings.Build}" Click="Item_Build_Click">
@@ -694,6 +700,12 @@
                                     <MenuItem Header="{x:Static strings:ResStrings.CopyToClipboard}" Click="ExportToImage_Click" Tag="OneClipboard">
                                         <MenuItem.Icon>
                                             <Image Width="16" Height="16" Source="Resources/Icons/ToClipboard.png" />
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+
+                                    <MenuItem Header="{x:Static strings:ResStrings.Video}" Click="ExportToVideo_Click">
+                                        <MenuItem.Icon>
+                                            <Image Width="16" Height="16" Source="Resources/Icons/Media/Video.png" />
                                         </MenuItem.Icon>
                                     </MenuItem>
 

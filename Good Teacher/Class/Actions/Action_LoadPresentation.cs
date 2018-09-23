@@ -15,5 +15,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.LoadPresentation;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }

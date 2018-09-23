@@ -16,7 +16,7 @@ namespace Good_Teacher.Controls
             DataObject.AddPastingHandler(this, OnPaste);
         }
 
-        public double GetDouble()
+        public double GetDouble(double FailDefaultValue = 0)
         {
             double val = 0;
             if(double.TryParse(Text,out val))
@@ -27,12 +27,13 @@ namespace Good_Teacher.Controls
             else
             {
                 success = false;
-                return 0;
+                Text = "" + FailDefaultValue;
+                return FailDefaultValue;
             }
         }
 
 
-        public int GetInt()
+        public int GetInt(int FailDefaultValue = 0)
         {
             int val = 0;
             if (int.TryParse(Text, out val))
@@ -43,12 +44,13 @@ namespace Good_Teacher.Controls
             else
             {
                 success = false;
-                return 0;
+                Text = "" + FailDefaultValue;
+                return FailDefaultValue;
             }
         }
 
 
-        public float GetFloat()
+        public float GetFloat(float FailDefaultValue = 0)
         {
             float val = 0;
             if (float.TryParse(Text, out val))
@@ -59,7 +61,8 @@ namespace Good_Teacher.Controls
             else
             {
                 success = false;
-                return 0;
+                Text = "" + FailDefaultValue;
+                return FailDefaultValue;
             }
         }
 

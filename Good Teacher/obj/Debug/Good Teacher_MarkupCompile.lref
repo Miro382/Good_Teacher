@@ -1,5 +1,5 @@
 ﻿
-
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\App.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\AnswerButton.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\Barcode.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Controls\CButton.xaml;;
@@ -90,11 +90,13 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Dialogs\
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\DWindow_Content.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Popup\PWindow_ColorPicker.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Popup\PWindow_SpecialDialog.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Popup\PWindow_UploadFile.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_AppSettings.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_CheckForUpdates.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_CodeEditor.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ControlsID.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Editor.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ExportToVideo.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_FileInformations.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_FontManager.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_FormulaWriter.xaml;;
@@ -110,8 +112,10 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ShowImage.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_ShowModel.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_TextEditor.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Timers.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Transitions.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AboutApp.xaml;;
+FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AddCondition.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_AllControls.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Archive.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ChartData.xaml;;
@@ -119,5 +123,4 @@ FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_C
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_ColorPicker.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_SetOnClickActions.xaml;;
 FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Window_Settings.xaml;;
-FD:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher\Windows\Special\Window_Timers.xaml;;
 

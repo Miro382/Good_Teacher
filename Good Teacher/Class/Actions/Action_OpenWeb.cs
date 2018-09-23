@@ -26,5 +26,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.OpenWeb;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.ClosePresentation;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }

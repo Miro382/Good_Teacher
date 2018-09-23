@@ -1,4 +1,5 @@
 ﻿using Good_Teacher.Class.Actions;
+using Good_Teacher.Class.Actions.Conditions;
 using Good_Teacher.Class.Enumerators;
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Controls;
@@ -22,6 +23,8 @@ namespace Good_Teacher.Windows
         DataStore data;
         int selpos;
 
+        private const int MarginCon = 25;
+
         public Window_ClickActionsList(DataStore datastore, List<IActions> actionlist, int selectedPosition)
         {
             InitializeComponent();
@@ -37,20 +40,69 @@ namespace Good_Teacher.Windows
         void AddActions()
         {
             SP_Actions.Children.Clear();
+            int marginL = 0;
 
             foreach (IActions action in Actionlist)
             {
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Orientation = Orientation.Horizontal;
 
+                Image imageC = new Image();
+
+                if (action.IsCondition())
+                {
+                    if (action.DoAction() == 1)
+                    {
+                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/Else.png"));
+
+                        if (marginL > 0)
+                        {
+                            marginL -= MarginCon;
+                        }
+                    }
+                    else if(action.DoAction() == 2)
+                    {
+                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/Condition.png"));
+                    }
+                    else
+                    {
+                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/CancelCondition.png"));
+                    }
+                }
+                else
+                {
+                    imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/Action.png"));
+                }
+                imageC.Margin = new Thickness(marginL, 5, 0, 0);
+                imageC.Width = 20;
+                imageC.Height = 20;
+                RenderOptions.SetBitmapScalingMode(imageC, BitmapScalingMode.Fant);
+                imageC.VerticalAlignment = VerticalAlignment.Center;
+
+
                 Label labelT = new Label();
                 labelT.Content = GetActionName(action);
                 labelT.Margin = new Thickness(0, 5, 0, 0);
                 labelT.FontWeight = FontWeights.Bold;
+                labelT.VerticalAlignment = VerticalAlignment.Center;
+
+                if(action.IsCondition())
+                {
+                    if (action.DoAction() == 1)
+                    {
+                        labelT.Foreground = new SolidColorBrush(Colors.DarkBlue);
+                    }
+                    else
+                    {
+                        labelT.Foreground = new SolidColorBrush(Colors.DarkRed);
+                    }
+                    marginL += MarginCon;
+                }
 
                 Label label = new Label();
                 label.Content = GetActionInfo(action);
                 label.Margin = new Thickness(0, 5, 0, 0);
+                label.VerticalAlignment = VerticalAlignment.Center;
 
 
                 FlatButton edit = new FlatButton();
@@ -70,6 +122,7 @@ namespace Good_Teacher.Windows
                 edit.Width = 24;
                 edit.Tag = action;
                 edit.VerticalContentAlignment = VerticalAlignment.Center;
+                edit.VerticalAlignment = VerticalAlignment.Center;
 
                 FlatButton Delete = new FlatButton();
                 Delete.Content = new Image
@@ -88,8 +141,10 @@ namespace Good_Teacher.Windows
                 Delete.Width = 24;
                 Delete.Tag = action;
                 Delete.VerticalContentAlignment = VerticalAlignment.Center;
+                Delete.VerticalAlignment = VerticalAlignment.Center;
 
 
+                stackPanel.Children.Add(imageC);
                 stackPanel.Children.Add(labelT);
                 stackPanel.Children.Add(label);
                 stackPanel.Children.Add(edit);
@@ -102,17 +157,37 @@ namespace Good_Teacher.Windows
         private void EditAction_Click(object sender, MouseEventArgs e)
         {
             int id = Actionlist.IndexOf((IActions)((FlatButton)sender).Tag);
-            Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(Actionlist, data, id, selpos);
-            window_SetOnClickActions.Owner = Window.GetWindow(this);
-            window_SetOnClickActions.ShowDialog();
 
-            if (window_SetOnClickActions.isOK)
+            if (((IActions)((FlatButton)sender).Tag).IsCondition())
             {
-                if (window_SetOnClickActions.actions != null)
+                Window_AddCondition window_AddCondition = new Window_AddCondition(Actionlist, data, id, selpos);
+                window_AddCondition.Owner = Window.GetWindow(this);
+                window_AddCondition.ShowDialog();
+
+                if (window_AddCondition.isOK)
                 {
-                    Actionlist[id] = window_SetOnClickActions.actions;
-                    Debug.WriteLine(window_SetOnClickActions.actions);
-                    AddActions();
+                    if (window_AddCondition.actions != null)
+                    {
+                        Actionlist[id] = window_AddCondition.actions;
+                        Debug.WriteLine(window_AddCondition.actions);
+                        AddActions();
+                    }
+                }
+            }
+            else
+            {
+                Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(Actionlist, data, id, selpos);
+                window_SetOnClickActions.Owner = Window.GetWindow(this);
+                window_SetOnClickActions.ShowDialog();
+
+                if (window_SetOnClickActions.isOK)
+                {
+                    if (window_SetOnClickActions.actions != null)
+                    {
+                        Actionlist[id] = window_SetOnClickActions.actions;
+                        Debug.WriteLine(window_SetOnClickActions.actions);
+                        AddActions();
+                    }
                 }
             }
         }
@@ -159,6 +234,12 @@ namespace Good_Teacher.Windows
 
                     case ActionType.Action_Type.Position:
                         return Strings.ResStrings.Position;
+
+                    case ActionType.Action_Type.CONDITION_IsChecked:
+                        return Strings.ResStrings.IsChecked;
+
+                    case ActionType.Action_Type.CONDITION_Else:
+                        return Strings.ResStrings.Else;
 
                     case ActionType.Action_Type.NoAction:
                         return "-";
@@ -228,6 +309,12 @@ namespace Good_Teacher.Windows
 
                         return "- "+returnpos;
 
+                    case ActionType.Action_Type.CONDITION_IsChecked:
+
+                        return "- " + Strings.ResStrings.ID + ": " + ((Condition_IsChecked)action).ID + " "+Strings.ResStrings.CIf+": "+LocalizationWorker.BoolCheckedUnchecked(((Condition_IsChecked)action).CheckIfChecked);
+
+                    case ActionType.Action_Type.CONDITION_Else:
+                        return "";
                     case ActionType.Action_Type.NoAction:
                         return "";
                 }
@@ -239,7 +326,7 @@ namespace Good_Teacher.Windows
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             Window_SetOnClickActions window_SetOnClickActions = new Window_SetOnClickActions(data, selpos);
-            window_SetOnClickActions.Owner = Window.GetWindow(this);
+            window_SetOnClickActions.Owner = this;
             window_SetOnClickActions.ShowDialog();
 
             if (window_SetOnClickActions.isOK)
@@ -254,6 +341,22 @@ namespace Good_Teacher.Windows
         }
 
 
+        private void ButtonAddCondition_Click(object sender, RoutedEventArgs e)
+        {
+            Window_AddCondition window_AddCondition = new Window_AddCondition();
+            window_AddCondition.Owner = this;
+            window_AddCondition.ShowDialog();
+
+            if (window_AddCondition.isOK)
+            {
+                if (window_AddCondition.actions != null)
+                {
+                    Actionlist.Add(window_AddCondition.actions);
+                    Debug.WriteLine(window_AddCondition.actions);
+                    AddActions();
+                }
+            }
+        }
 
     }
 }

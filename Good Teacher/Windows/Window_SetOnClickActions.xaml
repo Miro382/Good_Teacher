@@ -65,7 +65,7 @@
                             <Label Content="{x:Static strings:ResStrings.OpenLink}" FontSize="14" FontWeight="Bold" />
                             <StackPanel Orientation="Horizontal">
 
-                                <TextBox x:Name="TB_OpenLink" Width="400" MinHeight="25" FontSize="14" VerticalContentAlignment="Center"/>
+                                <TextBox x:Name="TB_OpenLink" Width="400" Padding="1,3" FontSize="14" VerticalContentAlignment="Center"/>
 
 
                             </StackPanel>
@@ -92,7 +92,7 @@
                             <Label Content="{x:Static strings:ResStrings.OpenApplication}" FontSize="14" FontWeight="Bold" />
                             <StackPanel Orientation="Horizontal">
 
-                                <TextBox x:Name="TB_OpenApp" Text="Example.exe" Width="400" MinHeight="25" KeyUp="TB_OpenApp_KeyUp" FontSize="14" VerticalContentAlignment="Center"/>
+                                <TextBox x:Name="TB_OpenApp" Text="Example.exe" Width="400" Padding="1,3" KeyUp="TB_OpenApp_KeyUp" FontSize="14" VerticalContentAlignment="Center"/>
 
 
                             </StackPanel>
@@ -118,10 +118,10 @@
                             <Label Content="{x:Static strings:ResStrings.ShowMessageBox}" FontSize="14" FontWeight="Bold" />
 
                             <Label Content="{x:Static strings:ResStrings.Title}" FontWeight="Bold"/>
-                            <TextBox x:Name="TB_MBTitle" Padding="1,2,1,2" Width="400" />
+                            <TextBox x:Name="TB_MBTitle" Padding="1,3,1,3" Width="400" />
 
                             <Label Content="{x:Static strings:ResStrings.Text}" FontWeight="Bold"/>
-                            <TextBox x:Name="TB_MBText" Padding="1,2,1,2" Height="100" AcceptsReturn="True"/>
+                            <TextBox x:Name="TB_MBText" Padding="1,3,1,3" Height="100" AcceptsReturn="True"/>
                         </StackPanel>
 
                     </TabItem>
@@ -230,7 +230,7 @@
                             <Label Content="{x:Static strings:ResStrings.Position}" FontSize="14" FontWeight="Bold" />
 
                             <Label Content="{x:Static strings:ResStrings.ID}" Margin="0,10,0,0" FontWeight="Bold" />
-                            <Controls:NumberBox x:Name="NB_PositionID" Width="120" Text="0" Padding="1" Margin="0,0,0,10" HorizontalAlignment="Left" />
+                            <Controls:NumberBox x:Name="NB_PositionID" Width="120" Text="0" Padding="1,2" Margin="0,0,0,10" HorizontalAlignment="Left" />
 
                             <Grid Margin="0,5">
                                 
@@ -250,7 +250,7 @@
                                         <ComboBoxItem Content="/" />
                                     </ComboBox>
 
-                                    <Controls:NumberBox x:Name="NB_AX" Width="120" Text="0" Padding="1" Margin="0,10" HorizontalAlignment="Left" />
+                                    <Controls:NumberBox x:Name="NB_AX" Width="120" Text="0" Padding="1,2" Margin="0,10" HorizontalAlignment="Left" />
 
                                 </StackPanel>
 
@@ -266,7 +266,7 @@
                                         <ComboBoxItem Content="/" />
                                     </ComboBox>
 
-                                    <Controls:NumberBox x:Name="NB_AY" Width="120" Text="0" Padding="1" Margin="0,10" HorizontalAlignment="Left" />
+                                    <Controls:NumberBox x:Name="NB_AY" Width="120" Text="0" Padding="1,2" Margin="0,10" HorizontalAlignment="Left" />
 
                                 </StackPanel>
                             </Grid>

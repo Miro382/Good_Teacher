@@ -18,6 +18,11 @@ namespace Good_Teacher.Class.Actions
             return ActionType.Action_Type.GoToPage;
         }
 
+        public bool IsCondition()
+        {
+            return false;
+        }
+
         public void SetValues(int toPage,bool toSpecific,bool next, bool previous)
         {
             ToPage = toPage;

@@ -1790,4 +1790,58 @@ Ak vyberiete možnosť "Neuložiť", zmeny sa stratia. Ak vyberiete možnosť "Z
   <data name="Timer" xml:space="preserve">
     <value>Časovač</value>
   </data>
+  <data name="DefaultTimeInSec" xml:space="preserve">
+    <value>Predvolený čas (sek)</value>
+  </data>
+  <data name="IgnoreTransitionTime" xml:space="preserve">
+    <value>Ignorovať prechodový čas</value>
+  </data>
+  <data name="UseTransitionTime" xml:space="preserve">
+    <value>Použiť prechodový čas</value>
+  </data>
+  <data name="ExportToVideoSuccess" xml:space="preserve">
+    <value>Export do videa je úspešný.</value>
+  </data>
+  <data name="AddAction" xml:space="preserve">
+    <value>Pridať akciu</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>Pridať podmienku</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Podmienka</value>
+  </data>
+  <data name="CIf" xml:space="preserve">
+    <value>Ak</value>
+  </data>
+  <data name="Else" xml:space="preserve">
+    <value>Inak</value>
+  </data>
+  <data name="ElseText" xml:space="preserve">
+    <value>Ak podmienka nie je splnená, všetky nasledujúce akcie a podmienky budú ignorované až do konca alebo do podmienky "inak".</value>
+  </data>
+  <data name="CancelCondition" xml:space="preserve">
+    <value>Zrušiť podmienku</value>
+  </data>
+  <data name="CancelConditionText" xml:space="preserve">
+    <value>Zrušiť podmienky a pokračovať bez podmienok</value>
+  </data>
+  <data name="ReceiveFileInstruction" xml:space="preserve">
+    <value>V PHP použi "$_FILES". Súbor sa odovzdáva prostredníctvom metódy POST.</value>
+  </data>
+  <data name="UploadData" xml:space="preserve">
+    <value>Nahrať údaje</value>
+  </data>
+  <data name="UploadingFile" xml:space="preserve">
+    <value>Nahrávanie súboru</value>
+  </data>
+  <data name="UploadingFileT" xml:space="preserve">
+    <value>Nahrávanie súboru ... Počkajte, prosím.</value>
+  </data>
+  <data name="UploadWholeGTOUT" xml:space="preserve">
+    <value>Nahrať celý Repairo súbor (.gtout)</value>
+  </data>
+  <data name="UploadWholeMustInfo" xml:space="preserve">
+    <value>Musí byť začiarknuté políčko "Uložiť výstupný súbor".</value>
+  </data>
 </root>

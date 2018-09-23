@@ -18,7 +18,7 @@
                 <Run Text="{x:Static strings:ResStrings.UDownloading}" FontWeight="Bold"/>
                 <Run x:Name="R_Percentage" Text="0%"/>
                 </TextBlock>
-                <ProgressBar x:Name="PB_Download" Height="15" Foreground="#FF341F97"/>
+                <ProgressBar x:Name="PB_Download" Height="20" Foreground="#FF341F97"/>
                 <Label x:Name="LB_Size" Content=""/>
             </StackPanel>
         </StackPanel>

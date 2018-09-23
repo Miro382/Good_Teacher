@@ -1,0 +1,14 @@
+﻿<Window x:Class="Good_Teacher.Windows.Popup.PWindow_UploadFile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Good_Teacher.Windows.Popup"
+        xmlns:strings="clr-namespace:Good_Teacher.Strings"
+        mc:Ignorable="d"
+        Title="{x:Static strings:ResStrings.UploadingFile}" Height="200" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="15,20">
+        <TextBlock TextWrapping="Wrap" Text="{x:Static strings:ResStrings.UploadingFileT}" />
+        <ProgressBar x:Name="PB_Upload" Margin="0,20" Height="20" Foreground="#FF341F97" Maximum="100" Minimum="0" />
+    </StackPanel>
+</Window>

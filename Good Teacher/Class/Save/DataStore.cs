@@ -31,6 +31,9 @@ namespace Good_Teacher
         public string ScriptWarningMessage = "";
         public List<FontPackage> FontManager = new List<FontPackage>();
 
+        public bool UploadWholeFile = false;
+        public string UploadWholeFileAddress = "";
+
         public float SavedVersionCode = 0;
 
     }

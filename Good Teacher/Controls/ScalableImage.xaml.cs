@@ -59,7 +59,7 @@ namespace Good_Teacher.Controls
 
         private void UserControl_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            bool handle = (Keyboard.Modifiers & ModifierKeys.Control) > 0;
+            bool handle = (Keyboard.Modifiers & ModifierKeys.Shift) > 0;
             if (!handle)
                 return;
 

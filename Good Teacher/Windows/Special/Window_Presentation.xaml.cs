@@ -21,6 +21,9 @@ using System.Text.RegularExpressions;
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Class.Enumerators;
 using Good_Teacher.Class.Special;
+using Good_Teacher.Class.Actions.Conditions;
+using System.Net;
+using Good_Teacher.Windows.Popup;
 
 namespace Good_Teacher.Windows.Special
 {
@@ -160,9 +163,12 @@ namespace Good_Teacher.Windows.Special
                     if (timer.ActualTime <= 0)
                     {
                         timer.Stop = true;
-                        foreach (IActions action in timer.Actions)
+                        DoAllActions(timer.Actions);
+
+                        if (timer.RepeatTimer)
                         {
-                            DoAction(action);
+                            timer.SetActualTime();
+                            timer.Stop = false;
                         }
                     }
                 }
@@ -557,7 +563,16 @@ namespace Good_Teacher.Windows.Special
 
                     string dirp = Path.GetDirectoryName(MainWindow.pathtofile);
                     Directory.CreateDirectory(dirp+"\\GT_Output\\");
-                    saveEditor.SaveWithCompressionO(dirp + "\\GT_Output\\GT_" + DateTime.Now.Year + "_" + DateTime.Now.Month.ToString("00") + "_" + DateTime.Now.Day+"__"+DateTime.Now.Hour.ToString("00")+"_"+DateTime.Now.Minute.ToString("00")+ ".gtout", output);
+
+                    string filenameS = dirp + "\\GT_Output\\GT_" + DateTime.Now.Year + "_" + DateTime.Now.Month.ToString("00") + "_" + DateTime.Now.Day + "__" + DateTime.Now.Hour.ToString("00") + "_" + DateTime.Now.Minute.ToString("00") + ".gtout";
+                    saveEditor.SaveWithCompressionO(filenameS, output);
+
+                    if (data.UploadWholeFile)
+                    {
+                        PWindow_UploadFile pWindow_UploadFile = new PWindow_UploadFile(filenameS,data.UploadWholeFileAddress);
+                        pWindow_UploadFile.Owner = this;
+                        pWindow_UploadFile.ShowDialog();
+                    }
                 }
             }
 
@@ -702,10 +717,73 @@ namespace Good_Teacher.Windows.Special
                 }
             }
 
-            foreach (IActions action in actions)
+            DoAllActions(actions);
+        }
+
+        public void DoAllActions(List<IActions> actionlist)
+        {
+            List<ActionOrder> order = new List<ActionOrder>();
+
+            foreach (IActions action in actionlist)
             {
-                DoAction(action);
+                /*
+                if (action.IsCondition())
+                {
+                    int act = action.DoAction();
+                    switch (act)
+                    {
+                        case 0:
+                            FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Condition_IsChecked)action).ID);
+                            bool conChecked = false;
+
+                            if (ControlWorker.IsControlChecked(felm) == 1)
+                            {
+                                conChecked = true;
+                            }
+                            else if (ControlWorker.IsControlChecked(felm) == 0)
+                            {
+                                conChecked = false;
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                            if (conChecked == ((Condition_IsChecked)action).CheckIfChecked)
+                            {
+                                Cond = 1;
+                            }
+                            else
+                            {
+                                Cond = 2;
+                            }
+
+                            order++;
+                            break;
+
+                        case 1:
+                            if (Cond == 2)
+                            {
+                                inElse = true;
+                            }
+                            break;
+                        case 2:
+                            Cond = 0;
+                            if (order > 0)
+                            {
+                                order--;
+                            }
+                            break;
+
+                    }
+                }
+                else{
+                    if(order)
+                    DoAction(action);
+                }
+                */
             }
+
         }
 
 

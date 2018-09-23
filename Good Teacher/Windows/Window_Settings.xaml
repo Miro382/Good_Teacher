@@ -293,6 +293,27 @@
             </TabItem>
 
 
+
+            <!-- Sound Settings -->
+            <TabItem Header="{x:Static strings:ResStrings.UploadData}">
+
+                <StackPanel Margin="10" Grid.Column="0">
+                    <GroupBox x:Name="GRBX_UploadWholeFile" Header="{x:Static strings:ResStrings.UploadWholeGTOUT}" IsEnabled="false" >
+                        <StackPanel Margin="15" >
+                            <TextBlock Text="{x:Static strings:ResStrings.UploadWholeMustInfo}" TextWrapping="Wrap" />
+                            <CheckBox x:Name="CB_UploadWholeFile" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" Margin="0,15,0,5" Content="{x:Static strings:ResStrings.UploadData}" />
+                            <Label Content="{x:Static strings:ResStrings.WebAddress}" Margin="0,5,0,0" />
+                            <TextBox x:Name="TB_UploadW_Address" Padding="2" KeyUp="TB_UploadW_Address_KeyUp" />
+
+                            <TextBlock TextWrapping="Wrap" Margin="0,15,0,0" Text="{x:Static strings:ResStrings.ReceiveFileInstruction}" />
+                        </StackPanel>
+                    </GroupBox>
+
+
+                </StackPanel>
+            </TabItem>
+
+
         </TabControl>
     </Grid>
 </Window>

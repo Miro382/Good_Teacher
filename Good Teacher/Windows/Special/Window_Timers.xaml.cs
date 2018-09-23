@@ -64,6 +64,15 @@ namespace Good_Teacher.Windows.Special
                 label.Content = Strings.ResStrings.ActionsCount + " " + timer.Actions.Count;
                 label.Margin = new Thickness(5, 5, 0, 0);
 
+                CheckBox repeat = new CheckBox();
+                repeat.Content = Strings.ResStrings.Repeat;
+                repeat.IsChecked = timer.RepeatTimer;
+                repeat.Margin = new Thickness(10,5,10,0);
+                repeat.VerticalAlignment = VerticalAlignment.Center;
+                repeat.Tag = timer;
+                repeat.Checked += Repeat_Checked;
+                repeat.Unchecked += Repeat_Checked;
+
 
                 FlatButton edit = new FlatButton();
                 edit.Content = new Image
@@ -106,6 +115,7 @@ namespace Good_Teacher.Windows.Special
                 stackPanel.Children.Add(labeltim);
                 stackPanel.Children.Add(numberBox);
                 stackPanel.Children.Add(label);
+                stackPanel.Children.Add(repeat);
                 stackPanel.Children.Add(edit);
                 stackPanel.Children.Add(Delete);
 
@@ -115,6 +125,14 @@ namespace Good_Teacher.Windows.Special
                 i++;
             }
         }
+
+        private void Repeat_Checked(object sender, RoutedEventArgs e)
+        {
+            TimerAction timer = (TimerAction)((CheckBox)sender).Tag;
+
+            timer.RepeatTimer = ((CheckBox)sender).IsChecked == true;
+        }
+
 
         private void NumberBox_KeyDown(object sender, KeyEventArgs e)
         {

@@ -14,7 +14,10 @@
             SetVisibility,
             DoAnimation,
             Position,
-            NoAction
+            NoAction,
+            CONDITION_IsChecked,
+            CONDITION_Else,
+            CONDITION_CancelCondition
 
         };
     }

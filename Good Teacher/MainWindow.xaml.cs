@@ -7,6 +7,7 @@ using Good_Teacher.Pages.Pages;
 using Good_Teacher.Pages.Special;
 using Good_Teacher.Windows;
 using Good_Teacher.Windows.Dialogs;
+using Good_Teacher.Windows.Popup;
 using Good_Teacher.Windows.Special;
 using System;
 using System.Collections.Generic;
@@ -35,12 +36,12 @@ namespace Good_Teacher
         /// <summary>
         /// Good Teacher Version Code
         /// </summary>
-        public const float VersionCode = 0.93f;
+        public const float VersionCode = 0.94f;
 
         /// <summary>
         /// Text Version code
         /// </summary>
-        public const string VersionSpecialIdentificationName = "Beta REV 12";
+        public const string VersionSpecialIdentificationName = "Beta REV 13";
 
         /// <summary>
         /// Good Teacher Home Web URL
@@ -435,31 +436,6 @@ namespace Good_Teacher
 
             return copy;
         }
-
-        void CheckState()
-        {
-            if (this.WindowState == WindowState.Normal)
-            {
-                MaximizeButton.Content = new Image
-                {
-                    Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/maximize.png")),
-                    VerticalAlignment = VerticalAlignment.Center
-                };
-
-                BorderThickness = new Thickness(0, 0, 0, 0);
-            }
-            else
-            {
-                MaximizeButton.Content = new Image
-                {
-                    Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/NormalWindow.png")),
-                    VerticalAlignment = VerticalAlignment.Center
-                };
-
-                BorderThickness = new Thickness(5, 5, 5, 5);
-            }
-        }
-
 
         private void MainWindow_StateChanged(object sender, EventArgs e)
         {
@@ -883,6 +859,19 @@ namespace Good_Teacher
                 Window_Timers window_Timers = new Window_Timers(data, SelectedPosition);
                 window_Timers.Owner = this;
                 window_Timers.ShowDialog();
+            }
+        }
+
+        private void ExportToVideo_Click(object sender, RoutedEventArgs e)
+        {
+            if (data.pages.Count > 0 && SelectedPosition >= 0)
+            {
+                SaveCanvas();
+                LoadCanvas();
+
+                Window_ExportToVideo window_ExportToVideo = new Window_ExportToVideo(data);
+                window_ExportToVideo.Owner = this;
+                window_ExportToVideo.ShowDialog();
             }
         }
 

@@ -16,5 +16,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.SetVisibility;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }

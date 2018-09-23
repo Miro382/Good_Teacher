@@ -102,6 +102,12 @@ namespace Good_Teacher.Windows
 
             TB_WarningScriptMessage.Text = data.ScriptWarningMessage;
 
+            CB_UploadWholeFile.IsChecked = data.UploadWholeFile;
+
+            TB_UploadW_Address.Text = data.UploadWholeFileAddress;
+
+            GRBX_UploadWholeFile.IsEnabled = CB_SaveOutput.IsChecked == true;
+
 
             if (selpos >= 0)
             {
@@ -609,6 +615,7 @@ namespace Good_Teacher.Windows
                 else if (sender == CB_SaveOutput)
                 {
                     data.SaveOutput = CB_SaveOutput.IsChecked == true;
+                    GRBX_UploadWholeFile.IsEnabled = CB_SaveOutput.IsChecked == true;
                 }
                 else if (sender == CB_SoundRepeat)
                 {
@@ -636,6 +643,10 @@ namespace Good_Teacher.Windows
                 else if (sender == CB_DebugScript)
                 {
                     data.ScriptDebug = CB_DebugScript.IsChecked == true;
+                }
+                else if (sender == CB_UploadWholeFile)
+                {
+                    data.UploadWholeFile = CB_UploadWholeFile.IsChecked == true;
                 }
             }
         }
@@ -735,6 +746,12 @@ namespace Good_Teacher.Windows
         private void TB_WarningScriptMessage_KeyUp(object sender, KeyEventArgs e)
         {
             data.ScriptWarningMessage = TB_WarningScriptMessage.Text;
+        }
+
+
+        private void TB_UploadW_Address_KeyUp(object sender, KeyEventArgs e)
+        {
+            data.UploadWholeFileAddress = TB_UploadW_Address.Text;
         }
 
     }

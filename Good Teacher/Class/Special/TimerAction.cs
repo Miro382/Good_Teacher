@@ -11,6 +11,11 @@ namespace Good_Teacher.Class.Special
         /// </summary>
         public float DefaultTime = 0;
 
+        /// <summary>
+        /// Repeat timer?
+        /// </summary>
+        public bool RepeatTimer = false;
+
         //Actual time is only for decreasing default time (DefaultTime * 10)
         [JsonIgnore]
         public float ActualTime = 0;

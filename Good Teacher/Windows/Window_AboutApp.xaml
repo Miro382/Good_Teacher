@@ -7,7 +7,7 @@
         xmlns:strings="clr-namespace:Good_Teacher.Strings"
         xmlns:h="http://helix-toolkit.org/wpf" x:Class="Good_Teacher.Windows.Window_AboutApp"
         mc:Ignorable="d"
-        Title="{x:Static strings:ResStrings.About}"  Height="400" Width="520" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/help.png" ResizeMode="NoResize">
+        Title="{x:Static strings:ResStrings.About}"  Height="400" Width="550" WindowStartupLocation="CenterOwner" Icon="/Good Teacher;component/Resources/Icons/help.png" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -32,7 +32,7 @@
                 </Label.Effect>
             </Label>
 
-        <Image Grid.Column="0" Grid.Row="1" Height="100" Width="100" Source="/Good Teacher;component/Resources/test.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,5,0">
+        <Image Grid.Column="0" Grid.Row="1" Height="100" Width="100" Source="/Good Teacher;component/Resources/test.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0,5,0">
             <Image.Effect>
                 <DropShadowEffect Opacity="0.7"/>
             </Image.Effect>
@@ -48,14 +48,14 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Margin="15,5" Grid.Column="1" Grid.Row="1">
+        <StackPanel Margin="15,5,10,5" Grid.Column="1" Grid.Row="1">
 
-            <StackPanel Orientation="Horizontal" Height="40" Margin="0,5,0,0">
+            <StackPanel Orientation="Horizontal" Height="40" Margin="0,2,0,0">
                 <Label Content="{x:Static strings:ResStrings.Version}" FontSize="14" VerticalAlignment="Center" FontWeight="Bold"/>
                 <Label x:Name="Label_Version" Content="-" FontSize="14" VerticalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" Margin="0,5,0,0">
+            <StackPanel Orientation="Vertical" Margin="0,2,0,0">
                 <Label Content="{x:Static strings:ResStrings.CreatedBy}" FontSize="20" VerticalAlignment="Center" Foreground="#FFE91E63" FontWeight="Bold"/>
                 <Label Content="Miroslav Murin"  FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
             </StackPanel>
@@ -66,9 +66,11 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" VerticalAlignment="Center"><Run Text="Newtonsoft.Json"/><LineBreak/><Run Text="LiveCharts"/><LineBreak/><Run Text="Helix Toolkit"/><LineBreak/><Run Text="ZXing.Net"/><LineBreak/><Run Text="WpfMath"/><LineBreak/><Run Text="AvalonEdit"/></TextBlock>
                     <TextBlock Grid.Column="1"><Run Text="PDFsharp"/><LineBreak/><Run Text="ZstdNet"/><LineBreak/><Run Text="Zstandard"/><LineBreak/><Run Text="Fody Costura"/><LineBreak/><Run Text="Jint"/><LineBreak/><Run Text="Inno Setup"/></TextBlock>
+                    <TextBlock Grid.Column="2"><Run Text="SharpAvi"/></TextBlock>
                 </Grid>
             </StackPanel>
         </StackPanel>

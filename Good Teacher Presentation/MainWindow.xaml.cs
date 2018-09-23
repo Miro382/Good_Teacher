@@ -10,11 +10,13 @@ using Good_Teacher.Class.Serialization;
 using Good_Teacher.Class.Special;
 using Good_Teacher.Class.Workers;
 using Good_Teacher.Controls;
+using Good_Teacher.Windows.Popup;
 using Good_Teacher.Windows.Special;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -175,6 +177,12 @@ namespace Good_Teacher_Presentation
                         foreach (IActions action in timer.Actions)
                         {
                             DoAction(action);
+                        }
+
+                        if (timer.RepeatTimer)
+                        {
+                            timer.SetActualTime();
+                            timer.Stop = false;
                         }
                     }
                 }
@@ -564,7 +572,17 @@ namespace Good_Teacher_Presentation
 
                     string dirp = System.IO.Path.GetDirectoryName(Good_Teacher.MainWindow.pathtofile);
                     Directory.CreateDirectory(dirp + "\\GT_Output\\");
-                    saveEditor.SaveWithCompressionO(dirp + "\\GT_Output\\GT_"+ DateTime.Now.Year +"_" + DateTime.Now.Month.ToString("00") + "_"+ DateTime.Now.Day + "__" + DateTime.Now.Hour.ToString("00") + "_" + DateTime.Now.Minute.ToString("00") + ".gtout", output);
+
+                    string filenameS = dirp + "\\GT_Output\\GT_" + DateTime.Now.Year + "_" + DateTime.Now.Month.ToString("00") + "_" + DateTime.Now.Day + "__" + DateTime.Now.Hour.ToString("00") + "_" + DateTime.Now.Minute.ToString("00") + ".gtout";
+                    saveEditor.SaveWithCompressionO(filenameS, output);
+
+                    if (data.UploadWholeFile)
+                    {
+                        PWindow_UploadFile pWindow_UploadFile = new PWindow_UploadFile(filenameS, data.UploadWholeFileAddress);
+                        pWindow_UploadFile.Owner = this;
+                        pWindow_UploadFile.ShowDialog();
+                    }
+
                 }
             }
 

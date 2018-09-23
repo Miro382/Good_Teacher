@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/icons/buttons/timer.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/icons/special/cancelcondition.png")]
 
 

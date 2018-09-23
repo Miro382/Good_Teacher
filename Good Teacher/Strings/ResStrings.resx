@@ -1789,4 +1789,58 @@ If you select "Don't save" changes will be lost. If you select "Close" you can c
   <data name="Timer" xml:space="preserve">
     <value>Timer</value>
   </data>
+  <data name="DefaultTimeInSec" xml:space="preserve">
+    <value>Default time (sec)</value>
+  </data>
+  <data name="IgnoreTransitionTime" xml:space="preserve">
+    <value>Ignore transition time</value>
+  </data>
+  <data name="UseTransitionTime" xml:space="preserve">
+    <value>Use transition time</value>
+  </data>
+  <data name="ExportToVideoSuccess" xml:space="preserve">
+    <value>Export to video is successful.</value>
+  </data>
+  <data name="AddAction" xml:space="preserve">
+    <value>Add action</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>Add condition</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="CIf" xml:space="preserve">
+    <value>If</value>
+  </data>
+  <data name="Else" xml:space="preserve">
+    <value>Else</value>
+  </data>
+  <data name="ElseText" xml:space="preserve">
+    <value>If the condition is not met, all of the following actions and conditions will be ignored until the end or "else" condition.</value>
+  </data>
+  <data name="CancelCondition" xml:space="preserve">
+    <value>Cancel condition</value>
+  </data>
+  <data name="CancelConditionText" xml:space="preserve">
+    <value>Cancel conditions and continue without conditions</value>
+  </data>
+  <data name="ReceiveFileInstruction" xml:space="preserve">
+    <value>In PHP use "$_FILES". File is uploaded via POST.</value>
+  </data>
+  <data name="UploadData" xml:space="preserve">
+    <value>Upload data</value>
+  </data>
+  <data name="UploadingFile" xml:space="preserve">
+    <value>Uploading file</value>
+  </data>
+  <data name="UploadingFileT" xml:space="preserve">
+    <value>Uploading file ... Please wait.</value>
+  </data>
+  <data name="UploadWholeGTOUT" xml:space="preserve">
+    <value>Upload whole Repairo file (.gtout)</value>
+  </data>
+  <data name="UploadWholeMustInfo" xml:space="preserve">
+    <value>"Save output file" checkbox must be checked.</value>
+  </data>
 </root>

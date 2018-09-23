@@ -21,7 +21,10 @@
 
 
         <StackPanel Grid.Row="1" Background="#FFF3F3F3" >
-            <Button Padding="50,5" Margin="10" Content="{x:Static strings:ResStrings.Add}" HorizontalAlignment="Center" Click="ButtonAdd_Click" FontSize="16" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Padding="35,5" Margin="10" Content="{x:Static strings:ResStrings.AddAction}" HorizontalAlignment="Center" Click="ButtonAdd_Click" FontSize="16" />
+                <Button Padding="35,5" Margin="10" Content="{x:Static strings:ResStrings.AddCondition}" HorizontalAlignment="Center" Click="ButtonAddCondition_Click" FontSize="16" />
+            </StackPanel>
         </StackPanel>
 
         <!-- 

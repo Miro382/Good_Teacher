@@ -19,5 +19,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.Position;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }

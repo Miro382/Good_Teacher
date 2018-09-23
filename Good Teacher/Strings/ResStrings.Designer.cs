@@ -106,11 +106,29 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add action.
+        /// </summary>
+        public static string AddAction {
+            get {
+                return ResourceManager.GetString("AddAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add column.
         /// </summary>
         public static string AddColumn {
             get {
                 return ResourceManager.GetString("AddColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add condition.
+        /// </summary>
+        public static string AddCondition {
+            get {
+                return ResourceManager.GetString("AddCondition", resourceCulture);
             }
         }
         
@@ -754,6 +772,24 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel condition.
+        /// </summary>
+        public static string CancelCondition {
+            get {
+                return ResourceManager.GetString("CancelCondition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel conditions and continue without conditions.
+        /// </summary>
+        public static string CancelConditionText {
+            get {
+                return ResourceManager.GetString("CancelConditionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can&apos;t check if new version is available..
         /// </summary>
         public static string CantCheckVersion {
@@ -912,6 +948,15 @@ namespace Good_Teacher.Strings {
         public static string Chevron {
             get {
                 return ResourceManager.GetString("Chevron", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If.
+        /// </summary>
+        public static string CIf {
+            get {
+                return ResourceManager.GetString("CIf", resourceCulture);
             }
         }
         
@@ -1094,6 +1139,15 @@ namespace Good_Teacher.Strings {
         public static string Compress {
             get {
                 return ResourceManager.GetString("Compress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condition.
+        /// </summary>
+        public static string Condition {
+            get {
+                return ResourceManager.GetString("Condition", resourceCulture);
             }
         }
         
@@ -1467,6 +1521,15 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Default time (sec).
+        /// </summary>
+        public static string DefaultTimeInSec {
+            get {
+                return ResourceManager.GetString("DefaultTimeInSec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To default zoom (100%).
         /// </summary>
         public static string DefaultZoom {
@@ -1719,6 +1782,24 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Else.
+        /// </summary>
+        public static string Else {
+            get {
+                return ResourceManager.GetString("Else", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If the condition is not met, all of the following actions and conditions will be ignored until the end or &quot;else&quot; condition..
+        /// </summary>
+        public static string ElseText {
+            get {
+                return ResourceManager.GetString("ElseText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enabled.
         /// </summary>
         public static string Enabled {
@@ -1877,6 +1958,15 @@ namespace Good_Teacher.Strings {
         public static string ExportToPDF {
             get {
                 return ResourceManager.GetString("ExportToPDF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export to video is successful..
+        /// </summary>
+        public static string ExportToVideoSuccess {
+            get {
+                return ResourceManager.GetString("ExportToVideoSuccess", resourceCulture);
             }
         }
         
@@ -2363,6 +2453,15 @@ namespace Good_Teacher.Strings {
         public static string ID {
             get {
                 return ResourceManager.GetString("ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ignore transition time.
+        /// </summary>
+        public static string IgnoreTransitionTime {
+            get {
+                return ResourceManager.GetString("IgnoreTransitionTime", resourceCulture);
             }
         }
         
@@ -3560,6 +3659,15 @@ namespace Good_Teacher.Strings {
         public static string RealView {
             get {
                 return ResourceManager.GetString("RealView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In PHP use &quot;$_FILES&quot;. File is uploaded via POST..
+        /// </summary>
+        public static string ReceiveFileInstruction {
+            get {
+                return ResourceManager.GetString("ReceiveFileInstruction", resourceCulture);
             }
         }
         
@@ -4789,6 +4897,51 @@ namespace Good_Teacher.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload data.
+        /// </summary>
+        public static string UploadData {
+            get {
+                return ResourceManager.GetString("UploadData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading file.
+        /// </summary>
+        public static string UploadingFile {
+            get {
+                return ResourceManager.GetString("UploadingFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading file ... Please wait..
+        /// </summary>
+        public static string UploadingFileT {
+            get {
+                return ResourceManager.GetString("UploadingFileT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload whole Repairo file (.gtout).
+        /// </summary>
+        public static string UploadWholeGTOUT {
+            get {
+                return ResourceManager.GetString("UploadWholeGTOUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Save output file&quot; checkbox must be checked..
+        /// </summary>
+        public static string UploadWholeMustInfo {
+            get {
+                return ResourceManager.GetString("UploadWholeMustInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Up to date version.
         /// </summary>
         public static string UpToDate {
@@ -4812,6 +4965,15 @@ namespace Good_Teacher.Strings {
         public static string UseLocalPath {
             get {
                 return ResourceManager.GetString("UseLocalPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use transition time.
+        /// </summary>
+        public static string UseTransitionTime {
+            get {
+                return ResourceManager.GetString("UseTransitionTime", resourceCulture);
             }
         }
         

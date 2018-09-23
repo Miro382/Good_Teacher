@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using Good_Teacher.Controls;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
 namespace Good_Teacher.Class.Workers
@@ -85,6 +88,39 @@ namespace Good_Teacher.Class.Workers
             {
                 return -1;
             }
+        }
+
+
+        /// <summary>
+        /// Check if element is checked
+        /// </summary>
+        /// <param name="element"></param>
+        /// <returns>int 0=unchecked 1=checked -1=not checkable</returns>
+        public static int IsControlChecked(FrameworkElement element)
+        {
+            if(element is ToggleButton)
+            {
+                if(((ToggleButton)element).IsChecked==true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }else if(element is ToggleButton_Control)
+            {
+                if (((ToggleButton_Control)element).IsChecked == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+
+            return -1;
         }
 
 

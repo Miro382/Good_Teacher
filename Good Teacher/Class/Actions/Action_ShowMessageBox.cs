@@ -17,5 +17,10 @@ namespace Good_Teacher.Class.Actions
         {
             return ActionType.Action_Type.ShowMessageBox;
         }
+
+        public bool IsCondition()
+        {
+            return false;
+        }
     }
 }
