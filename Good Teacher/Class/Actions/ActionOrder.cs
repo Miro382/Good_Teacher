@@ -10,5 +10,13 @@ namespace Good_Teacher.Class.Actions
     {
         public int order = 0;
         public bool inElse = false;
+        public bool ConditionTrue = true;
+
+        public ActionOrder(int ord, bool inelse = false)
+        {
+            order = ord;
+            inElse = inelse;
+        }
+
     }
 }

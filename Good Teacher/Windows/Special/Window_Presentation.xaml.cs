@@ -722,10 +722,92 @@ namespace Good_Teacher.Windows.Special
 
         public void DoAllActions(List<IActions> actionlist)
         {
-            List<ActionOrder> order = new List<ActionOrder>();
+            Debug.WriteLine("************************************** DO ALL ACTIONS");
+            Dictionary<int, ActionOrder> order = new Dictionary<int, ActionOrder>();
+
+            int ord = 0;
+
+            order.Add(0,new ActionOrder(0));
 
             foreach (IActions action in actionlist)
             {
+                if(action.IsCondition())
+                {
+                    switch(action.DoAction())
+                    {
+                        case 0: //is checked
+
+                            if (order[ord].inElse != order[ord].ConditionTrue)
+                            {
+                                ord++;
+                                if (!order.ContainsKey(ord))
+                                {
+                                    order.Add(ord, new ActionOrder(ord));
+                                }
+                                order[ord].inElse = false;
+
+                                FrameworkElement felm = ControlWorker.FindChild<FrameworkElement>(PlayCanvas, "ID_" + ((Condition_IsChecked)action).ID);
+                                bool conChecked = false;
+
+                                if (ControlWorker.IsControlChecked(felm) == 1)
+                                {
+                                    conChecked = true;
+                                }
+                                else if (ControlWorker.IsControlChecked(felm) == 0)
+                                {
+                                    conChecked = false;
+                                }
+                                else
+                                {
+                                    break;
+                                }
+
+                                if (conChecked == ((Condition_IsChecked)action).CheckIfChecked) //true
+                                {
+                                    order[ord].ConditionTrue = true;
+                                }
+                                else //false
+                                {
+                                    order[ord].ConditionTrue = false;
+                                }
+                            }
+                            break;
+
+                        case 1: //else
+                                //ord++;
+                            if (order[ord].inElse != order[ord].ConditionTrue)
+                            {
+                                if (!order.ContainsKey(ord))
+                                {
+                                    order.Add(ord, new ActionOrder(ord));
+                                }
+                                order[ord].inElse = true;
+                            }
+                            break;
+
+                        case 2: //cancel condition
+                            if (order.ContainsKey(ord))
+                            {
+                                order.Remove(ord);
+                            }
+                            ord--;
+                            break;
+                    }
+
+                    Debug.WriteLine("COND: "+action.GetActionType()+"   order: "+ord+"   Properties: InElse: "+order[ord].inElse+"   ConditionTrue: "+order[ord].ConditionTrue);
+                }
+                else
+                {
+                    Debug.WriteLine("Action: " + action.GetActionType() + "   order: " + ord + "   Properties: InElse: " + order[ord].inElse + "   ConditionTrue: " + order[ord].ConditionTrue);
+                    if (order[ord].inElse != order[ord].ConditionTrue)
+                    {
+                        DoAction(action);
+                        Debug.WriteLine("SUCCESS ACTION!");
+                    }
+
+                }
+
+
                 /*
                 if (action.IsCondition())
                 {

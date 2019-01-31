@@ -62,11 +62,16 @@ namespace Good_Teacher.Windows
                     }
                     else if(action.DoAction() == 2)
                     {
-                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/Condition.png"));
+                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/CancelCondition.png"));
+
+                        if (marginL > 0)
+                        {
+                            marginL -= MarginCon;
+                        }
                     }
                     else
                     {
-                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/CancelCondition.png"));
+                        imageC.Source = new BitmapImage(new Uri(@"pack://application:,,,/Resources/Icons/Special/Condition.png"));
                     }
                 }
                 else
@@ -88,7 +93,7 @@ namespace Good_Teacher.Windows
 
                 if(action.IsCondition())
                 {
-                    if (action.DoAction() == 1)
+                    if (action.DoAction() == 1 || action.DoAction() == 2)
                     {
                         labelT.Foreground = new SolidColorBrush(Colors.DarkBlue);
                     }
@@ -96,7 +101,11 @@ namespace Good_Teacher.Windows
                     {
                         labelT.Foreground = new SolidColorBrush(Colors.DarkRed);
                     }
-                    marginL += MarginCon;
+
+                    if (action.DoAction() != 2)
+                    {
+                        marginL += MarginCon;
+                    }
                 }
 
                 Label label = new Label();
@@ -241,6 +250,9 @@ namespace Good_Teacher.Windows
                     case ActionType.Action_Type.CONDITION_Else:
                         return Strings.ResStrings.Else;
 
+                    case ActionType.Action_Type.CONDITION_CancelCondition:
+                        return Strings.ResStrings.CancelCondition;
+
                     case ActionType.Action_Type.NoAction:
                         return "-";
                 }
@@ -314,6 +326,8 @@ namespace Good_Teacher.Windows
                         return "- " + Strings.ResStrings.ID + ": " + ((Condition_IsChecked)action).ID + " "+Strings.ResStrings.CIf+": "+LocalizationWorker.BoolCheckedUnchecked(((Condition_IsChecked)action).CheckIfChecked);
 
                     case ActionType.Action_Type.CONDITION_Else:
+                        return "";
+                    case ActionType.Action_Type.CONDITION_CancelCondition:
                         return "";
                     case ActionType.Action_Type.NoAction:
                         return "";
