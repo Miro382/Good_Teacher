@@ -59,3 +59,61 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Relea
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\Jint.dll
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\bin\Release\ICSharpCode.AvalonEdit.xml
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\x64\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\x86\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.exe.config
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher Repairo.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\PdfSharp-wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\PdfSharp.Charting-wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\WpfMath.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\ICSharpCode.AvalonEdit.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\ZstdNet.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Jint.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Newtonsoft.Json.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Good Teacher.exe.config
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\PdfSharp.Charting-wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\WpfMath.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\WpfMath.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\LiveCharts.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.presentation.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\zxing.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\sk\Good Teacher.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\de\PdfSharp-wpf.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Release\de\PdfSharp.Charting-wpf.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\MainWindow.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Answers.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_FullView.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Info.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\App.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo_MarkupCompile.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo_MarkupCompile.lref
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\MainWindow.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Answers.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_FullView.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Windows\Window_Info.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.g.resources
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good_Teacher_Repairo.Properties.Resources.resources
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.csproj.CopyComplete
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Release\Good Teacher Repairo.pdb

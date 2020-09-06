@@ -43,24 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.ComponentModel.Annotations" version="4.0.10.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Net.Http.Rtc" version="4.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3578880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Good Teacher.exe" size="3576320">
       <assemblyIdentity name="Good Teacher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IPLANO3qxtIiaCsZG3lXP4TL2zQSeat7Uc+M9Dy3NEo=</dsig:DigestValue>
+        <dsig:DigestValue>iUH/8TiJ1ghohrOW7kyY6rMFT2qWnSFt7yTfNMTt9oo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,43 +62,43 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HhgFo9M5uF/wOy2WOSRQMwq4NV1TKZY7ttGPbIbcIcc=</dsig:DigestValue>
+        <dsig:DigestValue>89P4U9u6cFdULhInhWBRrhxhEkjAX44snGY+xoG6zpA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.dll" size="6144">
-      <assemblyIdentity name="HelixToolkit" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="HelixToolkit" version="2.12.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H3FUrU0Z9sGG1HN1snkh4u+6v/N2c15kKGpuF82/CgQ=</dsig:DigestValue>
+        <dsig:DigestValue>I7v8rXGgD7ytOK/eU+5d/Et4Wo7u0d4o8cYglGFZ2Vo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="567296">
-      <assemblyIdentity name="HelixToolkit.Wpf" version="2.3.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HelixToolkit.Wpf.dll" size="583680">
+      <assemblyIdentity name="HelixToolkit.Wpf" version="2.12.0.0" publicKeyToken="52AA3500039CAF0D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>m71Fz3Oe4YIS1sTSaLuThsed1NvO+3GAirnM3kTFDQE=</dsig:DigestValue>
+        <dsig:DigestValue>ETFRBzpoReCXtxg2hdVmTKEYyFFCYXjbbUpNwFLFbB8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICSharpCode.AvalonEdit.dll" size="626688">
-      <assemblyIdentity name="ICSharpCode.AvalonEdit" version="5.0.3.0" publicKeyToken="9CC39BE672370310" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ICSharpCode.AvalonEdit.dll" size="612864">
+      <assemblyIdentity name="ICSharpCode.AvalonEdit" version="6.0.1.278" publicKeyToken="9CC39BE672370310" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BY848z8/mfkEq5WIRHojQ0bIWXGEBLTopSNnPtGc2+c=</dsig:DigestValue>
+        <dsig:DigestValue>ciUlOpylnbh5NA+eqO5PSABs6t+HjQS0RlIgB/vj67M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -149,74 +139,74 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="662528">
-      <assemblyIdentity name="Newtonsoft.Json" version="11.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="700336">
+      <assemblyIdentity name="Newtonsoft.Json" version="12.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Yw3T/yq5ONtdA2Q+/f+cNCrtzKM2a86CntwgD6ZS6Q=</dsig:DigestValue>
+        <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.Charting-wpf.dll" size="94208">
-      <assemblyIdentity name="PdfSharp.Charting-wpf" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PdfSharp.Charting-wpf" version="1.50.5147.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zXq1/Io3b9vltB2Dv0V05t8MYAPHHypbIH9GXzs1sKU=</dsig:DigestValue>
+        <dsig:DigestValue>omdf+Q7fGcp1wHTpQRIRAOqihFrKRivtT1QBscfOFVY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.Charting-wpf.resources.dll" size="4608">
-      <assemblyIdentity name="PdfSharp.Charting-wpf.resources" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <assemblyIdentity name="PdfSharp.Charting-wpf.resources" version="1.50.5147.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XWv+yQ+cuaxdPq6jZKjGnWjZeypRwtitkcNoZ7uf9BM=</dsig:DigestValue>
+        <dsig:DigestValue>SJUXlnRDHqHnfO3qIbmT9kSdBUagxkp8xyLY72OEVnY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp-wpf.dll" size="565248">
-      <assemblyIdentity name="PdfSharp-wpf" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PdfSharp-wpf" version="1.50.5147.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1fpnw3jfZ9aU+XC45eBWL9TFdydUeJ3lgpQ8o8RsHVA=</dsig:DigestValue>
+        <dsig:DigestValue>mb8SMv6/yo9PNau00U7KfZPPMo/8f8NIgUOnLAtTuks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp-wpf.resources.dll" size="5120">
-      <assemblyIdentity name="PdfSharp-wpf.resources" version="1.50.4845.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <assemblyIdentity name="PdfSharp-wpf.resources" version="1.50.5147.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ld+a1Wx2t90qaVLbFkF7MEbVWegTOgvkd5GZAhz1XLM=</dsig:DigestValue>
+        <dsig:DigestValue>c0jpz/ckF8qfhYa15VdOQwSs1QzI5+rTrwEkMTQDeuQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WpfMath.dll" size="319488">
-      <assemblyIdentity name="WpfMath" version="0.5.0.41790" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WpfMath.dll" size="335872">
+      <assemblyIdentity name="WpfMath" version="0.9.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>M3duwEqqmcoeurGWDcGRpKJDdz8rwyif4mVOcFxR2Do=</dsig:DigestValue>
+        <dsig:DigestValue>UtRNjFHG3yGDMlXYrRzXSGaGKG/PzqVLZ7dZq/Sl0Q8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -233,26 +223,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zxing.dll" size="441344">
-      <assemblyIdentity name="zxing" version="0.16.4.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zxing.dll" size="445440">
+      <assemblyIdentity name="zxing" version="0.16.5.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GYPHlOZcWDLnntazWe86+y0YGQdjlIudYrFzI46rJKE=</dsig:DigestValue>
+        <dsig:DigestValue>KedmGIGf1hHo8UQa6I0esCwPPwOM55sRzBg0vH1uIhg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zxing.presentation.dll" size="19456">
-      <assemblyIdentity name="zxing.presentation" version="0.16.4.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="zxing.presentation" version="0.16.5.0" publicKeyToken="4E88037AC681FE60" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fqc7kR503QQjQzMM5bDu7a+9tS8omMlsV1vha+flzrg=</dsig:DigestValue>
+        <dsig:DigestValue>Q3fxCWQNj5oBmDbU4piCWLtgeN5XnKCfDiXdro+W5G8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -265,13 +255,13 @@
       <dsig:DigestValue>9l4o6giWaM9GNF+SB0doW+NdXzYr7TpJzDo4WTk6MBE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Good Teacher.exe.config" size="231">
+  <file name="Good Teacher.exe.config" size="229">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fhEAiVDwydxByluQdeM3u6DU/J6+o5x+q9lLqJonF9A=</dsig:DigestValue>
+      <dsig:DigestValue>pOCO6nnAh8gKmfOL34h8NJUmal13QFuR0+P0+oqr2xo=</dsig:DigestValue>
     </hash>
   </file>
   <fileAssociation extension=".gtch" description="Good Teacher presentation" progid="GTCH" defaultIcon="BookIcon.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />

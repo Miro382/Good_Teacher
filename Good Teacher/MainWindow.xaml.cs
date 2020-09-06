@@ -35,12 +35,12 @@ namespace Good_Teacher
         /// <summary>
         /// Good Teacher Version Code
         /// </summary>
-        public const float VersionCode = 0.93f;
+        public const float VersionCode = 0.94f;
 
         /// <summary>
         /// Text Version code
         /// </summary>
-        public const string VersionSpecialIdentificationName = "Beta REV 12";
+        public const string VersionSpecialIdentificationName = "Beta REV 13";
 
         /// <summary>
         /// Good Teacher Home Web URL

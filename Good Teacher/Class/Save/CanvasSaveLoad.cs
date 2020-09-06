@@ -14,6 +14,7 @@ using Good_Teacher.Controls;
 using LiveCharts.Wpf.Charts.Base;
 using WpfMath.Controls;
 using Good_Teacher.Class.Workers;
+using System.Linq;
 
 namespace Good_Teacher.Class.Serialization
 {
@@ -363,17 +364,32 @@ namespace Good_Teacher.Class.Serialization
                         designSave.ToControlWithForeground(data, control);
                     }
 
-                    if (control.FontFamily.BaseUri != null)
+                    
+                    if (control.FontFamily.BaseUri != null && control.FontFamily.Source != null)
                     {
+                        Debug.WriteLine("Ffontfamilysource: " + control.FontFamily.Source);
 
-                        //Debug.WriteLine(""+ control.FontFamily.BaseUri+ "  "+ control.FontFamily+"    AP: "+control.FontFamily.BaseUri.AbsolutePath+"   AU: "+control.FontFamily.BaseUri.AbsoluteUri+"   H: "+control.FontFamily.BaseUri.Host+ "   S: "+control.FontFamily.Source);
+                        string fontfamilyloc = "";
+                        string fontfamilyfile = "";
 
-                        FontFamily fontFamily;
-                        if (FontWorker.GetFontFamily(control.FontFamily, out fontFamily))
+                        if(control.FontFamily.Source.Length >= 5 )
                         {
-                            control.FontFamily = fontFamily;
+                            fontfamilyloc = control.FontFamily.Source.Substring(0, 3);
+                            fontfamilyfile = control.FontFamily.Source.Substring(0, 5);
+                        }
+
+                        if (!string.IsNullOrWhiteSpace(control.FontFamily.Source) && (fontfamilyloc == "./#" || fontfamilyfile == "file:"))
+                        {
+                            //Debug.WriteLine("-------------------\nBU: " + control.FontFamily.BaseUri + "\nFF: " + control.FontFamily + "\nAP: " + control.FontFamily.BaseUri.AbsolutePath + "\nAU: " + control.FontFamily.BaseUri.AbsoluteUri + "\nH: " + control.FontFamily.BaseUri.Host + "\nS: " + control.FontFamily.Source + "\n********\n");
+
+                            FontFamily fontFamily;
+                            if (FontWorker.GetFontFamily(control.FontFamily, out fontFamily))
+                            {
+                                control.FontFamily = fontFamily;
+                            }
                         }
                     }
+                    
 
                 }
                 else if (frw is MediaPlayer_Control)

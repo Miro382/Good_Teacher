@@ -234,7 +234,7 @@
             <param name="dy">The dy.</param>
             <returns></returns>
         </member>
-        <member name="M:ZXing.Aztec.Internal.Detector.expandSquare(ZXing.ResultPoint[],System.Single,System.Single)">
+        <member name="M:ZXing.Aztec.Internal.Detector.expandSquare(ZXing.ResultPoint[],System.Int32,System.Int32)">
             <summary>
             Expand the square represented by the corner points by pushing out equally in all directions
             </summary>
@@ -563,6 +563,9 @@
         </member>
         <member name="F:ZXing.BarcodeFormat.IMB">
             <summary>Intelligent Mail barcode</summary>
+        </member>
+        <member name="F:ZXing.BarcodeFormat.PHARMA_CODE">
+            <summary>Pharmacode format.</summary>
         </member>
         <member name="F:ZXing.BarcodeFormat.All_1D">
             <summary>
@@ -1207,6 +1210,13 @@
             </summary>
             <param name="bitmap">The bitmap.</param>
         </member>
+        <member name="M:ZXing.BitmapLuminanceSource.CalculateLuminanceValuesSlow(System.Drawing.Bitmap,System.Byte[])">
+            <summary>
+            old slow way for unsupported bit depth
+            </summary>
+            <param name="bitmap"></param>
+            <param name="luminances"></param>
+        </member>
         <member name="M:ZXing.BitmapLuminanceSource.CreateLuminanceSource(System.Byte[],System.Int32,System.Int32)">
             <summary>
             Should create a new luminance source with the right class type.
@@ -1850,6 +1860,14 @@
             Tries to parse results that are a URI of some kind.
             </summary>
             <author>Sean Owen</author>
+        </member>
+        <member name="M:ZXing.Client.Result.URIResultParser.isPossiblyMaliciousURI(System.String)">
+            @return true if the URI contains suspicious patterns that may suggest it intends to
+             mislead the user about its true nature. At the moment this looks for the presence
+             of user/password syntax in the host/authority portion of a URI which may be used
+             in attempts to make the URI's host appear to be other than it is. Example:
+             http://yourbank.com@phisher.com  This URI connects to phisher.com but may appear
+             to connect to yourbank.com at first glance.
         </member>
         <member name="T:ZXing.Client.Result.URLTOResultParser">
             <summary> Parses the "URLTO" result format, which is of the form "URLTO:[title]:[url]".
@@ -3745,37 +3763,41 @@
             </summary>
             <returns><see cref="T:ZXing.Common.DetectorResult" />encapsulating results of detecting a Data Matrix Code or null</returns>
         </member>
-        <member name="M:ZXing.Datamatrix.Internal.Detector.correctTopRightRectangular(ZXing.ResultPoint,ZXing.ResultPoint,ZXing.ResultPoint,ZXing.ResultPoint,System.Int32,System.Int32)">
+        <member name="M:ZXing.Datamatrix.Internal.Detector.detectSolid1(ZXing.ResultPoint[])">
             <summary>
-            Calculates the position of the white top right module using the output of the rectangle detector
-            for a rectangular matrix
+            Detect a solid side which has minimum transition.
             </summary>
+            <param name="cornerPoints"></param>
+            <returns></returns>
         </member>
-        <member name="M:ZXing.Datamatrix.Internal.Detector.correctTopRight(ZXing.ResultPoint,ZXing.ResultPoint,ZXing.ResultPoint,ZXing.ResultPoint,System.Int32)">
+        <member name="M:ZXing.Datamatrix.Internal.Detector.detectSolid2(ZXing.ResultPoint[])">
             <summary>
-            Calculates the position of the white top right module using the output of the rectangle detector
-            for a square matrix
+            Detect a second solid side next to first solid side.
             </summary>
+            <param name="points"></param>
+            <returns></returns>
         </member>
-        <member name="M:ZXing.Datamatrix.Internal.Detector.increment(System.Collections.Generic.IDictionary{ZXing.ResultPoint,System.Int32},ZXing.ResultPoint)">
+        <member name="M:ZXing.Datamatrix.Internal.Detector.correctTopRight(ZXing.ResultPoint[])">
             <summary>
-            Increments the Integer associated with a key by one.
+            Calculates the corner position of the white top right module.
             </summary>
+            <param name="points"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZXing.Datamatrix.Internal.Detector.shiftToModuleCenter(ZXing.ResultPoint[])">
+            <summary>
+            Shift the edge points to the module center.
+            </summary>
+            <param name="points"></param>
+            <returns></returns>
         </member>
         <member name="M:ZXing.Datamatrix.Internal.Detector.transitionsBetween(ZXing.ResultPoint,ZXing.ResultPoint)">
             <summary>
             Counts the number of black/white transitions between two points, using something like Bresenham's algorithm.
             </summary>
-        </member>
-        <member name="T:ZXing.Datamatrix.Internal.Detector.ResultPointsAndTransitions">
-            <summary>
-            Simply encapsulates two points and a number of transitions between them.
-            </summary>
-        </member>
-        <member name="T:ZXing.Datamatrix.Internal.Detector.ResultPointsAndTransitionsComparator">
-            <summary>
-            Orders ResultPointsAndTransitions by number of transitions, ascending.
-            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
         </member>
         <member name="M:ZXing.Datamatrix.Encoder.C40Encoder.handleEOD(ZXing.Datamatrix.Encoder.EncoderContext,System.Text.StringBuilder)">
             <summary>
@@ -4207,6 +4229,12 @@
             type: <see cref="T:ZXing.PDF417.Internal.PDF417AspectRatio" />, or 1-4.
             </summary>
         </member>
+        <member name="F:ZXing.EncodeHintType.PDF417_IMAGE_ASPECT_RATIO">
+            <summary>
+            Specifies the desired aspect ratio (number of columns / number of rows) of the output image.  Default is 3.
+            type: <see cref="T:System.Single" />.
+            </summary>
+        </member>
         <member name="F:ZXing.EncodeHintType.PDF417_COMPACT">
             <summary>
             Specifies whether to use compact mode for PDF417
@@ -4285,6 +4313,14 @@
             Specifies whether the data should be encoded to the GS1 standard
             type: <see cref="T:System.Boolean" />, or "true" or "false"
             <see cref="T:System.String" /> value
+            </summary>
+        </member>
+        <member name="F:ZXing.EncodeHintType.QR_MASK_PATTERN">
+            <summary>
+             Specifies the QR code mask pattern to be used. Allowed values are
+            0..QRCode.NUM_MASK_PATTERNS-1. By default the code will automatically select
+            the optimal mask pattern.
+            (Type <see cref="T:System.Int32" />, or <see cref="T:System.String" /> representation of the integer value).
             </summary>
         </member>
         <member name="T:ZXing.FormatException">
@@ -5135,14 +5171,14 @@
             A comparator that orders FinderPatterns by their estimated module size.
             </summary>
         </member>
-        <member name="M:ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.#ctor(ZXing.Common.BitMatrix)">
+        <member name="M:ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.#ctor(ZXing.Common.BitMatrix,ZXing.ResultPointCallback)">
              <summary>
              <p>Creates a finder that will search the image for three finder patterns.</p>
             
              <param name="image">image to search</param>
              </summary>
         </member>
-        <member name="M:ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.selectMutipleBestPatterns">
+        <member name="M:ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.selectMultipleBestPatterns">
             <summary>
             </summary>
             <returns>the 3 best <see cref="T:ZXing.QrCode.Internal.FinderPattern" />s from our list of candidates. The "best" are
@@ -5278,21 +5314,6 @@
             <author>erik.barbara@gmail.com (Erik Barbara)</author>
             </summary>
         </member>
-        <member name="M:ZXing.OneD.Code39Writer.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
-        </member>
         <member name="M:ZXing.OneD.Code39Writer.encode(System.String)">
             <summary>
             Encode the contents to byte array expression of one-dimensional barcode.
@@ -5334,6 +5355,12 @@
             <summary>
             This object renders a CODE93 code as a BitMatrix
             </summary>
+        </member>
+        <member name="M:ZXing.OneD.Code93Writer.encode(System.String)">
+            <summary>
+            </summary>
+            <param name="contents">barcode contents to encode.It should not be encoded for extended characters.</param>
+            <returns>a { @code bool[]} of horizontal pixels(false = white, true = black)</returns>
         </member>
         <member name="M:ZXing.OneD.Code93Writer.appendPattern(System.Boolean[],System.Int32,System.Int32[],System.Boolean)">
             <summary>
@@ -5393,21 +5420,6 @@
             <author>aripollak@gmail.com (Ari Pollak)</author>
             </summary>
         </member>
-        <member name="M:ZXing.OneD.EAN13Writer.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
-        </member>
         <member name="M:ZXing.OneD.EAN13Writer.encode(System.String)">
             <summary>
             Encode the contents to byte array expression of one-dimensional barcode.
@@ -5448,21 +5460,6 @@
             This object renders an EAN8 code as a <see cref="T:ZXing.Common.BitMatrix"/>.
             <author>aripollak@gmail.com (Ari Pollak)</author>
             </summary>
-        </member>
-        <member name="M:ZXing.OneD.EAN8Writer.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
         </member>
         <member name="M:ZXing.OneD.EAN8Writer.encode(System.String)">
             <summary>
@@ -5605,21 +5602,6 @@
             <author>erik.barbara@gmail.com (Erik Barbara)</author>
             </summary>
         </member>
-        <member name="M:ZXing.OneD.ITFWriter.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
-        </member>
         <member name="M:ZXing.OneD.ITFWriter.encode(System.String)">
             <summary>
             Encode the contents to bool array expression of one-dimensional barcode.
@@ -5669,21 +5651,6 @@
             This object renders a MSI code as a <see cref="T:ZXing.Common.BitMatrix"/>.
             </summary>
         </member>
-        <member name="M:ZXing.OneD.MSIWriter.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
-        </member>
         <member name="M:ZXing.OneD.MSIWriter.encode(System.String)">
             <summary>
             Encode the contents to byte array expression of one-dimensional barcode.
@@ -5693,25 +5660,16 @@
             <param name="contents"></param>
             <returns></returns>
         </member>
+        <member name="T:ZXing.OneD.PharmaCodeReader">
+            <summary>
+            <p>Decodes PharmaCode</p>
+            * @author Ruslan Karachun
+            </summary>
+        </member>
         <member name="T:ZXing.OneD.PlesseyWriter">
             <summary>
             This object renders a Plessey code as a <see cref="T:ZXing.Common.BitMatrix"/>.
             </summary>
-        </member>
-        <member name="M:ZXing.OneD.PlesseyWriter.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
-            <summary>
-            Encode the contents following specified format.
-            {@code width} and {@code height} are required size. This method may return bigger size
-            {@code BitMatrix} when specified size is too small. The user can set both {@code width} and
-            {@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
-            or {@code height}, {@code IllegalArgumentException} is thrown.
-            </summary>
-            <param name="contents"></param>
-            <param name="format"></param>
-            <param name="width"></param>
-            <param name="height"></param>
-            <param name="hints"></param>
-            <returns></returns>
         </member>
         <member name="M:ZXing.OneD.PlesseyWriter.encode(System.String)">
             <summary>
@@ -5815,6 +5773,13 @@
             <summary>
             </summary>
             <returns>a byte array of horizontal pixels (0 = white, 1 = black)</returns>
+        </member>
+        <member name="M:ZXing.OneD.OneDimensionalCodeWriter.checkNumeric(System.String)">
+            <summary>
+            Throw ArgumentException if input contains characters other than digits 0-9.
+            </summary>
+            <param name="contents">string to check for numeric characters</param>
+            <exception cref="T:System.ArgumentException">if input contains characters other than digits 0-9.</exception>
         </member>
         <member name="M:ZXing.OneD.OneDimensionalCodeWriter.appendPattern(System.Boolean[],System.Int32,System.Int32[],System.Boolean)">
             <summary>
@@ -6238,11 +6203,6 @@
         <member name="T:ZXing.OneD.RSS.Expanded.ExpandedRow">
             <summary>
             One row of an RSS Expanded Stacked symbol, consisting of 1+ expanded pairs.
-            </summary>
-        </member>
-        <member name="P:ZXing.OneD.RSS.Expanded.ExpandedRow.IsReversed">
-            <summary>
-            Did this row of the image have to be reversed (mirrored) to recognize the pairs?
             </summary>
         </member>
         <member name="M:ZXing.OneD.RSS.Expanded.ExpandedRow.Equals(System.Object)">
@@ -6775,17 +6735,6 @@
             <param name="missingStartRows">Missing start rows.</param>
             <param name="missingEndRows">Missing end rows.</param>
             <param name="isLeft">If set to <c>true</c> is left.</param>
-        </member>
-        <member name="M:ZXing.PDF417.Internal.BoundingBox.calculateMinMaxValues">
-            <summary>
-            Calculates the minimum and maximum X &amp; Y values based on the corner points.
-            </summary>
-        </member>
-        <member name="M:ZXing.PDF417.Internal.BoundingBox.SetBottomRight(ZXing.ResultPoint)">
-            <summary>
-            If we adjust the width, set a new right corner coordinate and recalculate
-            </summary>
-            <param name="bottomRight">Bottom right.</param>
         </member>
         <member name="T:ZXing.PDF417.Internal.Codeword">
             <summary>
@@ -7884,6 +7833,12 @@
             <param name="aspectRatio">The height of a row, will alter this parameter if aspectRatio>4 (aspectRatio==AUTO)</param>
             <returns>dimension object containing cols as width and rows as height</returns>
         </member>
+        <member name="M:ZXing.PDF417.Internal.PDF417.setDesiredAspectRatio(System.Single)">
+            <summary>
+            Sets the desired aspect ratio for the output image.
+            </summary>
+            <param name="v"></param>
+        </member>
         <member name="M:ZXing.PDF417.Internal.PDF417.setDimensions(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             Sets max/min row/col values
@@ -8114,7 +8069,7 @@
              <returns>the requested character count</returns>
              </summary>
         </member>
-        <member name="M:ZXing.PDF417.Internal.PDF417HighLevelEncoder.determineConsecutiveBinaryCount(System.String,System.Byte[],System.Int32,System.Text.Encoding)">
+        <member name="M:ZXing.PDF417.Internal.PDF417HighLevelEncoder.determineConsecutiveBinaryCount(System.String,System.Byte[],System.Int32,System.Text.Encoding,System.Int32@)">
             <summary>
             Determines the number of consecutive characters that are encodable using binary compaction.
             </summary>
@@ -8153,7 +8108,14 @@
         </member>
         <member name="P:ZXing.PDF417.PDF417EncodingOptions.AspectRatio">
             <summary>
-            Specifies what degree of error correction to use
+            Specifies the aspect ratio of the smallest codeword.
+            (Width of narrowest bar / Row Height)
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417EncodingOptions.ImageAspectRatio">
+            <summary>
+            Specifies the desired output image aspect ratio (Width / Height).
+            The actual aspect ratio is calculated based on the necessary number of codewords.
             </summary>
         </member>
         <member name="P:ZXing.PDF417.PDF417EncodingOptions.CharacterSet">
@@ -8332,7 +8294,7 @@
         </member>
         <member name="P:ZXing.PDF417.PDF417ResultMetadata.OptionalData">
             <summary>
-            always null
+            old optional data format as int array, always null
             </summary>
         </member>
         <member name="P:ZXing.PDF417.PDF417ResultMetadata.IsLastSegment">
@@ -9360,9 +9322,6 @@
             After a vertical and horizontal scan finds a potential finder pattern, this method
             "cross-cross-cross-checks" by scanning down diagonally through the center of the possible
             finder pattern to see if the same proportion is detected.
-            @param maxCount maximum reasonable number of modules that should be
-             observed in any reading state, based on the results of the horizontal scan
-            @param originalStateCountTotal The original state count total.
             </summary>
             <param name="centerI">row where a finder pattern was detected</param>
             <param name="centerJ">center of the section that appears to cross a finder pattern</param>
@@ -9431,19 +9390,23 @@
             candidates is "pretty similar"
             </returns>
         </member>
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.squaredDistance(ZXing.QrCode.Internal.FinderPattern,ZXing.QrCode.Internal.FinderPattern)">
+            <summary>
+            Get square of distance between a and b.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.selectBestPatterns">
             <returns> the 3 best {@link FinderPattern}s from our list of candidates. The "best" are
-            those that have been detected at least {@link #CENTER_QUORUM} times, and whose module
-            size differs from the average among those patterns the least
+            those have similar module size and form a shape closer to a isosceles right triangle.
             </returns>
         </member>
-        <member name="T:ZXing.QrCode.Internal.FinderPatternFinder.FurthestFromAverageComparator">
+        <member name="T:ZXing.QrCode.Internal.FinderPatternFinder.EstimatedModuleComparator">
             <summary>
-            Orders by furthest from average
+            Orders by {@link FinderPatternFinder#getEstimatedModuleSize()}
             </summary>
-        </member>
-        <member name="T:ZXing.QrCode.Internal.FinderPatternFinder.CenterComparator">
-            <summary> <p>Orders by {@link FinderPattern#getCount()}, descending.</p></summary>
         </member>
         <member name="T:ZXing.QrCode.Internal.FinderPatternInfo">
             <summary>

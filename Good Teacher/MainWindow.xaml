@@ -855,7 +855,8 @@
                     <Border Margin="0,0,5,5" x:Name="BorderWindowSize" BorderBrush="Black" BorderThickness="1"  Background="White" Width="1282" Height="722">
 
                         <Grid>
-                            <Rectangle Margin="5,5,-4,-4" Fill="#7F000000"/>
+                            <Rectangle Panel.ZIndex="-1" Margin="5,5,-4,-4" Fill="#7F000000"/>
+                            <Rectangle Panel.ZIndex="0" Fill="White"/>
                             <Canvas Panel.ZIndex="1" x:Name="DesignCanvas" Background="White" MouseDown="DesignCanvas_MouseDown" >
                             </Canvas>
                         </Grid>

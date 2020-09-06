@@ -59,3 +59,58 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Debug
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.csproj.CopyComplete
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\x64\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\x86\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher Repairo.exe.config
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher Repairo.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher Repairo.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\PdfSharp-wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\PdfSharp.Charting-wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\WpfMath.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.Wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\HelixToolkit.Wpf.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.presentation.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\ICSharpCode.AvalonEdit.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\ZstdNet.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Jint.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Newtonsoft.Json.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Good Teacher.exe.config
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\PdfSharp.Charting-wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.Wpf.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\LiveCharts.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.presentation.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.presentation.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.pdb
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\zxing.xml
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\sk\Good Teacher.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\de\PdfSharp-wpf.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\bin\Debug\de\PdfSharp.Charting-wpf.resources.dll
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\MainWindow.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_Answers.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_FullView.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_Info.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\App.g.cs
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo_MarkupCompile.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo_MarkupCompile.lref
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\MainWindow.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_Answers.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_FullView.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Windows\Window_Info.baml
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.g.resources
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good_Teacher_Repairo.Properties.Resources.resources
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.csproj.CopyComplete
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.exe
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\Good Teacher Repairo.pdb

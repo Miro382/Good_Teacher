@@ -50,3 +50,52 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\ReleaseX64\Updater
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\ReleaseX64\Updater.csproj.CopyComplete
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\ReleaseX64\Updater.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\ReleaseX64\Updater.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\x64\libzstd.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\x86\libzstd.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Updater.exe.config
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Updater.exe
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Updater.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Good Teacher.exe
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\WpfMath.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.Wpf.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\HelixToolkit.Wpf.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\PdfSharp-wpf.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.presentation.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\ICSharpCode.AvalonEdit.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\ZstdNet.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Jint.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Newtonsoft.Json.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Good Teacher.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Good Teacher.exe.config
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\WpfMath.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\WpfMath.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.Wpf.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\HelixToolkit.Wpf.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\LiveCharts.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.presentation.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.presentation.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.pdb
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\zxing.xml
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\sk\Good Teacher.resources.dll
+F:\repos\Good_Teacher\Updater\bin\ReleaseX64\de\PdfSharp-wpf.resources.dll
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\MainWindow.g.cs
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\App.g.cs
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater_MarkupCompile.cache
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater_MarkupCompile.lref
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\MainWindow.baml
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.g.resources
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.Properties.Resources.resources
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.csproj.CopyComplete
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.exe
+F:\repos\Good_Teacher\Updater\obj\ReleaseX64\Updater.pdb

@@ -50,3 +50,49 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.cspr
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.csproj.CopyComplete
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Updater\obj\Debug\Updater.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\x64\libzstd.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\x86\libzstd.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\Updater.exe.config
+F:\repos\Good_Teacher\Updater\bin\Debug\Updater.exe
+F:\repos\Good_Teacher\Updater\bin\Debug\Updater.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\Good Teacher.exe
+F:\repos\Good_Teacher\Updater\bin\Debug\WpfMath.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.Wpf.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\HelixToolkit.Wpf.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\PdfSharp-wpf.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.presentation.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\ICSharpCode.AvalonEdit.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\ZstdNet.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\Jint.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\Newtonsoft.Json.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\Good Teacher.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\Good Teacher.exe.config
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.Wpf.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\LiveCharts.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.presentation.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.presentation.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.pdb
+F:\repos\Good_Teacher\Updater\bin\Debug\zxing.xml
+F:\repos\Good_Teacher\Updater\bin\Debug\sk\Good Teacher.resources.dll
+F:\repos\Good_Teacher\Updater\bin\Debug\de\PdfSharp-wpf.resources.dll
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Updater\obj\Debug\MainWindow.g.cs
+F:\repos\Good_Teacher\Updater\obj\Debug\App.g.cs
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater_MarkupCompile.cache
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater_MarkupCompile.lref
+F:\repos\Good_Teacher\Updater\obj\Debug\MainWindow.baml
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.g.resources
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.Properties.Resources.resources
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.csproj.CopyComplete
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.exe
+F:\repos\Good_Teacher\Updater\obj\Debug\Updater.pdb

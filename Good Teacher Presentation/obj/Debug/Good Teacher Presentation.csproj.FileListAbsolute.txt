@@ -19,3 +19,35 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csproj.CoreCompileInputs.cache
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.pdb
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\x64\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\x86\libzstd.dll
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\Good Teacher Presentation.exe.config
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\Good Teacher Presentation.exe
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\Good Teacher Presentation.pdb
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\Good Teacher.exe.config
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\LiveCharts.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\zxing.presentation.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\bin\Debug\zxing.xml
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Controls\FlatButton.baml
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Controls\FlatButton.g.cs
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\MainWindow.g.cs
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\App.g.cs
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation_MarkupCompile.cache
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation_MarkupCompile.lref
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\MainWindow.baml
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.g.resources
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good_Teacher_Presentation.Properties.Resources.resources
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good_Teacher_Presentation.Strings.StringText.resources
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csproj.Fody.CopyLocal.cache
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.csproj.CopyComplete
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.exe
+F:\repos\Good_Teacher\Good Teacher Presentation\obj\Debug\Good Teacher Presentation.pdb

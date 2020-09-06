@@ -1,6 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Weavers>
-  <Costura
-    Unmanaged32Assemblies='libzstd'
-    Unmanaged64Assemblies='libzstd' />
+<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura Unmanaged32Assemblies="libzstd" Unmanaged64Assemblies="libzstd" />
 </Weavers>

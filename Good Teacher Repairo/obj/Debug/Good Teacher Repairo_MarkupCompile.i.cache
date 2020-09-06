@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\obj\Debug\
+F:\repos\Good_Teacher\Good Teacher Repairo\obj\Debug\
 Good_Teacher_Repairo
 none
 false
 DEBUG;TRACE
-D:\VisualStudio2017Projects\Projects\Good Teacher\Good Teacher Repairo\App.xaml
+F:\repos\Good_Teacher\Good Teacher Repairo\App.xaml
 4-881879521
 
-141308148104
-17-417882280
+11-720154787
+17-3440503
 MainWindow.xaml;Windows\Window_Answers.xaml;Windows\Window_FullView.xaml;Windows\Window_Info.xaml;
 resources\special\rsplashscreen.png
 True

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Good_Teacher</RootNamespace>
     <AssemblyName>Good Teacher</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -97,14 +97,14 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HelixToolkit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>..\packages\HelixToolkit.2.3.0\lib\netstandard1.1\HelixToolkit.dll</HintPath>
+    <Reference Include="HelixToolkit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.2.12.0\lib\netstandard1.1\HelixToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="HelixToolkit.Wpf, Version=2.3.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>..\packages\HelixToolkit.Wpf.2.3.0\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+    <Reference Include="HelixToolkit.Wpf, Version=2.12.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.12.0\lib\net45\HelixToolkit.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="Jint, Version=0.0.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
       <HintPath>..\packages\Jint.2.11.58\lib\net451\Jint.dll</HintPath>
@@ -115,14 +115,14 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PdfSharp-wpf, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp-wpf.1.50.4845-RC2a\lib\net30\PdfSharp-wpf.dll</HintPath>
+    <Reference Include="PdfSharp-wpf, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-wpf.1.50.5147\lib\net30\PdfSharp-wpf.dll</HintPath>
     </Reference>
-    <Reference Include="PdfSharp.Charting-wpf, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\PDFsharp-wpf.1.50.4845-RC2a\lib\net30\PdfSharp.Charting-wpf.dll</HintPath>
+    <Reference Include="PdfSharp.Charting-wpf, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp-wpf.1.50.5147\lib\net30\PdfSharp.Charting-wpf.dll</HintPath>
     </Reference>
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
@@ -146,17 +146,17 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="WpfMath, Version=0.5.0.41790, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WpfMath.0.5.0\lib\net40\WpfMath.dll</HintPath>
+    <Reference Include="WpfMath, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfMath.0.9.0\lib\net452\WpfMath.dll</HintPath>
     </Reference>
     <Reference Include="ZstdNet, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdNet.1.3.3\lib\net45\ZstdNet.dll</HintPath>
     </Reference>
-    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.dll</HintPath>
+    <Reference Include="zxing, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.dll</HintPath>
     </Reference>
-    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.presentation.dll</HintPath>
+    <Reference Include="zxing.presentation, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.5\lib\net48\zxing.presentation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

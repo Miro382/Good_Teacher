@@ -50,3 +50,49 @@ D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\Debug\SaveViewe
 D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\Debug\SaveViewer.csproj.CopyComplete
 D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\Debug\SaveViewer.exe
 D:\VisualStudio2017Projects\Projects\Good Teacher\SaveViewer\obj\Debug\SaveViewer.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\x64\libzstd.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\x86\libzstd.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\SaveViewer.exe.config
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\SaveViewer.exe
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\SaveViewer.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Good Teacher.exe
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Newtonsoft.Json.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\WpfMath.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.Wpf.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\HelixToolkit.Wpf.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\PdfSharp-wpf.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.presentation.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\ICSharpCode.AvalonEdit.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\ZstdNet.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Jint.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Good Teacher.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Good Teacher.exe.config
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\Newtonsoft.Json.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.Wpf.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.Wpf.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\HelixToolkit.Wpf.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\LiveCharts.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\PdfSharp-wpf.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.presentation.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.presentation.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\ICSharpCode.AvalonEdit.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.pdb
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\zxing.xml
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\sk\Good Teacher.resources.dll
+F:\repos\Good_Teacher\SaveViewer\bin\Debug\de\PdfSharp-wpf.resources.dll
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.csprojAssemblyReference.cache
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\MainWindow.g.cs
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\App.g.cs
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer_MarkupCompile.cache
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer_MarkupCompile.lref
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\MainWindow.baml
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.g.resources
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.Properties.Resources.resources
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.csproj.GenerateResource.cache
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.csproj.CoreCompileInputs.cache
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.csproj.CopyComplete
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.exe
+F:\repos\Good_Teacher\SaveViewer\obj\Debug\SaveViewer.pdb

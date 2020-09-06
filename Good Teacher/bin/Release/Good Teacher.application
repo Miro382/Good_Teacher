@@ -4,17 +4,17 @@
   <description asmv2:publisher="Miroslav Murin" co.v1:suiteName="Good Teacher" asmv2:product="Test Maker" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.7.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Good Teacher.exe.manifest" size="16625">
+    <dependentAssembly dependencyType="install" codebase="Good Teacher.exe.manifest" size="16076">
       <assemblyIdentity name="Good Teacher.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7Xudm11nhok0uMw7QIG1mZzKaEaCXkp23x3n6PB2Nzg=</dsig:DigestValue>
+        <dsig:DigestValue>+ZWLRWvzTGITJnaf6LbvaHHT+hWZUeJwfro/xKvZBZY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
